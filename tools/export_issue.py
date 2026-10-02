@@ -32,9 +32,9 @@ TOP_N = 10
 # research repo, so the ledger maps them by the UTC date of the freeze.
 LEGACY: Dict[str, dict] = {
     '2026-09-27': {'folder': f'{TOURNAMENT}/pilot-2026-09-28', 'model': 'gbm|K0',
-                   'note': 'Pilot, two days ahead, issued before the rule of one and three days. Published unchanged.'},
+                   'note': 'Pilot, two days ahead of the reading it started from, issued before the rule of one and three days. Published unchanged.'},
     '2026-09-29': {'folder': f'{TOURNAMENT}/live-2026-09-30', 'model': 'gbm|K0',
-                   'note': 'Two days ahead, issued before the rule of one and three days. Published unchanged.'},
+                   'note': 'Two days ahead of the reading it started from, issued before the rule of one and three days. Published unchanged.'},
 }
 FORWARD_MODEL = 'gbm_med'
 
@@ -144,8 +144,10 @@ def buildForecast(issueDay: str, freeze: dict, src: dict, folder: str, commit: s
     horizons = []
     for t in targetsOf(freeze):
         doc = json.load(open(os.path.join(folder, f'forecast_{t["day"]}.json'), encoding='utf-8'))
-        days = (dt.date.fromisoformat(t['day']) - dt.date.fromisoformat(issueDay)).days
-        horizons.append({'horizonDays': days, 'targetDay': t['day'], 'targetStartsUtc': f'{t["day"]}T00:00:00Z',
+        origin = freeze.get('origin') or freeze['targets'][0].get('origin')
+        lag = (dt.date.fromisoformat(t['day']) - dt.date.fromisoformat(origin)).days
+        horizons.append({'horizonDays': t['h'], 'horizonCountedFrom': 'origin reading' if src['note'] else 'issue day',
+                         'lagFromOriginDays': lag, 'targetDay': t['day'], 'targetStartsUtc': f'{t["day"]}T00:00:00Z',
                          'frozenBeforeTargetStart': fz < dt.datetime.fromisoformat(f'{t["day"]}T00:00:00+00:00'),
                          'regions': regionsOf(doc, src['model'])})
         for r in horizons[-1]['regions'].values():
@@ -180,7 +182,7 @@ def issueReadme(issueDay: str, forecast: dict, unpublished: List[str]) -> str:
     for h in forecast['horizons']:
         when = 'before' if h['frozenBeforeTargetStart'] else 'after'
         unit = 'day' if h['horizonDays'] == 1 else 'days'
-        lines.append(f'- {h["horizonDays"]} {unit} ahead: target {h["targetDay"]}, frozen {when} that day began (UTC).')
+        lines.append(f'- {h["horizonDays"]} {unit} ahead of the {h["horizonCountedFrom"]}: target {h["targetDay"]}, frozen {when} that day began (UTC).')
     lines += ['', '`forecast.json` lists the top 10 stories per region for each target. `FREEZE.json` and '
               '`FREEZE.json.ots` are copied byte for byte from the research repo, with every forecast file they hash. '
               '`MANIFEST.json` holds the sha256 of every file here.', '']
@@ -213,7 +215,7 @@ def export(issueDay: str, research: str, force: bool = False) -> int:
     if frozenUtc(freeze).date().isoformat() != issueDay:
         print(f'refused: freeze is dated {frozenUtc(freeze).date()} UTC, not {issueDay}')
         return 2
-    if git(research, 'status', '--porcelain', '--', src['folder']).stdout.strip():
+    if git(research, 'status', '--porcelain', '--untracked-files=no', '--', src['folder']).stdout.strip():
         print(f'refused: {src["folder"]} has uncommitted changes in the research repo')
         return 2
     commit = git(research, 'log', '-1', '--diff-filter=A', '--format=%H', '--', f'{src["folder"]}/FREEZE.json').stdout.strip()
@@ -229,6 +231,11 @@ def export(issueDay: str, research: str, force: bool = False) -> int:
             print(f'refused: {name} no longer matches FREEZE.json')
             return 2
         published.append(name)
+    for name in ['FREEZE.json', 'FREEZE.json.ots', *published]:
+        rel = f'{src["folder"]}/{name}'
+        if os.path.exists(os.path.join(research, rel)) and git(research, 'ls-files', '--error-unmatch', rel).returncode != 0:
+            print(f'refused: {rel} is not committed in the research repo')
+            return 2
     out = os.path.join(LEDGER, 'issues', issueDay)
     if os.path.exists(out) and not force:
         print(f'refused: {out} exists (use --force to rewrite it)')
