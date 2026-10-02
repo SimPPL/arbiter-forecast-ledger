@@ -1,0 +1,216 @@
+{
+ "issueDay": "2026-09-29",
+ "frozenUtc": "2026-09-29T04:33:58Z",
+ "frozenIst": "2026-09-29T10:03:58+05:30",
+ "origin": "2026-09-28",
+ "model": "gbm|K0",
+ "unit": "An Arbiter story (narrative key) on X, regions US and IN. \"posts\" is the forecast count of posts published on the target day (UTC) that Arbiter will assign to the story; lo and hi bound the 80 percent range.",
+ "note": "Two days ahead of the reading it started from, issued before the rule of one and three days. Published unchanged.",
+ "source": {
+  "repo": "narrative-reach-sim (private research repo)",
+  "folder": "cleanroom/2026-09-28-tomorrow-tournament/forecasts/live-2026-09-30",
+  "freezeCommit": "8d628db022790a36274e053a83cf29e1347ef5d3"
+ },
+ "horizons": [
+  {
+   "horizonDays": 2,
+   "horizonCountedFrom": "origin reading",
+   "lagFromOriginDays": 2,
+   "targetDay": "2026-09-30",
+   "targetStartsUtc": "2026-09-30T00:00:00Z",
+   "frozenBeforeTargetStart": true,
+   "regions": {
+    "IN": {
+     "liveStories": 1091,
+     "top": [
+      {
+       "rank": 1,
+       "title": "Qazi Tauqeer’s Bigg Boss 20 spotlight",
+       "arbiterKey": "IN:e9da355927000ea3",
+       "posts": 33.1,
+       "lo": 0.0,
+       "hi": 297.6,
+       "chance": "possible"
+      },
+      {
+       "rank": 2,
+       "title": "राजपाल यादव की चेक बाउंस मामले में सुप्रीम कोर्ट याचिका",
+       "arbiterKey": "IN:fb5a2b249f63a11b",
+       "posts": 21.5,
+       "lo": 0.0,
+       "hi": 196.2,
+       "chance": "possible"
+      },
+      {
+       "rank": 3,
+       "title": "Election commissioners’ objections to India’s SIR process reported",
+       "arbiterKey": "IN:6c4503596fcb4ab4",
+       "posts": 21.4,
+       "lo": 0.0,
+       "hi": 195.1,
+       "chance": "possible"
+      },
+      {
+       "rank": 4,
+       "title": "Virat Kohli’s ODI centuries and run-scoring records",
+       "arbiterKey": "IN:d741bfd3c3b5e2e9",
+       "posts": 20.7,
+       "lo": 0.0,
+       "hi": 189.2,
+       "chance": "possible"
+      },
+      {
+       "rank": 5,
+       "title": "International football fixtures spotlight Netherlands, Germany, Norway and Denma",
+       "arbiterKey": "IN:38d9cd25ae2548f1",
+       "posts": 14.5,
+       "lo": 1.0,
+       "hi": 78.4,
+       "chance": "possible"
+      },
+      {
+       "rank": 6,
+       "title": "Ujjain Shahi Mosque Faces Removal Amid Simhastha Road-Widening Plans",
+       "arbiterKey": "IN:f528a8904fa45827",
+       "posts": 10.1,
+       "lo": 0.5,
+       "hi": 56.0,
+       "chance": "possible"
+      },
+      {
+       "rank": 7,
+       "title": "Online discussion of teachers and classroom experiences",
+       "arbiterKey": "IN:2c6fd6992a53bc55",
+       "posts": 9.4,
+       "lo": 0.4,
+       "hi": 52.2,
+       "chance": "possible"
+      },
+      {
+       "rank": 8,
+       "title": "Tributes Mark Lata Mangeshkar’s Birth Anniversary",
+       "arbiterKey": "IN:023deebf538f555b",
+       "posts": 9.0,
+       "lo": 0.3,
+       "hi": 50.4,
+       "chance": "possible"
+      },
+      {
+       "rank": 9,
+       "title": "Student Protests at Lovely Professional University",
+       "arbiterKey": "IN:8af7a72825221f87",
+       "posts": 8.9,
+       "lo": 0.3,
+       "hi": 50.1,
+       "chance": "possible"
+      },
+      {
+       "rank": 10,
+       "title": "AI Model Development and Performance Advances",
+       "arbiterKey": "IN:7634cda229c04fb9",
+       "posts": 8.7,
+       "lo": 0.3,
+       "hi": 48.7,
+       "chance": "possible"
+      }
+     ]
+    },
+    "US": {
+     "liveStories": 907,
+     "top": [
+      {
+       "rank": 1,
+       "title": "AI and crypto assets draw renewed trading interest",
+       "arbiterKey": "US:9bdb89f3846ae06c",
+       "posts": 12.6,
+       "lo": 0.8,
+       "hi": 68.6,
+       "chance": "possible"
+      },
+      {
+       "rank": 2,
+       "title": "Explosives arrests and evacuations near RAF Fairford",
+       "arbiterKey": "US:1c4a9540aabd2b1b",
+       "posts": 9.4,
+       "lo": 0.4,
+       "hi": 52.5,
+       "chance": "possible"
+      },
+      {
+       "rank": 3,
+       "title": "NFL Fans React to a Chaotic Week of Close Games",
+       "arbiterKey": "US:86fb773dc0dfe20d",
+       "posts": 6.4,
+       "lo": 0.0,
+       "hi": 37.0,
+       "chance": "possible"
+      },
+      {
+       "rank": 4,
+       "title": "Cubs Fans Debate Jacob Webb’s Bullpen Struggles and Edward Cabrera’s Relief Outi",
+       "arbiterKey": "US:f2192fda9b96f6b8",
+       "posts": 4.5,
+       "lo": 0.0,
+       "hi": 27.1,
+       "chance": "possible"
+      },
+      {
+       "rank": 5,
+       "title": "Vikings and Buccaneers Face Off in NFL Game",
+       "arbiterKey": "US:06d67049337d03ec",
+       "posts": 4.3,
+       "lo": 0.0,
+       "hi": 26.4,
+       "chance": "possible"
+      },
+      {
+       "rank": 6,
+       "title": "Kirill Marchenko Reportedly Traded to the Toronto Maple Leafs",
+       "arbiterKey": "US:5e274d5c02d48e7c",
+       "posts": 4.2,
+       "lo": 0.0,
+       "hi": 26.0,
+       "chance": "possible"
+      },
+      {
+       "rank": 7,
+       "title": "Dancing With the Stars Viewers Debate Carrie Ann Inaba’s Judging",
+       "arbiterKey": "US:10cf5502997994fb",
+       "posts": 4.0,
+       "lo": 0.0,
+       "hi": 24.8,
+       "chance": "possible"
+      },
+      {
+       "rank": 8,
+       "title": "Sixers Media-Day Buzz and Roster Talk",
+       "arbiterKey": "US:e73bf00170f420a8",
+       "posts": 4.0,
+       "lo": 0.0,
+       "hi": 24.6,
+       "chance": "possible"
+      },
+      {
+       "rank": 9,
+       "title": "Saints Rally Past Ravens in Fourth-Quarter Comeback",
+       "arbiterKey": "US:328846ab40ffc7b9",
+       "posts": 2.8,
+       "lo": 0.4,
+       "hi": 10.5,
+       "chance": "long shot"
+      },
+      {
+       "rank": 10,
+       "title": "Rookie award odds and Jacob Rodriguez’s home debut",
+       "arbiterKey": "US:a20aed422c4c125c",
+       "posts": 2.8,
+       "lo": 0.4,
+       "hi": 10.5,
+       "chance": "long shot"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

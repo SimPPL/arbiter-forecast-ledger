@@ -1,0 +1,23 @@
+{
+ "kind": "issue",
+ "issueDay": "2026-09-29",
+ "researchFolder": "cleanroom/2026-09-28-tomorrow-tournament/forecasts/live-2026-09-30",
+ "researchFreezeCommit": "8d628db022790a36274e053a83cf29e1347ef5d3",
+ "researchHead": "31909d65a39da434b2b7c40b04138e1a0859ef20",
+ "freezeSha256": "8100044bd2d6ef7478f67cde83e9b067d10bfbe6f926aed40e1651749ade0901",
+ "frozenFilesNotPublished": {
+  "data/tomorrow_tournament/live/vint.parquet": "1ab14a311fd8312ead5eb6cac7e99099c09b2e889ae0ed3a2181217201bcdc40",
+  "data/tomorrow_tournament/live/nk_meta.parquet": "fce3bf1769f66af1eeaef975b8c5d3b1f213287f26b55816431f699a91af57cf",
+  "cleanroom/2026-09-28-tomorrow-tournament/specs/live_base.json": "020a958ad2280a29b452855b5052e1cccb77944619e4e924aaa3b9f45d90ac5f"
+ },
+ "exportedUtc": "2026-10-02T23:09:55Z",
+ "files": {
+  "FREEZE.json": "8100044bd2d6ef7478f67cde83e9b067d10bfbe6f926aed40e1651749ade0901",
+  "FREEZE.json.ots": "ca1f63cda4176d9d83f339c7642b03f8e39d34e66eb476881eae69158ed78e19",
+  "README.md": "52a5bac83506dd8f6037e2e476769fd3d620382864ead559347c7cab8232e66e",
+  "forecast.json": "ca743e71afecc21555a18550fedd32648053c7516c919dd262742cf2df3109a4",
+  "forecast_2026-09-30.json": "0a907d1a01505b1f68917149985774bed576b0e672f6da87ce3855ccf455b61f",
+  "pred_2026-09-30_h2_K0.parquet": "30d698c16bb4288f051bc04dd64563cbe0fa68a41e2e6d2473d6e9196179fbb4",
+  "pred_2026-09-30_h2_K6.parquet": "2525fca3e98b13da5bca4366fa75ae8a873bd6e437292103665c664b57b10274"
+ }
+}
