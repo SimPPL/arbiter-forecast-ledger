@@ -1,0 +1,51 @@
+{
+ "block": "TOMORROW-FWD-1",
+ "issueDay": "2026-10-02",
+ "origin": "2026-10-01",
+ "originReason": "issue day minus one",
+ "createdIst": "2026-10-02T12:31:38+05:30",
+ "dryRun": false,
+ "targets": [
+  {
+   "day": "2026-10-03",
+   "h": 1,
+   "lag": 2
+  },
+  {
+   "day": "2026-10-05",
+   "h": 3,
+   "lag": 4
+  }
+ ],
+ "files": {
+  "forecast_2026-10-03.json": "d7d2026f003cab486a22c6dcd70086c47704e3704c07187959abb19ca6d5a64c",
+  "forecast_2026-10-05.json": "af5a5a37b3a0b16c526c88f6bbac49a584242da72bf11d7f45eee2bdaa623949",
+  "pred_2026-10-03_h1_K0.parquet": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+  "pred_2026-10-03_h1_K6.parquet": "b5a9dc58785b50bb34cff3e5ba0104343f652f5fb565333574abe5528478c3ba",
+  "pred_2026-10-05_h3_K0.parquet": "9185810e0893478372588d87ec455105b486ba9b716a3864efc36c586c23ab8a",
+  "pred_2026-10-05_h3_K6.parquet": "15306a6f5ddb34c43b97fecd92e96268bde4fe845f548a371a66a7f3eb1cb1d4",
+  "inputs/build_stats.json": "f8a67b5040c67092e309c74bbdc2a32a8859fcdf2175f16fbdb75208b3bfc2a7",
+  "inputs/nk_meta.parquet": "632ecf6941d1ee420f410cc583ed5bd32ae04f513ba2ac8f2773733452447090",
+  "inputs/vint.parquet": "a633d8fae7328da1d56ad3cb36c8c0163945e8da0ac403c4bf2d81672ebd9eed"
+ },
+ "code": {
+  "commit": "d137f97e02e65cce9f7dda6946317e1ab3f9405c",
+  "files": {
+   "cleanroom/2026-10-01-tomorrow-forward/code/fwd_lib.py": "27f49374c82396fa39c57337df858fa46f575c6fe606ae5038a8a0f6f67683cf",
+   "cleanroom/2026-10-01-tomorrow-forward/code/fwd_freeze.py": "644379ed168153b00a0f40d0a8dc3e1e63f177999fa324862f835ba0bbc6087c",
+   "cleanroom/2026-10-01-tomorrow-forward/code/fwd_score.py": "b3dc4ce6f380d3b9596051f6f2b87537f1fad95dbb24955642d91b15ac437e45",
+   "cleanroom/2026-10-01-tomorrow-forward/code/fwd_freeze.sh": "b98bae3501456fd10c7e1671a3ca17c36349485a97a0af9b268f9165bba8103e",
+   "cleanroom/2026-09-28-tomorrow-tournament/code/tn_lib.py": "55bb7ae1b75ac7e31a1ab11a160cb3454ea775654348960d92845c184b7e66ad",
+   "cleanroom/2026-09-28-tomorrow-tournament/code/tn_models.py": "54fac88e21628b62543692e33a98359ca3b06383aebcade9a3db1777e985c795",
+   "cleanroom/2026-09-28-tomorrow-tournament/code/tn_run.py": "f128fbf68038d0851206385c6e54e4b2d4ce6245caa92ed03bea6b718e68b971",
+   "cleanroom/2026-09-28-tomorrow-tournament/code/tn_live_data.py": "22a37ea0a8555988dcce9d9898c0bd9a7f15a87b1f71c098d87ad0a40638e011"
+  },
+  "versions": {
+   "python": "3.11.6",
+   "lightgbm": "4.7.0",
+   "numpy": "2.4.6",
+   "pandas": "2.3.1"
+  }
+ },
+ "frozenIst": "2026-10-02T12:32:05+05:30"
+}
