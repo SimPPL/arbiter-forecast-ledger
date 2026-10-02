@@ -5,7 +5,7 @@
  "origin": "2026-09-26",
  "model": "gbm|K0",
  "unit": "An Arbiter story (narrative key) on X, regions US and IN. \"posts\" is the forecast count of posts published on the target day (UTC) that Arbiter will assign to the story; lo and hi bound the 80 percent range.",
- "note": "Pilot, two days ahead of the reading it started from, issued before the rule of one and three days. Published unchanged.",
+ "note": "Pilot, two days ahead of the reading it started from, issued before the rule of one and three days. Published unchanged. This copy reached the ledger on 2 October and its OpenTimestamps proof was made on 29 September, both after the target day, so the stamp and push checks in tools/verify.py fail for it. The only record that it was made before 28 September is the push to our private research repo at 21:19:29 UTC on 27 September, which an outsider cannot check.",
  "source": {
   "repo": "narrative-reach-sim (private research repo)",
   "folder": "cleanroom/2026-09-28-tomorrow-tournament/forecasts/pilot-2026-09-28",
