@@ -14,6 +14,8 @@
  "horizons": [
   {
    "horizonDays": 1,
+   "horizonCountedFrom": "issue day",
+   "lagFromOriginDays": 2,
    "targetDay": "2026-10-03",
    "targetStartsUtc": "2026-10-03T00:00:00Z",
    "frozenBeforeTargetStart": true,
@@ -212,6 +214,8 @@
   },
   {
    "horizonDays": 3,
+   "horizonCountedFrom": "issue day",
+   "lagFromOriginDays": 4,
    "targetDay": "2026-10-05",
    "targetStartsUtc": "2026-10-05T00:00:00Z",
    "frozenBeforeTargetStart": true,
