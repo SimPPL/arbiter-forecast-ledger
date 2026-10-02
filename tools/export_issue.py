@@ -32,9 +32,16 @@ TOP_N = 10
 # research repo, so the ledger maps them by the UTC date of the freeze.
 LEGACY: Dict[str, dict] = {
     '2026-09-27': {'folder': f'{TOURNAMENT}/pilot-2026-09-28', 'model': 'gbm|K0',
-                   'note': 'Pilot, two days ahead of the reading it started from, issued before the rule of one and three days. Published unchanged.'},
+                   'note': ('Pilot, two days ahead of the reading it started from, issued before the rule of one and three days. '
+                            'Published unchanged. This copy reached the ledger on 2 October and its OpenTimestamps proof was '
+                            'made on 29 September, both after the target day, so the stamp and push checks in tools/verify.py '
+                            'fail for it. The only record that it was made before 28 September is the push to our private '
+                            'research repo at 21:19:29 UTC on 27 September, which an outsider cannot check.')},
     '2026-09-29': {'folder': f'{TOURNAMENT}/live-2026-09-30', 'model': 'gbm|K0',
-                   'note': 'Two days ahead of the reading it started from, issued before the rule of one and three days. Published unchanged.'},
+                   'note': ('Two days ahead of the reading it started from, issued before the rule of one and three days. '
+                            'Published unchanged. This copy reached the ledger on 2 October, after the target day, so the push '
+                            'check in tools/verify.py fails for it. The OpenTimestamps proof, anchored in Bitcoin on 29 September, '
+                            'is the public clock that shows it was made before 30 September.')},
 }
 FORWARD_MODEL = 'gbm_med'
 
@@ -276,11 +283,27 @@ def writeManifest(out: str, meta: dict) -> None:
             if rel != 'MANIFEST.json':
                 files[rel] = sha256(p)
     meta = dict(meta)
-    meta['exportedUtc'] = dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+    meta.setdefault('exportedUtc', dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))
     meta['files'] = dict(sorted(files.items()))
     with open(os.path.join(out, 'MANIFEST.json'), 'w', encoding='utf-8') as fh:
         json.dump(meta, fh, indent=1, ensure_ascii=False)
         fh.write('\n')
+
+
+def refreshManifest(folder: str) -> None:
+    """Re-hash a folder into its existing MANIFEST.json, keeping the recorded fields.
+
+    Used after `ots upgrade` completes a stamp: the proof file grows, the stamped file does not change.
+
+    @param folder: issue, outcome or pre-registration folder.
+    @returns: None.
+    @throws FileNotFoundError: when the folder has no MANIFEST.json.
+    """
+    path = os.path.join(folder, 'MANIFEST.json')
+    meta = json.load(open(path, encoding='utf-8'))
+    meta.pop('files', None)
+    meta['refreshedUtc'] = dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+    writeManifest(folder, meta)
 
 
 def main(argv: Optional[List[str]] = None) -> int:
@@ -294,7 +317,11 @@ def main(argv: Optional[List[str]] = None) -> int:
     ap.add_argument('issueDay')
     ap.add_argument('--research', default=DEFAULT_RESEARCH)
     ap.add_argument('--force', action='store_true')
+    ap.add_argument('--refresh-manifest', action='store_true', help='treat the argument as a folder and only re-hash it')
     a = ap.parse_args(argv)
+    if a.refresh_manifest:
+        refreshManifest(os.path.abspath(a.issueDay))
+        return 0
     return export(a.issueDay, os.path.abspath(a.research), a.force)
 
 
