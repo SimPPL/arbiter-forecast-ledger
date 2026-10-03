@@ -1,0 +1,444 @@
+{
+ "day": "2026-09-30",
+ "kind": "bridged",
+ "horizonDays": 2,
+ "reading": "T0, bridged",
+ "logErrorDefinition": "mean |log(1 + actual) - log(1 + forecast)| over the matched 30 Sep stories; lower is better",
+ "headline": "gbm",
+ "references": [
+  "persist",
+  "zero"
+ ],
+ "models": {
+  "ewma": {
+   "name": "exponential smoothing",
+   "logError": {
+    "label": "bridged log error, matched stories (bridged, 38.1 percent of its predicted posts unmatched)",
+    "value": 1.095,
+    "unmatchedShareOfPredicted": 0.381,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorUS": {
+    "label": "bridged log error, US (bridged, 38.1 percent of its predicted posts unmatched)",
+    "value": 1.193,
+    "unmatchedShareOfPredicted": 0.542,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorIN": {
+    "label": "bridged log error, India (bridged, 38.1 percent of its predicted posts unmatched)",
+    "value": 1.048,
+    "unmatchedShareOfPredicted": 0.349,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsUS": {
+    "label": "bridged real top-10 stories found, US, at most 4 (bridged, 38.1 percent of its predicted posts unmatched)",
+    "value": 2,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsIN": {
+    "label": "bridged real top-10 stories found, India, at most 4 (bridged, 38.1 percent of its predicted posts unmatched)",
+    "value": 0,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "rows": 363,
+   "rowsMerged": 39
+  },
+  "gbm": {
+   "name": "boosted trees",
+   "logError": {
+    "label": "bridged log error, matched stories (bridged, 35.8 percent of its predicted posts unmatched)",
+    "value": 1.181,
+    "unmatchedShareOfPredicted": 0.358,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorUS": {
+    "label": "bridged log error, US (bridged, 35.8 percent of its predicted posts unmatched)",
+    "value": 1.321,
+    "unmatchedShareOfPredicted": 0.499,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorIN": {
+    "label": "bridged log error, India (bridged, 35.8 percent of its predicted posts unmatched)",
+    "value": 1.113,
+    "unmatchedShareOfPredicted": 0.323,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsUS": {
+    "label": "bridged real top-10 stories found, US, at most 4 (bridged, 35.8 percent of its predicted posts unmatched)",
+    "value": 1,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsIN": {
+    "label": "bridged real top-10 stories found, India, at most 4 (bridged, 35.8 percent of its predicted posts unmatched)",
+    "value": 0,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "rows": 363,
+   "rowsMerged": 39
+  },
+  "hawkes": {
+   "name": "hawkes",
+   "logError": {
+    "label": "bridged log error, matched stories (bridged, 79.3 percent of keys unmatched)",
+    "value": 1.687,
+    "unmatchedShareOfPredicted": null,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorUS": {
+    "label": "bridged log error, US (bridged, 79.3 percent of keys unmatched)",
+    "value": 1.68,
+    "unmatchedShareOfPredicted": null,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorIN": {
+    "label": "bridged log error, India (bridged, 79.3 percent of keys unmatched)",
+    "value": 1.691,
+    "unmatchedShareOfPredicted": null,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsUS": {
+    "label": "bridged real top-10 stories found, US, at most 4 (bridged, 79.3 percent of keys unmatched)",
+    "value": null,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsIN": {
+    "label": "bridged real top-10 stories found, India, at most 4 (bridged, 79.3 percent of keys unmatched)",
+    "value": null,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "rows": 363,
+   "rowsMerged": 39
+  },
+  "holt_damped": {
+   "name": "damped Holt",
+   "logError": {
+    "label": "bridged log error, matched stories (bridged, 36.9 percent of its predicted posts unmatched)",
+    "value": 1.096,
+    "unmatchedShareOfPredicted": 0.369,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorUS": {
+    "label": "bridged log error, US (bridged, 36.9 percent of its predicted posts unmatched)",
+    "value": 1.176,
+    "unmatchedShareOfPredicted": 0.519,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorIN": {
+    "label": "bridged log error, India (bridged, 36.9 percent of its predicted posts unmatched)",
+    "value": 1.058,
+    "unmatchedShareOfPredicted": 0.34,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsUS": {
+    "label": "bridged real top-10 stories found, US, at most 4 (bridged, 36.9 percent of its predicted posts unmatched)",
+    "value": 2,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsIN": {
+    "label": "bridged real top-10 stories found, India, at most 4 (bridged, 36.9 percent of its predicted posts unmatched)",
+    "value": 0,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "rows": 363,
+   "rowsMerged": 39
+  },
+  "nb_glm": {
+   "name": "nb_glm",
+   "logError": {
+    "label": "bridged log error, matched stories (bridged, 50.0 percent of its predicted posts unmatched)",
+    "value": 1.683,
+    "unmatchedShareOfPredicted": 0.5,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorUS": {
+    "label": "bridged log error, US (bridged, 50.0 percent of its predicted posts unmatched)",
+    "value": 1.68,
+    "unmatchedShareOfPredicted": null,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorIN": {
+    "label": "bridged log error, India (bridged, 50.0 percent of its predicted posts unmatched)",
+    "value": 1.685,
+    "unmatchedShareOfPredicted": 0.5,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsUS": {
+    "label": "bridged real top-10 stories found, US, at most 4 (bridged, 50.0 percent of its predicted posts unmatched)",
+    "value": null,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsIN": {
+    "label": "bridged real top-10 stories found, India, at most 4 (bridged, 50.0 percent of its predicted posts unmatched)",
+    "value": null,
+    "unmatchedShareOfKeys": 0.793,
+    "void": "ties at zero fill this top 10 (audit F4)"
+   },
+   "rows": 363,
+   "rowsMerged": 39
+  },
+  "persist": {
+   "name": "yesterday's count",
+   "logError": {
+    "label": "bridged log error, matched stories (bridged, 13.3 percent of its predicted posts unmatched)",
+    "value": 1.66,
+    "unmatchedShareOfPredicted": 0.133,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorUS": {
+    "label": "bridged log error, US (bridged, 13.3 percent of its predicted posts unmatched)",
+    "value": 1.262,
+    "unmatchedShareOfPredicted": 0.171,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorIN": {
+    "label": "bridged log error, India (bridged, 13.3 percent of its predicted posts unmatched)",
+    "value": 1.852,
+    "unmatchedShareOfPredicted": 0.128,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsUS": {
+    "label": "bridged real top-10 stories found, US, at most 4 (bridged, 13.3 percent of its predicted posts unmatched)",
+    "value": 2,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsIN": {
+    "label": "bridged real top-10 stories found, India, at most 4 (bridged, 13.3 percent of its predicted posts unmatched)",
+    "value": 0,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "rows": 363,
+   "rowsMerged": 39
+  },
+  "pooled": {
+   "name": "pooled",
+   "logError": {
+    "label": "bridged log error, matched stories (bridged, 43.4 percent of its predicted posts unmatched)",
+    "value": 1.223,
+    "unmatchedShareOfPredicted": 0.434,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorUS": {
+    "label": "bridged log error, US (bridged, 43.4 percent of its predicted posts unmatched)",
+    "value": 1.37,
+    "unmatchedShareOfPredicted": 0.552,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorIN": {
+    "label": "bridged log error, India (bridged, 43.4 percent of its predicted posts unmatched)",
+    "value": 1.152,
+    "unmatchedShareOfPredicted": 0.405,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsUS": {
+    "label": "bridged real top-10 stories found, US, at most 4 (bridged, 43.4 percent of its predicted posts unmatched)",
+    "value": 2,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsIN": {
+    "label": "bridged real top-10 stories found, India, at most 4 (bridged, 43.4 percent of its predicted posts unmatched)",
+    "value": 0,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "rows": 363,
+   "rowsMerged": 39
+  },
+  "sched_event": {
+   "name": "sched_event",
+   "logError": {
+    "label": "bridged log error, matched stories (bridged, 43.3 percent of its predicted posts unmatched)",
+    "value": 1.224,
+    "unmatchedShareOfPredicted": 0.433,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorUS": {
+    "label": "bridged log error, US (bridged, 43.3 percent of its predicted posts unmatched)",
+    "value": 1.371,
+    "unmatchedShareOfPredicted": 0.551,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorIN": {
+    "label": "bridged log error, India (bridged, 43.3 percent of its predicted posts unmatched)",
+    "value": 1.153,
+    "unmatchedShareOfPredicted": 0.404,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsUS": {
+    "label": "bridged real top-10 stories found, US, at most 4 (bridged, 43.3 percent of its predicted posts unmatched)",
+    "value": 2,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsIN": {
+    "label": "bridged real top-10 stories found, India, at most 4 (bridged, 43.3 percent of its predicted posts unmatched)",
+    "value": 0,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "rows": 363,
+   "rowsMerged": 39
+  },
+  "seasonal7": {
+   "name": "seasonal7",
+   "logError": {
+    "label": "bridged log error, matched stories (bridged, 95.5 percent of its predicted posts unmatched)",
+    "value": 1.388,
+    "unmatchedShareOfPredicted": 0.955,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorUS": {
+    "label": "bridged log error, US (bridged, 95.5 percent of its predicted posts unmatched)",
+    "value": 1.324,
+    "unmatchedShareOfPredicted": 0.969,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorIN": {
+    "label": "bridged log error, India (bridged, 95.5 percent of its predicted posts unmatched)",
+    "value": 1.419,
+    "unmatchedShareOfPredicted": 0.941,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsUS": {
+    "label": "bridged real top-10 stories found, US, at most 4 (bridged, 95.5 percent of its predicted posts unmatched)",
+    "value": 1,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsIN": {
+    "label": "bridged real top-10 stories found, India, at most 4 (bridged, 95.5 percent of its predicted posts unmatched)",
+    "value": 0,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "rows": 363,
+   "rowsMerged": 39
+  },
+  "strat_cat": {
+   "name": "strat_cat",
+   "logError": {
+    "label": "bridged log error, matched stories (bridged, 43.3 percent of its predicted posts unmatched)",
+    "value": 1.236,
+    "unmatchedShareOfPredicted": 0.433,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorUS": {
+    "label": "bridged log error, US (bridged, 43.3 percent of its predicted posts unmatched)",
+    "value": 1.402,
+    "unmatchedShareOfPredicted": 0.615,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorIN": {
+    "label": "bridged log error, India (bridged, 43.3 percent of its predicted posts unmatched)",
+    "value": 1.156,
+    "unmatchedShareOfPredicted": 0.39,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsUS": {
+    "label": "bridged real top-10 stories found, US, at most 4 (bridged, 43.3 percent of its predicted posts unmatched)",
+    "value": 2,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsIN": {
+    "label": "bridged real top-10 stories found, India, at most 4 (bridged, 43.3 percent of its predicted posts unmatched)",
+    "value": 0,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "rows": 363,
+   "rowsMerged": 39
+  },
+  "weekday_persist": {
+   "name": "weekday_persist",
+   "logError": {
+    "label": "bridged log error, matched stories (bridged, 13.8 percent of its predicted posts unmatched)",
+    "value": 1.486,
+    "unmatchedShareOfPredicted": 0.138,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorUS": {
+    "label": "bridged log error, US (bridged, 13.8 percent of its predicted posts unmatched)",
+    "value": 1.329,
+    "unmatchedShareOfPredicted": 0.171,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorIN": {
+    "label": "bridged log error, India (bridged, 13.8 percent of its predicted posts unmatched)",
+    "value": 1.562,
+    "unmatchedShareOfPredicted": 0.128,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsUS": {
+    "label": "bridged real top-10 stories found, US, at most 4 (bridged, 13.8 percent of its predicted posts unmatched)",
+    "value": 2,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsIN": {
+    "label": "bridged real top-10 stories found, India, at most 4 (bridged, 13.8 percent of its predicted posts unmatched)",
+    "value": 0,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "rows": 363,
+   "rowsMerged": 39
+  },
+  "zero": {
+   "name": "every story dies",
+   "logError": {
+    "label": "bridged log error, matched stories (bridged, 79.3 percent of keys unmatched)",
+    "value": 1.687,
+    "unmatchedShareOfPredicted": null,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorUS": {
+    "label": "bridged log error, US (bridged, 79.3 percent of keys unmatched)",
+    "value": 1.68,
+    "unmatchedShareOfPredicted": null,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "logErrorIN": {
+    "label": "bridged log error, India (bridged, 79.3 percent of keys unmatched)",
+    "value": 1.691,
+    "unmatchedShareOfPredicted": null,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsUS": {
+    "label": "bridged real top-10 stories found, US, at most 4 (bridged, 79.3 percent of keys unmatched)",
+    "value": null,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "top10HitsIN": {
+    "label": "bridged real top-10 stories found, India, at most 4 (bridged, 79.3 percent of keys unmatched)",
+    "value": null,
+    "unmatchedShareOfKeys": 0.793
+   },
+   "rows": 363,
+   "rowsMerged": 39
+  }
+ },
+ "bridge": {
+  "keysMatched": 413,
+  "forecastKeysUnmatched": 1585,
+  "forecastKeys": 1998,
+  "unmatchedShareOfKeys": 0.793,
+  "dayPostsCoveredByMatchedStories": {
+   "US": {
+    "dayPosts": 43542.0,
+    "shareInMatchedTargets": 0.2149648615130219
+   },
+   "IN": {
+    "dayPosts": 35130.0,
+    "shareInMatchedTargets": 0.3790777113578138
+   }
+  }
+ },
+ "notes": [
+  "Bridged numbers cover the stories that kept their posts across the rename, a selected slice of the day, and are not comparable with a by-key score.",
+  "Only 4 of each region's real top 10 are matched stories, so bridged top-10 hits are capped at 4.",
+  "Forecasts of 102 unmatched stories whose posts landed in a matched story are dropped, which biases bridged forecasts low; adding them back lowers every model's error by about 0.04 to 0.06 and leaves the order unchanged.",
+  "Coverage of the 80 percent range and the area-share comparison are not reported for this day."
+ ],
+ "timing": {
+  "2026-09-29": {
+   "targetStartsUtc": "2026-09-30T00:00:00Z",
+   "ledgerCommit": "249ff67487099c81fb94edf0fbe280008f5f213d",
+   "ledgerPushUtc": "2026-10-02T23:10:10Z",
+   "ledgerPushSource": "https://api.github.com/repos/SimPPL/arbiter-forecast-ledger/activity (activity API)",
+   "researchPushUtc": "2026-09-29T04:34:46Z",
+   "researchCommit": "8d628db",
+   "researchPushNote": "Push to the private research repo, recorded from its GitHub events; an outsider cannot check it."
+  }
+ }
+}

@@ -1,0 +1,472 @@
+{
+ "day": "2026-09-30",
+ "kind": "bridged",
+ "reading": "T0, bridged: Arbiter renamed every story on 30 September, so each forecast story is followed to the 30 Sep story holding at least half of its 28 Sep posts",
+ "bridgeRule": "amendment 02: best 30 Sep key by share of 28 Sep member posts (representative + duplicate ids), matched when share >= 0.5; many-to-one forecasts summed; unmatched excluded",
+ "unmatchedShareOfKeys": 0.793,
+ "forecasts": [
+  {
+   "issueDay": "2026-09-29",
+   "horizonDays": 2,
+   "model": "gbm|K0",
+   "regions": {
+    "US": [
+     {
+      "rank": 1,
+      "title": "AI and crypto assets draw renewed trading interest",
+      "arbiterKey": "US:9bdb89f3846ae06c",
+      "posts": 12.6,
+      "lo": 0.8,
+      "hi": 68.6,
+      "chance": "possible",
+      "bridged": false,
+      "bridgedTo": null,
+      "actualBridged": null,
+      "label": "unmatched by the bridge: no 30 Sep story holds half of its 28 Sep posts, so it is not scored"
+     },
+     {
+      "rank": 2,
+      "title": "Explosives arrests and evacuations near RAF Fairford",
+      "arbiterKey": "US:1c4a9540aabd2b1b",
+      "posts": 9.4,
+      "lo": 0.4,
+      "hi": 52.5,
+      "chance": "possible",
+      "bridged": true,
+      "bridgedTo": "US:611a8648542db4eb",
+      "bridgeShare": 0.711,
+      "storiesSharingTarget": 1,
+      "actualBridged": 39,
+      "label": "bridged actual: posts on 30 Sep in the story that holds most of this story's 28 Sep posts"
+     },
+     {
+      "rank": 3,
+      "title": "NFL Fans React to a Chaotic Week of Close Games",
+      "arbiterKey": "US:86fb773dc0dfe20d",
+      "posts": 6.4,
+      "lo": 0.0,
+      "hi": 37.0,
+      "chance": "possible",
+      "bridged": false,
+      "bridgedTo": null,
+      "actualBridged": null,
+      "label": "unmatched by the bridge: no 30 Sep story holds half of its 28 Sep posts, so it is not scored"
+     },
+     {
+      "rank": 4,
+      "title": "Cubs Fans Debate Jacob Webb’s Bullpen Struggles and Edward Cabrera’s Relief Outi",
+      "arbiterKey": "US:f2192fda9b96f6b8",
+      "posts": 4.5,
+      "lo": 0.0,
+      "hi": 27.1,
+      "chance": "possible",
+      "bridged": false,
+      "bridgedTo": null,
+      "actualBridged": null,
+      "label": "unmatched by the bridge: no 30 Sep story holds half of its 28 Sep posts, so it is not scored"
+     },
+     {
+      "rank": 5,
+      "title": "Vikings and Buccaneers Face Off in NFL Game",
+      "arbiterKey": "US:06d67049337d03ec",
+      "posts": 4.3,
+      "lo": 0.0,
+      "hi": 26.4,
+      "chance": "possible",
+      "bridged": true,
+      "bridgedTo": "US:c380cc30f2ca4f78",
+      "bridgeShare": 0.907,
+      "storiesSharingTarget": 2,
+      "actualBridged": 8,
+      "label": "bridged actual: posts on 30 Sep in the story that holds most of this story's 28 Sep posts"
+     },
+     {
+      "rank": 6,
+      "title": "Kirill Marchenko Reportedly Traded to the Toronto Maple Leafs",
+      "arbiterKey": "US:5e274d5c02d48e7c",
+      "posts": 4.2,
+      "lo": 0.0,
+      "hi": 26.0,
+      "chance": "possible",
+      "bridged": true,
+      "bridgedTo": "US:7946a4b98658e7b3",
+      "bridgeShare": 0.963,
+      "storiesSharingTarget": 2,
+      "actualBridged": 1675,
+      "label": "bridged actual: posts on 30 Sep in the story that holds most of this story's 28 Sep posts"
+     },
+     {
+      "rank": 7,
+      "title": "Dancing With the Stars Viewers Debate Carrie Ann Inaba’s Judging",
+      "arbiterKey": "US:10cf5502997994fb",
+      "posts": 4.0,
+      "lo": 0.0,
+      "hi": 24.8,
+      "chance": "possible",
+      "bridged": false,
+      "bridgedTo": null,
+      "actualBridged": null,
+      "label": "unmatched by the bridge: no 30 Sep story holds half of its 28 Sep posts, so it is not scored"
+     },
+     {
+      "rank": 8,
+      "title": "Sixers Media-Day Buzz and Roster Talk",
+      "arbiterKey": "US:e73bf00170f420a8",
+      "posts": 4.0,
+      "lo": 0.0,
+      "hi": 24.6,
+      "chance": "possible",
+      "bridged": true,
+      "bridgedTo": "US:99434d89fde8b8da",
+      "bridgeShare": 0.883,
+      "storiesSharingTarget": 1,
+      "actualBridged": 26,
+      "label": "bridged actual: posts on 30 Sep in the story that holds most of this story's 28 Sep posts"
+     },
+     {
+      "rank": 9,
+      "title": "Saints Rally Past Ravens in Fourth-Quarter Comeback",
+      "arbiterKey": "US:328846ab40ffc7b9",
+      "posts": 2.8,
+      "lo": 0.4,
+      "hi": 10.5,
+      "chance": "long shot",
+      "bridged": true,
+      "bridgedTo": "US:4fc9e28d506a8b63",
+      "bridgeShare": 0.974,
+      "storiesSharingTarget": 4,
+      "actualBridged": 8,
+      "label": "bridged actual: posts on 30 Sep in the story that holds most of this story's 28 Sep posts"
+     },
+     {
+      "rank": 10,
+      "title": "Rookie award odds and Jacob Rodriguez’s home debut",
+      "arbiterKey": "US:a20aed422c4c125c",
+      "posts": 2.8,
+      "lo": 0.4,
+      "hi": 10.5,
+      "chance": "long shot",
+      "bridged": true,
+      "bridgedTo": "US:6bc8f4e80054ca19",
+      "bridgeShare": 0.734,
+      "storiesSharingTarget": 5,
+      "actualBridged": 16,
+      "label": "bridged actual: posts on 30 Sep in the story that holds most of this story's 28 Sep posts"
+     }
+    ],
+    "IN": [
+     {
+      "rank": 1,
+      "title": "Qazi Tauqeer’s Bigg Boss 20 spotlight",
+      "arbiterKey": "IN:e9da355927000ea3",
+      "posts": 33.1,
+      "lo": 0.0,
+      "hi": 297.6,
+      "chance": "possible",
+      "bridged": true,
+      "bridgedTo": "IN:f670094fbe29dc76",
+      "bridgeShare": 0.793,
+      "storiesSharingTarget": 2,
+      "actualBridged": 72,
+      "label": "bridged actual: posts on 30 Sep in the story that holds most of this story's 28 Sep posts"
+     },
+     {
+      "rank": 2,
+      "title": "राजपाल यादव की चेक बाउंस मामले में सुप्रीम कोर्ट याचिका",
+      "arbiterKey": "IN:fb5a2b249f63a11b",
+      "posts": 21.5,
+      "lo": 0.0,
+      "hi": 196.2,
+      "chance": "possible",
+      "bridged": false,
+      "bridgedTo": null,
+      "actualBridged": null,
+      "label": "unmatched by the bridge: no 30 Sep story holds half of its 28 Sep posts, so it is not scored"
+     },
+     {
+      "rank": 3,
+      "title": "Election commissioners’ objections to India’s SIR process reported",
+      "arbiterKey": "IN:6c4503596fcb4ab4",
+      "posts": 21.4,
+      "lo": 0.0,
+      "hi": 195.1,
+      "chance": "possible",
+      "bridged": false,
+      "bridgedTo": null,
+      "actualBridged": null,
+      "label": "unmatched by the bridge: no 30 Sep story holds half of its 28 Sep posts, so it is not scored"
+     },
+     {
+      "rank": 4,
+      "title": "Virat Kohli’s ODI centuries and run-scoring records",
+      "arbiterKey": "IN:d741bfd3c3b5e2e9",
+      "posts": 20.7,
+      "lo": 0.0,
+      "hi": 189.2,
+      "chance": "possible",
+      "bridged": true,
+      "bridgedTo": "IN:89099b425da66c5f",
+      "bridgeShare": 0.603,
+      "storiesSharingTarget": 2,
+      "actualBridged": 70,
+      "label": "bridged actual: posts on 30 Sep in the story that holds most of this story's 28 Sep posts"
+     },
+     {
+      "rank": 5,
+      "title": "International football fixtures spotlight Netherlands, Germany, Norway and Denma",
+      "arbiterKey": "IN:38d9cd25ae2548f1",
+      "posts": 14.5,
+      "lo": 1.0,
+      "hi": 78.4,
+      "chance": "possible",
+      "bridged": true,
+      "bridgedTo": "IN:a6624bbb553d35c6",
+      "bridgeShare": 0.675,
+      "storiesSharingTarget": 1,
+      "actualBridged": 605,
+      "label": "bridged actual: posts on 30 Sep in the story that holds most of this story's 28 Sep posts"
+     },
+     {
+      "rank": 6,
+      "title": "Ujjain Shahi Mosque Faces Removal Amid Simhastha Road-Widening Plans",
+      "arbiterKey": "IN:f528a8904fa45827",
+      "posts": 10.1,
+      "lo": 0.5,
+      "hi": 56.0,
+      "chance": "possible",
+      "bridged": true,
+      "bridgedTo": "IN:c9a12515930d1696",
+      "bridgeShare": 0.971,
+      "storiesSharingTarget": 1,
+      "actualBridged": 8,
+      "label": "bridged actual: posts on 30 Sep in the story that holds most of this story's 28 Sep posts"
+     },
+     {
+      "rank": 7,
+      "title": "Online discussion of teachers and classroom experiences",
+      "arbiterKey": "IN:2c6fd6992a53bc55",
+      "posts": 9.4,
+      "lo": 0.4,
+      "hi": 52.2,
+      "chance": "possible",
+      "bridged": true,
+      "bridgedTo": "IN:090c9c31c4e5d6b8",
+      "bridgeShare": 0.613,
+      "storiesSharingTarget": 1,
+      "actualBridged": 406,
+      "label": "bridged actual: posts on 30 Sep in the story that holds most of this story's 28 Sep posts"
+     },
+     {
+      "rank": 8,
+      "title": "Tributes Mark Lata Mangeshkar’s Birth Anniversary",
+      "arbiterKey": "IN:023deebf538f555b",
+      "posts": 9.0,
+      "lo": 0.3,
+      "hi": 50.4,
+      "chance": "possible",
+      "bridged": true,
+      "bridgedTo": "IN:8461f0f3d9afb33a",
+      "bridgeShare": 0.977,
+      "storiesSharingTarget": 1,
+      "actualBridged": 1,
+      "label": "bridged actual: posts on 30 Sep in the story that holds most of this story's 28 Sep posts"
+     },
+     {
+      "rank": 9,
+      "title": "Student Protests at Lovely Professional University",
+      "arbiterKey": "IN:8af7a72825221f87",
+      "posts": 8.9,
+      "lo": 0.3,
+      "hi": 50.1,
+      "chance": "possible",
+      "bridged": true,
+      "bridgedTo": "IN:5822623ce0d27615",
+      "bridgeShare": 0.924,
+      "storiesSharingTarget": 3,
+      "actualBridged": 18,
+      "label": "bridged actual: posts on 30 Sep in the story that holds most of this story's 28 Sep posts"
+     },
+     {
+      "rank": 10,
+      "title": "AI Model Development and Performance Advances",
+      "arbiterKey": "IN:7634cda229c04fb9",
+      "posts": 8.7,
+      "lo": 0.3,
+      "hi": 48.7,
+      "chance": "possible",
+      "bridged": false,
+      "bridgedTo": null,
+      "actualBridged": null,
+      "label": "unmatched by the bridge: no 30 Sep story holds half of its 28 Sep posts, so it is not scored"
+     }
+    ]
+   }
+  }
+ ],
+ "actualTop10": {
+  "US": [
+   {
+    "rank": 1,
+    "title": "MLB postseason games bring big hits and heated reactions",
+    "arbiterKey": "US:cfc5a4ffc262e59f",
+    "posts": 8143,
+    "bridgedFromForecast": false,
+    "label": "actual 30 Sep story (new key); bridged comparison only"
+   },
+   {
+    "rank": 2,
+    "title": "WNBA playoff upsets and Fever-Aces matchup draw fan reactions",
+    "arbiterKey": "US:03f085b5c846bee4",
+    "posts": 3371,
+    "bridgedFromForecast": false,
+    "label": "actual 30 Sep story (new key); bridged comparison only"
+   },
+   {
+    "rank": 3,
+    "title": "DWTS Fans React to Eliminations and Contestant Rankings",
+    "arbiterKey": "US:017a24f564dbd018",
+    "posts": 2661,
+    "bridgedFromForecast": false,
+    "label": "actual 30 Sep story (new key); bridged comparison only"
+   },
+   {
+    "rank": 4,
+    "title": "Stars and fashion looks draw attention at Paris Fashion Week",
+    "arbiterKey": "US:dfdf14e1f626f3ac",
+    "posts": 1941,
+    "bridgedFromForecast": true,
+    "label": "actual 30 Sep story (new key); bridged comparison only"
+   },
+   {
+    "rank": 5,
+    "title": "U.S. Forces End Iraq Mission Amid Iran Tensions",
+    "arbiterKey": "US:836e5990ec747487",
+    "posts": 1805,
+    "bridgedFromForecast": true,
+    "label": "actual 30 Sep story (new key); bridged comparison only"
+   },
+   {
+    "rank": 6,
+    "title": "Maple Leafs acquire Kirill Marchenko in trade involving Matthew Knies",
+    "arbiterKey": "US:7946a4b98658e7b3",
+    "posts": 1675,
+    "bridgedFromForecast": true,
+    "label": "actual 30 Sep story (new key); bridged comparison only"
+   },
+   {
+    "rank": 7,
+    "title": "Morning Greetings and Faith-Based Blessings",
+    "arbiterKey": "US:dc649862268c0bc3",
+    "posts": 1486,
+    "bridgedFromForecast": true,
+    "label": "actual 30 Sep story (new key); bridged comparison only"
+   },
+   {
+    "rank": 8,
+    "title": "Snowfall Viewers React to Leon, Wanda and Dara’s Relationship Drama",
+    "arbiterKey": "US:7a6ae286eed11558",
+    "posts": 1260,
+    "bridgedFromForecast": false,
+    "label": "actual 30 Sep story (new key); bridged comparison only"
+   },
+   {
+    "rank": 9,
+    "title": "Trump Announces U.S. Push for AI “Superintelligence”",
+    "arbiterKey": "US:84ef5ba95d676c36",
+    "posts": 1246,
+    "bridgedFromForecast": false,
+    "label": "actual 30 Sep story (new key); bridged comparison only"
+   },
+   {
+    "rank": 10,
+    "title": "Cooler PCE Inflation Eases Fed-Hike Concerns",
+    "arbiterKey": "US:16afd1546b5b3419",
+    "posts": 1161,
+    "bridgedFromForecast": false,
+    "label": "actual 30 Sep story (new key); bridged comparison only"
+   }
+  ],
+  "IN": [
+   {
+    "rank": 1,
+    "title": "सपा के राज्यसभा उम्मीदवारों पर सियासी बहस",
+    "arbiterKey": "IN:239be0eb9bacffe6",
+    "posts": 1818,
+    "bridgedFromForecast": true,
+    "label": "actual 30 Sep story (new key); bridged comparison only"
+   },
+   {
+    "rank": 2,
+    "title": "Rohit Sharma reaches 12,000 ODI runs with a century",
+    "arbiterKey": "IN:ebb3c99818e95fa4",
+    "posts": 1430,
+    "bridgedFromForecast": true,
+    "label": "actual 30 Sep story (new key); bridged comparison only"
+   },
+   {
+    "rank": 3,
+    "title": "Reports of a confrontation aboard a FlyDubai flight",
+    "arbiterKey": "IN:f1bb9ee3c01de292",
+    "posts": 1309,
+    "bridgedFromForecast": false,
+    "label": "actual 30 Sep story (new key); bridged comparison only"
+   },
+   {
+    "rank": 4,
+    "title": "India Wins Asian Games Gold in Archery and Shooting",
+    "arbiterKey": "IN:e7d64e4d4233e2ee",
+    "posts": 1109,
+    "bridgedFromForecast": false,
+    "label": "actual 30 Sep story (new key); bridged comparison only"
+   },
+   {
+    "rank": 5,
+    "title": "Manchester City’s Premier League charges and potential sanctions",
+    "arbiterKey": "IN:cbda7a7331303a4d",
+    "posts": 1106,
+    "bridgedFromForecast": true,
+    "label": "actual 30 Sep story (new key); bridged comparison only"
+   },
+   {
+    "rank": 6,
+    "title": "Indian Coast Guard seizes narcotics from vessel in Arabian Sea",
+    "arbiterKey": "IN:da9981f7891c9278",
+    "posts": 1090,
+    "bridgedFromForecast": false,
+    "label": "actual 30 Sep story (new key); bridged comparison only"
+   },
+   {
+    "rank": 7,
+    "title": "Trump and Tech Leaders Sign White House Superintelligence Accord",
+    "arbiterKey": "IN:1071ffd387d67b31",
+    "posts": 1070,
+    "bridgedFromForecast": false,
+    "label": "actual 30 Sep story (new key); bridged comparison only"
+   },
+   {
+    "rank": 8,
+    "title": "Shubman Gill’s Record Double Century Leads India’s ODI Chase",
+    "arbiterKey": "IN:46286b793ed10dbe",
+    "posts": 940,
+    "bridgedFromForecast": true,
+    "label": "actual 30 Sep story (new key); bridged comparison only"
+   },
+   {
+    "rank": 9,
+    "title": "Sant Rampal Ji Announces Scripture-Based Debate Challenge",
+    "arbiterKey": "IN:57095f5ed6493b6b",
+    "posts": 929,
+    "bridgedFromForecast": false,
+    "label": "actual 30 Sep story (new key); bridged comparison only"
+   },
+   {
+    "rank": 10,
+    "title": "Apple Pay launches in India with limited card support",
+    "arbiterKey": "IN:82998f737fc4f243",
+    "posts": 909,
+    "bridgedFromForecast": false,
+    "label": "actual 30 Sep story (new key); bridged comparison only"
+   }
+  ]
+ }
+}
