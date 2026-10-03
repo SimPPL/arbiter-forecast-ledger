@@ -5,7 +5,7 @@
  "origin": "2026-09-28",
  "model": "gbm|K0",
  "unit": "An Arbiter story (narrative key) on X, regions US and IN. \"posts\" is the forecast count of posts published on the target day (UTC) that Arbiter will assign to the story; lo and hi bound the 80 percent range.",
- "note": "Two days ahead of the reading it started from, issued before the rule of one and three days. Published unchanged. This copy reached the ledger on 2 October, after the target day, so the push check in tools/verify.py fails for it. The OpenTimestamps proof, anchored in Bitcoin on 29 September, is the public clock that shows it was made before 30 September.",
+ "note": "Two days ahead of the reading it started from, issued before the horizon rule of 3 October 2026 (forecasts hourly, for the next day, and at most two days ahead). Published unchanged. This copy reached the ledger on 2 October, after the target day, so the push check in tools/verify.py fails for it. The OpenTimestamps proof, anchored in Bitcoin on 29 September, is the public clock that shows it was made before 30 September.",
  "source": {
   "repo": "narrative-reach-sim (private research repo)",
   "folder": "cleanroom/2026-09-28-tomorrow-tournament/forecasts/live-2026-09-30",
