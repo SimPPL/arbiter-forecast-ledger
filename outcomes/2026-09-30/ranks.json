@@ -1,0 +1,68 @@
+{
+ "day": "2026-09-30",
+ "rankRule": "rank among the region's non-hub stories with at least one post that day, by post count; tied stories share the better rank",
+ "regions": {
+  "US": {
+   "storiesWithPosts": 412,
+   "stories": {
+    "US:4fc9e28d506a8b63": {
+     "posts": 8,
+     "rank": 157
+    },
+    "US:611a8648542db4eb": {
+     "posts": 39,
+     "rank": 79
+    },
+    "US:6bc8f4e80054ca19": {
+     "posts": 16,
+     "rank": 111
+    },
+    "US:7946a4b98658e7b3": {
+     "posts": 1675,
+     "rank": 6
+    },
+    "US:99434d89fde8b8da": {
+     "posts": 26,
+     "rank": 95
+    },
+    "US:c380cc30f2ca4f78": {
+     "posts": 8,
+     "rank": 157
+    }
+   }
+  },
+  "IN": {
+   "storiesWithPosts": 406,
+   "stories": {
+    "IN:090c9c31c4e5d6b8": {
+     "posts": 406,
+     "rank": 28
+    },
+    "IN:5822623ce0d27615": {
+     "posts": 18,
+     "rank": 141
+    },
+    "IN:8461f0f3d9afb33a": {
+     "posts": 1,
+     "rank": 339
+    },
+    "IN:89099b425da66c5f": {
+     "posts": 70,
+     "rank": 76
+    },
+    "IN:a6624bbb553d35c6": {
+     "posts": 605,
+     "rank": 18
+    },
+    "IN:c9a12515930d1696": {
+     "posts": 8,
+     "rank": 191
+    },
+    "IN:f670094fbe29dc76": {
+     "posts": 72,
+     "rank": 75
+    }
+   }
+  }
+ }
+}
