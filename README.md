@@ -43,7 +43,7 @@ Swapneel set the horizons on 3 October 2026: forecasts are hourly, for the next 
 
 ## What it cannot tell you
 
-The forecast covers stories that already exist. On a typical day most posts go to stories that did not exist the morning before, and no forecast here lists them; `TABLE.md` marks those stories in the real top ten as new. Arbiter re-groups posts every day, so a story key can end while the conversation goes on under another key. Two scored days are a description and test nothing. And the ledger shows story volumes only. What we expect accounts to post is a separate benchmark, frozen in a private repository because it covers private accounts, and this ledger will receive its public-account rows and aggregate scores once each issue is scored.
+The forecast covers stories that already exist. On a typical day most posts go to stories that did not exist the morning before, and no forecast here lists them; `TABLE.md` marks those stories in the real top ten as new. Arbiter re-groups posts every day, so a story key can end while the conversation goes on under another key. Two scored days are a description and test nothing. And the ledger shows story volumes only. What we expect accounts to post is a separate benchmark, frozen in a private repository because it covers private accounts. From issue 2026-10-04 on, this ledger receives each of its predicted points and account rows as unit commits, with private accounts as salted hashes, and each row's score once the issue is scored.
 
 ## How to check the timing
 
@@ -73,6 +73,28 @@ The first issues are copies of forecasts frozen in our private research reposito
 - Issue 2026-10-02 forecast 3 October (one day ahead) and 5 October (three days ahead), stamped at 07:02 UTC on 2 October.
 - Issue 2026-10-03 forecast 4 October and 6 October.
 
+## One commit per story, category, predicted post and account
+
+From issue 2026-10-04 on, every forecast in this ledger is its own commit, and so is every score. The frozen parquet still holds the whole forecast and is still what we score. On top of it we commit small files, one per unit, so you can open the history of one story or one category and read each forecast and its score as a separate commit. We think a reader should be able to follow one story from the morning we forecast it to the morning we score it without opening a parquet file. We also want each of those steps to have its own commit, with its own place in the history, next to the two thousand other stories of the same issue.
+
+A unit is one of these:
+
+- a story (narrative): `issues/<day>/narratives/<country>/<category>/<key>.json` gives the story's forecast for D+1 and D+2, the 80 percent range, the chance of any post, and the baselines' forecasts beside it. Each issue gets a file for the 50 busiest US stories and the 20 busiest India stories by the D+1 forecast, every story in the published top 10, and every story the account benchmark covers.
+- a category: `issues/<day>/categories/<country>/<category>.json` gives the forecast posts in one Arbiter category, its share of the country's forecast posts, and the list of stories in it.
+- a predicted post: `issues/<day>/posts/<country>/<key>/<option>.json` gives one point we expect people to make in a story, the model that wrote it and its chance. When the point repeats a real post from the day before, we publish a paraphrase and keep the post itself private.
+- an account: `issues/<day>/accounts/<country>/<key>/<account>.json` gives the chance that one account posts in the story, from each of the three account models. A public account appears by handle. Every other account appears as a hash of its handle and a salt we draw for each issue and keep in our private repository. That lets us prove later which account a row meant, while you check every score without learning who the person is.
+- an hour: `hourly/<day>/<HH>/<country>/<key>.json`, once the hourly benchmark is registered. An hourly issue that reaches GitHub after its hour begins is void and stays out of every score.
+
+The commits come in a fixed order: categories, then stories by forecast rank (US first, then India), then predicted posts, then accounts. Each message reads like a line of a scoreboard, for example `predict 2026-10-04 US sports "NHL season opener sparks team and player reactions": D+1 22 posts [0.0, 298], any post 0.63; D+2 ...`. The last commit of an issue writes `UNITS.json`, which lists every unit file with its sha256 and the commit that added it, and `UNITS.json.ots`, its OpenTimestamps proof. One Bitcoin stamp of that file shows that every unit existed by the block time, and GitHub's record of the push that brought the issue is the second clock.
+
+Scoring works the same way under `outcomes/<day>/`. Each story and each category gets one commit with the forecast beside the real count, the real rank, the log error and the Brier score on any post, and `OUTCOMES-UNITS.json` with its stamp comes last. When Arbiter renames a story, its file holds the bridge record that says which story of the target day we followed it to and why. Units of the 3 October target are the first scored this way.
+
+Every unit holds `derivedFrom`, the frozen file it came from, that file's sha256 and the row. `tools/verify.py` rebuilds every story and category unit from the frozen parquet and fails on any difference. Before anything is committed, `tools/commit_units.sh` scans every unit and every commit message for the handle of every private account in the account benchmark, and it refuses on a single match.
+
+Three views grow by a row every day, and we regenerate them in the same commit as each index and never edit them by hand. `by-narrative/<country>/<key>.md` lists each issue that forecast a story, with links to the forecast commit and the score commit. `by-category/<country>/<category>.md` does the same for a category, with the running error against yesterday's count and against every story dies. `SCOREBOARD.md` holds the benchmark so far, every number beside its baseline.
+
+Issues before 2026-10-04 were published as single commits, one per issue, and outcomes before the 3 October target as one commit per day. We leave them as they are, because rewriting them would change their history.
+
 ## Daily procedure
 
-`tools/ledger-publish.sh <issueDay>` exports a new frozen issue, commits it and prints the push command. `tools/ledger-score.sh <day>` exports the outcome of a scored day, writes its `TABLE.md` with `tools/outcome_table.py`, commits it and prints the push command, and neither script pushes by itself. A target day forecast by two issues, D+1 of one and D+2 of the issue before, gets one entry per issue in `score.json`, and the two are never averaged. The tests of the tools run with `<python with pandas> -m unittest discover -s tests`.
+`tools/ledger-publish.sh <issueDay>` exports a new frozen issue, commits it, runs `tools/commit_units.sh <issueDay>` for the unit commits, and prints the push command. `tools/ledger-score.sh <day>` exports the outcome of a scored day, writes its `TABLE.md` with `tools/outcome_table.py`, commits it, runs `tools/commit_units.sh --outcome <day>`, and prints the push command; neither script pushes by itself. `tools/commit_units.sh <day> --dry-run` rehearses the unit commits in a scratch clone and leaves this one untouched. A target day forecast by two issues, D+1 of one and D+2 of the issue before, gets one entry per issue in `score.json`, and the two are never averaged. The tests of the tools run with `<python with pandas> -m unittest discover -s tests`.

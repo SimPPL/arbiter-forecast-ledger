@@ -1,6 +1,6 @@
 # How to verify a forecast
 
-Each forecast in `issues/<day>/` claims it was made before the day it predicts. You can check that claim with three tests. None of them asks you to trust us, and a fourth applies once predicted posts are published.
+Each forecast in `issues/<day>/` claims it was made before the day it predicts. You can check that claim with three tests. None of them asks you to trust us, and a fourth applies once predicted posts are published. A fifth, from issue 2026-10-04 on, checks that every story, category, predicted post and account is its own commit and rebuilds from the frozen forecast.
 
 ## The quick way
 
@@ -40,6 +40,25 @@ Each entry gives the push time and the commit the branch moved to (`after`). Fin
 ## 4. Real posts came after the forecast (from issue 2026-10-03 on)
 
 An X post id encodes the moment the post was created: shift the id right by 22 bits and add 1288834974657 to get milliseconds since 1970 in UTC. Once `outcomes/<day>/posts.json` exists, the script checks that every real post scored against an issue was created after GitHub received that issue.
+
+## 5. Each unit is its own commit, and rebuilds from the frozen forecast (from issue 2026-10-04 on)
+
+From issue 2026-10-04 on, each story, category, predicted post and account in an issue is a small file committed on its own (the README explains the units). `UNITS.json` lists every unit file with its sha256 and the commit that added it. The script checks four things:
+
+- Every unit file matches its sha256. The commit listed beside it holds that file alone, and every unit file on disk appears in the list.
+- Every story and category unit, rebuilt from the frozen parquet in the same folder, equals the published file once both are parsed. The category lists split each country's stories, with no story left out or counted twice.
+- `UNITS.json.ots` puts `UNITS.json` in a Bitcoin block before the first target day.
+- GitHub received the commit that added `UNITS.json` before the first target day.
+
+The rebuild reads parquet, so it needs `pip install pandas pyarrow`. Without them the script reports the rebuild as not checked. Outcome folders get the same checks against `OUTCOMES-UNITS.json`, and the rebuild there also recomputes every score from the forecast and the real count, and compares each real count with `stories.json`.
+
+By hand: pick a unit, read its `derivedFrom`, open that parquet with pandas and find the row by its key. The forecast, range and chance of any post in the unit are the values in that row. `git log --format='%H %s' -- <unit path>` shows the one commit that added it, and `git show --stat <commit>` shows that the commit holds that file alone.
+
+The category of each story comes from an internal Arbiter table that stays private. `FREEZE.json` holds its hash, so we cannot change it after the freeze. Account rows show a public account by handle and every other account by `accountRef`, a hash of the handle and a salt we keep private for each issue. You can check every account score from the public files, and we can show which account a row meant to anyone who has the right to know.
+
+An hourly issue (`hourly/<day>/<HH>/`) must reach GitHub before its hour begins. The script marks a late one VOID, and it stays out of every score.
+
+Issues before 2026-10-04 were published as single commits and have no unit files. Outcomes before the 3 October target have none either.
 
 ## What fails today, and why
 
