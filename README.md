@@ -1,6 +1,6 @@
 # Arbiter forecast ledger
 
-Every morning we forecast which stories people on X will post about over the next one to two days, in the United States and in India. This repository publishes each forecast before the day it predicts and adds what actually happened afterwards, so anyone can see how often we were right. You do not have to take our word for the timing either. Each forecast has three clocks we cannot set ourselves, and this README and `VERIFY.md` show how to read them.
+Every morning we forecast how many posts each story Arbiter already tracks on X will get over the next one to two days, in the United States and in India. Most of a day's posts go to stories that do not exist yet when we forecast, and the forecast does not cover those. This repository publishes each forecast before the day it predicts and adds what actually happened afterwards, so anyone can see how often we were right. You do not have to take our word for the timing either. Each forecast has three clocks we cannot set ourselves, and this README and `VERIFY.md` show how to read them.
 
 The stories come from Arbiter, SimPPL's social listening platform, which groups posts on X into stories, which it calls narratives, each with a key such as `IN:f1bb9ee3c01de292`. We publish the forecasts in the open because a forecast scored only by the people who made it is hard to trust.
 
