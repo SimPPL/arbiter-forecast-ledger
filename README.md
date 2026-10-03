@@ -1,6 +1,6 @@
 # Arbiter forecast ledger
 
-Every morning we forecast which stories people on X will post about one day and three days from now, in the United States and in India. This repository publishes each forecast before the day it predicts and adds what actually happened afterwards, so anyone can see how often we were right. You do not have to take our word for the timing either. Each forecast has three clocks we cannot set ourselves, and this README and `VERIFY.md` show how to read them.
+Every morning we forecast which stories people on X will post about over the next one to two days, in the United States and in India. This repository publishes each forecast before the day it predicts and adds what actually happened afterwards, so anyone can see how often we were right. You do not have to take our word for the timing either. Each forecast has three clocks we cannot set ourselves, and this README and `VERIFY.md` show how to read them.
 
 The stories come from Arbiter, SimPPL's social listening platform, which groups posts on X into stories, which it calls narratives, each with a key such as `IN:f1bb9ee3c01de292`. We publish the forecasts in the open because a forecast scored only by the people who made it is hard to trust.
 
@@ -26,7 +26,7 @@ Two simple forecasts run beside ours every day. Yesterday's count says each stor
 
 ## The score so far
 
-We have scored two target days so far. Both forecasts were frozen two days ahead, before the one-day and three-day rule existed.
+We have scored two target days so far. Both forecasts were frozen two days ahead, before the horizon rules of 1 and 3 October existed.
 
 | target day | how scored | boosted trees | yesterday's count | every story dies | table |
 |---|---|---|---|---|---|
@@ -36,6 +36,10 @@ We have scored two target days so far. Both forecasts were frozen two days ahead
 On 28 September every story dies had the lowest log error, which we think says more about how many stories die than about our model. Boosted trees found one of each country's ten busiest stories while yesterday's count found none. Arbiter renamed every story on 30 September, so no forecast story kept its key. We followed each one to the story of that day holding at least half of its earlier posts, a rule we fixed before computing any score. Every number from that day says "bridged" and gives the share we could not match. The bridged score covers the stories that kept going, which is a selected slice of the day and is not comparable with 28 September.
 
 Issues 2026-10-02 and 2026-10-03 are frozen and waiting for their target days (3 to 6 October).
+
+## Horizons from 3 October 2026
+
+Swapneel set the horizons on 3 October 2026: forecasts are hourly, for the next day (D+1), and at most two days ahead (D+2). The three-day horizon is retired. The three-day targets frozen before that change, 5 and 6 October, are each scored once, and then that horizon ends. Issues 2026-10-02 and 2026-10-03 each hold a three-day target, published unchanged because changing them would break their hashes. From the next issue on, the ledger holds D+1 and D+2 forecasts.
 
 ## What it cannot tell you
 
@@ -55,7 +59,7 @@ python3 tools/verify.py
 
 ## Rules
 
-- Horizons are one day and three days ahead, counted from the issue day. The two earliest issues, frozen on 27 and 29 September 2026, forecast two days ahead. We made them before this rule and publish them unchanged, because changing them would break their hashes.
+- Horizons are hourly, one day and at most two days ahead, counted from the issue day (from 3 October 2026). Issues 2026-10-02 and 2026-10-03 also hold a three-day target each, scored once. The two earliest issues, frozen on 27 and 29 September 2026, forecast two days ahead. We made them before this rule and publish them unchanged, because changing them would break their hashes.
 - Every forecast starts from the newest reading Arbiter has published.
 - Any account this ledger shows by handle is a public account: a public figure, an organisation, a media outlet, or an account with a post seen at least 250,000 times. Never a private account and never a minor. We cite each real post by its id and link, so anyone can open it on X.
 - Days are UTC.
