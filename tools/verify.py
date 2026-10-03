@@ -644,7 +644,7 @@ def checkRebuild(rep: Report, folder: str, py: Optional[str]) -> None:
     if py is None:
         rep.line(False, where, 'rebuild', 'not checked: needs pandas and pyarrow (pip install pandas pyarrow), or --units-python')
         return
-    r = subprocess.run([py, os.path.abspath(__file__), '--rebuild', where], capture_output=True, text=True)
+    r = subprocess.run([py, os.path.abspath(__file__), '--root', LEDGER, '--rebuild', where], capture_output=True, text=True)
     try:
         res = json.loads(r.stdout.strip().splitlines()[-1])
     except (ValueError, IndexError):
@@ -836,7 +836,11 @@ def main(argv: Optional[List[str]] = None) -> int:
     ap.add_argument('--units-only', action='store_true', help='run only the unit checks')
     ap.add_argument('--outcome-day', action='append', default=[], help='check this outcome folder (repeatable)')
     ap.add_argument('--rebuild', default=None, help=argparse.SUPPRESS)
+    ap.add_argument('--root', default=None, help=argparse.SUPPRESS)
     a = ap.parse_args(argv)
+    if a.root:
+        global LEDGER
+        LEDGER = os.path.abspath(a.root)
     if a.ots_dump:
         return otsDump(a.ots_dump)
     if a.rebuild:
