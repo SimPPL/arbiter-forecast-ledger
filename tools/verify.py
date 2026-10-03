@@ -10,10 +10,18 @@ For each issue folder it runs these checks and prints one line per check, PASS o
             events API) is older than the first target day
   posts     once outcomes/<day>/posts.json exists: every real post's X id decodes to a time after
             that push
+  units     from issue 2026-10-04 on: every unit file matches its sha256 and its own commit in UNITS.json,
+            and no unit file is unlisted
+  rebuild   every narrative and category unit is rebuilt from the frozen parquet and must equal the
+            published file (needs a Python with pandas and pyarrow; found like the ots interpreter)
+  unitstamp the OpenTimestamps proof of UNITS.json, against the first target day
+  unitpush  GitHub's record of the push that added UNITS.json, against the first target day
 
-It also checks outcome folders against their MANIFEST.json and GitHub's record for force pushes.
+It also checks outcome folders against their MANIFEST.json (and their unit layer the same way), hourly
+issues (an hourly issue pushed after its hour began is void), and GitHub's record for force pushes.
 
 Usage: python3 tools/verify.py [issueDay ...] [--repo OWNER/NAME] [--offline] [--ots-python PATH]
+                              [--units-python PATH] [--units-only] [--outcome-day DAY ...]
 Exit code 0 when every check passes, 1 otherwise. Standard library only, Python 3.9 or later; the
 stamp check also needs the opentimestamps package (pip install opentimestamps-client), found either
 in this interpreter or in the one given by --ots-python or OTS_PYTHON.
@@ -40,6 +48,20 @@ DEFAULT_OTS_PYTHON = os.path.expanduser('~/Documents/simppl/papers/narrative-rea
 UTC = dt.timezone.utc
 # Left by `ots upgrade` and macOS; git ignores them too.
 IGNORED = ('.ots.bak', '.DS_Store')
+DEFAULT_UNITS_PYTHON = os.path.expanduser('~/Documents/simppl/papers/narrative-reach-sim/tmp/venv-bo/bin/python')
+# The unit layer of a folder is checked against its unit index, not against MANIFEST.json (it is committed after it).
+UNIT_DIRS = ('categories', 'narratives', 'posts', 'accounts')
+UNIT_INDEXES = ('UNITS.json', 'UNITS.json.ots', 'OUTCOMES-UNITS.json', 'OUTCOMES-UNITS.json.ots')
+
+
+def isUnitLayer(rel: str) -> bool:
+    """Whether a path inside an issue or outcome folder belongs to the unit layer.
+
+    @param rel: path relative to the folder.
+    @returns: True for unit directories and unit indexes.
+    @throws: nothing.
+    """
+    return rel in UNIT_INDEXES or rel.split('/')[0] in UNIT_DIRS
 
 
 class Report:
@@ -166,7 +188,7 @@ def checkManifest(rep: Report, folder: str) -> Optional[dict]:
     for root, _, names in os.walk(folder):
         for n in names:
             rel = os.path.relpath(os.path.join(root, n), folder)
-            if rel != 'MANIFEST.json' and not rel.endswith(IGNORED):
+            if rel != 'MANIFEST.json' and not rel.endswith(IGNORED) and not isUnitLayer(rel):
                 present.add(rel)
     bad = [n for n, d in listed.items() if n not in present or sha256(os.path.join(folder, n)) != d]
     extra = sorted(present - set(listed))
@@ -478,6 +500,31 @@ def checkPush(rep: Report, folder: str, start: Optional[dt.datetime], pushes: Op
     return t
 
 
+def checkUnitPush(rep: Report, folder: str, start: Optional[dt.datetime], pushes: Optional[List[dict]], source: str) -> None:
+    """Compare GitHub's receipt of the commit that added UNITS.json with the first target day.
+
+    @param rep: report.
+    @param folder: issue folder.
+    @param start: first target day start.
+    @param pushes: GitHub push rows, or None.
+    @param source: API name or error.
+    @returns: None.
+    @throws: nothing.
+    """
+    where = os.path.relpath(folder, LEDGER)
+    commit = addingCommit(os.path.relpath(os.path.join(folder, 'UNITS.json'), LEDGER))
+    if commit is None or pushes is None:
+        rep.line(False, where, 'unitpush', 'UNITS.json is not committed' if commit is None else f'GitHub record unavailable ({source})')
+        return
+    t = pushTimeOf(commit, pushes)
+    if t is None:
+        rep.line(False, where, 'unitpush', f'commit {commit[:7]} is not in any push GitHub recorded ({source})')
+    elif start is not None and t < start:
+        rep.line(True, where, 'unitpush', f'GitHub received the unit index {commit[:7]} at {iso(t)}, before {iso(start)}')
+    else:
+        rep.line(False, where, 'unitpush', f'GitHub received the unit index {commit[:7]} at {iso(t)}, not before {iso(start) if start else "the target day"}')
+
+
 def xPostTime(postId: str) -> dt.datetime:
     """Creation time encoded in an X (Twitter) post id.
 
@@ -520,6 +567,258 @@ def checkPosts(rep: Report, issueDay: str, days: List[str], pushed: Optional[dt.
             rep.line(False, where, 'posts', f'{len(rows)} posts on {day}, earliest created {iso(first)}, before the push at {iso(pushed)}')
 
 
+def unitsPython(explicit: Optional[str]) -> Optional[str]:
+    """Interpreter that can read parquet (pandas and pyarrow), for rebuilding units.
+
+    @param explicit: --units-python value.
+    @returns: path, or None when none is found.
+    @throws: nothing.
+    """
+    for cand in (explicit, os.environ.get('UNITS_PYTHON'), sys.executable, DEFAULT_UNITS_PYTHON):
+        if not cand or not os.path.exists(cand):
+            continue
+        r = subprocess.run([cand, '-c', 'import pandas, pyarrow'], capture_output=True)
+        if r.returncode == 0:
+            return cand
+    return None
+
+
+def checkUnits(rep: Report, folder: str, indexName: str) -> Optional[dict]:
+    """Every unit file matches its sha256 and the commit UNITS.json names for it, and nothing is unlisted.
+
+    @param rep: report.
+    @param folder: issue or outcome folder.
+    @param indexName: 'UNITS.json' or 'OUTCOMES-UNITS.json'.
+    @returns: the parsed index, or None when the folder has none.
+    @throws OSError: on an unreadable file.
+    """
+    where = os.path.relpath(folder, LEDGER)
+    path = os.path.join(folder, indexName)
+    if not os.path.exists(path):
+        return None
+    idx = json.load(open(path, encoding='utf-8'))
+    bad = []
+    listed = set()
+    for r in idx['units']:
+        listed.add(r['path'])
+        full = os.path.join(LEDGER, r['path'])
+        if not os.path.exists(full):
+            bad.append(f'{r["path"]} missing')
+            continue
+        if sha256(full) != r['sha256']:
+            bad.append(f'{r["path"]} changed')
+            continue
+        shown = subprocess.run(['git', '-C', LEDGER, 'show', f'{r["commit"]}:{r["path"]}'], capture_output=True)
+        if shown.returncode != 0 or hashlib.sha256(shown.stdout).hexdigest() != r['sha256']:
+            bad.append(f'{r["path"]} is not what commit {r["commit"][:7]} holds')
+            continue
+        parent = subprocess.run(['git', '-C', LEDGER, 'diff-tree', '--no-commit-id', '--name-only', '-r', r['commit']],
+                                capture_output=True, text=True).stdout.split()
+        if parent != [r['path']]:
+            bad.append(f'commit {r["commit"][:7]} holds {len(parent)} paths, not only {r["path"]}')
+    present = set()
+    for d in UNIT_DIRS:
+        for root, _, names in os.walk(os.path.join(folder, d)):
+            for n in names:
+                if not n.endswith(IGNORED):
+                    present.add(os.path.relpath(os.path.join(root, n), LEDGER))
+    extra = sorted(present - listed)
+    if bad or extra:
+        rep.line(False, where, 'units', f'{len(bad)} bad ({"; ".join(bad[:5])}); not listed: {", ".join(extra[:5]) or "none"}')
+    else:
+        counts = ', '.join(f'{n} {k}' for k, n in idx.get('counts', {}).items())
+        rep.line(True, where, 'units', f'{len(listed)} unit files match {indexName}, each in its own commit ({counts})')
+    return idx
+
+
+def checkRebuild(rep: Report, folder: str, py: Optional[str]) -> None:
+    """Rebuild every narrative and category unit of a folder from the frozen parquet (in a Python with pandas).
+
+    @param rep: report.
+    @param folder: issue or outcome folder.
+    @param py: interpreter with pandas and pyarrow, or None.
+    @returns: None.
+    @throws: nothing; every failure becomes a FAIL line.
+    """
+    where = os.path.relpath(folder, LEDGER)
+    if py is None:
+        rep.line(False, where, 'rebuild', 'not checked: needs pandas and pyarrow (pip install pandas pyarrow), or --units-python')
+        return
+    r = subprocess.run([py, os.path.abspath(__file__), '--rebuild', where], capture_output=True, text=True)
+    try:
+        res = json.loads(r.stdout.strip().splitlines()[-1])
+    except (ValueError, IndexError):
+        rep.line(False, where, 'rebuild', f'rebuild crashed: {(r.stderr or r.stdout).strip()[-300:]}')
+        return
+    if res['failures']:
+        rep.line(False, where, 'rebuild', f'{len(res["failures"])} of {res["checked"]} differ: {"; ".join(res["failures"][:5])}')
+    else:
+        rep.line(True, where, 'rebuild', f'{res["checked"]} units rebuilt from the frozen parquet, all identical; {res["note"]}')
+
+
+def rebuildFolder(where: str) -> int:
+    """Rebuild the units of one folder and print a JSON result line (runs under the pandas interpreter).
+
+    @param where: folder relative to the ledger (issues/<I> or outcomes/<T>).
+    @returns: exit code 0.
+    @throws ImportError: when pandas is not installed.
+    """
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import units_lib as U  # noqa: PLC0415
+    kind, day = where.split('/')[:2]
+    folder = os.path.join(LEDGER, where)
+    fails: List[str] = []
+    checked = 0
+    if kind == 'issues':
+        idx = json.load(open(os.path.join(folder, 'UNITS.json'), encoding='utf-8'))
+        data = U.IssueData(LEDGER, day)
+        cats: Dict[str, Dict[str, set]] = {}
+        nars = []
+        for r in idx['units']:
+            if r['unit'] not in ('narrative', 'category'):
+                continue
+            u = json.load(open(os.path.join(LEDGER, r['path']), encoding='utf-8'))
+            checked += 1
+            try:
+                rb = json.loads(U.dumps(U.rebuildIssueUnit(data, r['path'], u)))
+            except (KeyError, ValueError) as e:
+                fails.append(f'{r["path"]}: {e}')
+                continue
+            if rb != u:
+                diff = sorted(k for k in set(rb) | set(u) if rb.get(k) != u.get(k))
+                fails.append(f'{r["path"]} differs in {", ".join(diff)}')
+            if u['unit'] == 'category forecast':
+                cats.setdefault(u['region'], {})[u['category']] = set(u['members'])
+            else:
+                nars.append((r['path'], u))
+        for R, byCat in cats.items():
+            keys = set(data.rows(data.targets[0], R)['narrativeKey'])
+            seen: set = set()
+            for c, m in byCat.items():
+                if m & seen:
+                    fails.append(f'{R} category {c} shares keys with another category')
+                seen |= m
+            if seen != keys:
+                fails.append(f'{R} category members cover {len(seen)} keys, the parquet holds {len(keys)}')
+        for p, u in nars:
+            if u['arbiterKey'] not in cats.get(u['region'], {}).get(u['category'], set()):
+                fails.append(f'{p}: its category {u["category"]} does not list it')
+        sel = U.selection(data)
+        have = {(u['region'], u['arbiterKey']) for _, u in nars}
+        missing = [f'{R} {k}' for R, ks in sel.items() for k in ks if (R, k) not in have]
+        if missing:
+            fails.append(f'{len(missing)} selected stories have no unit (first: {missing[0]})')
+        note = 'category members partition each region; every top story has a unit'
+    else:
+        idx = json.load(open(os.path.join(folder, 'OUTCOMES-UNITS.json'), encoding='utf-8'))
+        datas: Dict[str, object] = {}
+        stories = os.path.join(folder, 'stories.json')
+        known: Dict[Tuple[str, str], int] = {}
+        if os.path.exists(stories):
+            for f in json.load(open(stories, encoding='utf-8')).get('forecasts', []):
+                if f.get('kind', 'by key') == 'by key':
+                    for rows in f['regions'].values():
+                        for row in rows:
+                            if row.get('actual') is not None:
+                                known[(f['issueDay'], row['arbiterKey'])] = int(row['actual'])
+        loaded = []
+        keyOf: Dict[str, Dict[int, Tuple[str, Optional[str]]]] = {}
+        for r in idx['units']:
+            if r['unit'] not in ('narrative', 'category'):
+                continue
+            u = json.load(open(os.path.join(LEDGER, r['path']), encoding='utf-8'))
+            loaded.append((r, u))
+            if u['unit'] == 'narrative outcome':
+                for e in u['byIssue']:
+                    m = legacyKeyOf(u, e)
+                    if m:
+                        keyOf.setdefault(e['issueDay'], {}).update(m)
+        legacySkipped = 0
+        for r, u in loaded:
+            if u['unit'] == 'category outcome' and any('nk' in ((e.get('derivedFrom') or {}).get('row') or {}) or
+                                                       e['issueDay'] in keyOf for e in u['byIssue']):
+                # A legacy parquet holds only integer keys; its category members cannot be matched without the research map.
+                legacySkipped += 1
+                continue
+            checked += 1
+            try:
+                for e in u['byIssue']:
+                    if e['issueDay'] not in datas:
+                        datas[e['issueDay']] = U.IssueData(LEDGER, e['issueDay'], keyOf=keyOf.get(e['issueDay']))
+                rb = json.loads(U.dumps(U.rebuildOutcomeUnit(datas, u)))
+            except (KeyError, ValueError, StopIteration) as e:
+                fails.append(f'{r["path"]}: {e}')
+                continue
+            if rb != u:
+                fails.append(f'{r["path"]} differs from its rebuild')
+            if u['unit'] == 'narrative outcome':
+                for e in u['byIssue']:
+                    k = (e['issueDay'], u['arbiterKey'])
+                    if e['scoring'] == 'by key' and k in known and known[k] != e['scoredActual']:
+                        fails.append(f'{r["path"]}: real {e["scoredActual"]} but stories.json says {known[k]}')
+        note = 'forecasts rebuilt from the parquet, scores recomputed from the real counts; real counts agree with stories.json'
+        if legacySkipped:
+            note += f'; {legacySkipped} category units of a legacy issue keyed by integer ids checked by hash only'
+    print(json.dumps({'checked': checked, 'failures': fails, 'note': note}))
+    return 0
+
+
+def legacyKeyOf(u: dict, e: dict) -> Optional[Dict[int, Tuple[str, Optional[str]]]]:
+    """nk-to-key map for a legacy parquet keyed by nk, taken from the outcome unit's own derivedFrom row.
+
+    @param u: outcome unit.
+    @param e: one byIssue entry.
+    @returns: {nk: (key, title)} or None when the row is keyed by narrativeKey.
+    @throws: nothing.
+    """
+    row = (e.get('derivedFrom') or {}).get('row') or {}
+    if 'nk' in row:
+        return {int(row['nk']): (u.get('arbiterKey'), u.get('title'))}
+    return None
+
+
+def checkHourly(rep: Report, pushes: Optional[List[dict]], source: str) -> None:
+    """Each hourly issue must reach GitHub before its hour begins; one that did not is void and never scored.
+
+    Uses GitHub's push record when it is available, and otherwise the commit's own committer time, which is labelled
+    as the weaker clock it is.
+
+    @param rep: report.
+    @param pushes: GitHub push rows, or None.
+    @param source: API name or the reason the record is unavailable.
+    @returns: None.
+    @throws: nothing.
+    """
+    root = os.path.join(LEDGER, 'hourly')
+    if not os.path.isdir(root):
+        return
+    for day in sorted(os.listdir(root)):
+        for hh in sorted(os.listdir(os.path.join(root, day))) if os.path.isdir(os.path.join(root, day)) else []:
+            where = f'hourly/{day}/{hh}'
+            rel = f'{where}/UNITS.json'
+            try:
+                start = dt.datetime.fromisoformat(f'{day}T{int(hh):02d}:00:00+00:00')
+            except ValueError:
+                rep.line(False, where, 'hour', 'folder name is not a day and an hour')
+                continue
+            commit = addingCommit(rel)
+            if commit is None:
+                rep.line(False, where, 'hour', 'UNITS.json is not committed: void')
+                continue
+            t = pushTimeOf(commit, pushes) if pushes is not None else None
+            clock = f'GitHub push ({source})'
+            if t is None:
+                ct = git('log', '-1', '--format=%cI', commit).stdout.strip()
+                t = parseTime(ct) if ct else None
+                clock = 'commit time only (not pushed or no GitHub record); not a proof'
+            if t is None:
+                rep.line(False, where, 'hour', 'no clock for UNITS.json: void')
+            elif t < start:
+                rep.line(True, where, 'hour', f'{clock} {iso(t)}, before {iso(start)}')
+            else:
+                rep.line(False, where, 'hour', f'VOID: {clock} {iso(t)}, after the hour began at {iso(start)}; never scored')
+
+
 def main(argv: Optional[List[str]] = None) -> int:
     """Run every check.
 
@@ -533,9 +832,15 @@ def main(argv: Optional[List[str]] = None) -> int:
     ap.add_argument('--offline', action='store_true', help='skip GitHub and Bitcoin lookups')
     ap.add_argument('--ots-python', default=None)
     ap.add_argument('--ots-dump', default=None, help=argparse.SUPPRESS)
+    ap.add_argument('--units-python', default=None)
+    ap.add_argument('--units-only', action='store_true', help='run only the unit checks')
+    ap.add_argument('--outcome-day', action='append', default=[], help='check this outcome folder (repeatable)')
+    ap.add_argument('--rebuild', default=None, help=argparse.SUPPRESS)
     a = ap.parse_args(argv)
     if a.ots_dump:
         return otsDump(a.ots_dump)
+    if a.rebuild:
+        return rebuildFolder(a.rebuild)
     rep = Report()
     issuesDir = os.path.join(LEDGER, 'issues')
     days = a.days or sorted(d for d in os.listdir(issuesDir) if os.path.isdir(os.path.join(issuesDir, d)))
@@ -549,22 +854,39 @@ def main(argv: Optional[List[str]] = None) -> int:
     if pushes is not None:
         forced = [p for p in pushes if p['type'] == 'force_push']
         rep.line(not forced, a.repo, 'history', f'{len(forced)} force pushes in {len(pushes)} recorded pushes ({source})')
+    upy = unitsPython(a.units_python)
+    if a.outcome_day and not a.days:
+        days = []
     for day in days:
         folder = os.path.join(issuesDir, day)
         if not os.path.isdir(folder):
             rep.line(False, f'issues/{day}', 'folder', 'no such issue')
             continue
-        checkManifest(rep, folder)
-        checkFreeze(rep, folder)
         start, targets = firstTargetStart(folder)
-        checkStamp(rep, folder, start, py, a.offline)
-        pushed = checkPush(rep, folder, start, pushes, source)
-        checkPosts(rep, day, targets, pushed)
+        if not a.units_only:
+            checkManifest(rep, folder)
+            checkFreeze(rep, folder)
+            checkStamp(rep, folder, start, py, a.offline)
+            pushed = checkPush(rep, folder, start, pushes, source)
+            checkPosts(rep, day, targets, pushed)
+        if checkUnits(rep, folder, 'UNITS.json') is not None:
+            checkRebuild(rep, folder, upy)
+            checkStamp(rep, folder, start, py, a.offline, name='UNITS.json')
+            if not a.offline:
+                checkUnitPush(rep, folder, start, pushes, source)
     outDir = os.path.join(LEDGER, 'outcomes')
-    if not a.days and os.path.isdir(outDir):
-        for day in sorted(os.listdir(outDir)):
-            if os.path.isdir(os.path.join(outDir, day)):
-                checkManifest(rep, os.path.join(outDir, day))
+    outDays = a.outcome_day or ([] if a.days else (sorted(os.listdir(outDir)) if os.path.isdir(outDir) else []))
+    for day in outDays:
+        folder = os.path.join(outDir, day)
+        if not os.path.isdir(folder):
+            rep.line(False, f'outcomes/{day}', 'folder', 'no such outcome')
+            continue
+        if not a.units_only:
+            checkManifest(rep, folder)
+        if checkUnits(rep, folder, 'OUTCOMES-UNITS.json') is not None:
+            checkRebuild(rep, folder, upy)
+    if not a.units_only and not a.days:
+        checkHourly(rep, pushes, source)
     print(f'{rep.total - rep.failed} of {rep.total} checks passed')
     return 0 if rep.failed == 0 else 1
 
