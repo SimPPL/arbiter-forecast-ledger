@@ -29,6 +29,8 @@ LEDGER = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REGIONS = ('US', 'IN')
 REGION_NAMES = {'US': 'United States', 'IN': 'India'}
 LIVE_DATA = 'data/tomorrow_tournament/live'
+sys.path.insert(0, os.path.join(LEDGER, 'tools'))
+import export_issue as EI  # noqa: E402  (standard library only)
 
 
 def sha256(path: str) -> str:
@@ -71,12 +73,65 @@ def forecastKeys(stories: dict) -> Dict[str, set]:
     """
     out: Dict[str, set] = {R: set() for R in REGIONS}
     for f in stories['forecasts']:
+        kind = forecastKind(stories, f)
+        if kind == 'rename, not scored':
+            continue
         for R in REGIONS:
             for r in f['regions'][R]:
-                k = r.get('bridgedTo') if stories['kind'] == 'bridged' else r['arbiterKey']
+                k = r.get('bridgedTo') if kind == 'bridged' else r['arbiterKey']
                 if k:
                     out[R].add(k)
     return out
+
+
+def forecastKind(stories: dict, f: dict) -> str:
+    """How one forecast of an outcome was scored: 'by key', 'bridged' or 'rename, not scored'.
+
+    @param stories: parsed stories.json (the 28 and 30 Sep files carry the kind only at the top).
+    @param f: one entry of stories['forecasts'].
+    @returns: the forecast's kind.
+    @throws KeyError: when neither carries a kind.
+    """
+    return f.get('kind', stories['kind'])
+
+
+def horizonText(f: dict) -> str:
+    """Heading text for a forecast's horizon with both clocks, e.g. "D+1 (lag 2)".
+
+    The lag comes from the entry itself or, for outcomes written before amendment 04, from the issue's forecast.json.
+
+    @param f: one entry of stories['forecasts'].
+    @returns: the horizon text.
+    @throws: nothing; without a lag the old wording is returned.
+    """
+    lag, countedFrom = f.get('lagFromOriginDays'), f.get('horizonCountedFrom')
+    if lag is None or countedFrom is None:
+        try:
+            fc = json.load(open(os.path.join(LEDGER, 'issues', f['issueDay'], 'forecast.json'), encoding='utf-8'))
+            h = next(x for x in fc['horizons'] if x['horizonDays'] == f['horizonDays'])
+            lag, countedFrom = h['lagFromOriginDays'], h['horizonCountedFrom']
+        except (OSError, KeyError, StopIteration, ValueError):
+            return f"{f['horizonDays']} day{'s' if f['horizonDays'] != 1 else ''} ahead"
+    return EI.horizonLabel(f['horizonDays'], lag, countedFrom)
+
+
+def modelName(score: dict, f: dict, model: str) -> str:
+    """Plain name of the forecast's model from score.json, for either score layout.
+
+    @param score: parsed score.json (models at the top for 28 and 30 Sep, byIssue for later days).
+    @param f: one entry of stories['forecasts'].
+    @param model: model id.
+    @returns: the plain name, or the id when score.json has none.
+    @throws: nothing.
+    """
+    if f.get('modelName'):
+        return f['modelName']
+    if model in (score.get('models') or {}):
+        return score['models'][model].get('name', model)
+    for p in score.get('byIssue') or []:
+        if p.get('issueDay') == f['issueDay'] and p.get('horizonDays') == f['horizonDays']:
+            return ((p.get('models') or {}).get(model) or {}).get('name', model)
+    return model
 
 
 def writeRanks(day: str, research: str) -> int:
@@ -158,7 +213,8 @@ def render(day: str) -> str:
     score = json.load(open(os.path.join(folder, 'score.json'), encoding='utf-8'))
     rpath = os.path.join(folder, 'ranks.json')
     ranks = json.load(open(rpath, encoding='utf-8')) if os.path.exists(rpath) else None
-    bridged = stories['kind'] == 'bridged'
+    bridgedTop = stories.get('actualTop10Source', 'computed' if stories['kind'] == 'bridged' else 'score file') == 'computed'
+    anyBridged = any(forecastKind(stories, f) != 'by key' for f in stories['forecasts'])
     top10Rank = {R: {t['arbiterKey']: t['rank'] for t in stories['actualTop10'][R]} for R in REGIONS}
 
     def realRank(R: str, key: Optional[str]) -> str:
@@ -171,7 +227,9 @@ def render(day: str) -> str:
         return str(top10Rank[R][key]) if key in top10Rank[R] else 'outside the top 10'
 
     lines = [f'# Predicted against real, {day}', '']
-    if bridged:
+    if anyBridged and stories.get('bridgeNote'):
+        lines += [stories['bridgeNote'], '']
+    elif anyBridged:
         lines += [f"Arbiter renamed every story on {day}, so no forecast story kept its key. We followed each forecast story to the "
                   f"story of that day holding at least half of its posts from the reading the forecast started from, a rule we fixed before "
                   f"computing any score. A row with no such match is not scored. The share of the forecast that could not be matched "
@@ -184,12 +242,19 @@ def render(day: str) -> str:
               'A real rank of "9 of 96" means the story was the ninth busiest of the 96 stories in that country with at least one post that day.', '']
     for f in stories['forecasts']:
         model = f['model'].split('|')[0]
-        mname = score.get('models', {}).get(model, {}).get('name', model)
-        lines += [f"## Issue {f['issueDay']}, {f['horizonDays']} day{'s' if f['horizonDays'] != 1 else ''} ahead, {mname}", '']
+        mname = modelName(score, f, model)
+        kind = forecastKind(stories, f)
+        lines += [f"## Issue {f['issueDay']}, {horizonText(f)}, {mname}", '']
+        if kind == 'rename, not scored':
+            lines += ['Arbiter renamed its stories after the reading this forecast started from, so no row can be scored by key. '
+                      'The rows are scored once the bridged score exists.', '']
         for R in REGIONS:
             lines += [f'### {REGION_NAMES[R]}', '']
-            if bridged:
-                un = score['models'][model][f'logError{R}'].get('unmatchedShareOfPredicted')
+            if kind == 'bridged':
+                if 'unmatchedShareOfPredicted' in f:
+                    un = f['unmatchedShareOfPredicted'].get(R)
+                else:
+                    un = score['models'][model][f'logError{R}'].get('unmatchedShareOfPredicted')
                 unTxt = 'n/a' if un is None else f'{100 * un:.1f} percent of predicted posts unmatched'
                 lines += ['| our rank | story | forecast | 80 percent range | real posts (bridged) | real rank (bridged) | in range | bridge | unmatched share, this region\'s forecast |',
                           '|---|---|---|---|---|---|---|---|---|']
@@ -208,6 +273,12 @@ def render(day: str) -> str:
                     else:
                         lines.append(f"| {r['rank']} | {cell(r['title'])} | {fmtCount(r['posts'])} | {fmtCount(r['lo'])} to {fmtCount(r['hi'])} | "
                                      f"not scored | not scored | not scored | unmatched | {unTxt} |")
+            elif kind == 'rename, not scored':
+                lines += ['| our rank | story | forecast | 80 percent range | real posts | real rank | in range |',
+                          '|---|---|---|---|---|---|---|']
+                for r in f['regions'][R]:
+                    lines.append(f"| {r['rank']} | {cell(r['title'])} | {fmtCount(r['posts'])} | {fmtCount(r['lo'])} to {fmtCount(r['hi'])} | "
+                                 f"not scored | not scored | not scored |")
             else:
                 lines += ['| our rank | story | forecast | 80 percent range | real posts | real rank | in range |',
                           '|---|---|---|---|---|---|---|']
@@ -219,10 +290,13 @@ def render(day: str) -> str:
     for R in REGIONS:
         listed = set()
         for f in stories['forecasts']:
+            kind = forecastKind(stories, f)
+            if kind == 'rename, not scored':
+                continue
             for r in f['regions'][R]:
-                listed.add(r.get('bridgedTo') if bridged else r['arbiterKey'])
+                listed.add(r.get('bridgedTo') if kind == 'bridged' else r['arbiterKey'])
         lines += [f'## The real top 10, {REGION_NAMES[R]}', '']
-        if bridged:
+        if bridgedTop:
             lines += ['| real rank | story | real posts | a forecast story was bridged to it | in our top 10 |', '|---|---|---|---|---|']
             for t in stories['actualTop10'][R]:
                 lines.append(f"| {t['rank']} | {cell(t['title'])} | {fmtCount(t['posts'])} | {'yes' if t.get('bridgedFromForecast') else 'no'} | "

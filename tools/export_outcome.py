@@ -10,7 +10,12 @@ Three kinds of day:
   2026-09-28  scored by story key (pilot)
   2026-09-30  scored through the post-overlap bridge, because Arbiter renamed every story that day;
               every number carries "bridged" and the share of the forecast that could not be matched
-  later days  scored by key by the forward block's fwd_score.py (results/issue-<I>/score_<day>_h<h>_T<K>.json)
+  later days  the forward block's fwd_score.py, one entry per issue that forecast the day (a day can be D+1 of
+              one issue and D+2 of the issue before; the entries are kept apart, never averaged):
+                results/issue-<I>/score_<day>_h<h>_T0.json          scored by key (amendment 04 scores included)
+                results/issue-<I>/rename_<day>_h<h>_T0.json         Arbiter renamed its stories after the origin;
+                results/issue-<I>/score_bridged_<day>_h<h>_T0.json  the bridged score, when it exists, with the
+                                                                     bridge file its `bridge` field names
 
 Usage: <python with pandas> tools/export_outcome.py <day> [--research <path>] [--force] [--offline]
 Exit codes: 0 written, 2 refused (no score yet, source uncommitted, or folder exists).
@@ -43,8 +48,29 @@ REGIONS = ('US', 'IN')
 # Models the page and the ledger report, with plain names; the score files hold more.
 NAMES = {'gbm': 'boosted trees', 'gbm_med': 'boosted trees (median)', 'persist': "yesterday's count",
          'zero': 'every story dies', 'volols': 'one-variable volume regression', 'ewma': 'exponential smoothing',
-         'holt_damped': 'damped Holt'}
-REFERENCES = ('persist', 'zero')
+         'holt_damped': 'damped Holt', 'surv_age': 'age-conditioned survival',
+         'tsb': 'Teunter-Syntetos-Babai activity probability', 'hurdle_nb': 'hurdle negative binomial'}
+REFERENCES = ('persist', 'zero', 'volols')
+# The two tournament days were scored against these two only.
+LEGACY_REFERENCES = ('persist', 'zero')
+CELLS = ('all',) + REGIONS
+CELL_WORDS = {'all': 'all stories', 'US': 'US', 'IN': 'India'}
+# Amendment 04 scores, in the order they are reported: every one comes before log error.
+DISTRIBUTIONAL = (('rps', 'ranked probability score'), ('brierActive', 'Brier score on any post'),
+                  ('logErrGivenActive', 'log error on stories that got a post'))
+# What each fitted reference is scored on (amendment 04, section 2); surv_age and tsb give only P(any post).
+REFERENCE_SCORES = {'surv_age': ('brierActive',), 'tsb': ('brierActive',),
+                    'hurdle_nb': ('rps', 'brierActive', 'logErrGivenActive', 'logErr')}
+CLIMATOLOGY = ('every story dies forecasts no posts, but its predictive distribution is the spread of the calibration '
+               'days, a climatology, so these scores describe that climatology and not "every story dies"')
+SCORE_DEFINITIONS = {
+    'activeRows': 'stories with at least one post on the day',
+    'rps': 'ranked probability score of the post count under the model\'s predictive distribution; lower is better',
+    'brierActive': '(P(at least one post) - 1 if the story got a post, else 0) squared, averaged; lower is better',
+    'logErrGivenActive': 'over stories with at least one post, |log(1 + actual) - log(1 + median given a post)|; lower is better',
+    'logError': 'mean |log(1 + actual) - log(1 + forecast)| over every story live at the origin; lower is better',
+    'climatology': CLIMATOLOGY,
+}
 # Private research-repo push times for the copied legacy issues (PROOF-OF-TIMING.md in the research repo).
 RESEARCH_PUSH = {'2026-09-27': ('2026-09-27T21:19:29Z', 'ad25f9d'), '2026-09-29': ('2026-09-29T04:34:46Z', '8d628db'),
                  '2026-10-02': ('2026-10-02T07:02:18Z', '79a7df4')}
@@ -168,12 +194,13 @@ def actualTop(score: dict) -> Dict[str, List[dict]]:
     return out
 
 
-def computedTop(research: str, actual: pd.Series, matched: set) -> Dict[str, List[dict]]:
+def computedTop(research: str, actual: pd.Series, matched: set, label: str) -> Dict[str, List[dict]]:
     """The day's actual top 10 per region, computed from the live tables (non-hub stories only).
 
     @param research: research repo root.
     @param actual: posts by key for the day.
     @param matched: keys of the day that a forecast story was bridged to.
+    @param label: what each row is, in plain words.
     @returns: {region: [{rank, title, arbiterKey, posts, bridgedFromForecast, label}]}.
     @throws OSError: when nk_meta is absent.
     """
@@ -183,7 +210,7 @@ def computedTop(research: str, actual: pd.Series, matched: set) -> Dict[str, Lis
         keys = [k for k in actual.index if k in meta.index and meta.at[k, 'region'] == R and not bool(meta.at[k, 'hub']) and actual[k] > 0]
         top = sorted(keys, key=lambda k: (-int(actual[k]), k))[:10]
         out[R] = [{'rank': i + 1, 'title': meta.at[k, 'title'], 'arbiterKey': k, 'posts': int(actual[k]),
-                   'bridgedFromForecast': k in matched, 'label': 'actual 30 Sep story (new key); bridged comparison only'}
+                   'bridgedFromForecast': k in matched, 'label': label}
                   for i, k in enumerate(top)]
     return out
 
@@ -198,6 +225,17 @@ def metric(label: str, value: Optional[float], **extra: object) -> dict:
     @throws: nothing.
     """
     return {'label': label, 'value': value, **extra}
+
+
+def shortDay(day: str) -> str:
+    """A day as "30 Sep".
+
+    @param day: YYYY-MM-DD.
+    @returns: day of month and abbreviated month.
+    @throws ValueError: when the day is malformed.
+    """
+    d = dt.date.fromisoformat(day)
+    return f'{d.day} {d.strftime("%b")}'
 
 
 def legacyByKey(day: str, research: str) -> tuple:
@@ -244,10 +282,87 @@ def legacyByKey(day: str, research: str) -> tuple:
                       'note': 'Computed by tools/export_outcome.py over the same rows; the research score file has no zero row. It ranks nothing, so it finds no top-10 story.'}
     score = {'day': day, 'kind': 'by key', 'horizonDays': 2, 'reading': 'T0',
              'logErrorDefinition': 'mean |log(1 + actual) - log(1 + forecast)| over every story the forecast listed; lower is better',
-             'headline': 'gbm', 'references': list(REFERENCES), 'models': models,
+             'headline': 'gbm', 'references': list(LEGACY_REFERENCES), 'models': models,
              'newStoryShare': sc.get('newShare'),
              'notes': ['The US half of this day is degraded: US collection fell from 24 to 28 September, and the day holds 4,486 posts in US stories against 29,183 in India.']}
     return stories, score, [rel, f'{TOURNAMENT}/forecasts/pilot-2026-09-28/pred_{day}_h2_K0.parquet', f'{LIVE_DATA}/vint.parquet', f'{LIVE_DATA}/nk_meta.parquet']
+
+
+def bridgedRows(top: List[dict], br: dict, actual: pd.Series) -> List[dict]:
+    """Forecast top 10 of one region beside the actual count of the story each was bridged to.
+
+    @param top: forecast.json rows.
+    @param br: bridge file (fromDay, toDay, minShare, mapping).
+    @param actual: posts by key on the target day.
+    @returns: rows with bridged, bridgedTo, bridgeShare, storiesSharingTarget, actualBridged and a label.
+    @throws KeyError: when the bridge file lacks its mapping.
+    """
+    mapping = {m['narrativeKey']: m for m in br['mapping']}
+    fan = pd.Series([m['bestKey'] for m in br['mapping'] if m['matched']]).value_counts()
+    fromD, toD = shortDay(br['fromDay']), shortDay(br['toDay'])
+    need = 'half' if abs(float(br.get('minShare', 0.5)) - 0.5) < 1e-12 else f'{round(100 * float(br["minShare"]))} percent'
+    rows = []
+    for r in top:
+        m = mapping.get(r['arbiterKey'])
+        row = dict(r)
+        if m and m['matched']:
+            a = int(actual.get(m['bestKey'], 0))
+            row.update({'bridged': True, 'bridgedTo': m['bestKey'], 'bridgeShare': num(m['bestShare']),
+                        'storiesSharingTarget': int(fan.get(m['bestKey'], 1)),
+                        'actualBridged': a, 'label': f'bridged actual: posts on {toD} in the story that holds most of this story\'s {fromD} posts'})
+        else:
+            row.update({'bridged': False, 'bridgedTo': None, 'actualBridged': None,
+                        'label': f'unmatched by the bridge: no {toD} story holds {need} of its {fromD} posts, so it is not scored'})
+        rows.append(row)
+    return rows
+
+
+def bridgedModels(sc: dict, voidTop10IN: tuple = ()) -> dict:
+    """Bridged log error and top-10 hits per model, each beside its unmatched share.
+
+    @param sc: one folder object of a bridged score file (models, unmatched).
+    @param voidTop10IN: models whose India top 10 is void because ties at zero fill it (30 Sep audit F4); a model
+        may also carry its own 'top10Void' reason.
+    @returns: {model: {name, logError, logErrorUS, logErrorIN, top10HitsUS, top10HitsIN, rows, rowsMerged}}.
+    @throws KeyError: when a model has no unmatched record.
+    """
+    models = {}
+    for name, m in sc['models'].items():
+        un = sc['unmatched'][name]
+        sP, sK = num(un.get('unmatchedShareOfPredicted')), num(un.get('unmatchedShareOfKeys'))
+        tag = (f'bridged, {round(100 * sP, 1)} percent of its predicted posts unmatched' if sP is not None
+               else f'bridged, {round(100 * sK, 1)} percent of keys unmatched')
+        hits = {d['region']: d['hits'] for d in m.get('perDay', [])}
+        byR = {R: num(un['byRegion'][R].get('unmatchedShareOfPredicted')) for R in REGIONS}
+        voidIN = name in voidTop10IN
+        ownVoid = m.get('top10Void')
+        models[name] = {'name': NAMES.get(name, name),
+                        'logError': metric(f'bridged log error, matched stories ({tag})', num(m.get('male')), unmatchedShareOfPredicted=sP, unmatchedShareOfKeys=sK),
+                        'logErrorUS': metric(f'bridged log error, US ({tag})', num(m.get('male_US')), unmatchedShareOfPredicted=byR['US'], unmatchedShareOfKeys=sK),
+                        'logErrorIN': metric(f'bridged log error, India ({tag})', num(m.get('male_IN')), unmatchedShareOfPredicted=byR['IN'], unmatchedShareOfKeys=sK),
+                        'top10HitsUS': metric(f'bridged real top-10 stories found, US, at most 4 ({tag})',
+                                              None if (name == 'zero' or ownVoid) else hits.get('US'), unmatchedShareOfKeys=sK,
+                                              **({'void': ownVoid} if ownVoid else {})),
+                        'top10HitsIN': metric(f'bridged real top-10 stories found, India, at most 4 ({tag})',
+                                              None if (name == 'zero' or voidIN or ownVoid) else hits.get('IN'), unmatchedShareOfKeys=sK,
+                                              **({'void': 'ties at zero fill this top 10 (audit F4)'} if voidIN else {'void': ownVoid} if ownVoid else {})),
+                        'rows': m.get('rows'), 'rowsMerged': m.get('rowsMerged')}
+    return models
+
+
+def bridgeSummary(br: dict, sc: dict, headline: str) -> dict:
+    """Counts of the bridge itself: keys matched and unmatched, and the share of the day the matched stories hold.
+
+    @param br: bridge file.
+    @param sc: one folder object of a bridged score file.
+    @param headline: model whose unmatched record gives the forecast key counts.
+    @returns: {keysMatched, forecastKeysUnmatched, forecastKeys, unmatchedShareOfKeys, dayPostsCoveredByMatchedStories}.
+    @throws KeyError: when a field is absent.
+    """
+    un = sc['unmatched'][headline]
+    return {'keysMatched': br['keysMatched'], 'forecastKeysUnmatched': un['keysUnmatched'],
+            'forecastKeys': un['keys'], 'unmatchedShareOfKeys': num(un['unmatchedShareOfKeys']),
+            'dayPostsCoveredByMatchedStories': sc['dayPostsCoveredByMatchedTargets']}
 
 
 def legacyBridged(day: str, research: str) -> tuple:
@@ -262,60 +377,21 @@ def legacyBridged(day: str, research: str) -> tuple:
     relB = f'{TOURNAMENT}/results/live/bridge_{day}.json'
     sc = loadJson(os.path.join(research, relS))['folders']['live-2026-09-30']
     br = loadJson(os.path.join(research, relB))
-    mapping = {m['narrativeKey']: m for m in br['mapping']}
     actual = actualCounts(research, day)
     unK = sc['unmatched']['gbm']['unmatchedShareOfKeys']
     iss = issuesFor(day)
-    fan = pd.Series([m['bestKey'] for m in br['mapping'] if m['matched']]).value_counts()
-    forecasts = []
-    for i in iss:
-        regions = {}
-        for R in REGIONS:
-            rows = []
-            for r in i['horizon']['regions'][R]['top']:
-                m = mapping.get(r['arbiterKey'])
-                row = dict(r)
-                if m and m['matched']:
-                    a = int(actual.get(m['bestKey'], 0))
-                    row.update({'bridged': True, 'bridgedTo': m['bestKey'], 'bridgeShare': num(m['bestShare']),
-                                'storiesSharingTarget': int(fan.get(m['bestKey'], 1)),
-                                'actualBridged': a, 'label': 'bridged actual: posts on 30 Sep in the story that holds most of this story\'s 28 Sep posts'})
-                else:
-                    row.update({'bridged': False, 'bridgedTo': None, 'actualBridged': None,
-                                'label': 'unmatched by the bridge: no 30 Sep story holds half of its 28 Sep posts, so it is not scored'})
-                rows.append(row)
-            regions[R] = rows
-        forecasts.append({'issueDay': i['issueDay'], 'horizonDays': i['horizon']['horizonDays'], 'model': i['forecast']['model'], 'regions': regions})
+    forecasts = [{'issueDay': i['issueDay'], 'horizonDays': i['horizon']['horizonDays'], 'model': i['forecast']['model'],
+                  'regions': {R: bridgedRows(i['horizon']['regions'][R]['top'], br, actual) for R in REGIONS}} for i in iss]
     stories = {'day': day, 'kind': 'bridged',
                'reading': 'T0, bridged: Arbiter renamed every story on 30 September, so each forecast story is followed to the 30 Sep story holding at least half of its 28 Sep posts',
                'bridgeRule': br['rule'], 'unmatchedShareOfKeys': num(unK),
                'forecasts': forecasts,
-               'actualTop10': computedTop(research, actual, {m['bestKey'] for m in br['mapping'] if m['matched']})}
-    models = {}
-    for name, m in sc['models'].items():
-        un = sc['unmatched'][name]
-        sP, sK = num(un.get('unmatchedShareOfPredicted')), num(un.get('unmatchedShareOfKeys'))
-        tag = (f'bridged, {round(100 * sP, 1)} percent of its predicted posts unmatched' if sP is not None
-               else f'bridged, {round(100 * sK, 1)} percent of keys unmatched')
-        hits = {d['region']: d['hits'] for d in m.get('perDay', [])}
-        byR = {R: num(un['byRegion'][R].get('unmatchedShareOfPredicted')) for R in REGIONS}
-        voidIN = name == 'nb_glm'
-        models[name] = {'name': NAMES.get(name, name),
-                        'logError': metric(f'bridged log error, matched stories ({tag})', num(m.get('male')), unmatchedShareOfPredicted=sP, unmatchedShareOfKeys=sK),
-                        'logErrorUS': metric(f'bridged log error, US ({tag})', num(m.get('male_US')), unmatchedShareOfPredicted=byR['US'], unmatchedShareOfKeys=sK),
-                        'logErrorIN': metric(f'bridged log error, India ({tag})', num(m.get('male_IN')), unmatchedShareOfPredicted=byR['IN'], unmatchedShareOfKeys=sK),
-                        'top10HitsUS': metric(f'bridged real top-10 stories found, US, at most 4 ({tag})',
-                                              None if name == 'zero' else hits.get('US'), unmatchedShareOfKeys=sK),
-                        'top10HitsIN': metric(f'bridged real top-10 stories found, India, at most 4 ({tag})',
-                                              None if (name == 'zero' or voidIN) else hits.get('IN'), unmatchedShareOfKeys=sK,
-                                              **({'void': 'ties at zero fill this top 10 (audit F4)'} if voidIN else {})),
-                        'rows': m.get('rows'), 'rowsMerged': m.get('rowsMerged')}
+               'actualTop10': computedTop(research, actual, {m['bestKey'] for m in br['mapping'] if m['matched']},
+                                          'actual 30 Sep story (new key); bridged comparison only')}
     score = {'day': day, 'kind': 'bridged', 'horizonDays': 2, 'reading': 'T0, bridged',
              'logErrorDefinition': 'mean |log(1 + actual) - log(1 + forecast)| over the matched 30 Sep stories; lower is better',
-             'headline': 'gbm', 'references': list(REFERENCES), 'models': models,
-             'bridge': {'keysMatched': br['keysMatched'], 'forecastKeysUnmatched': sc['unmatched']['gbm']['keysUnmatched'],
-                        'forecastKeys': sc['unmatched']['gbm']['keys'], 'unmatchedShareOfKeys': num(unK),
-                        'dayPostsCoveredByMatchedStories': sc['dayPostsCoveredByMatchedTargets']},
+             'headline': 'gbm', 'references': list(LEGACY_REFERENCES), 'models': bridgedModels(sc, ('nb_glm',)),
+             'bridge': bridgeSummary(br, sc, 'gbm'),
              'notes': ['Bridged numbers cover the stories that kept their posts across the rename, a selected slice of the day, and are not comparable with a by-key score.',
                        'Only 4 of each region\'s real top 10 are matched stories, so bridged top-10 hits are capped at 4.',
                        'Forecasts of 102 unmatched stories whose posts landed in a matched story are dropped, which biases bridged forecasts low; adding them back lowers every model\'s error by about 0.04 to 0.06 and leaves the order unchanged.',
@@ -323,52 +399,279 @@ def legacyBridged(day: str, research: str) -> tuple:
     return stories, score, [relS, relB, f'{LIVE_DATA}/vint.parquet', f'{LIVE_DATA}/nk_meta.parquet']
 
 
-def forwardByKey(day: str, research: str) -> Optional[tuple]:
-    """Stories and score for a day scored by the forward block.
+def voidReason(sc: dict, name: str) -> Optional[str]:
+    """Why a model's amendment 04 scores are void in one score file, or None when they stand.
+
+    They are void when the scorer set secondaryVoid, or when the replay of the frozen forecast is missing or not ok.
+
+    @param sc: research score file.
+    @param name: model name.
+    @returns: the reason in plain words, or None.
+    @throws: nothing.
+    """
+    own = (sc.get('models', {}).get(name) or {}).get('secondaryVoid')
+    if own:
+        return str(own)
+    rc = (sc.get('replayCheck') or {}).get(name)
+    if rc is None:
+        return 'the score file holds no replay check for this model'
+    if not rc.get('ok'):
+        return f'the replay does not reproduce the frozen forecast (largest difference {rc.get("maxAbsDiff")})'
+    return None
+
+
+def regionCell(m: dict, R: str) -> dict:
+    """One cell ('all', 'US' or 'IN') of a score file's model entry, or an empty dict.
+
+    A model entry also holds keys that are not cells (secondaryVoid is a string), so only dict values count.
+
+    @param m: models[name] of a score file.
+    @param R: cell name.
+    @returns: the cell, or {} when absent or not a cell.
+    @throws: nothing.
+    """
+    c = m.get(R)
+    return c if isinstance(c, dict) else {}
+
+
+def forwardModel(name: str, m: dict, void: Optional[str]) -> dict:
+    """Published scores of one model in one by-key score file: amendment 04 scores first, then log error.
+
+    @param name: model name.
+    @param m: models[name] of the score file.
+    @param void: voidReason for the model, or None.
+    @returns: the model entry for score.json.
+    @throws: nothing.
+    """
+    clim = name == 'zero'
+    out: Dict[str, object] = {'name': NAMES.get(name, name)}
+    if clim:
+        out['distributionNote'] = CLIMATOLOGY
+    for R in CELLS:
+        sfx = '' if R == 'all' else R
+        out[f'activeRows{sfx}'] = metric(f'stories with at least one post, {CELL_WORDS[R]}', regionCell(m, R).get('activeRows'))
+    for key, words in DISTRIBUTIONAL:
+        for R in CELLS:
+            sfx = '' if R == 'all' else R
+            label = f'{words}, {CELL_WORDS[R]}' + (' (climatology)' if clim else '')
+            value = None if void else num(regionCell(m, R).get(key))
+            out[f'{key}{sfx}'] = metric(label, value, **({'void': void} if void else {}))
+    out['logError'] = metric('log error, all stories', num(regionCell(m, 'all').get('logErr')))
+    for R in REGIONS:
+        out[f'logError{R}'] = metric(f'log error, {CELL_WORDS[R]}', num(regionCell(m, R).get('logErr')))
+    for R in REGIONS:
+        out[f'top10Hits{R}'] = metric(f'real top-10 stories found, {CELL_WORDS[R]}', None if clim else regionCell(m, R).get('top10All'))
+    out['cover80'] = metric('share of actuals inside the 80 percent range', num(regionCell(m, 'all').get('cover80')))
+    out['rows'] = regionCell(m, 'all').get('rows')
+    if void:
+        out['secondaryVoid'] = void
+    return out
+
+
+def forwardReference(name: str, cells: dict) -> dict:
+    """Published scores of one fitted reference (surv_age, tsb, hurdle_nb): only the scores it is registered for.
+
+    @param name: reference name.
+    @param cells: secondaryReferences[name] of the score file.
+    @returns: the reference entry for score.json.
+    @throws: nothing.
+    """
+    words = dict(DISTRIBUTIONAL, logErr='log error')
+    keys = REFERENCE_SCORES.get(name, tuple(k for k in ('rps', 'brierActive', 'logErrGivenActive', 'logErr') if k in regionCell(cells, 'all')))
+    out: Dict[str, object] = {'name': NAMES.get(name, name), 'scoredOn': list(keys)}
+    for R in CELLS:
+        sfx = '' if R == 'all' else R
+        out[f'activeRows{sfx}'] = metric(f'stories with at least one post, {CELL_WORDS[R]}', regionCell(cells, R).get('activeRows'))
+    for key in keys:
+        pub = 'logError' if key == 'logErr' else key
+        for R in CELLS:
+            sfx = '' if R == 'all' else R
+            out[f'{pub}{sfx}'] = metric(f'{words[key]}, {CELL_WORDS[R]}', num(regionCell(cells, R).get(key)))
+    return out
+
+
+def areaEntry(area: Optional[dict]) -> dict:
+    """The US issue-area share comparison of one score file or rename record.
+
+    @param area: areaShareUS of the research file, or None.
+    @returns: {label, actualPosts, tvd: {gbm_med, mix_persist}} with None values when the file holds none.
+    @throws: nothing.
+    """
+    tvd = (area or {}).get('tvd') or {}
+    return {'label': ('US issue-area share of the day\'s posts: total variation distance between the forecast mix of '
+                      'Arbiter\'s categories and the real mix, lower is better. It does not depend on story keys, but it '
+                      'does depend on Arbiter\'s categoriser.'),
+            'actualPosts': (area or {}).get('actualPosts'),
+            'tvd': {'gbm_med': metric('boosted trees (median): its forecasts summed by category', num(tvd.get('gbm_med'))),
+                    'mix_persist': metric('the origin day\'s mix', num(tvd.get('mix_persist')))}}
+
+
+def restrictionEntry(restriction: Optional[dict]) -> Optional[dict]:
+    """Keys dropped after a history rename and their share of each model's predicted posts, per region.
+
+    @param restriction: historyRenameRestriction of the score file, or None.
+    @returns: None when no history rename applies, else {label, regions: {R: {keptKeys, excludedKeys, excludedPredictedShare}}}.
+    @throws: nothing.
+    """
+    if not restriction:
+        return None
+    return {'label': ('Arbiter renamed its stories within the seven days before the origin. Stories that kept an old key '
+                      'cannot get a post under it, so they are dropped from every score; this gives how many were dropped '
+                      'and their share of each model\'s predicted posts.'),
+            'regions': {R: {'keptKeys': c.get('keptKeys'), 'excludedKeys': c.get('excludedKeys'),
+                            'excludedPredictedShare': {m: num(v) for m, v in (c.get('excludedPredictedShare') or {}).items()}}
+                        for R, c in restriction.items()}}
+
+
+def continuityEntry(cont: dict) -> dict:
+    """Run-map continuity per region, as the scorer recorded it.
+
+    @param cont: keyContinuity of a score file or continuity of a rename record.
+    @returns: {R: {forward, history, mapsMissing, pairs: [{from, to, gapDays, share, partialFlag}]}}.
+    @throws: nothing.
+    """
+    return {R: {'forwardRename': bool(c.get('forward')), 'historyRename': bool(c.get('history')), 'mapsMissing': list(c.get('mapsMissing') or []),
+                'pairs': [{'from': p.get('from'), 'to': p.get('to'), 'gapDays': p.get('gapDays'), 'keysKept': num(p.get('share')),
+                           'partialFlag': bool(p.get('partialFlag'))} for p in c.get('pairs') or []]}
+            for R, c in (cont or {}).items()}
+
+
+def forwardScoreFiles(day: str, research: str) -> List[dict]:
+    """Research files for every ledger issue that forecast the day.
 
     @param day: target day.
     @param research: research repo root.
-    @returns: (stories, score, source files), or None when no score file exists yet.
+    @returns: [{issue, kind, score, rename, bridged, bridge, sources}] in issue order; kind is 'by key', 'bridged' or
+        'rename, not scored'. Issues with no file yet are left out.
+    @throws OSError: when a file is unreadable.
+    @throws ValueError: when a bridged score names no bridge file.
+    """
+    out = []
+    for i in issuesFor(day):
+        h = i['horizon']['horizonDays']
+        base = f'{FORWARD}/results/issue-{i["issueDay"]}'
+        relS, relR, relB = (f'{base}/score_{day}_h{h}_T0.json', f'{base}/rename_{day}_h{h}_T0.json',
+                            f'{base}/score_bridged_{day}_h{h}_T0.json')
+        if os.path.exists(os.path.join(research, relS)):
+            out.append({'issue': i, 'kind': 'by key', 'score': loadJson(os.path.join(research, relS)), 'sources': [relS]})
+            continue
+        if not os.path.exists(os.path.join(research, relR)):
+            continue
+        rec = {'issue': i, 'kind': 'rename, not scored', 'rename': loadJson(os.path.join(research, relR)), 'sources': [relR]}
+        if os.path.exists(os.path.join(research, relB)):
+            doc = loadJson(os.path.join(research, relB))
+            folder = doc
+            if 'folders' in doc:
+                want = f'pred_{day}_h{h}_K0.parquet'
+                hits = [f for f in doc['folders'].values() if f.get('file') == want] or list(doc['folders'].values())
+                folder = hits[0]
+            if not doc.get('bridge'):
+                raise ValueError(f'{relB} names no bridge file')
+            relBr = f'{base}/{doc["bridge"]}'
+            rec.update({'kind': 'bridged', 'bridged': folder, 'bridge': loadJson(os.path.join(research, relBr))})
+            rec['sources'] += [relB, relBr]
+        out.append(rec)
+    return out
+
+
+def forwardByKey(day: str, research: str) -> Optional[tuple]:
+    """Stories and score for a day of the forward block, one entry per issue that forecast it.
+
+    A target day can be forecast by two issues (D+1 of one, D+2 of the one before). Each keeps its own rows and
+    scores; nothing is averaged across issues. A file scored by key reports the amendment 04 scores before log error;
+    a forward-rename day reports the rename record and, when it exists, the bridged score with its unmatched share.
+
+    @param day: target day.
+    @param research: research repo root.
+    @returns: (stories, score, source files), or None when no score file or rename record exists yet.
     @throws OSError: when a source file is unreadable.
     """
-    iss = issuesFor(day)
-    found = []
-    for i in iss:
-        h = i['horizon']['horizonDays']
-        rel = f'{FORWARD}/results/issue-{i["issueDay"]}/score_{day}_h{h}_T0.json'
-        if os.path.exists(os.path.join(research, rel)):
-            found.append((i, rel, loadJson(os.path.join(research, rel))))
+    found = forwardScoreFiles(day, research)
     if not found:
         return None
     actual = actualCounts(research, day)
-    stories = {'day': day, 'kind': 'by key', 'reading': 'T0: posts published on the day that Arbiter\'s reading of the day assigns to the story',
-               'forecasts': [{'issueDay': i['issueDay'], 'horizonDays': i['horizon']['horizonDays'], 'model': i['forecast']['model'],
-                              'regions': {R: storyRows(i['horizon']['regions'][R]['top'], actual) for R in REGIONS}} for i, _, _ in found],
-               'actualTop10': actualTop(found[-1][2])}
-    per = []
-    for i, rel, sc in found:
-        models = {}
-        for name, m in sc['models'].items():
-            models[name] = {'name': NAMES.get(name, name),
-                            'logError': metric('log error, all stories', num(m['all']['logErr'])),
-                            **{f'logError{R}': metric(f'log error, {"US" if R == "US" else "India"}', num(m.get(R, {}).get('logErr'))) for R in REGIONS},
-                            **{f'top10Hits{R}': metric(f'real top-10 stories found, {"US" if R == "US" else "India"}',
-                                                       None if name == 'zero' else m.get(R, {}).get('top10All')) for R in REGIONS},
-                            'cover80': metric('share of actuals inside the 80 percent range', num(m['all'].get('cover80'))),
-                            'rows': m['all'].get('rows')}
-        per.append({'issueDay': i['issueDay'], 'horizonDays': i['horizon']['horizonDays'], 'models': models,
-                    'newStoryShare': sc.get('newShare'), 'degradedTarget': sc.get('degradedTarget')})
-    score = {'day': day, 'kind': 'by key', 'reading': 'T0',
-             'logErrorDefinition': 'mean |log(1 + actual) - log(1 + forecast)| over every story live at the origin; lower is better',
-             'headline': EI.FORWARD_MODEL, 'references': list(REFERENCES), 'byIssue': per}
-    return stories, score, [rel for _, rel, _ in found] + [f'{LIVE_DATA}/vint.parquet', f'{LIVE_DATA}/nk_meta.parquet']
+    forecasts, per, sources = [], [], []
+    for f in found:
+        i, h = f['issue'], f['issue']['horizon']
+        sources += f['sources']
+        head = {'issueDay': i['issueDay'], 'horizonDays': h['horizonDays'], 'lagFromOriginDays': h.get('lagFromOriginDays'),
+                'horizonCountedFrom': h.get('horizonCountedFrom'), 'kind': f['kind'],
+                'modelName': NAMES.get(i['forecast']['model'].split('|')[0], i['forecast']['model'])}
+        if f['kind'] == 'by key':
+            sc = f['score']
+            forecasts.append({**head, 'model': i['forecast']['model'],
+                              'regions': {R: storyRows(h['regions'][R]['top'], actual) for R in REGIONS}})
+            models = {name: forwardModel(name, m, voidReason(sc, name)) for name, m in sc['models'].items()}
+            fit = sc.get('hurdleFit') or {}
+            per.append({**head, 'source': f['sources'][0], 'models': models,
+                        'secondaryReferences': {name: forwardReference(name, c) for name, c in (sc.get('secondaryReferences') or {}).items()},
+                        'secondaryVoid': {name: m['secondaryVoid'] for name, m in models.items() if m.get('secondaryVoid')},
+                        'areaShareUS': areaEntry(sc.get('areaShareUS')),
+                        'historyRenameRestriction': restrictionEntry(sc.get('historyRenameRestriction')),
+                        'keyContinuity': continuityEntry(sc.get('keyContinuity')),
+                        'hurdleFit': {'converged': fit.get('converged'), 'alphaAtBound': fit.get('alphaAtBound')} if fit else None,
+                        'tsbBeta': sc.get('tsbBeta'),
+                        'newStoryShare': sc.get('newShare'), 'degradedTarget': sc.get('degradedTarget'),
+                        'countsTowardBlock': True})
+            continue
+        rec = f['rename']
+        entry = {**head, 'source': f['sources'][0], 'rule': rec.get('rule'), 'keyContinuity': continuityEntry(rec.get('continuity')),
+                 'areaShareUS': areaEntry(rec.get('areaShareUS')), 'countsTowardBlock': False}
+        if f['kind'] == 'bridged':
+            sc, br = f['bridged'], f['bridge']
+            rows = {R: bridgedRows(h['regions'][R]['top'], br, actual) for R in REGIONS}
+            hl = EI.FORWARD_MODEL if EI.FORWARD_MODEL in sc['unmatched'] else next(iter(sc['unmatched']))
+            byR = sc['unmatched'][hl]['byRegion']
+            forecasts.append({**head, 'model': i['forecast']['model'], 'bridgeRule': br.get('rule'),
+                              'unmatchedShareOfPredicted': {R: num(byR[R].get('unmatchedShareOfPredicted')) for R in REGIONS},
+                              'regions': rows})
+            entry.update({'models': bridgedModels(sc), 'bridge': bridgeSummary(br, sc, hl)})
+        else:
+            forecasts.append({**head, 'model': i['forecast']['model'],
+                              'regions': {R: [{**r, 'actual': None, 'inRange': None,
+                                               'label': 'not scored: Arbiter renamed its stories after the reading this forecast started from, and no bridged score exists yet'}
+                                              for r in h['regions'][R]['top']] for R in REGIONS}})
+            entry['models'] = None
+        per.append(entry)
+    kinds = sorted({f['kind'] for f in found})
+    kind = kinds[0] if len(kinds) == 1 else 'mixed'
+    byKey = [f for f in found if f['kind'] == 'by key']
+    if byKey:
+        top, topSource = actualTop(byKey[-1]['score']), 'score file'
+    else:
+        matched = {m['bestKey'] for f in found if f['kind'] == 'bridged' for m in f['bridge']['mapping'] if m['matched']}
+        top, topSource = computedTop(research, actual, matched, f'actual {shortDay(day)} story; compared through the bridge only'), 'computed'
+    stories = {'day': day, 'kind': kind,
+               'reading': 'T0: posts published on the day that Arbiter\'s reading of the day assigns to the story' if kind == 'by key'
+               else 'T0. Each forecast says how it was scored: by story key, through the bridge across Arbiter\'s rename, or not scored',
+               'forecasts': forecasts, 'actualTop10': top, 'actualTop10Source': topSource}
+    if any(f['kind'] != 'by key' for f in found):
+        stories['bridgeNote'] = ('Arbiter renamed its stories after the reading at least one of these forecasts started from, so '
+                                 'its stories did not keep their keys. A bridged forecast follows each story to the story of the '
+                                 'target day holding at least half of its posts. A row with no such match is not scored, and the '
+                                 'share of the forecast that could not be matched sits on every row. A bridged day does not count '
+                                 'toward the 14 days of its horizon.')
+    notes = ['Each issue that forecast this day has its own entry in byIssue. A day can be D+1 of one issue and D+2 of the issue before; the two are kept apart and never averaged.',
+             'D+n counts days from the issue day; the lag counts days from the reading the forecast starts from.']
+    if any(p.get('historyRenameRestriction') for p in per):
+        notes.append('A history rename applies: see historyRenameRestriction for the stories dropped from every score and their share of predicted posts.')
+    if any(pp['partialFlag'] for p in per for c in (p.get('keyContinuity') or {}).values() for pp in c['pairs']):
+        notes.append('A pair of run maps kept between 25 and 50 percent of keys, which may be a partial rename; amendment 04 flags it for a sensitivity report.')
+    score = {'day': day, 'kind': kind, 'reading': 'T0',
+             'logErrorDefinition': SCORE_DEFINITIONS['logError'],
+             'scoreDefinitions': SCORE_DEFINITIONS,
+             'scoreOrder': 'stories with a post, ranked probability score, Brier score on any post and log error given a post come before log error',
+             'headline': EI.FORWARD_MODEL, 'references': list(REFERENCES),
+             'secondaryReferences': {k: NAMES[k] for k in REFERENCE_SCORES}, 'byIssue': per, 'notes': notes}
+    return stories, score, sources + [f'{LIVE_DATA}/vint.parquet', f'{LIVE_DATA}/nk_meta.parquet']
 
 
-def outcomeReadme(day: str, kind: str) -> str:
+def outcomeReadme(day: str, kind: str, forward: bool = False) -> str:
     """Plain-prose README for an outcome folder.
 
     @param day: target day.
-    @param kind: 'by key' or 'bridged'.
+    @param kind: 'by key', 'bridged', 'rename, not scored' or 'mixed'.
+    @param forward: True for a day of the forward block (amendment 04 scores, one entry per issue).
     @returns: markdown text.
     @throws: nothing.
     """
@@ -377,11 +680,24 @@ def outcomeReadme(day: str, kind: str) -> str:
              'and lists the day\'s real top 10 per region. `score.json` scores every model against the references, with the '
              'GitHub push time of the issue that forecast this day. `MANIFEST.json` holds the sha256 of every file here, and '
              '`sources` in it names the research files the numbers came from, with their sha256.', '']
-    if kind == 'bridged':
+    if kind == 'bridged' and not forward:
         lines += ['Arbiter renamed every story on 30 September, so no forecast story kept its key. Each forecast story was followed '
                   'to the 30 September story holding at least half of its 28 September posts, a rule fixed before any score was '
                   'computed. Stories with no such match are excluded and counted. Every number here says "bridged" and gives the '
                   'unmatched share beside it.', '']
+    if forward:
+        lines += ['Each issue that forecast this day is scored on its own. A day can be D+1 of one issue (two days after the reading '
+                  'it starts from, lag 2) and D+2 of the issue before (lag 3); the two are never averaged. For each model, '
+                  '`score.json` gives the number of stories that got a post, then the ranked probability score, the Brier score on '
+                  'whether a story got any post and the log error on the stories that did, and only then the log error over every '
+                  'story. "Every story dies" forecasts no posts, but its predictive distribution is a climatology of earlier days, '
+                  'so its first three scores are labelled climatology. A model whose frozen forecast could not be reproduced has '
+                  'those scores marked void. The US issue-area share compares the forecast mix of Arbiter\'s categories with the '
+                  'real one and does not depend on story keys.', '']
+        if kind != 'by key':
+            lines += ['Arbiter renamed its stories after the reading at least one forecast started from. That forecast is scored only '
+                      'through the bridge, every bridged number gives the unmatched share beside it, and it does not count toward the '
+                      '14 days of its horizon. Until the bridged score exists, the forecast is listed as not scored.', '']
     lines += [NO_POSTS, '']
     return '\n'.join(lines)
 
@@ -424,7 +740,7 @@ def export(day: str, research: str, force: bool, offline: bool) -> int:
             json.dump(obj, fh, indent=1, ensure_ascii=False)
             fh.write('\n')
     with open(os.path.join(out, 'README.md'), 'w', encoding='utf-8') as fh:
-        fh.write(outcomeReadme(day, stories['kind']))
+        fh.write(outcomeReadme(day, stories['kind'], forward=day not in ('2026-09-28', '2026-09-30')))
     EI.writeManifest(out, {'kind': 'outcome', 'day': day, 'scoring': stories['kind'],
                            'researchHead': EI.git(research, 'rev-parse', 'HEAD').stdout.strip(),
                            'sources': {rel: EI.sha256(os.path.join(research, rel)) for rel in sources}})
