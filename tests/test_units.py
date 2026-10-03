@@ -434,6 +434,23 @@ class PrivateHandles(Fixture):
         T = self.privateTool()
         self.assertEqual(T.check(ISSUE, self.research, self.ledger), [])
 
+    def test_late_private_units_get_next_index(self) -> None:
+        """FWD-TWEETS-1 units committed after the issue's UNITS.json go into UNITS-2.json, and verify reads both."""
+        self.publishIssue()
+        self.publishIssue(withPrivate=True)
+        first = json.load(open(os.path.join(self.ledger, 'issues', ISSUE, 'UNITS.json')))
+        second = json.load(open(os.path.join(self.ledger, 'issues', ISSUE, 'UNITS-2.json')))
+        self.assertEqual(first['counts'], {'category': 4, 'narrative': 6})
+        self.assertEqual(second['counts'], {'post': 3, 'account': 2})
+        self.assertEqual(second['follows'], [f'issues/{ISSUE}/UNITS.json'])
+        rep = self.unitsCheck(os.path.join(self.ledger, 'issues', ISSUE))
+        self.assertEqual((rep.total, rep.failed), (1, 0))
+        self.assertEqual(self.rebuild(f'issues/{ISSUE}')['failures'], [])
+        n = int(sh(self.ledger, 'rev-list', '--count', 'HEAD'))
+        self.publishIssue(withPrivate=False)
+        self.assertEqual(int(sh(self.ledger, 'rev-list', '--count', 'HEAD')), n)
+        self.assertFalse(os.path.exists(os.path.join(self.ledger, 'issues', ISSUE, 'UNITS-3.json')))
+
     def test_no_private_handle_anywhere_public(self) -> None:
         """Scan every committed public file and message for every handle of the issue: none appears."""
         self.publishIssue(withPrivate=True)
