@@ -49,6 +49,7 @@ if [[ -x "$OTS" ]]; then
 fi
 
 "$PY" tools/export_outcome.py "$DAY" --research "$RESEARCH" ${FORCE:+--force}
+"$PY" tools/outcome_table.py "$DAY" --research "$RESEARCH"
 git add "outcomes/$DAY"
 git commit -q -m "outcome $DAY: actual post counts and scores from the research score files" || echo "nothing changed in outcomes/$DAY"
 git log --oneline -1
