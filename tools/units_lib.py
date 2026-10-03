@@ -35,7 +35,6 @@ PAGE_TOP = 10
 UNITS_FROM_ISSUE = '2026-10-04'
 UNITS_FROM_OUTCOME = '2026-10-03'
 UNIT_DIRS = ('categories', 'narratives', 'posts', 'accounts')
-INDEX_NAMES = ('UNITS.json', 'UNITS.json.ots', 'OUTCOMES-UNITS.json', 'OUTCOMES-UNITS.json.ots')
 PRED_RE = re.compile(r'^pred_(\d{4}-\d{2}-\d{2})_h(\d+)_K0\.parquet$')
 PTOP10_NOTE = ('The frozen forecast holds no chance of reaching the region\'s top 10, so pTop10 is null; it was not '
                'added after the freeze because a number made later could not be shown to predate the target day.')
@@ -631,14 +630,36 @@ def unitKindOf(path: str) -> str:
     raise ValueError(f'{path} is not a unit path')
 
 
+INDEX_RE = re.compile(r'^(OUTCOMES-)?UNITS(-[0-9]+)?\.json(\.ots)?$')
+
+
 def isUnitLayer(rel: str) -> bool:
     """Whether a path inside an issue or outcome folder belongs to the unit layer (checked by UNITS.json, not MANIFEST.json).
 
     @param rel: path relative to the folder.
-    @returns: True for unit directories and unit indexes.
+    @returns: True for unit directories and unit indexes (UNITS.json, UNITS-2.json, OUTCOMES-UNITS.json, their proofs).
     @throws: nothing.
     """
-    return rel in INDEX_NAMES or rel.split('/')[0] in UNIT_DIRS
+    return bool(INDEX_RE.match(rel)) or rel.split('/')[0] in UNIT_DIRS
+
+
+def indexesOf(ledger: str, folder: str, base: str) -> List[Tuple[str, dict]]:
+    """Every unit index of a folder in order: <base>.json, then <base>-2.json, <base>-3.json, ...
+
+    @param ledger: ledger root.
+    @param folder: folder relative to the ledger.
+    @param base: 'UNITS' or 'OUTCOMES-UNITS'.
+    @returns: [(path relative to the ledger, parsed index)].
+    @throws ValueError: when an index is not JSON.
+    """
+    out = []
+    n = 1
+    while True:
+        rel = f'{folder}/{base}.json' if n == 1 else f'{folder}/{base}-{n}.json'
+        if not os.path.exists(os.path.join(ledger, rel)):
+            return out
+        out.append((rel, readJson(os.path.join(ledger, rel))))
+        n += 1
 
 
 def privateHandleScan(texts: Iterable[Tuple[str, str]], handles: Iterable[str]) -> List[Tuple[str, str]]:

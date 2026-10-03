@@ -100,9 +100,13 @@ def indexes(ledger: str) -> List[Tuple[str, dict]]:
         if not os.path.isdir(root):
             continue
         for d in sorted(os.listdir(root)):
-            p = os.path.join(root, d, name)
-            if os.path.exists(p):
+            n = 1
+            while True:
+                p = os.path.join(root, d, name if n == 1 else name.replace('.json', f'-{n}.json'))
+                if not os.path.exists(p):
+                    break
                 out += [(kind, r) for r in readJson(p)['units']]
+                n += 1
     return out
 
 

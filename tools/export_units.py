@@ -333,8 +333,7 @@ def linkIssueUnits(units: List[Tuple[str, dict, str]]) -> None:
         for e in u.get('byIssue', []):
             i = e['issueDay']
             if i not in cache:
-                p = os.path.join(LEDGER, 'issues', i, 'UNITS.json')
-                cache[i] = {x['path']: x for x in U.readJson(p)['units']} if os.path.exists(p) else {}
+                cache[i] = {x['path']: x for _, idx in U.indexesOf(LEDGER, f'issues/{i}', 'UNITS') for x in idx['units']}
             want = None
             if u['unit'] == 'narrative outcome':
                 want = f'issues/{i}/narratives/{u["region"]}/{U.slug(u["category"])}/{U.keyHex(u["arbiterKey"])}.json'
@@ -422,17 +421,26 @@ def writeIndex(ledger: str, kind: str, day: str, units: List[Tuple[str, dict, st
     @throws Refused: when the index exists with other content.
     """
     folder = f'issues/{day}' if kind == 'issue' else f'outcomes/{day}'
-    name = 'UNITS.json' if kind == 'issue' else 'OUTCOMES-UNITS.json'
+    base = 'UNITS' if kind == 'issue' else 'OUTCOMES-UNITS'
+    # Units already listed by an earlier index of this folder (UNITS.json, UNITS-2.json, ...) are never listed again;
+    # units added later, such as FWD-TWEETS-1 rows committed after the issue, get the next index with its own stamp.
+    earlier = U.indexesOf(ledger, folder, base)
+    listed = {r['path']: r for _, idx in earlier for r in idx['units']}
+    for path, u, _ in units:
+        if path in listed and listed[path]['sha256'] != U.sha256File(os.path.join(ledger, path)):
+            raise Refused(f'{path} differs from the sha256 its index lists; a unit is never rewritten')
+    fresh = [x for x in units if x[0] not in listed]
+    if earlier and not fresh:
+        return earlier[-1][0]
+    name = f'{base}.json' if not earlier else f'{base}-{len(earlier) + 1}.json'
     rel = f'{folder}/{name}'
-    obj = indexObject(ledger, kind, day, units)
+    obj = indexObject(ledger, kind, day, fresh)
+    if earlier:
+        obj['follows'] = [r for r, _ in earlier]
     text = U.dumps(obj)
     full = os.path.join(ledger, rel)
-    if os.path.exists(full):
-        if open(full, encoding='utf-8').read() != text:
-            raise Refused(f'{rel} exists with other content; an index is never rewritten')
-    else:
-        with open(full, 'w', encoding='utf-8') as fh:
-            fh.write(text)
+    with open(full, 'w', encoding='utf-8') as fh:
+        fh.write(text)
     paths = [rel]
     if ots and os.path.exists(ots) and not os.path.exists(full + '.ots'):
         r = subprocess.run([ots, 'stamp', full], capture_output=True, text=True)

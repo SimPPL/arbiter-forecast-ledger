@@ -33,6 +33,7 @@ import datetime as dt
 import hashlib
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -51,17 +52,32 @@ IGNORED = ('.ots.bak', '.DS_Store')
 DEFAULT_UNITS_PYTHON = os.path.expanduser('~/Documents/simppl/papers/narrative-reach-sim/tmp/venv-bo/bin/python')
 # The unit layer of a folder is checked against its unit index, not against MANIFEST.json (it is committed after it).
 UNIT_DIRS = ('categories', 'narratives', 'posts', 'accounts')
-UNIT_INDEXES = ('UNITS.json', 'UNITS.json.ots', 'OUTCOMES-UNITS.json', 'OUTCOMES-UNITS.json.ots')
+UNIT_INDEX_RE = re.compile(r'^(OUTCOMES-)?UNITS(-[0-9]+)?\.json(\.ots)?$')
 
 
 def isUnitLayer(rel: str) -> bool:
     """Whether a path inside an issue or outcome folder belongs to the unit layer.
 
     @param rel: path relative to the folder.
-    @returns: True for unit directories and unit indexes.
+    @returns: True for unit directories and unit indexes (UNITS.json, UNITS-2.json, OUTCOMES-UNITS.json, their proofs).
     @throws: nothing.
     """
-    return rel in UNIT_INDEXES or rel.split('/')[0] in UNIT_DIRS
+    return bool(UNIT_INDEX_RE.match(rel)) or rel.split('/')[0] in UNIT_DIRS
+
+
+def indexNames(folder: str, base: str) -> List[str]:
+    """The unit indexes of a folder in order: <base>.json, <base>-2.json, ...
+
+    @param folder: absolute folder.
+    @param base: 'UNITS' or 'OUTCOMES-UNITS'.
+    @returns: file names that exist.
+    @throws: nothing.
+    """
+    out, n = [], 1
+    while os.path.exists(os.path.join(folder, f'{base}.json' if n == 1 else f'{base}-{n}.json')):
+        out.append(f'{base}.json' if n == 1 else f'{base}-{n}.json')
+        n += 1
+    return out
 
 
 class Report:
@@ -593,10 +609,15 @@ def checkUnits(rep: Report, folder: str, indexName: str) -> Optional[dict]:
     @throws OSError: on an unreadable file.
     """
     where = os.path.relpath(folder, LEDGER)
-    path = os.path.join(folder, indexName)
-    if not os.path.exists(path):
+    names = indexNames(folder, indexName[:-len('.json')])
+    if not names:
         return None
-    idx = json.load(open(path, encoding='utf-8'))
+    idx = {'units': [], 'counts': {}}
+    for nm in names:
+        part = json.load(open(os.path.join(folder, nm), encoding='utf-8'))
+        idx['units'] += part['units']
+        for k, n in part.get('counts', {}).items():
+            idx['counts'][k] = idx['counts'].get(k, 0) + n
     bad = []
     listed = set()
     for r in idx['units']:
@@ -627,7 +648,7 @@ def checkUnits(rep: Report, folder: str, indexName: str) -> Optional[dict]:
         rep.line(False, where, 'units', f'{len(bad)} bad ({"; ".join(bad[:5])}); not listed: {", ".join(extra[:5]) or "none"}')
     else:
         counts = ', '.join(f'{n} {k}' for k, n in idx.get('counts', {}).items())
-        rep.line(True, where, 'units', f'{len(listed)} unit files match {indexName}, each in its own commit ({counts})')
+        rep.line(True, where, 'units', f'{len(listed)} unit files match {" + ".join(names)}, each in its own commit ({counts})')
     return idx
 
 
@@ -670,7 +691,7 @@ def rebuildFolder(where: str) -> int:
     fails: List[str] = []
     checked = 0
     if kind == 'issues':
-        idx = json.load(open(os.path.join(folder, 'UNITS.json'), encoding='utf-8'))
+        idx = {'units': [r for nm in indexNames(folder, 'UNITS') for r in json.load(open(os.path.join(folder, nm), encoding='utf-8'))['units']]}
         data = U.IssueData(LEDGER, day)
         cats: Dict[str, Dict[str, set]] = {}
         nars = []
@@ -710,7 +731,7 @@ def rebuildFolder(where: str) -> int:
             fails.append(f'{len(missing)} selected stories have no unit (first: {missing[0]})')
         note = 'category members partition each region; every top story has a unit'
     else:
-        idx = json.load(open(os.path.join(folder, 'OUTCOMES-UNITS.json'), encoding='utf-8'))
+        idx = {'units': [r for nm in indexNames(folder, 'OUTCOMES-UNITS') for r in json.load(open(os.path.join(folder, nm), encoding='utf-8'))['units']]}
         datas: Dict[str, object] = {}
         stories = os.path.join(folder, 'stories.json')
         known: Dict[Tuple[str, str], int] = {}
@@ -875,7 +896,8 @@ def main(argv: Optional[List[str]] = None) -> int:
             checkPosts(rep, day, targets, pushed)
         if checkUnits(rep, folder, 'UNITS.json') is not None:
             checkRebuild(rep, folder, upy)
-            checkStamp(rep, folder, start, py, a.offline, name='UNITS.json')
+            for nm in indexNames(folder, 'UNITS'):
+                checkStamp(rep, folder, start, py, a.offline, name=nm)
             if not a.offline:
                 checkUnitPush(rep, folder, start, pushes, source)
     outDir = os.path.join(LEDGER, 'outcomes')
