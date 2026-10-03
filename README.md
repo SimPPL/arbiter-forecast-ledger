@@ -75,4 +75,4 @@ The first issues are copies of forecasts frozen in our private research reposito
 
 ## Daily procedure
 
-`tools/ledger-publish.sh <issueDay>` exports a new frozen issue, commits it and prints the push command. `tools/ledger-score.sh <day>` exports the outcome of a scored day, writes its `TABLE.md` with `tools/outcome_table.py`, commits it and prints the push command, and neither script pushes by itself.
+`tools/ledger-publish.sh <issueDay>` exports a new frozen issue, commits it and prints the push command. `tools/ledger-score.sh <day>` exports the outcome of a scored day, writes its `TABLE.md` with `tools/outcome_table.py`, commits it and prints the push command, and neither script pushes by itself. A target day forecast by two issues, D+1 of one and D+2 of the issue before, gets one entry per issue in `score.json`, and the two are never averaged. The tests of the tools run with `<python with pandas> -m unittest discover -s tests`.
