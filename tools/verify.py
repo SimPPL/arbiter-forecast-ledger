@@ -639,8 +639,8 @@ def checkUnits(rep: Report, folder: str, indexName: str) -> Optional[dict]:
             bad.append(f'commit {r["commit"][:7]} holds {len(parent)} paths, not only {r["path"]}')
     present = set()
     for d in UNIT_DIRS:
-        for root, _, names in os.walk(os.path.join(folder, d)):
-            for n in names:
+        for root, _, files in os.walk(os.path.join(folder, d)):
+            for n in files:
                 if not n.endswith(IGNORED):
                     present.add(os.path.relpath(os.path.join(root, n), LEDGER))
     extra = sorted(present - listed)
