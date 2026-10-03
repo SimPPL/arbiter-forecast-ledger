@@ -38,6 +38,8 @@ EXPLORERS = ('https://blockstream.info/api', 'https://mempool.space/api')
 TWITTER_EPOCH_MS = 1288834974657
 DEFAULT_OTS_PYTHON = os.path.expanduser('~/Documents/simppl/papers/narrative-reach-sim/tmp/venv-ots/bin/python')
 UTC = dt.timezone.utc
+# Left by `ots upgrade` and macOS; git ignores them too.
+IGNORED = ('.ots.bak', '.DS_Store')
 
 
 class Report:
@@ -164,7 +166,7 @@ def checkManifest(rep: Report, folder: str) -> Optional[dict]:
     for root, _, names in os.walk(folder):
         for n in names:
             rel = os.path.relpath(os.path.join(root, n), folder)
-            if rel != 'MANIFEST.json':
+            if rel != 'MANIFEST.json' and not rel.endswith(IGNORED):
                 present.add(rel)
     bad = [n for n, d in listed.items() if n not in present or sha256(os.path.join(folder, n)) != d]
     extra = sorted(present - set(listed))

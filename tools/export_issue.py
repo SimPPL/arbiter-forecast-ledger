@@ -27,6 +27,8 @@ FORWARD = 'cleanroom/2026-10-01-tomorrow-forward/forecasts'
 TOURNAMENT = 'cleanroom/2026-09-28-tomorrow-tournament/forecasts'
 IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
 TOP_N = 10
+# Left by `ots upgrade` and macOS; git ignores them too.
+IGNORED = ('.ots.bak', '.DS_Store')
 
 # Issues frozen before the forward block began. Their folders are named by target day in the
 # research repo, so the ledger maps them by the UTC date of the freeze.
@@ -248,7 +250,12 @@ def export(issueDay: str, research: str, force: bool = False) -> int:
         print(f'refused: {out} exists (use --force to rewrite it)')
         return 2
     os.makedirs(out, exist_ok=True)
+    # A proof already in the ledger for the same FREEZE.json may have been upgraded here; keep it.
+    keepProof = (os.path.exists(os.path.join(out, 'FREEZE.json.ots')) and os.path.exists(os.path.join(out, 'FREEZE.json'))
+                 and sha256(os.path.join(out, 'FREEZE.json')) == sha256(os.path.join(folder, 'FREEZE.json')))
     for name in ['FREEZE.json', 'FREEZE.json.ots', *published]:
+        if name == 'FREEZE.json.ots' and keepProof:
+            continue
         if os.path.exists(os.path.join(folder, name)):
             shutil.copyfile(os.path.join(folder, name), os.path.join(out, name))
     forecast = buildForecast(issueDay, freeze, src, folder, commit)
@@ -280,7 +287,7 @@ def writeManifest(out: str, meta: dict) -> None:
         for n in sorted(names):
             p = os.path.join(root, n)
             rel = os.path.relpath(p, out)
-            if rel != 'MANIFEST.json':
+            if rel != 'MANIFEST.json' and not rel.endswith(IGNORED):
                 files[rel] = sha256(p)
     meta = dict(meta)
     meta.setdefault('exportedUtc', dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))
