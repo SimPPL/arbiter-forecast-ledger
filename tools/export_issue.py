@@ -34,13 +34,15 @@ IGNORED = ('.ots.bak', '.DS_Store')
 # research repo, so the ledger maps them by the UTC date of the freeze.
 LEGACY: Dict[str, dict] = {
     '2026-09-27': {'folder': f'{TOURNAMENT}/pilot-2026-09-28', 'model': 'gbm|K0',
-                   'note': ('Pilot, two days ahead of the reading it started from, issued before the rule of one and three days. '
+                   'note': ('Pilot, two days ahead of the reading it started from, issued before the horizon rule of 3 October 2026 '
+                            '(forecasts hourly, for the next day, and at most two days ahead). '
                             'Published unchanged. This copy reached the ledger on 2 October and its OpenTimestamps proof was '
                             'made on 29 September, both after the target day, so the stamp and push checks in tools/verify.py '
                             'fail for it. The only record that it was made before 28 September is the push to our private '
                             'research repo at 21:19:29 UTC on 27 September, which an outsider cannot check.')},
     '2026-09-29': {'folder': f'{TOURNAMENT}/live-2026-09-30', 'model': 'gbm|K0',
-                   'note': ('Two days ahead of the reading it started from, issued before the rule of one and three days. '
+                   'note': ('Two days ahead of the reading it started from, issued before the horizon rule of 3 October 2026 '
+                            '(forecasts hourly, for the next day, and at most two days ahead). '
                             'Published unchanged. This copy reached the ledger on 2 October, after the target day, so the push '
                             'check in tools/verify.py fails for it. The OpenTimestamps proof, anchored in Bitcoin on 29 September, '
                             'is the public clock that shows it was made before 30 September.')},
@@ -176,6 +178,20 @@ def buildForecast(issueDay: str, freeze: dict, src: dict, folder: str, commit: s
     }
 
 
+def horizonLabel(horizonDays: int, lag: int, countedFrom: str) -> str:
+    """Name a horizon with both clocks: days from the issue day and readings from the origin.
+
+    @param horizonDays: horizon as stored in forecast.json.
+    @param lag: days from the origin reading to the target (lagFromOriginDays).
+    @param countedFrom: 'issue day' or 'origin reading' (horizonCountedFrom).
+    @returns: e.g. "D+2 (lag 3)", or "2 days ahead (lag 2)" for an issue counted from its origin reading.
+    @throws: nothing.
+    """
+    if countedFrom == 'issue day':
+        return f'D+{horizonDays} (lag {lag})'
+    return f'{horizonDays} day{"" if horizonDays == 1 else "s"} ahead (lag {lag})'
+
+
 def issueReadme(issueDay: str, forecast: dict, unpublished: List[str]) -> str:
     """Plain-prose README for the issue folder.
 
@@ -190,8 +206,17 @@ def issueReadme(issueDay: str, forecast: dict, unpublished: List[str]) -> str:
              f'{forecast["origin"]}, with the model `{forecast["model"]}`.', '']
     for h in forecast['horizons']:
         when = 'before' if h['frozenBeforeTargetStart'] else 'after'
-        unit = 'day' if h['horizonDays'] == 1 else 'days'
-        lines.append(f'- {h["horizonDays"]} {unit} ahead of the {h["horizonCountedFrom"]}: target {h["targetDay"]}, frozen {when} that day began (UTC).')
+        label = horizonLabel(h['horizonDays'], h['lagFromOriginDays'], h['horizonCountedFrom'])
+        if h['horizonCountedFrom'] != 'issue day':
+            label = label.replace(' ahead', ' ahead of the origin reading', 1)
+        line = f'- {label}: target {h["targetDay"]}, frozen {when} that day began (UTC).'
+        if h['horizonCountedFrom'] == 'issue day' and h['horizonDays'] >= 3:
+            line += ' This three-day target was frozen before the horizon rule of 3 October 2026 and is scored once.'
+        lines.append(line)
+    lines += ['', 'D+n is the number of days from the issue day to the target day. The lag is the number of days from the '
+              'reading the forecast starts from to the target day, so D+1 (lag 2) is the second day after that reading.'
+              if any(h['horizonCountedFrom'] == 'issue day' for h in forecast['horizons']) else
+              'The lag is the number of days from the reading the forecast starts from to the target day.']
     lines += ['', '`forecast.json` lists the top 10 stories per region for each target. `FREEZE.json` and '
               '`FREEZE.json.ots` are copied byte for byte from the research repo, with every forecast file they hash. '
               '`MANIFEST.json` holds the sha256 of every file here.', '']
@@ -313,6 +338,32 @@ def refreshManifest(folder: str) -> None:
     writeManifest(folder, meta)
 
 
+def refreshReadme(folder: str) -> None:
+    """Rewrite an exported issue's README.md from its forecast.json, without touching any frozen file.
+
+    A legacy issue's note in forecast.json is replaced by the current LEGACY note first, so wording rules that change
+    after an issue was exported (such as the horizon rule of 3 October 2026) reach the folder. MANIFEST.json is then
+    re-hashed, keeping its recorded fields.
+
+    @param folder: issues/<issueDay> folder.
+    @returns: None.
+    @throws FileNotFoundError: when forecast.json or MANIFEST.json is absent.
+    """
+    fpath = os.path.join(folder, 'forecast.json')
+    forecast = json.load(open(fpath, encoding='utf-8'))
+    manifest = json.load(open(os.path.join(folder, 'MANIFEST.json'), encoding='utf-8'))
+    issueDay = forecast['issueDay']
+    if issueDay in LEGACY and forecast.get('note') != LEGACY[issueDay]['note']:
+        forecast['note'] = LEGACY[issueDay]['note']
+        with open(fpath, 'w', encoding='utf-8') as fh:
+            json.dump(forecast, fh, indent=1, ensure_ascii=False)
+            fh.write('\n')
+    unpublished = list(manifest.get('frozenFilesNotPublished', {}))
+    with open(os.path.join(folder, 'README.md'), 'w', encoding='utf-8') as fh:
+        fh.write(issueReadme(issueDay, forecast, unpublished))
+    refreshManifest(folder)
+
+
 def main(argv: Optional[List[str]] = None) -> int:
     """Command-line entry.
 
@@ -325,9 +376,14 @@ def main(argv: Optional[List[str]] = None) -> int:
     ap.add_argument('--research', default=DEFAULT_RESEARCH)
     ap.add_argument('--force', action='store_true')
     ap.add_argument('--refresh-manifest', action='store_true', help='treat the argument as a folder and only re-hash it')
+    ap.add_argument('--refresh-readme', action='store_true',
+                    help='treat the argument as an issue folder; rewrite README.md (and a legacy note in forecast.json), then re-hash')
     a = ap.parse_args(argv)
     if a.refresh_manifest:
         refreshManifest(os.path.abspath(a.issueDay))
+        return 0
+    if a.refresh_readme:
+        refreshReadme(os.path.abspath(a.issueDay))
         return 0
     return export(a.issueDay, os.path.abspath(a.research), a.force)
 
