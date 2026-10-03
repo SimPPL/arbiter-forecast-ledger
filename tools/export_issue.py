@@ -29,6 +29,9 @@ IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
 TOP_N = 10
 # Left by `ots upgrade` and macOS; git ignores them too.
 IGNORED = ('.ots.bak', '.DS_Store')
+# The unit layer is committed after MANIFEST.json and indexed by UNITS.json, so the manifest leaves it out.
+UNIT_DIRS = ('categories', 'narratives', 'posts', 'accounts')
+UNIT_INDEXES = ('UNITS.json', 'UNITS.json.ots', 'OUTCOMES-UNITS.json', 'OUTCOMES-UNITS.json.ots')
 
 # Issues frozen before the forward block began. Their folders are named by target day in the
 # research repo, so the ledger maps them by the UTC date of the freeze.
@@ -312,7 +315,7 @@ def writeManifest(out: str, meta: dict) -> None:
         for n in sorted(names):
             p = os.path.join(root, n)
             rel = os.path.relpath(p, out)
-            if rel != 'MANIFEST.json' and not rel.endswith(IGNORED):
+            if rel != 'MANIFEST.json' and not rel.endswith(IGNORED) and rel not in UNIT_INDEXES and rel.split(os.sep)[0] not in UNIT_DIRS:
                 files[rel] = sha256(p)
     meta = dict(meta)
     meta.setdefault('exportedUtc', dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))

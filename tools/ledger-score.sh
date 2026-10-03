@@ -4,6 +4,7 @@
 # written and committed the day's score file.
 #
 # Usage: tools/ledger-score.sh <day> [--dry-run]
+# From the 3 Oct target on it also runs tools/commit_units.sh --outcome (one commit per scored unit, then the views).
 #   --dry-run  work in a scratch clone of the ledger; nothing changes here.
 # FORCE=1 rewrites an existing outcome folder. ots upgrade leaves FREEZE.json.ots.bak beside each proof; git ignores it.
 # Exit codes: 0 done, 2 refused.
@@ -55,6 +56,12 @@ git commit -q -m "outcome $DAY: actual post counts and scores from the research 
 git log --oneline -1
 
 python3 tools/verify.py --offline || true
+
+# From the 3 Oct target on, every scored category and narrative gets its own commit, then OUTCOMES-UNITS.json, its
+# stamp and the regenerated views (by-narrative/, by-category/, SCOREBOARD.md).
+if [[ ! "$DAY" < "2026-10-03" ]]; then
+  bash tools/commit_units.sh --outcome "$DAY" || echo "outcome units refused for $DAY; the outcome itself is committed. Fix and run tools/commit_units.sh --outcome $DAY" >&2
+fi
 
 if [[ "$DRY" == "--dry-run" ]]; then
   echo "dry run: committed only in the scratch clone; the ledger at $LEDGER is unchanged"

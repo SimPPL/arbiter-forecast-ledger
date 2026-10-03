@@ -4,6 +4,7 @@
 # the issue there.
 #
 # Usage: tools/ledger-publish.sh <issueDay> [--dry-run]
+# From issue 2026-10-04 on it also runs tools/commit_units.sh (one commit per unit, then UNITS.json).
 #   --dry-run  export into a scratch copy of the ledger and show what would be committed; nothing changes here.
 # FORCE=1 rewrites an existing issue folder (the frozen files are copied again; their hashes cannot change).
 # Exit codes: 0 done, 2 refused.
@@ -50,6 +51,12 @@ git commit -q -m "issue $DAY: frozen forecast copied with identical hashes (FREE
 git log --oneline -1
 
 python3 tools/verify.py "$DAY" --offline || true
+
+# From issue 2026-10-04 on, every category and narrative (and every FWD-TWEETS-1 predicted post and account, once the
+# private repo has committed its units) gets its own commit, then UNITS.json and its stamp.
+if [[ ! "$DAY" < "2026-10-04" ]]; then
+  bash tools/commit_units.sh "$DAY" || echo "units refused for $DAY; the issue itself is committed. Fix and run tools/commit_units.sh $DAY" >&2
+fi
 
 if [[ "$DRY" == "--dry-run" ]]; then
   echo "dry run: committed only in the scratch clone; the ledger at $LEDGER is unchanged"
