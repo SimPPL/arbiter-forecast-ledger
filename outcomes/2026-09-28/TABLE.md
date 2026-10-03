@@ -4,7 +4,7 @@ Each row is one story from the forecast's top 10, with the forecast number of po
 
 Built by `tools/outcome_table.py` from `stories.json`, `score.json` and `ranks.json` in this folder. A real rank of "9 of 96" means the story was the ninth busiest of the 96 stories in that country with at least one post that day.
 
-## Issue 2026-09-27, 2 days ahead, boosted trees
+## Issue 2026-09-27, 2 days ahead (lag 2), boosted trees
 
 ### United States
 

@@ -4,7 +4,7 @@ Arbiter renamed every story on 2026-09-30, so no forecast story kept its key. We
 
 Built by `tools/outcome_table.py` from `stories.json`, `score.json` and `ranks.json` in this folder. A real rank of "9 of 96" means the story was the ninth busiest of the 96 stories in that country with at least one post that day.
 
-## Issue 2026-09-29, 2 days ahead, boosted trees
+## Issue 2026-09-29, 2 days ahead (lag 2), boosted trees
 
 ### United States
 
