@@ -663,6 +663,25 @@ def privateHandleScan(texts: Iterable[Tuple[str, str]], handles: Iterable[str]) 
     return sorted(set(hits))
 
 
+def redactHandles(text: Optional[str], handles: Iterable[str]) -> Tuple[Optional[str], int]:
+    """Replace every private handle in a public sentence.
+
+    @param text: sentence, or None.
+    @param handles: lower-case private handles.
+    @returns: (text with each handle replaced by '[a private account]', number replaced).
+    @throws: nothing.
+    """
+    if not text:
+        return text, 0
+    hs = sorted({h.lower().lstrip('@') for h in handles if h}, key=len, reverse=True)
+    n = 0
+    for i in range(0, len(hs), 500):
+        rx = re.compile(r'@?(?<![A-Za-z0-9_])(' + '|'.join(re.escape(h) for h in hs[i:i + 500]) + r')(?![A-Za-z0-9_])', re.IGNORECASE)
+        text, k = rx.subn('[a private account]', text)
+        n += k
+    return text, n
+
+
 def accountRef(handle: str, salt: str) -> str:
     """Public reference of an account that does not pass PublicAccounts.decide.
 
