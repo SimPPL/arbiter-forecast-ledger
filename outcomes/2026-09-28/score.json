@@ -1,0 +1,365 @@
+{
+ "day": "2026-09-28",
+ "kind": "by key",
+ "horizonDays": 2,
+ "reading": "T0",
+ "logErrorDefinition": "mean |log(1 + actual) - log(1 + forecast)| over every story the forecast listed; lower is better",
+ "headline": "gbm",
+ "references": [
+  "persist",
+  "zero"
+ ],
+ "models": {
+  "ewma": {
+   "name": "exponential smoothing",
+   "logError": {
+    "label": "log error, all stories",
+    "value": 0.293
+   },
+   "logErrorUS": {
+    "label": "log error, US",
+    "value": 0.169
+   },
+   "logErrorIN": {
+    "label": "log error, India",
+    "value": 0.424
+   },
+   "top10HitsUS": {
+    "label": "real top-10 stories found, US",
+    "value": 1
+   },
+   "top10HitsIN": {
+    "label": "real top-10 stories found, India",
+    "value": 1
+   },
+   "cover80": {
+    "label": "share of actuals inside the 80 percent range",
+    "value": 0.852
+   },
+   "rows": 2255
+  },
+  "gbm": {
+   "name": "boosted trees",
+   "logError": {
+    "label": "log error, all stories",
+    "value": 0.23
+   },
+   "logErrorUS": {
+    "label": "log error, US",
+    "value": 0.092
+   },
+   "logErrorIN": {
+    "label": "log error, India",
+    "value": 0.375
+   },
+   "top10HitsUS": {
+    "label": "real top-10 stories found, US",
+    "value": 1
+   },
+   "top10HitsIN": {
+    "label": "real top-10 stories found, India",
+    "value": 1
+   },
+   "cover80": {
+    "label": "share of actuals inside the 80 percent range",
+    "value": 0.875
+   },
+   "rows": 2255
+  },
+  "hawkes": {
+   "name": "hawkes",
+   "logError": {
+    "label": "log error, all stories",
+    "value": 0.215
+   },
+   "logErrorUS": {
+    "label": "log error, US",
+    "value": 0.064
+   },
+   "logErrorIN": {
+    "label": "log error, India",
+    "value": 0.374
+   },
+   "top10HitsUS": {
+    "label": "real top-10 stories found, US",
+    "value": 0
+   },
+   "top10HitsIN": {
+    "label": "real top-10 stories found, India",
+    "value": 1
+   },
+   "cover80": {
+    "label": "share of actuals inside the 80 percent range",
+    "value": 0.924
+   },
+   "rows": 2255
+  },
+  "holt_damped": {
+   "name": "damped Holt",
+   "logError": {
+    "label": "log error, all stories",
+    "value": 0.297
+   },
+   "logErrorUS": {
+    "label": "log error, US",
+    "value": 0.168
+   },
+   "logErrorIN": {
+    "label": "log error, India",
+    "value": 0.432
+   },
+   "top10HitsUS": {
+    "label": "real top-10 stories found, US",
+    "value": 1
+   },
+   "top10HitsIN": {
+    "label": "real top-10 stories found, India",
+    "value": 1
+   },
+   "cover80": {
+    "label": "share of actuals inside the 80 percent range",
+    "value": 0.855
+   },
+   "rows": 2255
+  },
+  "nb_glm": {
+   "name": "nb_glm",
+   "logError": {
+    "label": "log error, all stories",
+    "value": 0.215
+   },
+   "logErrorUS": {
+    "label": "log error, US",
+    "value": 0.064
+   },
+   "logErrorIN": {
+    "label": "log error, India",
+    "value": 0.373
+   },
+   "top10HitsUS": {
+    "label": "real top-10 stories found, US",
+    "value": 0
+   },
+   "top10HitsIN": {
+    "label": "real top-10 stories found, India",
+    "value": 1
+   },
+   "cover80": {
+    "label": "share of actuals inside the 80 percent range",
+    "value": 0.924
+   },
+   "rows": 2255
+  },
+  "persist": {
+   "name": "yesterday's count",
+   "logError": {
+    "label": "log error, all stories",
+    "value": 0.282
+   },
+   "logErrorUS": {
+    "label": "log error, US",
+    "value": 0.07
+   },
+   "logErrorIN": {
+    "label": "log error, India",
+    "value": 0.504
+   },
+   "top10HitsUS": {
+    "label": "real top-10 stories found, US",
+    "value": 0
+   },
+   "top10HitsIN": {
+    "label": "real top-10 stories found, India",
+    "value": 0
+   },
+   "cover80": {
+    "label": "share of actuals inside the 80 percent range",
+    "value": 0.917
+   },
+   "rows": 2255
+  },
+  "pooled": {
+   "name": "pooled",
+   "logError": {
+    "label": "log error, all stories",
+    "value": 0.25
+   },
+   "logErrorUS": {
+    "label": "log error, US",
+    "value": 0.112
+   },
+   "logErrorIN": {
+    "label": "log error, India",
+    "value": 0.394
+   },
+   "top10HitsUS": {
+    "label": "real top-10 stories found, US",
+    "value": 1
+   },
+   "top10HitsIN": {
+    "label": "real top-10 stories found, India",
+    "value": 1
+   },
+   "cover80": {
+    "label": "share of actuals inside the 80 percent range",
+    "value": 0.877
+   },
+   "rows": 2255
+  },
+  "sched_event": {
+   "name": "sched_event",
+   "logError": {
+    "label": "log error, all stories",
+    "value": 0.25
+   },
+   "logErrorUS": {
+    "label": "log error, US",
+    "value": 0.113
+   },
+   "logErrorIN": {
+    "label": "log error, India",
+    "value": 0.395
+   },
+   "top10HitsUS": {
+    "label": "real top-10 stories found, US",
+    "value": 1
+   },
+   "top10HitsIN": {
+    "label": "real top-10 stories found, India",
+    "value": 1
+   },
+   "cover80": {
+    "label": "share of actuals inside the 80 percent range",
+    "value": 0.875
+   },
+   "rows": 2255
+  },
+  "seasonal7": {
+   "name": "seasonal7",
+   "logError": {
+    "label": "log error, all stories",
+    "value": 0.903
+   },
+   "logErrorUS": {
+    "label": "log error, US",
+    "value": 0.686
+   },
+   "logErrorIN": {
+    "label": "log error, India",
+    "value": 1.131
+   },
+   "top10HitsUS": {
+    "label": "real top-10 stories found, US",
+    "value": 1
+   },
+   "top10HitsIN": {
+    "label": "real top-10 stories found, India",
+    "value": 0
+   },
+   "cover80": {
+    "label": "share of actuals inside the 80 percent range",
+    "value": 0.804
+   },
+   "rows": 2255
+  },
+  "strat_cat": {
+   "name": "strat_cat",
+   "logError": {
+    "label": "log error, all stories",
+    "value": 0.255
+   },
+   "logErrorUS": {
+    "label": "log error, US",
+    "value": 0.124
+   },
+   "logErrorIN": {
+    "label": "log error, India",
+    "value": 0.392
+   },
+   "top10HitsUS": {
+    "label": "real top-10 stories found, US",
+    "value": 1
+   },
+   "top10HitsIN": {
+    "label": "real top-10 stories found, India",
+    "value": 1
+   },
+   "cover80": {
+    "label": "share of actuals inside the 80 percent range",
+    "value": 0.875
+   },
+   "rows": 2255
+  },
+  "weekday_persist": {
+   "name": "weekday_persist",
+   "logError": {
+    "label": "log error, all stories",
+    "value": 0.235
+   },
+   "logErrorUS": {
+    "label": "log error, US",
+    "value": 0.068
+   },
+   "logErrorIN": {
+    "label": "log error, India",
+    "value": 0.412
+   },
+   "top10HitsUS": {
+    "label": "real top-10 stories found, US",
+    "value": 0
+   },
+   "top10HitsIN": {
+    "label": "real top-10 stories found, India",
+    "value": 0
+   },
+   "cover80": {
+    "label": "share of actuals inside the 80 percent range",
+    "value": 0.875
+   },
+   "rows": 2255
+  },
+  "zero": {
+   "name": "every story dies",
+   "logError": {
+    "label": "log error, all stories",
+    "value": 0.215
+   },
+   "logErrorUS": {
+    "label": "log error, US",
+    "value": 0.064
+   },
+   "logErrorIN": {
+    "label": "log error, India",
+    "value": 0.374
+   },
+   "top10HitsUS": {
+    "label": "real top-10 stories found, US",
+    "value": null
+   },
+   "top10HitsIN": {
+    "label": "real top-10 stories found, India",
+    "value": null
+   },
+   "rows": 2255,
+   "note": "Computed by tools/export_outcome.py over the same rows; the research score file has no zero row. It ranks nothing, so it finds no top-10 story."
+  }
+ },
+ "newStoryShare": {
+  "US": 0.823673651359786,
+  "IN": 0.6375629647397457
+ },
+ "notes": [
+  "The US half of this day is degraded: US collection fell from 24 to 28 September, and the day holds 4,486 posts in US stories against 29,183 in India."
+ ],
+ "timing": {
+  "2026-09-27": {
+   "targetStartsUtc": "2026-09-28T00:00:00Z",
+   "ledgerCommit": "b0045463fe85eb3a5a1a0d3964b197059d869fbe",
+   "ledgerPushUtc": "2026-10-02T23:10:10Z",
+   "ledgerPushSource": "https://api.github.com/repos/SimPPL/arbiter-forecast-ledger/activity (activity API)",
+   "researchPushUtc": "2026-09-27T21:19:29Z",
+   "researchCommit": "ad25f9d",
+   "researchPushNote": "Push to the private research repo, recorded from its GitHub events; an outsider cannot check it."
+  }
+ }
+}

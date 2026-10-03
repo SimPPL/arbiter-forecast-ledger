@@ -1,0 +1,384 @@
+{
+ "day": "2026-09-28",
+ "kind": "by key",
+ "reading": "T0: posts published on the day that Arbiter's reading of the day assigns to the story",
+ "forecasts": [
+  {
+   "issueDay": "2026-09-27",
+   "horizonDays": 2,
+   "model": "gbm|K0",
+   "regions": {
+    "US": [
+     {
+      "rank": 1,
+      "title": "AI and crypto assets draw renewed trading interest",
+      "arbiterKey": "US:9bdb89f3846ae06c",
+      "posts": 2.0,
+      "lo": 0.1,
+      "hi": 6.7,
+      "chance": "long shot",
+      "actual": 70,
+      "inRange": false
+     },
+     {
+      "rank": 2,
+      "title": "Fans Celebrate JoongDunk’s Seoul Appearance and Bond",
+      "arbiterKey": "US:a7695dc14dbd15ec",
+      "posts": 1.3,
+      "lo": 0.0,
+      "hi": 5.0,
+      "chance": "long shot",
+      "actual": 0,
+      "inRange": true
+     },
+     {
+      "rank": 3,
+      "title": "Judge Blocks Trump Administration’s White House Media Ban",
+      "arbiterKey": "US:e836f4a16cdd1cce",
+      "posts": 1.0,
+      "lo": 0.0,
+      "hi": 4.2,
+      "chance": "long shot",
+      "actual": 0,
+      "inRange": true
+     },
+     {
+      "rank": 4,
+      "title": "Global leaders’ UN speeches amid geopolitical tensions",
+      "arbiterKey": "US:98e7aa67e3be4562",
+      "posts": 0.9,
+      "lo": 0.0,
+      "hi": 4.0,
+      "chance": "long shot",
+      "actual": 19,
+      "inRange": false
+     },
+     {
+      "rank": 5,
+      "title": "Trump-Xi Summit and China-U.S. Diplomatic Engagement",
+      "arbiterKey": "US:ab79d05b03708d16",
+      "posts": 0.9,
+      "lo": 0.0,
+      "hi": 3.9,
+      "chance": "long shot",
+      "actual": 1,
+      "inRange": true
+     },
+     {
+      "rank": 6,
+      "title": "Grand Jury Finds No Criminal Charges in Nolan Wells’ Death",
+      "arbiterKey": "US:f54c6e6a762ab446",
+      "posts": 0.8,
+      "lo": 0.0,
+      "hi": 3.8,
+      "chance": "long shot",
+      "actual": 1,
+      "inRange": true
+     },
+     {
+      "rank": 7,
+      "title": "Discount promo posts for Abdul Samad Al Qurashi fragrances",
+      "arbiterKey": "US:6460fd549ee93239",
+      "posts": 0.8,
+      "lo": 0.0,
+      "hi": 3.8,
+      "chance": "long shot",
+      "actual": 0,
+      "inRange": true
+     },
+     {
+      "rank": 8,
+      "title": "Xbox reshuffles studios and shifts Halo development to Activision",
+      "arbiterKey": "US:37cf480a75ae7264",
+      "posts": 0.8,
+      "lo": 0.0,
+      "hi": 3.6,
+      "chance": "long shot",
+      "actual": 3,
+      "inRange": true
+     },
+     {
+      "rank": 9,
+      "title": "Tom Cruise Film Digger Premieres in London",
+      "arbiterKey": "US:934c9175f283d76f",
+      "posts": 0.7,
+      "lo": 0.0,
+      "hi": 3.5,
+      "chance": "long shot",
+      "actual": 0,
+      "inRange": true
+     },
+     {
+      "rank": 10,
+      "title": "Taylor Swift fans debate “Patient Zero” and a possible deluxe release",
+      "arbiterKey": "US:0e9abafeceddbce1",
+      "posts": 0.7,
+      "lo": 0.0,
+      "hi": 3.5,
+      "chance": "long shot",
+      "actual": 21,
+      "inRange": false
+     }
+    ],
+    "IN": [
+     {
+      "rank": 1,
+      "title": "Qazi Tauqeer’s Bigg Boss 20 spotlight",
+      "arbiterKey": "IN:e9da355927000ea3",
+      "posts": 56.7,
+      "lo": 0.8,
+      "hi": 580.4,
+      "chance": "likely",
+      "actual": 1044,
+      "inRange": false
+     },
+     {
+      "rank": 2,
+      "title": "Bigg Boss Fans Rally Behind Scout Amid Bias Claims",
+      "arbiterKey": "IN:6ded9713a38e41c5",
+      "posts": 25.9,
+      "lo": 0.0,
+      "hi": 270.5,
+      "chance": "possible",
+      "actual": 9,
+      "inRange": true
+     },
+     {
+      "rank": 3,
+      "title": "Election commissioners’ objections to India’s SIR process reported",
+      "arbiterKey": "IN:6c4503596fcb4ab4",
+      "posts": 10.0,
+      "lo": 0.5,
+      "hi": 64.7,
+      "chance": "possible",
+      "actual": 51,
+      "inRange": true
+     },
+     {
+      "rank": 4,
+      "title": "Festive Campaign Encourages Responsible PET Bottle Recycling",
+      "arbiterKey": "IN:04aaa30f1ddf9b00",
+      "posts": 7.7,
+      "lo": 0.2,
+      "hi": 51.2,
+      "chance": "possible",
+      "actual": 17,
+      "inRange": true
+     },
+     {
+      "rank": 5,
+      "title": "First-Look Posters Build Excitement for Bhansali’s Love & War",
+      "arbiterKey": "IN:2004b6d9a821c7c6",
+      "posts": 7.2,
+      "lo": 0.1,
+      "hi": 48.1,
+      "chance": "possible",
+      "actual": 6,
+      "inRange": true
+     },
+     {
+      "rank": 6,
+      "title": "ब्रह्मा कुमारी पंथ की मान्यताओं पर संत रामपाल समर्थक बहस",
+      "arbiterKey": "IN:c0eca0d213ce1ad0",
+      "posts": 7.0,
+      "lo": 0.1,
+      "hi": 46.9,
+      "chance": "possible",
+      "actual": 1,
+      "inRange": true
+     },
+     {
+      "rank": 7,
+      "title": "जमुई मामले में नंदन यादव की गिरफ्तारी और राजनीतिक आरोप-प्रत्यारोप",
+      "arbiterKey": "IN:751ff09db72c6490",
+      "posts": 6.4,
+      "lo": 0.0,
+      "hi": 43.4,
+      "chance": "possible",
+      "actual": 4,
+      "inRange": true
+     },
+     {
+      "rank": 8,
+      "title": "राजपाल यादव की चेक बाउंस मामले में सुप्रीम कोर्ट याचिका",
+      "arbiterKey": "IN:fb5a2b249f63a11b",
+      "posts": 6.4,
+      "lo": 0.0,
+      "hi": 43.2,
+      "chance": "possible",
+      "actual": 89,
+      "inRange": false
+     },
+     {
+      "rank": 9,
+      "title": "Birthday Wishes Pour In for Ravi Dada",
+      "arbiterKey": "IN:c31385d2f16d6463",
+      "posts": 5.7,
+      "lo": 0.0,
+      "hi": 39.3,
+      "chance": "possible",
+      "actual": 11,
+      "inRange": true
+     },
+     {
+      "rank": 10,
+      "title": "Reactions to Spain–England Match Focus on Key Players and Refereeing",
+      "arbiterKey": "IN:ee67ddfafe10dded",
+      "posts": 5.5,
+      "lo": 0.0,
+      "hi": 37.9,
+      "chance": "possible",
+      "actual": 0,
+      "inRange": true
+     }
+    ]
+   }
+  }
+ ],
+ "actualTop10": {
+  "US": [
+   {
+    "rank": 1,
+    "title": "Vikings and Buccaneers Face Off in NFL Game",
+    "arbiterKey": "US:06d67049337d03ec",
+    "posts": 1062,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 2,
+    "title": "Kirill Marchenko Reportedly Traded to the Toronto Maple Leafs",
+    "arbiterKey": "US:5e274d5c02d48e7c",
+    "posts": 909,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 3,
+    "title": "Sixers Media-Day Buzz and Roster Talk",
+    "arbiterKey": "US:e73bf00170f420a8",
+    "posts": 505,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 4,
+    "title": "NFL Fans React to a Chaotic Week of Close Games",
+    "arbiterKey": "US:86fb773dc0dfe20d",
+    "posts": 499,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 5,
+    "title": "Explosives arrests and evacuations near RAF Fairford",
+    "arbiterKey": "US:1c4a9540aabd2b1b",
+    "posts": 327,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 6,
+    "title": "Motivational Posts Promote Strategic $XDC Investing",
+    "arbiterKey": "US:874ffe3bb9fc4277",
+    "posts": 322,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 7,
+    "title": "Cornell fraternity rape allegations and calls for accountability",
+    "arbiterKey": "US:345f14646c910588",
+    "posts": 287,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 8,
+    "title": "Eagles bring Zach Ertz back for tight end depth",
+    "arbiterKey": "US:551c585c68c7f1f2",
+    "posts": 159,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 9,
+    "title": "AI and crypto assets draw renewed trading interest",
+    "arbiterKey": "US:9bdb89f3846ae06c",
+    "posts": 70,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 10,
+    "title": "Debate Over Justin Herbert’s Performance and NFL Future",
+    "arbiterKey": "US:fdb812e358d2e979",
+    "posts": 64,
+    "liveAtOrigin": true
+   }
+  ],
+  "IN": [
+   {
+    "rank": 1,
+    "title": "जमुई छात्र छेड़छाड़ मामले में पुलिस और नेताओं की जवाबदेही पर सवाल",
+    "arbiterKey": "IN:a98d67d37125bbff",
+    "posts": 1479,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 2,
+    "title": "Tributes Mark Lata Mangeshkar’s Birth Anniversary",
+    "arbiterKey": "IN:023deebf538f555b",
+    "posts": 1312,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 3,
+    "title": "Ujjain Shahi Mosque Faces Removal Amid Simhastha Road-Widening Plans",
+    "arbiterKey": "IN:f528a8904fa45827",
+    "posts": 1077,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 4,
+    "title": "Qazi Tauqeer’s Bigg Boss 20 spotlight",
+    "arbiterKey": "IN:e9da355927000ea3",
+    "posts": 1044,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 5,
+    "title": "Omega’s ₹200 Crore Fundraise and AI Expansion Plan",
+    "arbiterKey": "IN:0b11f13ae5842ef6",
+    "posts": 995,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 6,
+    "title": "Student Protests at Lovely Professional University",
+    "arbiterKey": "IN:8af7a72825221f87",
+    "posts": 923,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 7,
+    "title": "International football fixtures spotlight Netherlands, Germany, Norway and Denma",
+    "arbiterKey": "IN:38d9cd25ae2548f1",
+    "posts": 879,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 8,
+    "title": "Federal Reserve Rate Hike Draws Market and Political Attention",
+    "arbiterKey": "IN:264b8fa4c34e9a49",
+    "posts": 836,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 9,
+    "title": "AI Model Development and Performance Advances",
+    "arbiterKey": "IN:7634cda229c04fb9",
+    "posts": 772,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 10,
+    "title": "Sant Rampal’s Scriptural Debate Challenge",
+    "arbiterKey": "IN:6b4c2036403ae009",
+    "posts": 682,
+    "liveAtOrigin": false
+   }
+  ]
+ }
+}

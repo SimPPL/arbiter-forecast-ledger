@@ -1,0 +1,18 @@
+{
+ "kind": "outcome",
+ "day": "2026-09-28",
+ "scoring": "by key",
+ "researchHead": "31909d65a39da434b2b7c40b04138e1a0859ef20",
+ "sources": {
+  "cleanroom/2026-09-28-tomorrow-tournament/results/live/score_2026-09-28_h2_K0.json": "5e57dfde02c45df5ae8d67ee303d17d575a7f7257044b62e76eee97630e9d4f5",
+  "cleanroom/2026-09-28-tomorrow-tournament/forecasts/pilot-2026-09-28/pred_2026-09-28_h2_K0.parquet": "b8cc9609c06cb6844202fe39ef66e5a0d7030e78f5cf1d0e5079056078112586",
+  "data/tomorrow_tournament/live/vint.parquet": "a633d8fae7328da1d56ad3cb36c8c0163945e8da0ac403c4bf2d81672ebd9eed",
+  "data/tomorrow_tournament/live/nk_meta.parquet": "632ecf6941d1ee420f410cc583ed5bd32ae04f513ba2ac8f2773733452447090"
+ },
+ "exportedUtc": "2026-10-02T23:53:33Z",
+ "files": {
+  "README.md": "e606f28f2e5ca68fc8dc2473b3ad562549e1d43dc5f10d853098ed31fcfcb2cd",
+  "score.json": "45621c7ee9d38920f19e0579ef4cfc2c91542a552c6b18ef9b994eb132fb2723",
+  "stories.json": "d7f935d9661957fe772627f8626ec6c0be237222ef967b6b4f887914df851692"
+ }
+}
