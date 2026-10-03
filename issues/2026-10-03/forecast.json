@@ -1,0 +1,416 @@
+{
+ "issueDay": "2026-10-03",
+ "frozenUtc": "2026-10-03T07:24:16Z",
+ "frozenIst": "2026-10-03T12:54:16+05:30",
+ "origin": "2026-10-02",
+ "model": "gbm_med",
+ "unit": "An Arbiter story (narrative key) on X, regions US and IN. \"posts\" is the forecast count of posts published on the target day (UTC) that Arbiter will assign to the story; lo and hi bound the 80 percent range.",
+ "note": null,
+ "source": {
+  "repo": "narrative-reach-sim (private research repo)",
+  "folder": "cleanroom/2026-10-01-tomorrow-forward/forecasts/issue-2026-10-03",
+  "freezeCommit": "18092561a16782ccde4a2a9d862d008338bd9e6e"
+ },
+ "horizons": [
+  {
+   "horizonDays": 1,
+   "horizonCountedFrom": "issue day",
+   "lagFromOriginDays": 2,
+   "targetDay": "2026-10-04",
+   "targetStartsUtc": "2026-10-04T00:00:00Z",
+   "frozenBeforeTargetStart": true,
+   "regions": {
+    "IN": {
+     "liveStories": 1371,
+     "top": [
+      {
+       "rank": 1,
+       "title": "Reports of Ronaldo’s rift with Portugal coach Jorge Jesus",
+       "arbiterKey": "IN:a6624bbb553d35c6",
+       "posts": 35.8,
+       "lo": 0.0,
+       "hi": 485.3,
+       "chance": "likely"
+      },
+      {
+       "rank": 2,
+       "title": "Reports of a confrontation aboard a FlyDubai flight",
+       "arbiterKey": "IN:f1bb9ee3c01de292",
+       "posts": 32.9,
+       "lo": 0.0,
+       "hi": 446.7,
+       "chance": "likely"
+      },
+      {
+       "rank": 3,
+       "title": "Gandhi Jayanti tributes highlight truth, peace and cleanliness",
+       "arbiterKey": "IN:57ed7b9f042f4ce4",
+       "posts": 28.2,
+       "lo": 0.0,
+       "hi": 385.1,
+       "chance": "likely"
+      },
+      {
+       "rank": 4,
+       "title": "Protest over Election Chief at Mumbai’s Shivaji Park",
+       "arbiterKey": "IN:eca699ff3823b127",
+       "posts": 21.0,
+       "lo": 0.0,
+       "hi": 289.6,
+       "chance": "likely"
+      },
+      {
+       "rank": 5,
+       "title": "Drishyam’s Vijay Salgaonkar Returns for a Final Showdown",
+       "arbiterKey": "IN:c0803a0c1ae0f99e",
+       "posts": 19.2,
+       "lo": 1.7,
+       "hi": 163.0,
+       "chance": "likely"
+      },
+      {
+       "rank": 6,
+       "title": "Tamil Film Releases Draw Fan Buzz and Mixed Expectations",
+       "arbiterKey": "IN:20e89d6f58021950",
+       "posts": 19.1,
+       "lo": 1.6,
+       "hi": 161.8,
+       "chance": "likely"
+      },
+      {
+       "rank": 7,
+       "title": "Debate over Delhi Police conduct and public safety",
+       "arbiterKey": "IN:f3f57d88fea4f1a0",
+       "posts": 18.1,
+       "lo": 1.5,
+       "hi": 153.5,
+       "chance": "likely"
+      },
+      {
+       "rank": 8,
+       "title": "Wicknell Chivayo Reported Dead in Helicopter Crash",
+       "arbiterKey": "IN:7f75b62ab30339fa",
+       "posts": 14.4,
+       "lo": 1.0,
+       "hi": 123.8,
+       "chance": "possible"
+      },
+      {
+       "rank": 9,
+       "title": "World Heart Day Promotes Heart Health and Prevention",
+       "arbiterKey": "IN:963a6b98b79c35bb",
+       "posts": 12.5,
+       "lo": 0.8,
+       "hi": 108.5,
+       "chance": "possible"
+      },
+      {
+       "rank": 10,
+       "title": "Hindu Devotional Prayers and Daily Greetings",
+       "arbiterKey": "IN:7e4ac68906339414",
+       "posts": 11.7,
+       "lo": 0.7,
+       "hi": 101.8,
+       "chance": "possible"
+      }
+     ]
+    },
+    "US": {
+     "liveStories": 1190,
+     "top": [
+      {
+       "rank": 1,
+       "title": "Formind’s RYET Commercial Updates Draw Investor Attention",
+       "arbiterKey": "US:6ac3e2825463b554",
+       "posts": 29.0,
+       "lo": 0.0,
+       "hi": 396.2,
+       "chance": "likely"
+      },
+      {
+       "rank": 2,
+       "title": "LingOrm Draws Fan Attention at Dior’s Paris Fashion Week Show",
+       "arbiterKey": "US:a84a4cb3ef9e948a",
+       "posts": 22.9,
+       "lo": 0.0,
+       "hi": 314.9,
+       "chance": "likely"
+      },
+      {
+       "rank": 3,
+       "title": "NHL season opener sparks team and player reactions",
+       "arbiterKey": "US:9414a04a0f2a6f5d",
+       "posts": 21.6,
+       "lo": 0.0,
+       "hi": 297.9,
+       "chance": "likely"
+      },
+      {
+       "rank": 4,
+       "title": "Reality TV fans debate Angela’s conflict with Melody",
+       "arbiterKey": "US:029e22ce0f2f2335",
+       "posts": 18.9,
+       "lo": 1.6,
+       "hi": 160.6,
+       "chance": "likely"
+      },
+      {
+       "rank": 5,
+       "title": "Bitget Reports $351M Hot-Wallet Breach",
+       "arbiterKey": "US:977e42721988a89f",
+       "posts": 17.3,
+       "lo": 1.4,
+       "hi": 147.1,
+       "chance": "likely"
+      },
+      {
+       "rank": 6,
+       "title": "Nigeria’s Independence Day and national politics",
+       "arbiterKey": "US:934aed0b68b62d85",
+       "posts": 16.9,
+       "lo": 1.4,
+       "hi": 144.0,
+       "chance": "likely"
+      },
+      {
+       "rank": 7,
+       "title": "Calls to ban LFI amid unrest in France",
+       "arbiterKey": "US:db3eed060beda220",
+       "posts": 16.6,
+       "lo": 1.3,
+       "hi": 141.3,
+       "chance": "possible"
+      },
+      {
+       "rank": 8,
+       "title": "Debate over Ancelotti’s tactics for Brazil",
+       "arbiterKey": "US:63bbdad0d08ec158",
+       "posts": 15.0,
+       "lo": 1.1,
+       "hi": 128.8,
+       "chance": "possible"
+      },
+      {
+       "rank": 9,
+       "title": "Buzz builds around Tom Cruise’s film Digger",
+       "arbiterKey": "US:2a0c197695d5603d",
+       "posts": 14.9,
+       "lo": 1.1,
+       "hi": 127.5,
+       "chance": "possible"
+      },
+      {
+       "rank": 10,
+       "title": "Fans celebrate pop and R&B artists",
+       "arbiterKey": "US:e2f3d4fe605ce5ed",
+       "posts": 14.5,
+       "lo": 1.0,
+       "hi": 124.3,
+       "chance": "possible"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "horizonDays": 3,
+   "horizonCountedFrom": "issue day",
+   "lagFromOriginDays": 4,
+   "targetDay": "2026-10-06",
+   "targetStartsUtc": "2026-10-06T00:00:00Z",
+   "frozenBeforeTargetStart": true,
+   "regions": {
+    "IN": {
+     "liveStories": 1371,
+     "top": [
+      {
+       "rank": 1,
+       "title": "Reports of a confrontation aboard a FlyDubai flight",
+       "arbiterKey": "IN:f1bb9ee3c01de292",
+       "posts": 8.6,
+       "lo": 0.4,
+       "hi": 91.4,
+       "chance": "possible"
+      },
+      {
+       "rank": 2,
+       "title": "Tamil Film Releases Draw Fan Buzz and Mixed Expectations",
+       "arbiterKey": "IN:20e89d6f58021950",
+       "posts": 5.7,
+       "lo": 0.0,
+       "hi": 63.3,
+       "chance": "possible"
+      },
+      {
+       "rank": 3,
+       "title": "Protest over Election Chief at Mumbai’s Shivaji Park",
+       "arbiterKey": "IN:eca699ff3823b127",
+       "posts": 4.3,
+       "lo": 0.0,
+       "hi": 49.9,
+       "chance": "possible"
+      },
+      {
+       "rank": 4,
+       "title": "Wicknell Chivayo Reported Dead in Helicopter Crash",
+       "arbiterKey": "IN:7f75b62ab30339fa",
+       "posts": 4.3,
+       "lo": 0.0,
+       "hi": 49.8,
+       "chance": "possible"
+      },
+      {
+       "rank": 5,
+       "title": "Captain Smit Machchhar Praised After Reported Flight Incident",
+       "arbiterKey": "IN:636f05f3345161f7",
+       "posts": 3.8,
+       "lo": 0.0,
+       "hi": 45.1,
+       "chance": "possible"
+      },
+      {
+       "rank": 6,
+       "title": "Trump and Tech Leaders Sign White House Superintelligence Accord",
+       "arbiterKey": "IN:1071ffd387d67b31",
+       "posts": 3.4,
+       "lo": 0.0,
+       "hi": 41.2,
+       "chance": "possible"
+      },
+      {
+       "rank": 7,
+       "title": "2027 Cricket World Cup Groups and Schedule Revealed",
+       "arbiterKey": "IN:592a2023abfdec51",
+       "posts": 3.0,
+       "lo": 0.0,
+       "hi": 37.6,
+       "chance": "possible"
+      },
+      {
+       "rank": 8,
+       "title": "Rayalaseema Plans a Global Horticulture Hub",
+       "arbiterKey": "IN:66e2a3f70365bce2",
+       "posts": 2.9,
+       "lo": 0.2,
+       "hi": 11.8,
+       "chance": "long shot"
+      },
+      {
+       "rank": 9,
+       "title": "Saudi-Pakistan Defense Pact and Houthi Attacks",
+       "arbiterKey": "IN:59054866f10a15f6",
+       "posts": 2.5,
+       "lo": 0.1,
+       "hi": 10.6,
+       "chance": "long shot"
+      },
+      {
+       "rank": 10,
+       "title": "Negreira case fuels Real Madrid–Barcelona rivalry",
+       "arbiterKey": "IN:7061469f85de1004",
+       "posts": 2.2,
+       "lo": 0.0,
+       "hi": 9.5,
+       "chance": "long shot"
+      }
+     ]
+    },
+    "US": {
+     "liveStories": 1190,
+     "top": [
+      {
+       "rank": 1,
+       "title": "Nike Earnings Beat EPS Estimates but Miss Revenue Forecasts",
+       "arbiterKey": "US:9100c463bfe0b461",
+       "posts": 9.7,
+       "lo": 0.5,
+       "hi": 102.2,
+       "chance": "possible"
+      },
+      {
+       "rank": 2,
+       "title": "Formind’s RYET Commercial Updates Draw Investor Attention",
+       "arbiterKey": "US:6ac3e2825463b554",
+       "posts": 3.6,
+       "lo": 0.0,
+       "hi": 43.5,
+       "chance": "possible"
+      },
+      {
+       "rank": 3,
+       "title": "Legal and political battles over voter eligibility and election rules",
+       "arbiterKey": "US:93ad5bf8ba2e1cd3",
+       "posts": 3.5,
+       "lo": 0.0,
+       "hi": 42.2,
+       "chance": "possible"
+      },
+      {
+       "rank": 4,
+       "title": "Snowfall Viewers React to Leon, Wanda and Dara’s Relationship Drama",
+       "arbiterKey": "US:7a6ae286eed11558",
+       "posts": 3.2,
+       "lo": 0.0,
+       "hi": 38.9,
+       "chance": "possible"
+      },
+      {
+       "rank": 5,
+       "title": "Posts About Dizziness and Feeling Unwell",
+       "arbiterKey": "US:99f02684a5cc2582",
+       "posts": 2.5,
+       "lo": 0.1,
+       "hi": 10.7,
+       "chance": "long shot"
+      },
+      {
+       "rank": 6,
+       "title": "Fans promote Yeonjun’s Miu Miu appearances",
+       "arbiterKey": "US:6ea1156fd6a1d17b",
+       "posts": 2.4,
+       "lo": 0.1,
+       "hi": 10.4,
+       "chance": "long shot"
+      },
+      {
+       "rank": 7,
+       "title": "Ethel Cain Merch Drop and Store Chatter",
+       "arbiterKey": "US:72515ce02c92f5f5",
+       "posts": 2.4,
+       "lo": 0.0,
+       "hi": 10.2,
+       "chance": "long shot"
+      },
+      {
+       "rank": 8,
+       "title": "DWTS Fans React to Eliminations and Contestant Rankings",
+       "arbiterKey": "US:017a24f564dbd018",
+       "posts": 2.3,
+       "lo": 0.0,
+       "hi": 10.1,
+       "chance": "long shot"
+      },
+      {
+       "rank": 9,
+       "title": "Sneaker deals and new Nike signature styles",
+       "arbiterKey": "US:d0a7d81bc8bad12f",
+       "posts": 2.3,
+       "lo": 0.0,
+       "hi": 9.8,
+       "chance": "long shot"
+      },
+      {
+       "rank": 10,
+       "title": "Trump Announces U.S. Push for AI “Superintelligence”",
+       "arbiterKey": "US:84ef5ba95d676c36",
+       "posts": 2.2,
+       "lo": 0.0,
+       "hi": 9.8,
+       "chance": "long shot"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}
