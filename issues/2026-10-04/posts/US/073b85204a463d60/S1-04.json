@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:073b85204a463d60",
+ "title": "Jack Smith’s Senate Hearing Draws Scrutiny of Eric Schmitt",
+ "optionId": "S1-04",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "Eric Schmitt made a total ass of himself by lying about Jack Smith being in Atlanta when he was actually at a Hawkeyes game.",
+ "sentenceIs": "written by the model",
+ "chance": 0.85,
+ "redacted": 0,
+ "personaRef": "sha256:60abda5424d382ff9f304c8756e239d310192f97acfdcf41f81a4c2af61c5e57",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/073b85204a463d60/S1-04.json",
+  "sha256": "5999c7228d8cdc0a2f597c161d59bea9e509fa268665fcac829835232ddbd232",
+  "commit": "dc7573fbcfdc691040e83c92ac7234749ad61d09"
+ }
+}
