@@ -1,0 +1,28 @@
+{
+ "unit": "account forecast",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:e06e09c0dc3dedf8",
+ "title": "Tennessee Execution of Christa Pike Delayed by Court Stay",
+ "accountRef": "sha256:a235ca2bf983c0d0e59e872e441f774aba9220f609b7eb517b78c2956b7b6764",
+ "public": false,
+ "namedBecause": null,
+ "chances": {
+  "W1": null,
+  "W2": null,
+  "W3": 0.005202
+ },
+ "listRanks": {
+  "W1": null,
+  "W2": null,
+  "W3": 6
+ },
+ "accountRefRule": "the handle for an account that passes PublicAccounts.decide at the origin; otherwise sha256(lower(handle) + \":\" + salt), with one salt per issue kept only in the private repo",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/accounts/e06e09c0dc3dedf8/sha256-a235ca2bf983c0d0e59e872e441f774aba9220f609b7eb517b78c2956b7b6764.json",
+  "sha256": "41fc6a69a551467fa980830de5125cc691f5ad892f490d00675d7f749c3a1c47",
+  "commit": "90957a1814963d8747c865fdd6d98be63637f2ba"
+ }
+}
