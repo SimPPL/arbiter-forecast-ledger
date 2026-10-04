@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:9100c463bfe0b461",
+ "title": "Nike Earnings Beat EPS Estimates but Miss Revenue Forecasts",
+ "optionId": "S3-02",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "The new Nike signature shoe for Caitlin Clark is selling out quickly.",
+ "sentenceIs": "written by the model",
+ "chance": 0.7,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/9100c463bfe0b461/S3-02.json",
+  "sha256": "bb65b142a3a9fa40c390be0a5ea46aec2634bcc171f9d92323a189c86e045826",
+  "commit": "aaae81daa25ecbe77a47f277b8ff7bd38e543d0b"
+ }
+}
