@@ -1,0 +1,28 @@
+{
+ "unit": "account forecast",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:0846f85d2095b37c",
+ "title": "Mississippi State edges Missouri in SEC matchup",
+ "accountRef": "@therebelwalk",
+ "public": true,
+ "namedBecause": "a post with 250,000+ views",
+ "chances": {
+  "W1": 0.076117,
+  "W2": null,
+  "W3": null
+ },
+ "listRanks": {
+  "W1": 4,
+  "W2": null,
+  "W3": null
+ },
+ "accountRefRule": "the handle for an account that passes PublicAccounts.decide at the origin; otherwise sha256(lower(handle) + \":\" + salt), with one salt per issue kept only in the private repo",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/accounts/0846f85d2095b37c/therebelwalk.json",
+  "sha256": "5b1a225d70a2e4e3b41b1a145cd9c6266d5c91de2c1ffdf9a52f8d7cf3a7970f",
+  "commit": "e399499b6f21f7e8c3d8af1311069e7b966fda43"
+ }
+}
