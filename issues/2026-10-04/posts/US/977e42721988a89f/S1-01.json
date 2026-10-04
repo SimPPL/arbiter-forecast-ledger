@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:977e42721988a89f",
+ "title": "Bitget Reports $351M Hot-Wallet Breach",
+ "optionId": "S1-01",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "sentence": "Bitget reports a $351M hot wallet breach and has hired Mandiant and SlowMist to investigate",
+ "sentenceIs": "written by the model",
+ "chance": 0.95,
+ "redacted": 0,
+ "personaRef": "sha256:9212148dbb76076d4d88e5d8da882a8dbb8910efc0c9ff38fbc64943a6d81efb",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/977e42721988a89f/S1-01.json",
+  "sha256": "42245f22fc5820fde132850122dd798a5951e2088cb8b5138283e49581d6e5b5",
+  "commit": "2ec192a170ff3eaa76709f39a11dd14c11d567b4"
+ }
+}
