@@ -1,0 +1,28 @@
+{
+ "unit": "account forecast",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:9219ac6562e6dc15",
+ "title": "Fever and Aces playoff matchup sparks player and fan debate",
+ "accountRef": "sha256:9eee743a8cc9fdcd50d67da36840baa396e69f40a56f380bc1ef77e6f8d801bb",
+ "public": false,
+ "namedBecause": null,
+ "chances": {
+  "W1": 0.141478,
+  "W2": null,
+  "W3": null
+ },
+ "listRanks": {
+  "W1": 9,
+  "W2": null,
+  "W3": null
+ },
+ "accountRefRule": "the handle for an account that passes PublicAccounts.decide at the origin; otherwise sha256(lower(handle) + \":\" + salt), with one salt per issue kept only in the private repo",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/accounts/9219ac6562e6dc15/sha256-9eee743a8cc9fdcd50d67da36840baa396e69f40a56f380bc1ef77e6f8d801bb.json",
+  "sha256": "626a848fc4d45e9de467b0ffabe92d9d716bb027eb975fb513ab47198ac78a93",
+  "commit": "e333b91214ff8e8ca707d4e31880aee13e687ade"
+ }
+}
