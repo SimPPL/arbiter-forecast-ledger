@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:e06e09c0dc3dedf8",
+ "title": "Tennessee Execution of Christa Pike Delayed by Court Stay",
+ "optionId": "S2-04",
+ "seat": "S2",
+ "seatName": "continuation",
+ "model": "none: the origin day's most repeated posts, fixed chances by rank",
+ "sentence": "Michael Griffiths, a 72 year old, was arrested eight months after the death of Kianna Underwood and charged with leaving the scene of a fatal crash involving two vehicles, though no second arrest has been announced.",
+ "sentenceIs": "a paraphrase of a real post from the origin day; the post itself stays private",
+ "chance": 0.4,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/e06e09c0dc3dedf8/S2-04.json",
+  "sha256": "35962678d26b4c44394752d49d15ea5c40845552ea6383a3dc6c7893fafc0a3d",
+  "commit": "acac1c146d06c62f3cff21766e069acc82a22db3"
+ }
+}
