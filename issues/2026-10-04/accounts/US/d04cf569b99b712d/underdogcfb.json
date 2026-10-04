@@ -1,0 +1,28 @@
+{
+ "unit": "account forecast",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:d04cf569b99b712d",
+ "title": "Virginia Tech–Pitt matchup draws college football betting picks",
+ "accountRef": "@underdogcfb",
+ "public": true,
+ "namedBecause": "a post with 250,000+ views",
+ "chances": {
+  "W1": 0.149159,
+  "W2": null,
+  "W3": null
+ },
+ "listRanks": {
+  "W1": 2,
+  "W2": null,
+  "W3": null
+ },
+ "accountRefRule": "the handle for an account that passes PublicAccounts.decide at the origin; otherwise sha256(lower(handle) + \":\" + salt), with one salt per issue kept only in the private repo",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/accounts/d04cf569b99b712d/underdogcfb.json",
+  "sha256": "8f96f1e56cb22b634c1fcfb468803d78aad2256a923e925cd41272bcab955d6b",
+  "commit": "85787fd4fb384549fc7f006c1ae9e60cc77e59d7"
+ }
+}
