@@ -1,0 +1,28 @@
+{
+ "unit": "account forecast",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:d04cf569b99b712d",
+ "title": "Virginia Tech–Pitt matchup draws college football betting picks",
+ "accountRef": "sha256:67d93801b534d768261b27ca2c48ec6d2541c2c84cc38d5bd9331bd6b762527a",
+ "public": false,
+ "namedBecause": null,
+ "chances": {
+  "W1": 0.124472,
+  "W2": null,
+  "W3": null
+ },
+ "listRanks": {
+  "W1": 3,
+  "W2": null,
+  "W3": null
+ },
+ "accountRefRule": "the handle for an account that passes PublicAccounts.decide at the origin; otherwise sha256(lower(handle) + \":\" + salt), with one salt per issue kept only in the private repo",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/accounts/d04cf569b99b712d/sha256-67d93801b534d768261b27ca2c48ec6d2541c2c84cc38d5bd9331bd6b762527a.json",
+  "sha256": "c4abfe056091a21c3e248c244592e5914b27c57608a434a40d2788ccddd662a3",
+  "commit": "5d5c780412baee569b16dbdc9e5174ad68fd1c0f"
+ }
+}
