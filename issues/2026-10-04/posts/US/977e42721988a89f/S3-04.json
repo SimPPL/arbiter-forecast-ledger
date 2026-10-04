@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:977e42721988a89f",
+ "title": "Bitget Reports $351M Hot-Wallet Breach",
+ "optionId": "S3-04",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "DogeOS public testnet is attracting an avalanche of new projects",
+ "sentenceIs": "written by the model",
+ "chance": 0.5,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/977e42721988a89f/S3-04.json",
+  "sha256": "b21b40c8d2868ebaa864d7ac7f131867789f6ad468a240469a7b3b12e7019698",
+  "commit": "f11e88818f0db349794a78e4282ee2ff06cbc8d3"
+ }
+}
