@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "arbiterKey": "US:6ac3e2825463b554",
+ "title": "Formind’s RYET Commercial Updates Draw Investor Attention",
+ "category": "finance",
+ "real": {
+  "posts": 20,
+  "rank": 163,
+  "storiesWithPost": 469
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 20.89112424298666,
+    "lo80": 16.54535143298593,
+    "hi80": 29.10617737892892,
+    "pAnyPost": 0.9835412207542992,
+    "pTop10": null,
+    "asHeldLatestDay": 1523.0,
+    "rank": 3,
+    "storiesForecast": 1135,
+    "baselines": {
+     "persist": 1523.0,
+     "volols": 3.89313242753686,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 20,
+   "logError": 0.04155883124021065,
+   "brierAnyPost": 0.0002708914142587123,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 1523.0,
+     "logError": 4.2845712985231685
+    },
+    "volols": {
+     "posts": 3.89313242753686,
+     "logError": 1.4566897610909026
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 3.044522437723423
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "US:6ac3e2825463b554"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
