@@ -1,0 +1,69 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-04",
+ "region": "IN",
+ "arbiterKey": "IN:8a314801b3f76c80",
+ "title": "India Defeats Pakistan in Cricket Final to Win Gold",
+ "category": "sports",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "IN top 20 by the D+1 forecast",
+  "published top 10 for 2026-10-05",
+  "published top 10 for 2026-10-06"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-05",
+   "lag": 2,
+   "posts": 13.113623461012715,
+   "lo80": 0.9839181416674332,
+   "hi80": 120.72096889344215,
+   "pAnyPost": 0.5962616822429907,
+   "pTop10": null,
+   "asHeldLatestDay": 1132.0,
+   "rank": 8,
+   "storiesForecast": 1418,
+   "baselines": {
+    "persist": 1132.0,
+    "volols": 5.932647985147121,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-06",
+   "lag": 3,
+   "posts": 5.827085330521442,
+   "lo80": 0.0,
+   "hi80": 55.16435690338412,
+   "pAnyPost": 0.42228739002932547,
+   "pTop10": null,
+   "asHeldLatestDay": 1132.0,
+   "rank": 5,
+   "storiesForecast": 1418,
+   "baselines": {
+    "persist": 1132.0,
+    "volols": 3.3653162527508935,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-04/pred_2026-10-05_h1_K0.parquet",
+   "sha256": "45c05dceca8e30ee736feca09ca0956ead659dd21923b587d61d5a0571dccbb0",
+   "row": {
+    "narrativeKey": "IN:8a314801b3f76c80"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-04/pred_2026-10-06_h2_K0.parquet",
+   "sha256": "a39d5c6bcc42b7f41043e2bc918952c95159ee37143194e938d358f3f6a53383",
+   "row": {
+    "narrativeKey": "IN:8a314801b3f76c80"
+   },
+   "models": "every model"
+  }
+ ]
+}
