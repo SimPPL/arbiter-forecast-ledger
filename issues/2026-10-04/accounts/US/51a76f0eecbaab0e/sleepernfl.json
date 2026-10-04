@@ -1,0 +1,28 @@
+{
+ "unit": "account forecast",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:51a76f0eecbaab0e",
+ "title": "NFL game reactions, player updates, and betting picks",
+ "accountRef": "@sleepernfl",
+ "public": true,
+ "namedBecause": "a post with 250,000+ views",
+ "chances": {
+  "W1": null,
+  "W2": null,
+  "W3": 0.005202
+ },
+ "listRanks": {
+  "W1": null,
+  "W2": null,
+  "W3": 5
+ },
+ "accountRefRule": "the handle for an account that passes PublicAccounts.decide at the origin; otherwise sha256(lower(handle) + \":\" + salt), with one salt per issue kept only in the private repo",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/accounts/51a76f0eecbaab0e/sleepernfl.json",
+  "sha256": "9b29404dcc4bfdee9b58c79dec858d45901621310bbcbebcf948c94fcc491fc0",
+  "commit": "d4381a1b459c74a4c4fcc6d71e849484e32028da"
+ }
+}
