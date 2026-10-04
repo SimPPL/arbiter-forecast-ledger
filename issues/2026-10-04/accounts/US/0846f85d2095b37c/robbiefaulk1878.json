@@ -1,0 +1,28 @@
+{
+ "unit": "account forecast",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:0846f85d2095b37c",
+ "title": "Mississippi State edges Missouri in SEC matchup",
+ "accountRef": "@robbiefaulk1878",
+ "public": true,
+ "namedBecause": "a post with 250,000+ views",
+ "chances": {
+  "W1": 0.083875,
+  "W2": 0.036156,
+  "W3": 0.005202
+ },
+ "listRanks": {
+  "W1": 3,
+  "W2": 8,
+  "W3": 10
+ },
+ "accountRefRule": "the handle for an account that passes PublicAccounts.decide at the origin; otherwise sha256(lower(handle) + \":\" + salt), with one salt per issue kept only in the private repo",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/accounts/0846f85d2095b37c/robbiefaulk1878.json",
+  "sha256": "18234a414a7cc395efe681e96a9793d2af1482bee6f7b54471521434e56d89f2",
+  "commit": "d45e1e314009930665115351db2625472fd24a1b"
+ }
+}
