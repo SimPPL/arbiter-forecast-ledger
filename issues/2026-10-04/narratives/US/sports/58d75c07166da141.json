@@ -1,0 +1,67 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-04",
+ "region": "US",
+ "arbiterKey": "US:58d75c07166da141",
+ "title": "Phillies rally with clutch homers against the Braves",
+ "category": "sports",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "US top 50 by the D+1 forecast"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-05",
+   "lag": 2,
+   "posts": 5.587895608908148,
+   "lo80": 0.0,
+   "hi80": 55.81638302879971,
+   "pAnyPost": 0.4672897196261683,
+   "pTop10": null,
+   "asHeldLatestDay": 12.0,
+   "rank": 25,
+   "storiesForecast": 1341,
+   "baselines": {
+    "persist": 12.0,
+    "volols": 0.9739358743315477,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-06",
+   "lag": 3,
+   "posts": 0.9256722861730364,
+   "lo80": 0.0,
+   "hi80": 8.714488497390683,
+   "pAnyPost": 0.155241935483871,
+   "pTop10": null,
+   "asHeldLatestDay": 12.0,
+   "rank": 77,
+   "storiesForecast": 1341,
+   "baselines": {
+    "persist": 12.0,
+    "volols": 0.6316213568871357,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-04/pred_2026-10-05_h1_K0.parquet",
+   "sha256": "45c05dceca8e30ee736feca09ca0956ead659dd21923b587d61d5a0571dccbb0",
+   "row": {
+    "narrativeKey": "US:58d75c07166da141"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-04/pred_2026-10-06_h2_K0.parquet",
+   "sha256": "a39d5c6bcc42b7f41043e2bc918952c95159ee37143194e938d358f3f6a53383",
+   "row": {
+    "narrativeKey": "US:58d75c07166da141"
+   },
+   "models": "every model"
+  }
+ ]
+}
