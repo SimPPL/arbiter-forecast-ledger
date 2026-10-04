@@ -1,0 +1,67 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-04",
+ "region": "US",
+ "arbiterKey": "US:f6c1449f9d45a65b",
+ "title": "Mike Tomlin’s Minecraft City-Building Era",
+ "category": "sports",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "US top 50 by the D+1 forecast"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-05",
+   "lag": 2,
+   "posts": 3.704360177835004,
+   "lo80": 0.0,
+   "hi80": 39.57209549706339,
+   "pAnyPost": 0.38504672897196257,
+   "pTop10": null,
+   "asHeldLatestDay": 6.0,
+   "rank": 45,
+   "storiesForecast": 1341,
+   "baselines": {
+    "persist": 6.0,
+    "volols": 0.7232542010813234,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-06",
+   "lag": 3,
+   "posts": 2.6468371014261516,
+   "lo80": 0.16862431082743598,
+   "hi80": 17.397292897675598,
+   "pAnyPost": 0.2530241935483871,
+   "pTop10": null,
+   "asHeldLatestDay": 6.0,
+   "rank": 16,
+   "storiesForecast": 1341,
+   "baselines": {
+    "persist": 6.0,
+    "volols": 0.4817452954276527,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-04/pred_2026-10-05_h1_K0.parquet",
+   "sha256": "45c05dceca8e30ee736feca09ca0956ead659dd21923b587d61d5a0571dccbb0",
+   "row": {
+    "narrativeKey": "US:f6c1449f9d45a65b"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-04/pred_2026-10-06_h2_K0.parquet",
+   "sha256": "a39d5c6bcc42b7f41043e2bc918952c95159ee37143194e938d358f3f6a53383",
+   "row": {
+    "narrativeKey": "US:f6c1449f9d45a65b"
+   },
+   "models": "every model"
+  }
+ ]
+}
