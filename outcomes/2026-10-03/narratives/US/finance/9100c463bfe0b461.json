@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "arbiterKey": "US:9100c463bfe0b461",
+ "title": "Nike Earnings Beat EPS Estimates but Miss Revenue Forecasts",
+ "category": "finance",
+ "real": {
+  "posts": 61,
+  "rank": 130,
+  "storiesWithPost": 469
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 3.535788369356329,
+    "lo80": 0.0,
+    "hi80": 27.780883990461987,
+    "pAnyPost": 0.34347048300536676,
+    "pTop10": null,
+    "asHeldLatestDay": 721.0,
+    "rank": 49,
+    "storiesForecast": 1135,
+    "baselines": {
+     "persist": 721.0,
+     "volols": 3.206846189622298,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 61,
+   "logError": 2.6151354754936973,
+   "brierAnyPost": 0.43103100668520644,
+   "inRange80": false,
+   "baselines": {
+    "persist": {
+     "posts": 721.0,
+     "logError": 2.4548907538477343
+    },
+    "volols": {
+     "posts": 3.206846189622298,
+     "logError": 2.6904211416892556
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 4.127134385045092
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "US:9100c463bfe0b461"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
