@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:92b7402a19461f1a",
+ "title": "Juice=Juice’s 2026 “5ROOMS” Tour in Kyoto",
+ "optionId": "S3-03",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "The group adapted lyrics to honor Eba and Mifu.",
+ "sentenceIs": "written by the model",
+ "chance": 0.01,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/92b7402a19461f1a/S3-03.json",
+  "sha256": "886d1daddd74f6e5b767c43e583c8e3913c3fd9267daea53556e5c1fa39138c7",
+  "commit": "bd2bd9d94e6bcae31c2633a559e2ac270318753a"
+ }
+}
