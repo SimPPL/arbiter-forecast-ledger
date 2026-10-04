@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:6ac3e2825463b554",
+ "title": "Formind’s RYET Commercial Updates Draw Investor Attention",
+ "optionId": "S1-04",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "meta-llama/llama-3.3-70b-instruct",
+ "sentence": "RYET revenue is up significantly with Smart Campus contributing substantially.",
+ "sentenceIs": "written by the model",
+ "chance": 0.99,
+ "redacted": 0,
+ "personaRef": "sha256:c42a826752215e347d5f9629f77f2b56c15d7a517c927ece26b28909374fac0a",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/6ac3e2825463b554/S1-04.json",
+  "sha256": "29ec1046b3b09074882e7ffd0b2ef9ec067782a3f53ac74dbff127237e943b67",
+  "commit": "cf3d1f0b15078e4eab668231d594d44945c44f21"
+ }
+}
