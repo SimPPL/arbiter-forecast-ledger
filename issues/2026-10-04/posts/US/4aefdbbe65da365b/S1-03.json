@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:4aefdbbe65da365b",
+ "title": "Broncos-Rams Game Sparks Debate Over Coaching and Key Plays",
+ "optionId": "S1-03",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "meta-llama/llama-3.3-70b-instruct",
+ "sentence": "Brock Bowers is the best wide receiver in the league.",
+ "sentenceIs": "written by the model",
+ "chance": 0.8,
+ "redacted": 0,
+ "personaRef": "sha256:a7aa4aa3f907c91d6390df21c190c3d99e1c6088e554d5d03d045040901eb0ff",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/4aefdbbe65da365b/S1-03.json",
+  "sha256": "acf6c043cbc6183901622c1f9c93288fef00f976a3143a0534ff914e6be34a8c",
+  "commit": "7481313e72552488ac64d7b41bd5f4296de226b2"
+ }
+}
