@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "arbiterKey": "US:f6c1449f9d45a65b",
+ "title": "Mike Tomlin’s Minecraft City-Building Era",
+ "category": "sports",
+ "real": {
+  "posts": 6,
+  "rank": 257,
+  "storiesWithPost": 469
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 3.995156755439232,
+    "lo80": 0.0,
+    "hi80": 30.695708746850254,
+    "pAnyPost": 0.3649373881932021,
+    "pTop10": null,
+    "asHeldLatestDay": 944.0,
+    "rank": 47,
+    "storiesForecast": 1135,
+    "baselines": {
+     "persist": 944.0,
+     "volols": 3.4422444218997716,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 6,
+   "logError": 0.3374413549768991,
+   "brierAnyPost": 0.4033045209148717,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 944.0,
+     "logError": 4.90527477843843
+    },
+    "volols": {
+     "posts": 3.4422444218997716,
+     "logError": 0.45475039990560395
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 1.9459101490553132
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "US:f6c1449f9d45a65b"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
