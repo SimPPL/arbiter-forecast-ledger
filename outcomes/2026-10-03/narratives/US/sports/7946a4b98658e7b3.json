@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "arbiterKey": "US:7946a4b98658e7b3",
+ "title": "Maple Leafs acquire Kirill Marchenko in trade involving Matthew Knies",
+ "category": "sports",
+ "real": {
+  "posts": 11,
+  "rank": 209,
+  "storiesWithPost": 469
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 11.529682970353019,
+    "lo80": 0.6572786393074956,
+    "hi80": 78.5044483211134,
+    "pAnyPost": 0.5509838998211092,
+    "pTop10": null,
+    "asHeldLatestDay": 32.0,
+    "rank": 9,
+    "storiesForecast": 1135,
+    "baselines": {
+     "persist": 32.0,
+     "volols": 1.2536809249315628,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 11,
+   "logError": 0.043193817152080705,
+   "brierAnyPost": 0.2016154582198597,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 32.0,
+     "logError": 1.0116009116784799
+    },
+    "volols": {
+     "posts": 1.2536809249315628,
+     "logError": 1.6723418036711342
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 2.4849066497880004
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "US:7946a4b98658e7b3"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
