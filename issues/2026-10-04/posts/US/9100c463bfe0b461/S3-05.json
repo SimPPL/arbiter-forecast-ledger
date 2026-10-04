@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:9100c463bfe0b461",
+ "title": "Nike Earnings Beat EPS Estimates but Miss Revenue Forecasts",
+ "optionId": "S3-05",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "Nike will reduce the frequency of Air Jordan retro releases to rebuild scarcity.",
+ "sentenceIs": "written by the model",
+ "chance": 0.3,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/9100c463bfe0b461/S3-05.json",
+  "sha256": "00564012629e945b9f634a710052740de99f618f7e2821c567fe316e14afe0d4",
+  "commit": "d4bdd9ee078b79096a82fe0c78f8ef9857ac53bd"
+ }
+}
