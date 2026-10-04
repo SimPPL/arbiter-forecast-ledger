@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:6ac3e2825463b554",
+ "title": "Formind’s RYET Commercial Updates Draw Investor Attention",
+ "optionId": "S2-04",
+ "seat": "S2",
+ "seatName": "continuation",
+ "model": "none: the origin day's most repeated posts, fixed chances by rank",
+ "sentence": "Ducommun Incorporated is a Tier 1 aerospace and defense supplier headquartered in Santa Ana, California, with a corporate history dating to 1849.",
+ "sentenceIs": "a paraphrase of a real post from the origin day; the post itself stays private",
+ "chance": 0.4,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/6ac3e2825463b554/S2-04.json",
+  "sha256": "422538b05f284504ecbe2e7bcc3d3e74841e1cdee9d3ffe933310084533a21e3",
+  "commit": "01daac458d9ba6a9a96caacdc798451d1b8a8824"
+ }
+}
