@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:073b85204a463d60",
+ "title": "Jack Smith’s Senate Hearing Draws Scrutiny of Eric Schmitt",
+ "optionId": "S2-03",
+ "seat": "S2",
+ "seatName": "continuation",
+ "model": "none: the origin day's most repeated posts, fixed chances by rank",
+ "sentence": "On Monday, Tim Smith will hand-deliver $2,649 in checks to Ann Arbor to fund STALIONS, his University email on Tim Smith, and his companies, Champions, following $3,000 in support received in two hours.",
+ "sentenceIs": "a paraphrase of a real post from the origin day; the post itself stays private",
+ "chance": 0.45,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/073b85204a463d60/S2-03.json",
+  "sha256": "095cd7d32d4de6ba73099dcc21766011fae05911858236bffde843fdeedec0d3",
+  "commit": "b7d3fbf0de54db2dc450f88313f45e8b1292cb5c"
+ }
+}
