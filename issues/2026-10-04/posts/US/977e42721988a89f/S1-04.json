@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:977e42721988a89f",
+ "title": "Bitget Reports $351M Hot-Wallet Breach",
+ "optionId": "S1-04",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "This is why you keep your funds in a wallet and not on an exchange.",
+ "sentenceIs": "written by the model",
+ "chance": 0.85,
+ "redacted": 0,
+ "personaRef": "sha256:9e7c8379391b789119ff9dedad9ed385caf77c3c4388c7fee860c8c25ca493c9",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/977e42721988a89f/S1-04.json",
+  "sha256": "def08452d18b7bcbe62502e3a81702f77c8bfe785ebb57d1cdfaaf7e19482c8b",
+  "commit": "4685347cbe2cb5786b6f158ad6506b30289212cb"
+ }
+}
