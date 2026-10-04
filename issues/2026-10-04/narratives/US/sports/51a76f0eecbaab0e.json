@@ -1,0 +1,67 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-04",
+ "region": "US",
+ "arbiterKey": "US:51a76f0eecbaab0e",
+ "title": "NFL game reactions, player updates, and betting picks",
+ "category": "sports",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "US top 50 by the D+1 forecast"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-05",
+   "lag": 2,
+   "posts": 3.9387490786312425,
+   "lo80": 0.0,
+   "hi80": 41.593549745265356,
+   "pAnyPost": 0.39439252336448594,
+   "pTop10": null,
+   "asHeldLatestDay": 280.0,
+   "rank": 41,
+   "storiesForecast": 1341,
+   "baselines": {
+    "persist": 280.0,
+    "volols": 2.8741392959406507,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-06",
+   "lag": 3,
+   "posts": 1.239118034195061,
+   "lo80": 0.0,
+   "hi80": 10.29573632215289,
+   "pAnyPost": 0.17641129032258063,
+   "pTop10": null,
+   "asHeldLatestDay": 280.0,
+   "rank": 52,
+   "storiesForecast": 1341,
+   "baselines": {
+    "persist": 280.0,
+    "volols": 1.6325431148481158,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-04/pred_2026-10-05_h1_K0.parquet",
+   "sha256": "45c05dceca8e30ee736feca09ca0956ead659dd21923b587d61d5a0571dccbb0",
+   "row": {
+    "narrativeKey": "US:51a76f0eecbaab0e"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-04/pred_2026-10-06_h2_K0.parquet",
+   "sha256": "a39d5c6bcc42b7f41043e2bc918952c95159ee37143194e938d358f3f6a53383",
+   "row": {
+    "narrativeKey": "US:51a76f0eecbaab0e"
+   },
+   "models": "every model"
+  }
+ ]
+}
