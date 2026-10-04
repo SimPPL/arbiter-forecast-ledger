@@ -1,0 +1,195 @@
+{
+ "unit": "category forecast",
+ "issueDay": "2026-10-04",
+ "region": "IN",
+ "category": "religion",
+ "model": "gbm_med",
+ "members": [
+  "IN:0047c2183763a08c",
+  "IN:01a716229ddecd50",
+  "IN:051ebab1bebfb038",
+  "IN:0c13a3148180b7e3",
+  "IN:0f11f5f663234db1",
+  "IN:102e084cc8a6b341",
+  "IN:11eb9c8a365105f0",
+  "IN:162fbbb367e81950",
+  "IN:17e8ac4e71152209",
+  "IN:1b88a7d464a72374",
+  "IN:1bf3274855b993c1",
+  "IN:1cc54e38ff349e0e",
+  "IN:1f712ca9d828e4e1",
+  "IN:1ff76d91e5c39f8a",
+  "IN:22b21ccd82e9d18d",
+  "IN:2443ccba73e717a7",
+  "IN:252cd3f76a5cd049",
+  "IN:2676608990d61038",
+  "IN:284f1d313dced657",
+  "IN:2a70d43362c35492",
+  "IN:2c8f42170da9717e",
+  "IN:2cab090b589d2716",
+  "IN:321f9637ad21bac1",
+  "IN:3390cd24a9282f6f",
+  "IN:34c163a17dc2775f",
+  "IN:382bef669cca1078",
+  "IN:39f7f190de6afa4a",
+  "IN:3e54aa7c4daa4b1a",
+  "IN:3ef21c19ff9c4dbf",
+  "IN:3f60bb7b900b4f2c",
+  "IN:3fe0c706fab7ce8e",
+  "IN:426d87a3ce24ce44",
+  "IN:43aff0b21c54b94f",
+  "IN:47a9c9e9b4c93bc7",
+  "IN:48d214f996821583",
+  "IN:4e525bc6bdeb84a3",
+  "IN:55d78e393d3c7d0f",
+  "IN:57095f5ed6493b6b",
+  "IN:589dd617803d0a8e",
+  "IN:58fbfc4b7bf60cdc",
+  "IN:59064b18c1d82131",
+  "IN:59691a4b0c99386a",
+  "IN:5c1dc152be2ab3ce",
+  "IN:5da2da6ecd559015",
+  "IN:5dee96afb5c95e1f",
+  "IN:5f6dd00a4efc98ef",
+  "IN:67e13e0a7021e685",
+  "IN:67f170e2474eca37",
+  "IN:6b4c2036403ae009",
+  "IN:6cf82929362383ab",
+  "IN:6d8b9a08d663bfc5",
+  "IN:6e540cede7ed9575",
+  "IN:6e88eb49ab2a5654",
+  "IN:726d9e801250a26a",
+  "IN:746dd8cf847fd9de",
+  "IN:772fca5ce3cc0167",
+  "IN:775898d54cc26cef",
+  "IN:7787bbea4648db69",
+  "IN:78277b10abcb3ca8",
+  "IN:7930adb47cc1c7bd",
+  "IN:7b7d3faae15e7af8",
+  "IN:7e0fbe71034496a0",
+  "IN:7e4ac68906339414",
+  "IN:7f1354f83a7aed10",
+  "IN:8032ab4aa41ce42c",
+  "IN:828ad21f5ab5a4aa",
+  "IN:82b4abcd9949506b",
+  "IN:855520fcd53daa27",
+  "IN:87237125aaedfd8b",
+  "IN:89961e44360f23e9",
+  "IN:8db79c127fe8b1d5",
+  "IN:952e3b008b6bef38",
+  "IN:95639ff809a10443",
+  "IN:96a76d0c883bc1d6",
+  "IN:97314878b4a1782e",
+  "IN:9807ed40c69ea644",
+  "IN:a2396d3ec62261d4",
+  "IN:a3b9a56011308c8c",
+  "IN:a427f8e29bdceefe",
+  "IN:a59a5a4e7e6e79ed",
+  "IN:a61ec3990cab205d",
+  "IN:aba7f803bac6963c",
+  "IN:ad15d097c7270b75",
+  "IN:ad55f2824d855247",
+  "IN:b085239b67928861",
+  "IN:b4ee4a729cb6223c",
+  "IN:b5c81e4c2921721a",
+  "IN:b657949fe5bde612",
+  "IN:bb12ace970d24cf7",
+  "IN:bbfe82c484fb72fa",
+  "IN:bd148705f2aa6031",
+  "IN:c09f58cea8edbffd",
+  "IN:c0eca0d213ce1ad0",
+  "IN:c0f262ddf29e970d",
+  "IN:c40333e9ea4bfd8e",
+  "IN:c9c1b395a0213128",
+  "IN:ca1c606ae8391d62",
+  "IN:ca669a5173eaab15",
+  "IN:ccbbd6c7fe6a5c2f",
+  "IN:cdc402eb4f95c581",
+  "IN:d1e4129e3083d2ae",
+  "IN:d3199c69d5e9c1b5",
+  "IN:d3e420971889bc98",
+  "IN:e248482deb2a8eb8",
+  "IN:e2873e7699c5555d",
+  "IN:e6eced240358d87f",
+  "IN:e8eb061cd45f73d0",
+  "IN:e973a0bf75ef0e1d",
+  "IN:ea8627a39053f435",
+  "IN:ee61ea41bee5acd3",
+  "IN:fc080d5ed16089b0",
+  "IN:fc53913d824c6715",
+  "IN:fc98fddcb6c8b786"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-05",
+   "lag": 2,
+   "posts": 53.45209122241153,
+   "regionPosts": 657.5843695877403,
+   "share": 0.08128552577355554,
+   "stories": 113,
+   "baselines": {
+    "persist": {
+     "posts": 2592.0,
+     "share": 0.056289089645587216
+    },
+    "volols": {
+     "posts": 62.6076194141222,
+     "share": 0.0709461217646309
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null
+    }
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-06",
+   "lag": 3,
+   "posts": 12.91609329851113,
+   "regionPosts": 216.616717500188,
+   "share": 0.059626484269386645,
+   "stories": 113,
+   "baselines": {
+    "persist": {
+     "posts": 2592.0,
+     "share": 0.056289089645587216
+    },
+    "volols": {
+     "posts": 40.717611609642894,
+     "share": 0.0711188159804919
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null
+    }
+   }
+  }
+ },
+ "shareRule": "share is the category's forecast posts over the region's forecast posts, both summed over stories live at the origin with negative forecasts counted as zero (the rule of fwd_score.areaShareUS)",
+ "categorySource": {
+  "file": "inputs/nk_meta.parquet",
+  "sha256": "f7bd153f2bfd462044415c1b5b122c8cf7218d19f3eb6a1775407b79332d5b59",
+  "public": false,
+  "note": "a frozen input of the research repo; FREEZE.json holds its sha256"
+ },
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-04/pred_2026-10-05_h1_K0.parquet",
+   "sha256": "45c05dceca8e30ee736feca09ca0956ead659dd21923b587d61d5a0571dccbb0",
+   "row": {
+    "region": "IN",
+    "narrativeKey": "members"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-04/pred_2026-10-06_h2_K0.parquet",
+   "sha256": "a39d5c6bcc42b7f41043e2bc918952c95159ee37143194e938d358f3f6a53383",
+   "row": {
+    "region": "IN",
+    "narrativeKey": "members"
+   },
+   "models": "every model"
+  }
+ ]
+}
