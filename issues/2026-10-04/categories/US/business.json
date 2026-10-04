@@ -1,0 +1,104 @@
+{
+ "unit": "category forecast",
+ "issueDay": "2026-10-04",
+ "region": "US",
+ "category": "business",
+ "model": "gbm_med",
+ "members": [
+  "US:0a08763db6f1ba2d",
+  "US:292cbeab1d77d12b",
+  "US:293f5c95186a19b2",
+  "US:2de9bbe21103fdb7",
+  "US:37cf480a75ae7264",
+  "US:3c9fcd09c7e2963a",
+  "US:55d23cee1f48e980",
+  "US:6460fd549ee93239",
+  "US:6d80fbfdb9c2c51b",
+  "US:75fc98ead8321593",
+  "US:7b8d0c57e16dccce",
+  "US:7c1b3f83a806f329",
+  "US:9325f0014192b230",
+  "US:a45db3184a2a17cf",
+  "US:a631264d1059b6db",
+  "US:a88e6f3f13800c01",
+  "US:b520cfc3b00490c8",
+  "US:c184d1dca6a937a7",
+  "US:cb5c64672e740e44",
+  "US:d0a7d81bc8bad12f",
+  "US:eeaeba1b66bf1061",
+  "US:f681718cf403b284"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-05",
+   "lag": 2,
+   "posts": 10.968464834995405,
+   "regionPosts": 570.7346161537416,
+   "share": 0.019218152403149093,
+   "stories": 22,
+   "baselines": {
+    "persist": {
+     "posts": 916.0,
+     "share": 0.012612042021781933
+    },
+    "volols": {
+     "posts": 14.398063212478107,
+     "share": 0.019785306872254414
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null
+    }
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-06",
+   "lag": 3,
+   "posts": 5.211935239633446,
+   "regionPosts": 204.92729854265045,
+   "share": 0.025433093964046537,
+   "stories": 22,
+   "baselines": {
+    "persist": {
+     "posts": 916.0,
+     "share": 0.012612042021781933
+    },
+    "volols": {
+     "posts": 8.972915263722403,
+     "share": 0.019819654393594614
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null
+    }
+   }
+  }
+ },
+ "shareRule": "share is the category's forecast posts over the region's forecast posts, both summed over stories live at the origin with negative forecasts counted as zero (the rule of fwd_score.areaShareUS)",
+ "categorySource": {
+  "file": "inputs/nk_meta.parquet",
+  "sha256": "f7bd153f2bfd462044415c1b5b122c8cf7218d19f3eb6a1775407b79332d5b59",
+  "public": false,
+  "note": "a frozen input of the research repo; FREEZE.json holds its sha256"
+ },
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-04/pred_2026-10-05_h1_K0.parquet",
+   "sha256": "45c05dceca8e30ee736feca09ca0956ead659dd21923b587d61d5a0571dccbb0",
+   "row": {
+    "region": "US",
+    "narrativeKey": "members"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-04/pred_2026-10-06_h2_K0.parquet",
+   "sha256": "a39d5c6bcc42b7f41043e2bc918952c95159ee37143194e938d358f3f6a53383",
+   "row": {
+    "region": "US",
+    "narrativeKey": "members"
+   },
+   "models": "every model"
+  }
+ ]
+}
