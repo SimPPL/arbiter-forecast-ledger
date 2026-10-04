@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:a84a4cb3ef9e948a",
+ "title": "LingOrm Draws Fan Attention at Dior’s Paris Fashion Week Show",
+ "optionId": "S3-05",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "Becky is at the Miu Miu show in Paris",
+ "sentenceIs": "written by the model",
+ "chance": 0.99,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/a84a4cb3ef9e948a/S3-05.json",
+  "sha256": "947aebe666ad418739c6f6d3230765f9d8c11c57fa125cf4f97c566b1e8b56d6",
+  "commit": "4f9b7f7badb1cf53312b2de5af139259be4bd468"
+ }
+}
