@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "IN",
+ "arbiterKey": "IN:1bfc6fcbef5b20f9",
+ "title": "UPSC marks 100 years as Modi calls for citizen-first selection",
+ "category": "politics",
+ "real": {
+  "posts": 2,
+  "rank": 325,
+  "storiesWithPost": 403
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 8.749985969926211,
+    "lo80": 0.2896131146924962,
+    "hi80": 60.86647000660216,
+    "pAnyPost": 0.5062611806797853,
+    "pTop10": null,
+    "asHeldLatestDay": 529.0,
+    "rank": 9,
+    "storiesForecast": 1376,
+    "baselines": {
+     "persist": 529.0,
+     "volols": 4.385331009210537,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 2,
+   "logError": 1.1786535573586836,
+   "brierAnyPost": 0.2437780217037196,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 529.0,
+     "logError": 5.174264717878057
+    },
+    "volols": {
+     "posts": 4.385331009210537,
+     "logError": 0.5850664887995909
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 1.0986122886681098
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "IN:1bfc6fcbef5b20f9"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
