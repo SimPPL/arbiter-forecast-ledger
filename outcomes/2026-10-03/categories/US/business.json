@@ -1,0 +1,74 @@
+{
+ "unit": "category outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "category": "business",
+ "real": {
+  "posts": 916,
+  "regionPosts": 72629,
+  "share": 0.012612042021781933
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet; real totals include stories that did not exist at the origin, so compare shares first",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "forecast": {
+    "posts": 8.71843883308768,
+    "share": 0.01425260205227622,
+    "regionPosts": 611.7085709058506,
+    "stories": 14
+   },
+   "realPostsOfMembers": 73.0,
+   "logError": 4.547082480563776,
+   "shareError": 0.001640560030494287,
+   "baselines": {
+    "persist": {
+     "posts": 109.0,
+     "share": 0.0024688561721404306,
+     "logError": 2.120627106464048,
+     "shareError": 0.010143185849641502
+    },
+    "volols": {
+     "posts": 5.599664097966618,
+     "share": 0.01330899931036188,
+     "logError": 4.9340887187667235,
+     "shareError": 0.0006969572885799479
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null,
+     "logError": 6.821107472256465,
+     "shareError": null
+    }
+   },
+   "members": [
+    "US:293f5c95186a19b2",
+    "US:2de9bbe21103fdb7",
+    "US:37cf480a75ae7264",
+    "US:6460fd549ee93239",
+    "US:6d80fbfdb9c2c51b",
+    "US:75fc98ead8321593",
+    "US:7b8d0c57e16dccce",
+    "US:7c1b3f83a806f329",
+    "US:9efaf96999c7a5e2",
+    "US:a45db3184a2a17cf",
+    "US:a631264d1059b6db",
+    "US:cb5c64672e740e44",
+    "US:eeaeba1b66bf1061",
+    "US:f681718cf403b284"
+   ],
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "region": "US",
+     "narrativeKey": "members"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
