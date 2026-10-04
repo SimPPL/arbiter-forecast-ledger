@@ -1,0 +1,28 @@
+{
+ "unit": "account forecast",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:9219ac6562e6dc15",
+ "title": "Fever and Aces playoff matchup sparks player and fan debate",
+ "accountRef": "@pick6packfb",
+ "public": true,
+ "namedBecause": "a post with 250,000+ views",
+ "chances": {
+  "W1": 0.157456,
+  "W2": null,
+  "W3": null
+ },
+ "listRanks": {
+  "W1": 7,
+  "W2": null,
+  "W3": null
+ },
+ "accountRefRule": "the handle for an account that passes PublicAccounts.decide at the origin; otherwise sha256(lower(handle) + \":\" + salt), with one salt per issue kept only in the private repo",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/accounts/9219ac6562e6dc15/pick6packfb.json",
+  "sha256": "dc73f71ab37b8157d8c1caa495226aa35138eda897400941213e202762fc99db",
+  "commit": "5acf244ac55f255903e60f63747029a253f65bc6"
+ }
+}
