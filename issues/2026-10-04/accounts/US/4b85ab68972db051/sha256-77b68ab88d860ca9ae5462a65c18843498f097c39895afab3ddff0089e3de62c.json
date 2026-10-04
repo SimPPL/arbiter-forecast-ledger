@@ -1,0 +1,28 @@
+{
+ "unit": "account forecast",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:4b85ab68972db051",
+ "title": "La Granja VIP MX and Wanda-related social chatter",
+ "accountRef": "sha256:77b68ab88d860ca9ae5462a65c18843498f097c39895afab3ddff0089e3de62c",
+ "public": false,
+ "namedBecause": null,
+ "chances": {
+  "W1": null,
+  "W2": 0.026629,
+  "W3": null
+ },
+ "listRanks": {
+  "W1": null,
+  "W2": 4,
+  "W3": null
+ },
+ "accountRefRule": "the handle for an account that passes PublicAccounts.decide at the origin; otherwise sha256(lower(handle) + \":\" + salt), with one salt per issue kept only in the private repo",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/accounts/4b85ab68972db051/sha256-77b68ab88d860ca9ae5462a65c18843498f097c39895afab3ddff0089e3de62c.json",
+  "sha256": "04f090562d9668a206db5d9fa030ecdf354ffcf2a034a6d147b48e0541c93f88",
+  "commit": "85b06ac16387dd2785540f32af9cec23e89e9cae"
+ }
+}
