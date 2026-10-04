@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "IN",
+ "arbiterKey": "IN:82998f737fc4f243",
+ "title": "Apple Pay launches in India with limited card support",
+ "category": "technology",
+ "real": {
+  "posts": 7,
+  "rank": 242,
+  "storiesWithPost": 403
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 6.059004274254919,
+    "lo80": 0.0,
+    "hi80": 43.79141586015776,
+    "pAnyPost": 0.44901610017889093,
+    "pTop10": null,
+    "asHeldLatestDay": 9.0,
+    "rank": 17,
+    "storiesForecast": 1376,
+    "baselines": {
+     "persist": 9.0,
+     "volols": 1.0261987538744062,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 7,
+   "logError": 0.12513753776237468,
+   "brierAnyPost": 0.30358325786207796,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 9.0,
+     "logError": 0.22314355131421015
+    },
+    "volols": {
+     "posts": 1.0261987538744062,
+     "logError": 1.3732800390488005
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 2.0794415416798357
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "IN:82998f737fc4f243"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
