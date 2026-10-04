@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "IN",
+ "arbiterKey": "IN:369864610d439a21",
+ "title": "Promo codes for funded trading plans and other offers",
+ "category": "business",
+ "real": {
+  "posts": 23,
+  "rank": 172,
+  "storiesWithPost": 403
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 6.473421746660034,
+    "lo80": 0.0,
+    "hi80": 46.42101411864192,
+    "pAnyPost": 0.4633273703041145,
+    "pTop10": null,
+    "asHeldLatestDay": 18.0,
+    "rank": 14,
+    "storiesForecast": 1376,
+    "baselines": {
+     "persist": 18.0,
+     "volols": 1.3730854986710435,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 23,
+   "logError": 1.1667008709344344,
+   "brierAnyPost": 0.288017511464697,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 18.0,
+     "logError": 0.2336148511815055
+    },
+    "volols": {
+     "posts": 1.3730854986710435,
+     "logError": 2.3138628237620686
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 3.1780538303479458
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "IN:369864610d439a21"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
