@@ -1,0 +1,7 @@
+# Outcome 2026-10-03
+
+`stories.json` puts each forecast story beside the number of posts Arbiter's reading of the day assigned to it, and lists the day's real top 10 per region. `score.json` scores every model against the references, with the GitHub push time of the issue that forecast this day. `MANIFEST.json` holds the sha256 of every file here, and `sources` in it names the research files the numbers came from, with their sha256.
+
+Each issue that forecast this day is scored on its own. A day can be D+1 of one issue (two days after the reading it starts from, lag 2) and D+2 of the issue before (lag 3); the two are never averaged. For each model, `score.json` gives the number of stories that got a post, then the ranked probability score, the Brier score on whether a story got any post and the log error on the stories that did, and only then the log error over every story. "Every story dies" forecasts no posts, but its predictive distribution is a climatology of earlier days, so its first three scores are labelled climatology. A model whose frozen forecast could not be reproduced has those scores marked void. The US issue-area share compares the forecast mix of Arbiter's categories with the real one and does not depend on story keys.
+
+posts.json is absent. Real posts by named accounts are published from the outcome of issue 2026-10-03 on, beside the predicted posts they are scored against.

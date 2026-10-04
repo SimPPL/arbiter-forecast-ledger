@@ -1,0 +1,631 @@
+{
+ "day": "2026-10-03",
+ "kind": "by key",
+ "reading": "T0",
+ "logErrorDefinition": "mean |log(1 + actual) - log(1 + forecast)| over every story live at the origin; lower is better",
+ "scoreDefinitions": {
+  "activeRows": "stories with at least one post on the day",
+  "rps": "ranked probability score of the post count under the model's predictive distribution; lower is better",
+  "brierActive": "(P(at least one post) - 1 if the story got a post, else 0) squared, averaged; lower is better",
+  "logErrGivenActive": "over stories with at least one post, |log(1 + actual) - log(1 + median given a post)|; lower is better",
+  "logError": "mean |log(1 + actual) - log(1 + forecast)| over every story live at the origin; lower is better",
+  "climatology": "every story dies forecasts no posts, but its predictive distribution is the spread of the calibration days, a climatology, so these scores describe that climatology and not \"every story dies\""
+ },
+ "scoreOrder": "stories with a post, ranked probability score, Brier score on any post and log error given a post come before log error",
+ "headline": "gbm_med",
+ "references": [
+  "persist",
+  "zero",
+  "volols"
+ ],
+ "secondaryReferences": {
+  "surv_age": "age-conditioned survival",
+  "tsb": "Teunter-Syntetos-Babai activity probability",
+  "hurdle_nb": "hurdle negative binomial"
+ },
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizonDays": 1,
+   "lagFromOriginDays": 2,
+   "horizonCountedFrom": "issue day",
+   "kind": "by key",
+   "modelName": "boosted trees (median)",
+   "source": "cleanroom/2026-10-01-tomorrow-forward/results/issue-2026-10-02/score_2026-10-03_h1_T0.json",
+   "models": {
+    "gbm_med": {
+     "name": "boosted trees (median)",
+     "activeRows": {
+      "label": "stories with at least one post, all stories",
+      "value": 468
+     },
+     "activeRowsUS": {
+      "label": "stories with at least one post, US",
+      "value": 261
+     },
+     "activeRowsIN": {
+      "label": "stories with at least one post, India",
+      "value": 207
+     },
+     "rps": {
+      "label": "ranked probability score, all stories",
+      "value": 37.681
+     },
+     "rpsUS": {
+      "label": "ranked probability score, US",
+      "value": 51.285
+     },
+     "rpsIN": {
+      "label": "ranked probability score, India",
+      "value": 22.528
+     },
+     "brierActive": {
+      "label": "Brier score on any post, all stories",
+      "value": 0.194
+     },
+     "brierActiveUS": {
+      "label": "Brier score on any post, US",
+      "value": 0.207
+     },
+     "brierActiveIN": {
+      "label": "Brier score on any post, India",
+      "value": 0.179
+     },
+     "logErrGivenActive": {
+      "label": "log error on stories that got a post, all stories",
+      "value": 1.242
+     },
+     "logErrGivenActiveUS": {
+      "label": "log error on stories that got a post, US",
+      "value": 1.251
+     },
+     "logErrGivenActiveIN": {
+      "label": "log error on stories that got a post, India",
+      "value": 1.23
+     },
+     "logError": {
+      "label": "log error, all stories",
+      "value": 0.668
+     },
+     "logErrorUS": {
+      "label": "log error, US",
+      "value": 0.71
+     },
+     "logErrorIN": {
+      "label": "log error, India",
+      "value": 0.621
+     },
+     "top10HitsUS": {
+      "label": "real top-10 stories found, US",
+      "value": 0
+     },
+     "top10HitsIN": {
+      "label": "real top-10 stories found, India",
+      "value": 1
+     },
+     "cover80": {
+      "label": "share of actuals inside the 80 percent range",
+      "value": 0.67
+     },
+     "rows": 1374
+    },
+    "persist": {
+     "name": "yesterday's count",
+     "activeRows": {
+      "label": "stories with at least one post, all stories",
+      "value": 468
+     },
+     "activeRowsUS": {
+      "label": "stories with at least one post, US",
+      "value": 261
+     },
+     "activeRowsIN": {
+      "label": "stories with at least one post, India",
+      "value": 207
+     },
+     "rps": {
+      "label": "ranked probability score, all stories",
+      "value": 37.604
+     },
+     "rpsUS": {
+      "label": "ranked probability score, US",
+      "value": 51.305
+     },
+     "rpsIN": {
+      "label": "ranked probability score, India",
+      "value": 22.343
+     },
+     "brierActive": {
+      "label": "Brier score on any post, all stories",
+      "value": 0.208
+     },
+     "brierActiveUS": {
+      "label": "Brier score on any post, US",
+      "value": 0.222
+     },
+     "brierActiveIN": {
+      "label": "Brier score on any post, India",
+      "value": 0.193
+     },
+     "logErrGivenActive": {
+      "label": "log error on stories that got a post, all stories",
+      "value": 1.337
+     },
+     "logErrGivenActiveUS": {
+      "label": "log error on stories that got a post, US",
+      "value": 1.352
+     },
+     "logErrGivenActiveIN": {
+      "label": "log error on stories that got a post, India",
+      "value": 1.319
+     },
+     "logError": {
+      "label": "log error, all stories",
+      "value": 1.09
+     },
+     "logErrorUS": {
+      "label": "log error, US",
+      "value": 1.042
+     },
+     "logErrorIN": {
+      "label": "log error, India",
+      "value": 1.144
+     },
+     "top10HitsUS": {
+      "label": "real top-10 stories found, US",
+      "value": 0
+     },
+     "top10HitsIN": {
+      "label": "real top-10 stories found, India",
+      "value": 1
+     },
+     "cover80": {
+      "label": "share of actuals inside the 80 percent range",
+      "value": 0.814
+     },
+     "rows": 1374
+    },
+    "zero": {
+     "name": "every story dies",
+     "distributionNote": "every story dies forecasts no posts, but its predictive distribution is the spread of the calibration days, a climatology, so these scores describe that climatology and not \"every story dies\"",
+     "activeRows": {
+      "label": "stories with at least one post, all stories",
+      "value": 468
+     },
+     "activeRowsUS": {
+      "label": "stories with at least one post, US",
+      "value": 261
+     },
+     "activeRowsIN": {
+      "label": "stories with at least one post, India",
+      "value": 207
+     },
+     "rps": {
+      "label": "ranked probability score, all stories (climatology)",
+      "value": 38.676
+     },
+     "rpsUS": {
+      "label": "ranked probability score, US (climatology)",
+      "value": 52.078
+     },
+     "rpsIN": {
+      "label": "ranked probability score, India (climatology)",
+      "value": 23.749
+     },
+     "brierActive": {
+      "label": "Brier score on any post, all stories (climatology)",
+      "value": 0.269
+     },
+     "brierActiveUS": {
+      "label": "Brier score on any post, US (climatology)",
+      "value": 0.284
+     },
+     "brierActiveIN": {
+      "label": "Brier score on any post, India (climatology)",
+      "value": 0.252
+     },
+     "logErrGivenActive": {
+      "label": "log error on stories that got a post, all stories (climatology)",
+      "value": 1.316
+     },
+     "logErrGivenActiveUS": {
+      "label": "log error on stories that got a post, US (climatology)",
+      "value": 1.324
+     },
+     "logErrGivenActiveIN": {
+      "label": "log error on stories that got a post, India (climatology)",
+      "value": 1.305
+     },
+     "logError": {
+      "label": "log error, all stories",
+      "value": 0.813
+     },
+     "logErrorUS": {
+      "label": "log error, US",
+      "value": 0.859
+     },
+     "logErrorIN": {
+      "label": "log error, India",
+      "value": 0.763
+     },
+     "top10HitsUS": {
+      "label": "real top-10 stories found, US",
+      "value": null
+     },
+     "top10HitsIN": {
+      "label": "real top-10 stories found, India",
+      "value": null
+     },
+     "cover80": {
+      "label": "share of actuals inside the 80 percent range",
+      "value": 0.718
+     },
+     "rows": 1374
+    },
+    "volols": {
+     "name": "one-variable volume regression",
+     "activeRows": {
+      "label": "stories with at least one post, all stories",
+      "value": 468
+     },
+     "activeRowsUS": {
+      "label": "stories with at least one post, US",
+      "value": 261
+     },
+     "activeRowsIN": {
+      "label": "stories with at least one post, India",
+      "value": 207
+     },
+     "rps": {
+      "label": "ranked probability score, all stories",
+      "value": 37.873
+     },
+     "rpsUS": {
+      "label": "ranked probability score, US",
+      "value": 51.56
+     },
+     "rpsIN": {
+      "label": "ranked probability score, India",
+      "value": 22.629
+     },
+     "brierActive": {
+      "label": "Brier score on any post, all stories",
+      "value": 0.224
+     },
+     "brierActiveUS": {
+      "label": "Brier score on any post, US",
+      "value": 0.245
+     },
+     "brierActiveIN": {
+      "label": "Brier score on any post, India",
+      "value": 0.2
+     },
+     "logErrGivenActive": {
+      "label": "log error on stories that got a post, all stories",
+      "value": 1.289
+     },
+     "logErrGivenActiveUS": {
+      "label": "log error on stories that got a post, US",
+      "value": 1.305
+     },
+     "logErrGivenActiveIN": {
+      "label": "log error on stories that got a post, India",
+      "value": 1.269
+     },
+     "logError": {
+      "label": "log error, all stories",
+      "value": 0.819
+     },
+     "logErrorUS": {
+      "label": "log error, US",
+      "value": 0.829
+     },
+     "logErrorIN": {
+      "label": "log error, India",
+      "value": 0.807
+     },
+     "top10HitsUS": {
+      "label": "real top-10 stories found, US",
+      "value": 0
+     },
+     "top10HitsIN": {
+      "label": "real top-10 stories found, India",
+      "value": 1
+     },
+     "cover80": {
+      "label": "share of actuals inside the 80 percent range",
+      "value": 0.662
+     },
+     "rows": 1374
+    }
+   },
+   "secondaryReferences": {
+    "surv_age": {
+     "name": "age-conditioned survival",
+     "scoredOn": [
+      "brierActive"
+     ],
+     "activeRows": {
+      "label": "stories with at least one post, all stories",
+      "value": 468
+     },
+     "activeRowsUS": {
+      "label": "stories with at least one post, US",
+      "value": 261
+     },
+     "activeRowsIN": {
+      "label": "stories with at least one post, India",
+      "value": 207
+     },
+     "brierActive": {
+      "label": "Brier score on any post, all stories",
+      "value": 0.191
+     },
+     "brierActiveUS": {
+      "label": "Brier score on any post, US",
+      "value": 0.204
+     },
+     "brierActiveIN": {
+      "label": "Brier score on any post, India",
+      "value": 0.177
+     }
+    },
+    "tsb": {
+     "name": "Teunter-Syntetos-Babai activity probability",
+     "scoredOn": [
+      "brierActive"
+     ],
+     "activeRows": {
+      "label": "stories with at least one post, all stories",
+      "value": 468
+     },
+     "activeRowsUS": {
+      "label": "stories with at least one post, US",
+      "value": 261
+     },
+     "activeRowsIN": {
+      "label": "stories with at least one post, India",
+      "value": 207
+     },
+     "brierActive": {
+      "label": "Brier score on any post, all stories",
+      "value": 0.294
+     },
+     "brierActiveUS": {
+      "label": "Brier score on any post, US",
+      "value": 0.283
+     },
+     "brierActiveIN": {
+      "label": "Brier score on any post, India",
+      "value": 0.306
+     }
+    },
+    "hurdle_nb": {
+     "name": "hurdle negative binomial",
+     "scoredOn": [
+      "rps",
+      "brierActive",
+      "logErrGivenActive",
+      "logErr"
+     ],
+     "activeRows": {
+      "label": "stories with at least one post, all stories",
+      "value": 468
+     },
+     "activeRowsUS": {
+      "label": "stories with at least one post, US",
+      "value": 261
+     },
+     "activeRowsIN": {
+      "label": "stories with at least one post, India",
+      "value": 207
+     },
+     "rps": {
+      "label": "ranked probability score, all stories",
+      "value": 37.291
+     },
+     "rpsUS": {
+      "label": "ranked probability score, US",
+      "value": 50.867
+     },
+     "rpsIN": {
+      "label": "ranked probability score, India",
+      "value": 22.17
+     },
+     "brierActive": {
+      "label": "Brier score on any post, all stories",
+      "value": 0.183
+     },
+     "brierActiveUS": {
+      "label": "Brier score on any post, US",
+      "value": 0.198
+     },
+     "brierActiveIN": {
+      "label": "Brier score on any post, India",
+      "value": 0.167
+     },
+     "logErrGivenActive": {
+      "label": "log error on stories that got a post, all stories",
+      "value": 1.22
+     },
+     "logErrGivenActiveUS": {
+      "label": "log error on stories that got a post, US",
+      "value": 1.246
+     },
+     "logErrGivenActiveIN": {
+      "label": "log error on stories that got a post, India",
+      "value": 1.187
+     },
+     "logError": {
+      "label": "log error, all stories",
+      "value": 0.72
+     },
+     "logErrorUS": {
+      "label": "log error, US",
+      "value": 0.765
+     },
+     "logErrorIN": {
+      "label": "log error, India",
+      "value": 0.67
+     }
+    }
+   },
+   "secondaryVoid": {},
+   "areaShareUS": {
+    "label": "US issue-area share of the day's posts: total variation distance between the forecast mix of Arbiter's categories and the real mix, lower is better. It does not depend on story keys, but it does depend on Arbiter's categoriser.",
+    "actualPosts": 72629,
+    "tvd": {
+     "gbm_med": {
+      "label": "boosted trees (median): its forecasts summed by category",
+      "value": 0.48
+     },
+     "mix_persist": {
+      "label": "the origin day's mix",
+      "value": 0.525
+     }
+    }
+   },
+   "historyRenameRestriction": {
+    "label": "Arbiter renamed its stories within the seven days before the origin. Stories that kept an old key cannot get a post under it, so they are dropped from every score; this gives how many were dropped and their share of each model's predicted posts.",
+    "regions": {
+     "US": {
+      "keptKeys": 724,
+      "excludedKeys": 411,
+      "excludedPredictedShare": {
+       "gbm_med": 0.002,
+       "persist": 0.0,
+       "zero": 0.0,
+       "volols": 0.108
+      }
+     },
+     "IN": {
+      "keptKeys": 650,
+      "excludedKeys": 726,
+      "excludedPredictedShare": {
+       "gbm_med": 0.01,
+       "persist": 0.0,
+       "zero": 0.0,
+       "volols": 0.168
+      }
+     }
+    }
+   },
+   "keyContinuity": {
+    "US": {
+     "forwardRename": false,
+     "historyRename": true,
+     "mapsMissing": [],
+     "pairs": [
+      {
+       "from": "2026-09-27",
+       "to": "2026-09-28",
+       "gapDays": 1,
+       "keysKept": 0.711,
+       "partialFlag": false
+      },
+      {
+       "from": "2026-09-28",
+       "to": "2026-09-30",
+       "gapDays": 2,
+       "keysKept": 0.0,
+       "partialFlag": false
+      },
+      {
+       "from": "2026-09-30",
+       "to": "2026-10-01",
+       "gapDays": 1,
+       "keysKept": 0.734,
+       "partialFlag": false
+      },
+      {
+       "from": "2026-10-01",
+       "to": "2026-10-02",
+       "gapDays": 1,
+       "keysKept": 0.724,
+       "partialFlag": false
+      },
+      {
+       "from": "2026-10-02",
+       "to": "2026-10-03",
+       "gapDays": 1,
+       "keysKept": 0.715,
+       "partialFlag": false
+      }
+     ]
+    },
+    "IN": {
+     "forwardRename": false,
+     "historyRename": true,
+     "mapsMissing": [],
+     "pairs": [
+      {
+       "from": "2026-09-27",
+       "to": "2026-09-28",
+       "gapDays": 1,
+       "keysKept": 0.718,
+       "partialFlag": false
+      },
+      {
+       "from": "2026-09-28",
+       "to": "2026-09-30",
+       "gapDays": 2,
+       "keysKept": 0.0,
+       "partialFlag": false
+      },
+      {
+       "from": "2026-09-30",
+       "to": "2026-10-01",
+       "gapDays": 1,
+       "keysKept": 0.747,
+       "partialFlag": false
+      },
+      {
+       "from": "2026-10-01",
+       "to": "2026-10-02",
+       "gapDays": 1,
+       "keysKept": 0.723,
+       "partialFlag": false
+      },
+      {
+       "from": "2026-10-02",
+       "to": "2026-10-03",
+       "gapDays": 1,
+       "keysKept": 0.702,
+       "partialFlag": false
+      }
+     ]
+    }
+   },
+   "hurdleFit": {
+    "converged": true,
+    "alphaAtBound": true
+   },
+   "tsbBeta": 0.5,
+   "newStoryShare": {
+    "US": 0.4747277258395407,
+    "IN": 0.6574661223071577
+   },
+   "degradedTarget": {
+    "US": false,
+    "IN": false
+   },
+   "countsTowardBlock": true
+  }
+ ],
+ "notes": [
+  "Each issue that forecast this day has its own entry in byIssue. A day can be D+1 of one issue and D+2 of the issue before; the two are kept apart and never averaged.",
+  "D+n counts days from the issue day; the lag counts days from the reading the forecast starts from.",
+  "A history rename applies: see historyRenameRestriction for the stories dropped from every score and their share of predicted posts."
+ ],
+ "timing": {
+  "2026-10-02": {
+   "targetStartsUtc": "2026-10-03T00:00:00Z",
+   "ledgerCommit": "3c39704ef09003ce0948da6c1681ae1debab8bc7",
+   "ledgerPushUtc": "2026-10-02T23:08:58Z",
+   "ledgerPushSource": "https://api.github.com/repos/SimPPL/arbiter-forecast-ledger/activity (activity API)",
+   "researchPushUtc": "2026-10-02T07:02:18Z",
+   "researchCommit": "79a7df4",
+   "researchPushNote": "Push to the private research repo, recorded from its GitHub events; an outsider cannot check it."
+  }
+ }
+}

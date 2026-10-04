@@ -1,0 +1,389 @@
+{
+ "day": "2026-10-03",
+ "kind": "by key",
+ "reading": "T0: posts published on the day that Arbiter's reading of the day assigns to the story",
+ "forecasts": [
+  {
+   "issueDay": "2026-10-02",
+   "horizonDays": 1,
+   "lagFromOriginDays": 2,
+   "horizonCountedFrom": "issue day",
+   "kind": "by key",
+   "modelName": "boosted trees (median)",
+   "model": "gbm_med",
+   "regions": {
+    "US": [
+     {
+      "rank": 1,
+      "title": "Fortnite Halloween draws attention with horror character crossovers",
+      "arbiterKey": "US:0098682eddd62915",
+      "posts": 34.5,
+      "lo": 27.4,
+      "hi": 47.8,
+      "chance": "likely",
+      "actual": 25,
+      "inRange": false
+     },
+     {
+      "rank": 2,
+      "title": "Juice=Juice’s 2026 “5ROOMS” Tour in Kyoto",
+      "arbiterKey": "US:92b7402a19461f1a",
+      "posts": 24.4,
+      "lo": 19.4,
+      "hi": 33.9,
+      "chance": "likely",
+      "actual": 102,
+      "inRange": false
+     },
+     {
+      "rank": 3,
+      "title": "Formind’s RYET Commercial Updates Draw Investor Attention",
+      "arbiterKey": "US:6ac3e2825463b554",
+      "posts": 20.9,
+      "lo": 16.5,
+      "hi": 29.1,
+      "chance": "likely",
+      "actual": 20,
+      "inRange": true
+     },
+     {
+      "rank": 4,
+      "title": "Joey Porter Jr.’s move from the Steelers to the Cowboys",
+      "arbiterKey": "US:5893068df1b13ea7",
+      "posts": 20.7,
+      "lo": 16.4,
+      "hi": 28.8,
+      "chance": "likely",
+      "actual": 4,
+      "inRange": false
+     },
+     {
+      "rank": 5,
+      "title": "Tennessee Execution of Christa Pike Delayed by Court Stay",
+      "arbiterKey": "US:e06e09c0dc3dedf8",
+      "posts": 15.8,
+      "lo": 1.2,
+      "hi": 105.8,
+      "chance": "likely",
+      "actual": 6,
+      "inRange": true
+     },
+     {
+      "rank": 6,
+      "title": "Jack Smith’s Senate Hearing Draws Scrutiny of Eric Schmitt",
+      "arbiterKey": "US:073b85204a463d60",
+      "posts": 13.0,
+      "lo": 0.9,
+      "hi": 87.8,
+      "chance": "possible",
+      "actual": 27,
+      "inRange": true
+     },
+     {
+      "rank": 7,
+      "title": "Crypto Communities Vote for Moonshot Listings",
+      "arbiterKey": "US:c184d1dca6a937a7",
+      "posts": 12.2,
+      "lo": 0.7,
+      "hi": 82.7,
+      "chance": "possible",
+      "actual": 2,
+      "inRange": true
+     },
+     {
+      "rank": 8,
+      "title": "Cornell Student’s Lawsuit Alleges Fraternity Sexual Assault",
+      "arbiterKey": "US:6aefd8f0597da22f",
+      "posts": 12.0,
+      "lo": 0.7,
+      "hi": 81.6,
+      "chance": "possible",
+      "actual": 20,
+      "inRange": true
+     },
+     {
+      "rank": 9,
+      "title": "Maple Leafs acquire Kirill Marchenko in trade involving Matthew Knies",
+      "arbiterKey": "US:7946a4b98658e7b3",
+      "posts": 11.5,
+      "lo": 0.7,
+      "hi": 78.5,
+      "chance": "possible",
+      "actual": 11,
+      "inRange": true
+     },
+     {
+      "rank": 10,
+      "title": "Reggie’s departure from the Clover Boys sparks streamer drama",
+      "arbiterKey": "US:88ce71409e711548",
+      "posts": 11.3,
+      "lo": 0.6,
+      "hi": 77.3,
+      "chance": "possible",
+      "actual": 2,
+      "inRange": true
+     }
+    ],
+    "IN": [
+     {
+      "rank": 1,
+      "title": "Reports of a confrontation aboard a FlyDubai flight",
+      "arbiterKey": "IN:f1bb9ee3c01de292",
+      "posts": 36.8,
+      "lo": 29.3,
+      "hi": 51.0,
+      "chance": "likely",
+      "actual": 2854,
+      "inRange": false
+     },
+     {
+      "rank": 2,
+      "title": "2027 Cricket World Cup Groups and Schedule Revealed",
+      "arbiterKey": "IN:592a2023abfdec51",
+      "posts": 25.6,
+      "lo": 20.3,
+      "hi": 35.6,
+      "chance": "likely",
+      "actual": 22,
+      "inRange": true
+     },
+     {
+      "rank": 3,
+      "title": "Reports of Ronaldo’s rift with Portugal coach Jorge Jesus",
+      "arbiterKey": "IN:a6624bbb553d35c6",
+      "posts": 18.5,
+      "lo": 1.6,
+      "hi": 122.4,
+      "chance": "likely",
+      "actual": 53,
+      "inRange": true
+     },
+     {
+      "rank": 4,
+      "title": "Kuldeep Yadav’s wicket-taking spell against West Indies",
+      "arbiterKey": "IN:fb5c07ca1dcfccda",
+      "posts": 17.9,
+      "lo": 1.5,
+      "hi": 118.8,
+      "chance": "likely",
+      "actual": 149,
+      "inRange": false
+     },
+     {
+      "rank": 5,
+      "title": "Swachhata Hi Seva 2026 Cleanliness Drive",
+      "arbiterKey": "IN:08cee8c5ffeb6c95",
+      "posts": 17.0,
+      "lo": 1.4,
+      "hi": 113.3,
+      "chance": "likely",
+      "actual": 12,
+      "inRange": true
+     },
+     {
+      "rank": 6,
+      "title": "Gandhi Jayanti tributes highlight truth, peace and cleanliness",
+      "arbiterKey": "IN:57ed7b9f042f4ce4",
+      "posts": 16.1,
+      "lo": 1.3,
+      "hi": 107.3,
+      "chance": "likely",
+      "actual": 596,
+      "inRange": false
+     },
+     {
+      "rank": 7,
+      "title": "Virat Kohli reaches 15,000 ODI runs with century against West Indies",
+      "arbiterKey": "IN:89099b425da66c5f",
+      "posts": 11.4,
+      "lo": 0.6,
+      "hi": 77.9,
+      "chance": "possible",
+      "actual": 733,
+      "inRange": false
+     },
+     {
+      "rank": 8,
+      "title": "Telugu Film Promotions and Leak Warnings",
+      "arbiterKey": "IN:8020cb8b205f558a",
+      "posts": 10.3,
+      "lo": 0.5,
+      "hi": 70.8,
+      "chance": "possible",
+      "actual": 3,
+      "inRange": true
+     },
+     {
+      "rank": 9,
+      "title": "UPSC marks 100 years as Modi calls for citizen-first selection",
+      "arbiterKey": "IN:1bfc6fcbef5b20f9",
+      "posts": 8.7,
+      "lo": 0.3,
+      "hi": 60.9,
+      "chance": "possible",
+      "actual": 2,
+      "inRange": true
+     },
+     {
+      "rank": 10,
+      "title": "Wicknell Chivayo Reported Dead in Helicopter Crash",
+      "arbiterKey": "IN:7f75b62ab30339fa",
+      "posts": 7.4,
+      "lo": 0.1,
+      "hi": 52.3,
+      "chance": "possible",
+      "actual": 28,
+      "inRange": true
+     }
+    ]
+   }
+  }
+ ],
+ "actualTop10": {
+  "US": [
+   {
+    "rank": 1,
+    "title": "Wisconsin stuns Penn State with road win",
+    "arbiterKey": "US:562b435aa1e07b1f",
+    "posts": 7892,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 2,
+    "title": "Mississippi State edges Missouri in SEC matchup",
+    "arbiterKey": "US:0846f85d2095b37c",
+    "posts": 7227,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 3,
+    "title": "Fever and Aces playoff matchup sparks player and fan debate",
+    "arbiterKey": "US:9219ac6562e6dc15",
+    "posts": 3419,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 4,
+    "title": "Football player matchups and comparisons",
+    "arbiterKey": "US:cd8bfe0c4a805ddc",
+    "posts": 2520,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 5,
+    "title": "Bills Fans React to Game Against the Chargers",
+    "arbiterKey": "US:912490d350a007f6",
+    "posts": 2407,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 6,
+    "title": "Virginia Tech–Pitt matchup draws college football betting picks",
+    "arbiterKey": "US:d04cf569b99b712d",
+    "posts": 2228,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 7,
+    "title": "Debate over South Africa’s batting order and ODI cricket",
+    "arbiterKey": "US:2ff7376ab6042774",
+    "posts": 2175,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 8,
+    "title": "Fans promote Yeonjun’s Miu Miu appearances",
+    "arbiterKey": "US:6ea1156fd6a1d17b",
+    "posts": 1973,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 9,
+    "title": "F1 Azerbaijan GP: Russell takes pole as Colapinto draws fan attention",
+    "arbiterKey": "US:3036285ba7ac1d01",
+    "posts": 1762,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 10,
+    "title": "Idaho Vandals Mount Dramatic Comeback Against Montana State",
+    "arbiterKey": "US:c27207391991c3cf",
+    "posts": 1360,
+    "liveAtOrigin": false
+   }
+  ],
+  "IN": [
+   {
+    "rank": 1,
+    "title": "Reports of a confrontation aboard a FlyDubai flight",
+    "arbiterKey": "IN:f1bb9ee3c01de292",
+    "posts": 2854,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 2,
+    "title": "India beats Pakistan to win Asian Games cricket gold",
+    "arbiterKey": "IN:cb84705f2a3518f0",
+    "posts": 1711,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 3,
+    "title": "Bigg Boss 20 Contestant Support and House Rivalries",
+    "arbiterKey": "IN:f670094fbe29dc76",
+    "posts": 1524,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 4,
+    "title": "Keng and Namping Attend the BoF 500 Gala in Paris",
+    "arbiterKey": "IN:840c6f6e503dd1da",
+    "posts": 1308,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 5,
+    "title": "India Defeats Pakistan in Cricket Final to Win Gold",
+    "arbiterKey": "IN:8a314801b3f76c80",
+    "posts": 1132,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 6,
+    "title": "Brazil defeats India in football friendly as Estevão scores",
+    "arbiterKey": "IN:b719b71b62a50948",
+    "posts": 1078,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 7,
+    "title": "Debate over Delhi Police conduct and public safety",
+    "arbiterKey": "IN:f3f57d88fea4f1a0",
+    "posts": 1028,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 8,
+    "title": "India’s women win Asian Games hockey gold and qualify for LA Olympics",
+    "arbiterKey": "IN:d7b27e1023fd2e52",
+    "posts": 1014,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 9,
+    "title": "Tilak Varma’s Match-Winning Fifty Against Pakistan",
+    "arbiterKey": "IN:f1937e9b43a7bc71",
+    "posts": 950,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 10,
+    "title": "BTS World Tour Excitement in Bogotá",
+    "arbiterKey": "IN:28a8b25965df1ea0",
+    "posts": 945,
+    "liveAtOrigin": false
+   }
+  ]
+ },
+ "actualTop10Source": "score file"
+}

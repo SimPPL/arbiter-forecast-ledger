@@ -1,0 +1,96 @@
+{
+ "day": "2026-10-03",
+ "rankRule": "rank among the region's non-hub stories with at least one post that day, by post count; tied stories share the better rank",
+ "regions": {
+  "US": {
+   "storiesWithPosts": 469,
+   "stories": {
+    "US:0098682eddd62915": {
+     "posts": 25,
+     "rank": 154
+    },
+    "US:073b85204a463d60": {
+     "posts": 27,
+     "rank": 151
+    },
+    "US:5893068df1b13ea7": {
+     "posts": 4,
+     "rank": 292
+    },
+    "US:6ac3e2825463b554": {
+     "posts": 20,
+     "rank": 163
+    },
+    "US:6aefd8f0597da22f": {
+     "posts": 20,
+     "rank": 163
+    },
+    "US:7946a4b98658e7b3": {
+     "posts": 11,
+     "rank": 209
+    },
+    "US:88ce71409e711548": {
+     "posts": 2,
+     "rank": 340
+    },
+    "US:92b7402a19461f1a": {
+     "posts": 102,
+     "rank": 105
+    },
+    "US:c184d1dca6a937a7": {
+     "posts": 2,
+     "rank": 340
+    },
+    "US:e06e09c0dc3dedf8": {
+     "posts": 6,
+     "rank": 257
+    }
+   }
+  },
+  "IN": {
+   "storiesWithPosts": 403,
+   "stories": {
+    "IN:08cee8c5ffeb6c95": {
+     "posts": 12,
+     "rank": 206
+    },
+    "IN:1bfc6fcbef5b20f9": {
+     "posts": 2,
+     "rank": 325
+    },
+    "IN:57ed7b9f042f4ce4": {
+     "posts": 596,
+     "rank": 21
+    },
+    "IN:592a2023abfdec51": {
+     "posts": 22,
+     "rank": 175
+    },
+    "IN:7f75b62ab30339fa": {
+     "posts": 28,
+     "rank": 163
+    },
+    "IN:8020cb8b205f558a": {
+     "posts": 3,
+     "rank": 301
+    },
+    "IN:89099b425da66c5f": {
+     "posts": 733,
+     "rank": 14
+    },
+    "IN:a6624bbb553d35c6": {
+     "posts": 53,
+     "rank": 134
+    },
+    "IN:f1bb9ee3c01de292": {
+     "posts": 2854,
+     "rank": 1
+    },
+    "IN:fb5c07ca1dcfccda": {
+     "posts": 149,
+     "rank": 73
+    }
+   }
+  }
+ }
+}
