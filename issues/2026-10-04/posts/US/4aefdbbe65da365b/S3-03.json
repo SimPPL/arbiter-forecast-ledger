@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:4aefdbbe65da365b",
+ "title": "Broncos-Rams Game Sparks Debate Over Coaching and Key Plays",
+ "optionId": "S3-03",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "The Broncos overcame a 16 0 second half deficit to beat the Rams.",
+ "sentenceIs": "written by the model",
+ "chance": 0.85,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/4aefdbbe65da365b/S3-03.json",
+  "sha256": "bf79d30dc67ed86dd4807fd4cc5c9f7999225e1ceec491e4b26325135e19d8e5",
+  "commit": "e49b763abd1b42a1936d50ddfacff1e26afe54bf"
+ }
+}
