@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:d04cf569b99b712d",
+ "title": "Virginia Tech–Pitt matchup draws college football betting picks",
+ "optionId": "S2-03",
+ "seat": "S2",
+ "seatName": "continuation",
+ "model": "none: the origin day's most repeated posts, fixed chances by rank",
+ "sentence": "Nicky Cashin's 9-1 NCAAF run includes Arizona State -3.5 (-110) 2U, Miami -15 (-110) 2U, Temple +6 (-110) 2U, Old Dominion +2.5 (-108) 2U, Syracuse -6.5 (-110) 2U, and Ohio State -14 (-112) 3U.",
+ "sentenceIs": "a paraphrase of a real post from the origin day; the post itself stays private",
+ "chance": 0.45,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/d04cf569b99b712d/S2-03.json",
+  "sha256": "1931bd8697e93df93b694628da0db7d119afa05daea6b4a462fd33bf504a9385",
+  "commit": "c1bfeef8792c17d31b2cd01d6455c5e9649db3fb"
+ }
+}
