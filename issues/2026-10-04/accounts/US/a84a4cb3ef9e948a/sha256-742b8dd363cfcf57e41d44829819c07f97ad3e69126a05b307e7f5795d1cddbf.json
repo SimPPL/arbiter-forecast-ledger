@@ -1,0 +1,28 @@
+{
+ "unit": "account forecast",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:a84a4cb3ef9e948a",
+ "title": "LingOrm Draws Fan Attention at Dior’s Paris Fashion Week Show",
+ "accountRef": "sha256:742b8dd363cfcf57e41d44829819c07f97ad3e69126a05b307e7f5795d1cddbf",
+ "public": false,
+ "namedBecause": null,
+ "chances": {
+  "W1": 0.083891,
+  "W2": null,
+  "W3": 0.005202
+ },
+ "listRanks": {
+  "W1": 3,
+  "W2": null,
+  "W3": 1
+ },
+ "accountRefRule": "the handle for an account that passes PublicAccounts.decide at the origin; otherwise sha256(lower(handle) + \":\" + salt), with one salt per issue kept only in the private repo",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/accounts/a84a4cb3ef9e948a/sha256-742b8dd363cfcf57e41d44829819c07f97ad3e69126a05b307e7f5795d1cddbf.json",
+  "sha256": "b17b5de50b6b29e21f93fc389c42194176218cc68b3f141df7ed3a9b52003548",
+  "commit": "605d7ac800253d74d40c32b9337865ee3572acad"
+ }
+}
