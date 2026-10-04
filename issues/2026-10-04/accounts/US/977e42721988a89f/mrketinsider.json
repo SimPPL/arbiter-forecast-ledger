@@ -1,0 +1,28 @@
+{
+ "unit": "account forecast",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:977e42721988a89f",
+ "title": "Bitget Reports $351M Hot-Wallet Breach",
+ "accountRef": "@mrketinsider",
+ "public": true,
+ "namedBecause": "a post with 250,000+ views",
+ "chances": {
+  "W1": 0.190964,
+  "W2": null,
+  "W3": null
+ },
+ "listRanks": {
+  "W1": 3,
+  "W2": null,
+  "W3": null
+ },
+ "accountRefRule": "the handle for an account that passes PublicAccounts.decide at the origin; otherwise sha256(lower(handle) + \":\" + salt), with one salt per issue kept only in the private repo",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/accounts/977e42721988a89f/mrketinsider.json",
+  "sha256": "784b76488bd69331228f77539ec3ffd413c2d53609084d1daf8a6f5f4a407c49",
+  "commit": "473fd024f6f78db45eee5a7f9dcdb54984b741a6"
+ }
+}
