@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "IN",
+ "arbiterKey": "IN:08cee8c5ffeb6c95",
+ "title": "Swachhata Hi Seva 2026 Cleanliness Drive",
+ "category": "other",
+ "real": {
+  "posts": 12,
+  "rank": 206,
+  "storiesWithPost": 403
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 17.012438627104252,
+    "lo80": 1.3824728725515436,
+    "hi80": 113.29411257685544,
+    "pAnyPost": 0.6100178890876565,
+    "pTop10": null,
+    "asHeldLatestDay": 1524.0,
+    "rank": 5,
+    "storiesForecast": 1376,
+    "baselines": {
+     "persist": 1524.0,
+     "volols": 5.985867585576368,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 12,
+   "logError": 0.3261131966191182,
+   "brierAnyPost": 0.15208604683164736,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 1524.0,
+     "logError": 4.764800331579975
+    },
+    "volols": {
+     "posts": 5.985867585576368,
+     "logError": 0.6210601655112733
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 2.5649493574615367
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "IN:08cee8c5ffeb6c95"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
