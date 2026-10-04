@@ -1,0 +1,71 @@
+{
+ "unit": "category outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "category": "religion",
+ "real": {
+  "posts": 741,
+  "regionPosts": 72629,
+  "share": 0.010202536177009183
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet; real totals include stories that did not exist at the origin, so compare shares first",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "forecast": {
+    "posts": 8.716936688949557,
+    "share": 0.014250146399029613,
+    "regionPosts": 611.7085709058506,
+    "stories": 11
+   },
+   "realPostsOfMembers": 2.0,
+   "logError": 4.335478829824815,
+   "shareError": 0.00404761022202043,
+   "baselines": {
+    "persist": {
+     "posts": 4772.0,
+     "share": 0.10808607021517554,
+     "logError": 1.8613810738385164,
+     "shareError": 0.09788353403816635
+    },
+    "volols": {
+     "posts": 6.274468070192956,
+     "share": 0.014912839370027426,
+     "logError": 4.624978550282289,
+     "shareError": 0.004710303193018243
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null,
+     "logError": 6.60934924316738,
+     "shareError": null
+    }
+   },
+   "members": [
+    "US:04a6a6fb8b343250",
+    "US:0719d45c8e49e15d",
+    "US:517a81a4c441440f",
+    "US:5609c815f5d96081",
+    "US:870a5d7cf054f93b",
+    "US:8f0c49b640b81833",
+    "US:af73290637a67e40",
+    "US:d65c83dc44599976",
+    "US:dc649862268c0bc3",
+    "US:e03e47018b68e07b",
+    "US:f7821049f5482732"
+   ],
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "region": "US",
+     "narrativeKey": "members"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
