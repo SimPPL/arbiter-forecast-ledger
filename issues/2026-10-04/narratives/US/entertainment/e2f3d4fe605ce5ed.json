@@ -1,0 +1,67 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-04",
+ "region": "US",
+ "arbiterKey": "US:e2f3d4fe605ce5ed",
+ "title": "Fans celebrate pop and R&B artists",
+ "category": "entertainment",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "US top 50 by the D+1 forecast"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-05",
+   "lag": 2,
+   "posts": 6.150066085027192,
+   "lo80": 0.0050676114033610066,
+   "hi80": 60.66474356679498,
+   "pAnyPost": 0.485981308411215,
+   "pTop10": null,
+   "asHeldLatestDay": 10.0,
+   "rank": 21,
+   "storiesForecast": 1341,
+   "baselines": {
+    "persist": 10.0,
+    "volols": 0.9028987669108178,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-06",
+   "lag": 3,
+   "posts": 1.0594610410353924,
+   "lo80": 0.0,
+   "hi80": 9.389416069191334,
+   "pAnyPost": 0.16431451612903225,
+   "pTop10": null,
+   "asHeldLatestDay": 10.0,
+   "rank": 63,
+   "storiesForecast": 1341,
+   "baselines": {
+    "persist": 10.0,
+    "volols": 0.5897427610940796,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-04/pred_2026-10-05_h1_K0.parquet",
+   "sha256": "45c05dceca8e30ee736feca09ca0956ead659dd21923b587d61d5a0571dccbb0",
+   "row": {
+    "narrativeKey": "US:e2f3d4fe605ce5ed"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-04/pred_2026-10-06_h2_K0.parquet",
+   "sha256": "a39d5c6bcc42b7f41043e2bc918952c95159ee37143194e938d358f3f6a53383",
+   "row": {
+    "narrativeKey": "US:e2f3d4fe605ce5ed"
+   },
+   "models": "every model"
+  }
+ ]
+}
