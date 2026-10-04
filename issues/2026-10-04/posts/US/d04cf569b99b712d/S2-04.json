@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:d04cf569b99b712d",
+ "title": "Virginia Tech–Pitt matchup draws college football betting picks",
+ "optionId": "S2-04",
+ "seat": "S2",
+ "seatName": "continuation",
+ "model": "none: the origin day's most repeated posts, fixed chances by rank",
+ "sentence": "After going 3-0 tonight, the author aims to go 10-0 tomorrow with bets on Maryland +14.5, South Carolina -2.5, Notre Dame v UNC u46.5, SMU -21 (DK), Texas A&M -13.5, Louisana Tech +1.5, Georgia v Vandy u51, NC State +3.5, and Colorado +13.5.",
+ "sentenceIs": "a paraphrase of a real post from the origin day; the post itself stays private",
+ "chance": 0.4,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/d04cf569b99b712d/S2-04.json",
+  "sha256": "137449842659ae2d520f0eebe3d036758f22cd1fbd0fc685245329f3a83073c5",
+  "commit": "6d32ab01a741bcf2d846b52ed9b66fa637dbf0b0"
+ }
+}
