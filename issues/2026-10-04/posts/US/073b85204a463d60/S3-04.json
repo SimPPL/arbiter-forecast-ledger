@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:073b85204a463d60",
+ "title": "Jack Smith’s Senate Hearing Draws Scrutiny of Eric Schmitt",
+ "optionId": "S3-04",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "The seizure of records from journalists and donors was an abuse of power.",
+ "sentenceIs": "written by the model",
+ "chance": 0.5,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/073b85204a463d60/S3-04.json",
+  "sha256": "5b3d37005d8182087633c17d523085a4532515bb4cdff14214689e5a72c518c1",
+  "commit": "6f7b652fc1239128c43c369e718a7dcf1299dbc6"
+ }
+}
