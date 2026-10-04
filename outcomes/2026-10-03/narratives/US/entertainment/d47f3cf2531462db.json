@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "arbiterKey": "US:d47f3cf2531462db",
+ "title": "WWE fans speculate about Jaida Parker, Jey Uso and the Bloodline",
+ "category": "entertainment",
+ "real": {
+  "posts": 8,
+  "rank": 234,
+  "storiesWithPost": 469
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 5.7072497895294765,
+    "lo80": 0.0,
+    "hi80": 41.559432312070754,
+    "pAnyPost": 0.4311270125223614,
+    "pTop10": null,
+    "asHeldLatestDay": 7.0,
+    "rank": 30,
+    "storiesForecast": 1135,
+    "baselines": {
+     "persist": 7.0,
+     "volols": 0.6920083296859786,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 8,
+   "logError": 0.2940355778035124,
+   "brierAnyPost": 0.32361647588173353,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 7.0,
+     "logError": 0.11778303565638382
+    },
+    "volols": {
+     "posts": 0.6920083296859786,
+     "logError": 1.671308393182049
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 2.1972245773362196
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "US:d47f3cf2531462db"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
