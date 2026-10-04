@@ -1,0 +1,68 @@
+{
+ "unit": "category outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "category": "other",
+ "real": {
+  "posts": 143,
+  "regionPosts": 72629,
+  "share": 0.001968910490300018
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet; real totals include stories that did not exist at the origin, so compare shares first",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "forecast": {
+    "posts": 6.8514213121461305,
+    "share": 0.011200466427992306,
+    "regionPosts": 611.7085709058506,
+    "stories": 8
+   },
+   "realPostsOfMembers": 143.0,
+   "logError": 2.9091187252987445,
+   "shareError": 0.009231555937692287,
+   "baselines": {
+    "persist": {
+     "posts": 85.0,
+     "share": 0.001925254813137033,
+     "logError": 0.5154660033224934,
+     "shareError": 4.3655677162985056e-05
+    },
+    "volols": {
+     "posts": 4.9423672195008574,
+     "share": 0.011746769228493142,
+     "logError": 3.1877057237886777,
+     "shareError": 0.009777858738193123
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null,
+     "logError": 4.969813299576001,
+     "shareError": null
+    }
+   },
+   "members": [
+    "US:2180941b3900a7fd",
+    "US:3235c8482ef3adc5",
+    "US:39207c736486fce2",
+    "US:419f3ac9b3ae1038",
+    "US:62f938bfca0c574d",
+    "US:6cb565ad43f3c4e1",
+    "US:de303eb5c9027dd4",
+    "US:f54c6e6a762ab446"
+   ],
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "region": "US",
+     "narrativeKey": "members"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
