@@ -1,0 +1,96 @@
+{
+ "unit": "category outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "category": "technology",
+ "real": {
+  "posts": 136,
+  "regionPosts": 72629,
+  "share": 0.0018725302565091079
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet; real totals include stories that did not exist at the origin, so compare shares first",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "forecast": {
+    "posts": 21.603885125188537,
+    "share": 0.03531728367512712,
+    "regionPosts": 611.7085709058506,
+    "stories": 36
+   },
+   "realPostsOfMembers": 134.0,
+   "logError": 1.8018591261302221,
+   "shareError": 0.03344475341861801,
+   "baselines": {
+    "persist": {
+     "posts": 748.0,
+     "share": 0.016942242355605888,
+     "logError": 1.6987580576890942,
+     "shareError": 0.01506971209909678
+    },
+    "volols": {
+     "posts": 14.913996668899204,
+     "share": 0.0354468353652134,
+     "logError": 2.1527819101916927,
+     "shareError": 0.03357430510870429
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null,
+     "logError": 4.919980925828125,
+     "shareError": null
+    }
+   },
+   "members": [
+    "US:024c84816bcf2227",
+    "US:0f81cd436645943d",
+    "US:154a2fa7a0823f81",
+    "US:1889ae4dcc954b17",
+    "US:1c6f0bd2ea3666b7",
+    "US:1e4cf7071fc3eaef",
+    "US:2089724f8f961fa7",
+    "US:262b12cef25d518d",
+    "US:3198bd595c9507e1",
+    "US:38d6cf5ff8240c81",
+    "US:45deadaf924fb41c",
+    "US:479cddd1e2165050",
+    "US:47e4f9929ccaa587",
+    "US:4d1a79c39620a4c0",
+    "US:630f7f673625541e",
+    "US:676d8d32eab8760f",
+    "US:7592568a0d0bbdf2",
+    "US:771f38d7774196d2",
+    "US:7e5d097a4a0c7adc",
+    "US:80e31bbebb9ff3c8",
+    "US:83eaff00e0eef6b3",
+    "US:84ef5ba95d676c36",
+    "US:8e08b4b780af5b02",
+    "US:9524e6448c388b33",
+    "US:9a59f47cd7ee19d4",
+    "US:a31553354277fdfe",
+    "US:b54b27387889db7c",
+    "US:bd1df1ae46c9f0ab",
+    "US:bd6975dca0b19f0a",
+    "US:bec90d89bb912d66",
+    "US:c0627bb2068b0cc1",
+    "US:c7c8c57fde32f539",
+    "US:d43a036ad7d4da49",
+    "US:d650cef1d4bae6d4",
+    "US:e6fb8964f82c3e99",
+    "US:e8211f0bc1776278"
+   ],
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "region": "US",
+     "narrativeKey": "members"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
