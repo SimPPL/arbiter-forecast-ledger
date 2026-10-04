@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "arbiterKey": "US:3b44dd9aceb10c42",
+ "title": "Artists Share Day 1 Inktober Drawings",
+ "category": "culture",
+ "real": {
+  "posts": 9,
+  "rank": 224,
+  "storiesWithPost": 469
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 3.4469429492501855,
+    "lo80": 0.0,
+    "hi80": 27.21713420300847,
+    "pAnyPost": 0.33452593917710194,
+    "pTop10": null,
+    "asHeldLatestDay": 771.0,
+    "rank": 50,
+    "storiesForecast": 1135,
+    "baselines": {
+     "persist": 771.0,
+     "volols": 3.264214574374151,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 9,
+   "logError": 0.8103682105897885,
+   "brierAnyPost": 0.4428557256281182,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 771.0,
+     "logError": 4.3463994570307305
+    },
+    "volols": {
+     "posts": 3.264214574374151,
+     "logError": 0.8523270850762361
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 2.302585092994046
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "US:3b44dd9aceb10c42"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
