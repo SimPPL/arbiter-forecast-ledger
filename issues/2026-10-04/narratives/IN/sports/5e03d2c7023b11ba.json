@@ -1,0 +1,68 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-04",
+ "region": "IN",
+ "arbiterKey": "IN:5e03d2c7023b11ba",
+ "title": "Indian women win Asian Games compound archery gold",
+ "category": "sports",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "IN top 20 by the D+1 forecast",
+  "published top 10 for 2026-10-06"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-05",
+   "lag": 2,
+   "posts": 11.064633942347845,
+   "lo80": 0.6958966077647586,
+   "hi80": 103.04974575550388,
+   "pAnyPost": 0.5757009345794393,
+   "pTop10": null,
+   "asHeldLatestDay": 728.0,
+   "rank": 12,
+   "storiesForecast": 1418,
+   "baselines": {
+    "persist": 728.0,
+    "volols": 5.192044998798017,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-06",
+   "lag": 3,
+   "posts": 6.648407171049553,
+   "lo80": 0.05167911387612978,
+   "hi80": 61.921122162745846,
+   "pAnyPost": 0.4486803519061584,
+   "pTop10": null,
+   "asHeldLatestDay": 728.0,
+   "rank": 4,
+   "storiesForecast": 1418,
+   "baselines": {
+    "persist": 728.0,
+    "volols": 3.0050933816851457,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-04/pred_2026-10-05_h1_K0.parquet",
+   "sha256": "45c05dceca8e30ee736feca09ca0956ead659dd21923b587d61d5a0571dccbb0",
+   "row": {
+    "narrativeKey": "IN:5e03d2c7023b11ba"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-04/pred_2026-10-06_h2_K0.parquet",
+   "sha256": "a39d5c6bcc42b7f41043e2bc918952c95159ee37143194e938d358f3f6a53383",
+   "row": {
+    "narrativeKey": "IN:5e03d2c7023b11ba"
+   },
+   "models": "every model"
+  }
+ ]
+}
