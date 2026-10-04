@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "arbiterKey": "US:99f02684a5cc2582",
+ "title": "Posts About Dizziness and Feeling Unwell",
+ "category": "healthcare",
+ "real": {
+  "posts": 13,
+  "rank": 196,
+  "storiesWithPost": 469
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 6.088977913240507,
+    "lo80": 0.0,
+    "hi80": 43.981607235100284,
+    "pAnyPost": 0.44901610017889093,
+    "pTop10": null,
+    "asHeldLatestDay": 207.0,
+    "rank": 28,
+    "storiesForecast": 1135,
+    "baselines": {
+     "persist": 207.0,
+     "volols": 2.270603117034091,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 13,
+   "logError": 0.6805161583854729,
+   "brierAnyPost": 0.30358325786207796,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 207.0,
+     "logError": 2.6984807500860595
+    },
+    "volols": {
+     "posts": 2.270603117034091,
+     "logError": 1.4540829222529958
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 2.6390573296152584
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "US:99f02684a5cc2582"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
