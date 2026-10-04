@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "arbiterKey": "US:26283a7fbd20bc46",
+ "title": "Classic Performance Cars and the Buick Grand National",
+ "category": "culture",
+ "real": {
+  "posts": 9,
+  "rank": 224,
+  "storiesWithPost": 469
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 3.6288132371562907,
+    "lo80": 0.0,
+    "hi80": 28.371153577655868,
+    "pAnyPost": 0.3470483005366727,
+    "pTop10": null,
+    "asHeldLatestDay": 18.0,
+    "rank": 48,
+    "storiesForecast": 1135,
+    "baselines": {
+     "persist": 18.0,
+     "volols": 1.0155470384513354,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 9,
+   "logError": 0.7702845780201775,
+   "brierAnyPost": 0.42634592183204734,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 18.0,
+     "logError": 0.6418538861723944
+    },
+    "volols": {
+     "posts": 1.0155470384513354,
+     "logError": 1.601694451337869
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 2.302585092994046
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "US:26283a7fbd20bc46"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
