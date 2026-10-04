@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:e06e09c0dc3dedf8",
+ "title": "Tennessee Execution of Christa Pike Delayed by Court Stay",
+ "optionId": "S1-03",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "google/gemma-4-26b-a4b-it",
+ "sentence": "Tennessee should bring back the electric chair after the failed lethal injection attempt on Christa Pike.",
+ "sentenceIs": "written by the model",
+ "chance": 0.99,
+ "redacted": 0,
+ "personaRef": "@thelinzershow",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/e06e09c0dc3dedf8/S1-03.json",
+  "sha256": "5716256f97b01f5dd632f32a58e863885587f786175256bf7e8c45b207845cb5",
+  "commit": "73c5a98ac5aa4f88bc24e3d4ebc5cde1161a4920"
+ }
+}
