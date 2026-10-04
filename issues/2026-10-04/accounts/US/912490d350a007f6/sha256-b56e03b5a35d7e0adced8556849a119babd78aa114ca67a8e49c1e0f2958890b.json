@@ -1,0 +1,28 @@
+{
+ "unit": "account forecast",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:912490d350a007f6",
+ "title": "Bills Fans React to Game Against the Chargers",
+ "accountRef": "sha256:b56e03b5a35d7e0adced8556849a119babd78aa114ca67a8e49c1e0f2958890b",
+ "public": false,
+ "namedBecause": null,
+ "chances": {
+  "W1": null,
+  "W2": 0.036156,
+  "W3": null
+ },
+ "listRanks": {
+  "W1": null,
+  "W2": 8,
+  "W3": null
+ },
+ "accountRefRule": "the handle for an account that passes PublicAccounts.decide at the origin; otherwise sha256(lower(handle) + \":\" + salt), with one salt per issue kept only in the private repo",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/accounts/912490d350a007f6/sha256-b56e03b5a35d7e0adced8556849a119babd78aa114ca67a8e49c1e0f2958890b.json",
+  "sha256": "e612aefa0b4acc91be1ebcf9f5894b38bbb9e827c78a97f58faa6f658fb8ca28",
+  "commit": "31ee9923e5e8b388006e4971a3fc5d197ef72eb5"
+ }
+}
