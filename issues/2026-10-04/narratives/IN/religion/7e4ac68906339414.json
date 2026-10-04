@@ -1,0 +1,68 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-04",
+ "region": "IN",
+ "arbiterKey": "IN:7e4ac68906339414",
+ "title": "Hindu Devotional Prayers and Daily Greetings",
+ "category": "religion",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "IN top 20 by the D+1 forecast",
+  "published top 10 for 2026-10-05"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-05",
+   "lag": 2,
+   "posts": 16.032067007804752,
+   "lo80": 1.3941567394242074,
+   "hi80": 145.89067652788754,
+   "pAnyPost": 0.6299065420560748,
+   "pTop10": null,
+   "asHeldLatestDay": 651.0,
+   "rank": 5,
+   "storiesForecast": 1418,
+   "baselines": {
+    "persist": 651.0,
+    "volols": 5.017457125417437,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-06",
+   "lag": 3,
+   "posts": 1.6913995745276649,
+   "lo80": 0.0,
+   "hi80": 12.57737263830664,
+   "pAnyPost": 0.20564516129032262,
+   "pTop10": null,
+   "asHeldLatestDay": 651.0,
+   "rank": 38,
+   "storiesForecast": 1418,
+   "baselines": {
+    "persist": 651.0,
+    "volols": 2.9187164909240897,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-04/pred_2026-10-05_h1_K0.parquet",
+   "sha256": "45c05dceca8e30ee736feca09ca0956ead659dd21923b587d61d5a0571dccbb0",
+   "row": {
+    "narrativeKey": "IN:7e4ac68906339414"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-04/pred_2026-10-06_h2_K0.parquet",
+   "sha256": "a39d5c6bcc42b7f41043e2bc918952c95159ee37143194e938d358f3f6a53383",
+   "row": {
+    "narrativeKey": "IN:7e4ac68906339414"
+   },
+   "models": "every model"
+  }
+ ]
+}
