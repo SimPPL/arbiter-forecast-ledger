@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "IN",
+ "arbiterKey": "IN:f1bb9ee3c01de292",
+ "title": "Reports of a confrontation aboard a FlyDubai flight",
+ "category": "business",
+ "real": {
+  "posts": 2854,
+  "rank": 1,
+  "storiesWithPost": 403
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 36.778823740378904,
+    "lo80": 29.279063418231583,
+    "hi80": 50.95603277705226,
+    "pAnyPost": 0.994095505203336,
+    "pTop10": null,
+    "asHeldLatestDay": 3383.0,
+    "rank": 1,
+    "storiesForecast": 1376,
+    "baselines": {
+     "persist": 3383.0,
+     "volols": 7.500565251572748,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 2854,
+   "logError": 4.325078394954084,
+   "brierAnyPost": 3.4863058803832194e-05,
+   "inRange80": false,
+   "baselines": {
+    "persist": {
+     "posts": 3383.0,
+     "logError": 0.16998659863600274
+    },
+    "volols": {
+     "posts": 7.500565251572748,
+     "logError": 5.81669446061985
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 7.956827122090111
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "IN:f1bb9ee3c01de292"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
