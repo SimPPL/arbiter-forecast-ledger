@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "arbiterKey": "US:adc37aaf897187be",
+ "title": "Angel Reese’s WNBA Defensive Player of the Year Debate",
+ "category": "sports",
+ "real": {
+  "posts": 11,
+  "rank": 209,
+  "storiesWithPost": 469
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 7.144561327649078,
+    "lo80": 0.07726648365967542,
+    "hi80": 50.67958811921728,
+    "pAnyPost": 0.47584973166368516,
+    "pTop10": null,
+    "asHeldLatestDay": 835.0,
+    "rank": 18,
+    "storiesForecast": 1135,
+    "baselines": {
+     "persist": 835.0,
+     "volols": 3.3334702505621823,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 11,
+   "logError": 0.3875562670543511,
+   "brierAnyPost": 0.2747335037970309,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 835.0,
+     "logError": 4.243721963296702
+    },
+    "volols": {
+     "posts": 3.3334702505621823,
+     "logError": 1.0185379852101448
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 2.4849066497880004
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "US:adc37aaf897187be"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
