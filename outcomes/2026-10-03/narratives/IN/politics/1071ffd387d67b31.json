@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "IN",
+ "arbiterKey": "IN:1071ffd387d67b31",
+ "title": "Trump and Tech Leaders Sign White House Superintelligence Accord",
+ "category": "politics",
+ "real": {
+  "posts": 9,
+  "rank": 222,
+  "storiesWithPost": 403
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 3.5826369670586447,
+    "lo80": 0.0,
+    "hi80": 28.07815184023548,
+    "pAnyPost": 0.3452593917710197,
+    "pTop10": null,
+    "asHeldLatestDay": 9.0,
+    "rank": 41,
+    "storiesForecast": 1376,
+    "baselines": {
+     "persist": 9.0,
+     "volols": 1.0261987538744062,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 9,
+   "logError": 0.7803105035527167,
+   "brierAnyPost": 0.42868526406405505,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 9.0,
+     "logError": 0.0
+    },
+    "volols": {
+     "posts": 1.0261987538744062,
+     "logError": 1.5964235903630106
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 2.302585092994046
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "IN:1071ffd387d67b31"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
