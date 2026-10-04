@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:6ac3e2825463b554",
+ "title": "Formind’s RYET Commercial Updates Draw Investor Attention",
+ "optionId": "S1-01",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "The H1 FY2027 revenue of 9.3M to 9.5M already exceeds the entire FY2026 revenue of 7.48M which is a massive scale up for RYET.",
+ "sentenceIs": "written by the model",
+ "chance": 0.85,
+ "redacted": 0,
+ "personaRef": "sha256:2989ee21739b6b55996eb8265e66558b3ce6b3b84e4015e2a15d5b2afa3f01ce",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/6ac3e2825463b554/S1-01.json",
+  "sha256": "bcfab9282a203d857ce9681547a62b288a24504aab3c28fe6128228c0794e438",
+  "commit": "7aaf918c13366465a764d146243e659381582d67"
+ }
+}
