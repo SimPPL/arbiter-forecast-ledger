@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "IN",
+ "arbiterKey": "IN:fb5c07ca1dcfccda",
+ "title": "Kuldeep Yadav’s wicket-taking spell against West Indies",
+ "category": "sports",
+ "real": {
+  "posts": 149,
+  "rank": 73,
+  "storiesWithPost": 403
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 17.880393958661106,
+    "lo80": 1.4972757637552383,
+    "hi80": 118.80153921854104,
+    "pAnyPost": 0.6135957066189625,
+    "pTop10": null,
+    "asHeldLatestDay": 1568.0,
+    "rank": 4,
+    "storiesForecast": 1376,
+    "baselines": {
+     "persist": 1568.0,
+     "volols": 6.034962397057493,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 149,
+   "logError": 2.0725112671420947,
+   "brierAnyPost": 0.14930827794329893,
+   "inRange80": false,
+   "baselines": {
+    "persist": {
+     "posts": 1568.0,
+     "logError": 2.347558458636777
+    },
+    "volols": {
+     "posts": 6.034962397057493,
+     "logError": 3.0597429486675014
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 5.0106352940962555
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "IN:fb5c07ca1dcfccda"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
