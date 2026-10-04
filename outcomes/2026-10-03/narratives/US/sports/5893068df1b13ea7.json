@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "arbiterKey": "US:5893068df1b13ea7",
+ "title": "Joey Porter Jr.’s move from the Steelers to the Cowboys",
+ "category": "sports",
+ "real": {
+  "posts": 4,
+  "rank": 292,
+  "storiesWithPost": 469
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 20.704400061370755,
+    "lo80": 16.395695282341347,
+    "hi80": 28.84938146153949,
+    "pAnyPost": 0.9835412207542992,
+    "pTop10": null,
+    "asHeldLatestDay": 2179.0,
+    "rank": 4,
+    "storiesForecast": 1135,
+    "baselines": {
+     "persist": 2179.0,
+     "volols": 4.2606117295653805,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 4,
+   "logError": 1.4680770953628046,
+   "brierAnyPost": 0.0002708914142587123,
+   "inRange80": false,
+   "baselines": {
+    "persist": {
+     "posts": 2179.0,
+     "logError": 6.077642243349034
+    },
+    "volols": {
+     "posts": 4.2606117295653805,
+     "logError": 0.050809405949844066
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 1.6094379124341003
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "US:5893068df1b13ea7"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
