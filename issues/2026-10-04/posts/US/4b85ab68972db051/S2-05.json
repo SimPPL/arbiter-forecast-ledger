@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:4b85ab68972db051",
+ "title": "La Granja VIP MX and Wanda-related social chatter",
+ "optionId": "S2-05",
+ "seat": "S2",
+ "seatName": "continuation",
+ "model": "none: the origin day's most repeated posts, fixed chances by rank",
+ "sentence": "Alito Moreno accused three INE counselors of censorship and civil rights violations in the US.",
+ "sentenceIs": "a paraphrase of a real post from the origin day; the post itself stays private",
+ "chance": 0.35,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/4b85ab68972db051/S2-05.json",
+  "sha256": "12f76790697c92aac6ca46708ae32e76afaeffe1fff097965699af09ad9e7948",
+  "commit": "66c550d2f35d9925c3ceda977b0e938e74b34803"
+ }
+}
