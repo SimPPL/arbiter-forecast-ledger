@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:4b85ab68972db051",
+ "title": "La Granja VIP MX and Wanda-related social chatter",
+ "optionId": "S3-01",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "BTS played Im Fine and So What during their concert in Colombia",
+ "sentenceIs": "written by the model",
+ "chance": 0.99,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/4b85ab68972db051/S3-01.json",
+  "sha256": "3f388670130aed9e19a7d92f2c3212467d8fdda9e4e44f58359e1ec68f7d5c1c",
+  "commit": "ca61ed1b378ee8c11106502d5a72cec1edd8b19a"
+ }
+}
