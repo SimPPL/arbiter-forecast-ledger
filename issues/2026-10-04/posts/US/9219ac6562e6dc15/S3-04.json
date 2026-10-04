@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:9219ac6562e6dc15",
+ "title": "Fever and Aces playoff matchup sparks player and fan debate",
+ "optionId": "S3-04",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "The referees made poor calls during the Valkyries and Wings series.",
+ "sentenceIs": "written by the model",
+ "chance": 0.5,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/9219ac6562e6dc15/S3-04.json",
+  "sha256": "edbea64f574dcaa97faa8c77bd53d3a582a03493348df8ffeb1771c0360f6a1e",
+  "commit": "e4b5724051c5a5cc5f4b64d747d3ff90f6a94efe"
+ }
+}
