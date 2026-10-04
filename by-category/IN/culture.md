@@ -5,5 +5,7 @@ Share of the region's posts in this Arbiter category: forecast (stories live at 
 | issue | target day | horizon | forecast share | real share | share error | yesterday's share error | forecast posts | real posts | log error | yesterday's count log error | every story dies log error | forecast | score |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 2026-10-02 | 2026-10-03 | D+1 | 7.6% | 3.8% | 3.8 points | 4.5 points | 40 | 1727 | 3.742 | 0.382 | 7.455 | - | [score af0c1c2](https://github.com/SimPPL/arbiter-forecast-ledger/commit/af0c1c21a237d6e4ddea88fc7cefe37ea16be4ad) |
+| 2026-10-04 | 2026-10-05 | D+1 | 7.3% | - | - | - | 48 | - | - | - | - | [forecast 005977b](https://github.com/SimPPL/arbiter-forecast-ledger/commit/005977b9be2ff306a09285ddedfa8f132469775c) | - |
+| 2026-10-04 | 2026-10-06 | D+2 | 5.7% | - | - | - | 12 | - | - | - | - | [forecast 005977b](https://github.com/SimPPL/arbiter-forecast-ledger/commit/005977b9be2ff306a09285ddedfa8f132469775c) | - |
 
 Running means over 1 scored rows: share error 3.8 points against 4.5 points for yesterday's share; log error 3.742 against 0.382 for yesterday's count and 7.455 for every story dies.
