@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:9219ac6562e6dc15",
+ "title": "Fever and Aces playoff matchup sparks player and fan debate",
+ "optionId": "S3-03",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "Paige Bueckers needs to learn from this loss and come back stronger next year.",
+ "sentenceIs": "written by the model",
+ "chance": 0.6,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/9219ac6562e6dc15/S3-03.json",
+  "sha256": "5afea05cf85943581222c9a51fd6e268605d5f95563543870e1a11d3e44cb97e",
+  "commit": "5f78c555a15a63368df4c7c66a4c2ba3f0dc761f"
+ }
+}
