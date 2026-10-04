@@ -1,0 +1,68 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-04",
+ "region": "IN",
+ "arbiterKey": "IN:592a2023abfdec51",
+ "title": "2027 Cricket World Cup Groups and Schedule Revealed",
+ "category": "sports",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "IN top 20 by the D+1 forecast",
+  "published top 10 for 2026-10-05"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-05",
+   "lag": 2,
+   "posts": 12.760521482407139,
+   "lo80": 0.9342834448690249,
+   "hi80": 117.67569033171843,
+   "pAnyPost": 0.594392523364486,
+   "pTop10": null,
+   "asHeldLatestDay": 22.0,
+   "rank": 9,
+   "storiesForecast": 1418,
+   "baselines": {
+    "persist": 22.0,
+    "volols": 1.5542373379713623,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-06",
+   "lag": 3,
+   "posts": 3.6545871532513914,
+   "lo80": 0.0,
+   "hi80": 37.29187441738783,
+   "pAnyPost": 0.35777126099706746,
+   "pTop10": null,
+   "asHeldLatestDay": 22.0,
+   "rank": 17,
+   "storiesForecast": 1418,
+   "baselines": {
+    "persist": 22.0,
+    "volols": 1.0391380530141716,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-04/pred_2026-10-05_h1_K0.parquet",
+   "sha256": "45c05dceca8e30ee736feca09ca0956ead659dd21923b587d61d5a0571dccbb0",
+   "row": {
+    "narrativeKey": "IN:592a2023abfdec51"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-04/pred_2026-10-06_h2_K0.parquet",
+   "sha256": "a39d5c6bcc42b7f41043e2bc918952c95159ee37143194e938d358f3f6a53383",
+   "row": {
+    "narrativeKey": "IN:592a2023abfdec51"
+   },
+   "models": "every model"
+  }
+ ]
+}
