@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "arbiterKey": "US:c380cc30f2ca4f78",
+ "title": "Debate over the Vikings’ quarterback plans",
+ "category": "sports",
+ "real": {
+  "posts": 16,
+  "rank": 185,
+  "storiesWithPost": 469
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 5.422385597114693,
+    "lo80": 0.0,
+    "hi80": 39.75188694017546,
+    "pAnyPost": 0.4221824686940966,
+    "pTop10": null,
+    "asHeldLatestDay": 8.0,
+    "rank": 34,
+    "storiesForecast": 1135,
+    "baselines": {
+     "persist": 8.0,
+     "volols": 0.7328054016961967,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 16,
+   "logError": 0.973423707040572,
+   "brierAnyPost": 0.33387309948444865,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 8.0,
+     "logError": 0.6359887667199966
+    },
+    "volols": {
+     "posts": 0.7328054016961967,
+     "logError": 2.2834716294741195
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 2.833213344056216
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "US:c380cc30f2ca4f78"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
