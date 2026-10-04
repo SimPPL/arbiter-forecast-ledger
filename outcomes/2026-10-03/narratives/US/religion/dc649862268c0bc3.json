@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "arbiterKey": "US:dc649862268c0bc3",
+ "title": "Morning Greetings and Faith-Based Blessings",
+ "category": "religion",
+ "real": {
+  "posts": 2,
+  "rank": 340,
+  "storiesWithPost": 469
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 8.674584514611528,
+    "lo80": 0.27963989976268516,
+    "hi80": 60.388026049034565,
+    "pAnyPost": 0.5044722719141324,
+    "pTop10": null,
+    "asHeldLatestDay": 4772.0,
+    "rank": 13,
+    "storiesForecast": 1135,
+    "baselines": {
+     "persist": 4772.0,
+     "volols": 5.164250697045322,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 2,
+   "logError": 1.1708900050994073,
+   "brierAnyPost": 0.24554772930194158,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 4772.0,
+     "logError": 7.372118028337787
+    },
+    "volols": {
+     "posts": 5.164250697045322,
+     "logError": 0.720154299125157
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 1.0986122886681098
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "US:dc649862268c0bc3"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
