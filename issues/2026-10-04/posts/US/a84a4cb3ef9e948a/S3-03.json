@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:a84a4cb3ef9e948a",
+ "title": "LingOrm Draws Fan Attention at Dior’s Paris Fashion Week Show",
+ "optionId": "S3-03",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "Olandria is attending Paris Fashion Week",
+ "sentenceIs": "written by the model",
+ "chance": 0.99,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/a84a4cb3ef9e948a/S3-03.json",
+  "sha256": "999090239c515edf117c50b6c9909f51c7b8c5fd1e84155a13977be4f3d6258c",
+  "commit": "fe83dce1bd7111c65b1dd0f8ae602d02ce9e59a5"
+ }
+}
