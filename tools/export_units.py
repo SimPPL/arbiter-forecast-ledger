@@ -360,6 +360,32 @@ def committedSame(ledger: str, path: str, text: str) -> bool:
     return r.returncode == 0 and r.stdout == text
 
 
+# Fields that describe why a unit was selected, not what it forecasts. A later run can add a reason
+# (the FWD-TWEETS-1 keys join after the private issue lands) without the forecast changing; the
+# committed unit then stands, its first reasons stay in the file, and the index carries its sha256.
+SELECTION_FIELDS = ('selectedBecause',)
+
+
+def committedSameForecast(ledger: str, path: str, unit: dict) -> bool:
+    """Whether HEAD holds the path with the same content apart from the selection fields.
+
+    @param ledger: repo root.
+    @param path: path relative to the repo.
+    @param unit: the unit about to be written.
+    @returns: True when committed and equal once SELECTION_FIELDS are ignored on both sides.
+    @throws: nothing; unreadable or non-JSON content counts as different.
+    """
+    r = subprocess.run(['git', '-C', ledger, 'show', f'HEAD:{path}'], capture_output=True, text=True)
+    if r.returncode != 0:
+        return False
+    try:
+        old = json.loads(r.stdout)
+    except ValueError:
+        return False
+    strip = lambda d: {k: v for k, v in d.items() if k not in SELECTION_FIELDS}  # noqa: E731
+    return isinstance(old, dict) and strip(old) == strip(unit)
+
+
 def commitUnits(ledger: str, units: List[Tuple[str, dict, str]]) -> int:
     """Write and commit each unit on its own.
 
@@ -371,7 +397,7 @@ def commitUnits(ledger: str, units: List[Tuple[str, dict, str]]) -> int:
     made = 0
     for path, u, msg in units:
         text = U.dumps(u)
-        if committedSame(ledger, path, text):
+        if committedSame(ledger, path, text) or committedSameForecast(ledger, path, u):
             continue
         try:
             U.writeUnits(ledger, [(path, u, msg)])
