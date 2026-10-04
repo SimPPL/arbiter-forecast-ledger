@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:e06e09c0dc3dedf8",
+ "title": "Tennessee Execution of Christa Pike Delayed by Court Stay",
+ "optionId": "S2-05",
+ "seat": "S2",
+ "seatName": "continuation",
+ "model": "none: the origin day's most repeated posts, fixed chances by rank",
+ "sentence": "The post lists news segments regarding a plane attack suspect being suspended from a previous airline, new video and messages from Cornell University's Chi Phi fraternity house, the release of Luigi Mangione's full body camera arrest footage, and Christa Pike.",
+ "sentenceIs": "a paraphrase of a real post from the origin day; the post itself stays private",
+ "chance": 0.35,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/e06e09c0dc3dedf8/S2-05.json",
+  "sha256": "733a463738883a265e96e095133304a6243f6811b1647a81562a3d63fe2dc040",
+  "commit": "01c8f9f3082a4e97970b2d575ae9fd2d252d3108"
+ }
+}
