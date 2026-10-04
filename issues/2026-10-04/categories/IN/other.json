@@ -1,0 +1,116 @@
+{
+ "unit": "category forecast",
+ "issueDay": "2026-10-04",
+ "region": "IN",
+ "category": "other",
+ "model": "gbm_med",
+ "members": [
+  "IN:0392287a8d75e162",
+  "IN:0416d901b95d106b",
+  "IN:08cee8c5ffeb6c95",
+  "IN:0da36344d499cad7",
+  "IN:117cdad132199fc7",
+  "IN:165545b78371aa35",
+  "IN:1b6f8d8128bfab65",
+  "IN:328db9b2db9ec057",
+  "IN:35f94064e79b8d3a",
+  "IN:3aceac8daca6cf74",
+  "IN:3fa893140b21d47a",
+  "IN:4f86984566dc11a2",
+  "IN:51255e51206d33c6",
+  "IN:5500abe82e6189fb",
+  "IN:5ac2f0a39fed790b",
+  "IN:6057e07eec10b48a",
+  "IN:621bb4de2c007630",
+  "IN:636f05f3345161f7",
+  "IN:6bd0c4dfd41d2af0",
+  "IN:88a9c5118bad9748",
+  "IN:8a2d1520bd3bada2",
+  "IN:9336fa7525c3735d",
+  "IN:934dae6421f74f90",
+  "IN:adf9d6809bf84fe8",
+  "IN:c8316ea936a93786",
+  "IN:c87f45d2b21b0dc6",
+  "IN:d82a729b092dbd44",
+  "IN:da9981f7891c9278",
+  "IN:e291bc06ddd6e8b8",
+  "IN:ed1aab85254cf3af",
+  "IN:f3b831e74c68eea1",
+  "IN:f7c434eb5efaa90e",
+  "IN:fa3a3bf186268fe1",
+  "IN:fac09b71520bf470"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-05",
+   "lag": 2,
+   "posts": 17.19653944720307,
+   "regionPosts": 657.5843695877403,
+   "share": 0.02615107694543303,
+   "stories": 34,
+   "baselines": {
+    "persist": {
+     "posts": 130.0,
+     "share": 0.0028231410701876304
+    },
+    "volols": {
+     "posts": 13.984838958337177,
+     "share": 0.015847433537349014
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null
+    }
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-06",
+   "lag": 3,
+   "posts": 6.062479478241988,
+   "regionPosts": 216.616717500188,
+   "share": 0.02798712651638591,
+   "stories": 34,
+   "baselines": {
+    "persist": {
+     "posts": 130.0,
+     "share": 0.0028231410701876304
+    },
+    "volols": {
+     "posts": 9.682748023063974,
+     "share": 0.01691222907275523
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null
+    }
+   }
+  }
+ },
+ "shareRule": "share is the category's forecast posts over the region's forecast posts, both summed over stories live at the origin with negative forecasts counted as zero (the rule of fwd_score.areaShareUS)",
+ "categorySource": {
+  "file": "inputs/nk_meta.parquet",
+  "sha256": "f7bd153f2bfd462044415c1b5b122c8cf7218d19f3eb6a1775407b79332d5b59",
+  "public": false,
+  "note": "a frozen input of the research repo; FREEZE.json holds its sha256"
+ },
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-04/pred_2026-10-05_h1_K0.parquet",
+   "sha256": "45c05dceca8e30ee736feca09ca0956ead659dd21923b587d61d5a0571dccbb0",
+   "row": {
+    "region": "IN",
+    "narrativeKey": "members"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-04/pred_2026-10-06_h2_K0.parquet",
+   "sha256": "a39d5c6bcc42b7f41043e2bc918952c95159ee37143194e938d358f3f6a53383",
+   "row": {
+    "region": "IN",
+    "narrativeKey": "members"
+   },
+   "models": "every model"
+  }
+ ]
+}
