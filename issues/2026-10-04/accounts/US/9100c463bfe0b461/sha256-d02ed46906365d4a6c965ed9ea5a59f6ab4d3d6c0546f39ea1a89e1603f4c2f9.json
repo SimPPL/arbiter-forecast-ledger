@@ -1,0 +1,28 @@
+{
+ "unit": "account forecast",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:9100c463bfe0b461",
+ "title": "Nike Earnings Beat EPS Estimates but Miss Revenue Forecasts",
+ "accountRef": "sha256:d02ed46906365d4a6c965ed9ea5a59f6ab4d3d6c0546f39ea1a89e1603f4c2f9",
+ "public": false,
+ "namedBecause": null,
+ "chances": {
+  "W1": null,
+  "W2": null,
+  "W3": 0.005202
+ },
+ "listRanks": {
+  "W1": null,
+  "W2": null,
+  "W3": 5
+ },
+ "accountRefRule": "the handle for an account that passes PublicAccounts.decide at the origin; otherwise sha256(lower(handle) + \":\" + salt), with one salt per issue kept only in the private repo",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/accounts/9100c463bfe0b461/sha256-d02ed46906365d4a6c965ed9ea5a59f6ab4d3d6c0546f39ea1a89e1603f4c2f9.json",
+  "sha256": "f05490ea975571bf80888367ef567a62f0c816e99dc19958e82ec69b91202087",
+  "commit": "a91e4de9a8179993fe30e464d4d2881b7bc15138"
+ }
+}
