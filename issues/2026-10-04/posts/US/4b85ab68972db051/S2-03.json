@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:4b85ab68972db051",
+ "title": "La Granja VIP MX and Wanda-related social chatter",
+ "optionId": "S2-03",
+ "seat": "S2",
+ "seatName": "continuation",
+ "model": "none: the origin day's most repeated posts, fixed chances by rank",
+ "sentence": "Jimin is singing “IM FINE”.",
+ "sentenceIs": "a paraphrase of a real post from the origin day; the post itself stays private",
+ "chance": 0.45,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/4b85ab68972db051/S2-03.json",
+  "sha256": "54fd2f4f3df0bb735c2d176d6a2ea369d1279eab0eb08011a2e35a76f0db5412",
+  "commit": "ef55f5d05dfc60f4917edef7bfc48591df9c0d82"
+ }
+}
