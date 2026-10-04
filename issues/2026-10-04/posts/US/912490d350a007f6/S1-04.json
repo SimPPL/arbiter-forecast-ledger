@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:912490d350a007f6",
+ "title": "Bills Fans React to Game Against the Chargers",
+ "optionId": "S1-04",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "A win is a win even if it was ugly.",
+ "sentenceIs": "written by the model",
+ "chance": 0.85,
+ "redacted": 0,
+ "personaRef": "sha256:5079ac182c4a4c84945fc08cca7acbbbd6fda2efd353174e7854d5db6b06fc32",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/912490d350a007f6/S1-04.json",
+  "sha256": "e099c970207150ab315b7dab79692cef52742e0a348be3f1dafbd1b1d18c1499",
+  "commit": "01801a0056742b96b8707ecdf039826bf65123b0"
+ }
+}
