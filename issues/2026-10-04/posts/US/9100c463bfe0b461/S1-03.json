@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:9100c463bfe0b461",
+ "title": "Nike Earnings Beat EPS Estimates but Miss Revenue Forecasts",
+ "optionId": "S1-03",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "sentence": "Nike will cut Air Jordan retro releases to restore scarcity making each drop more exciting for fans",
+ "sentenceIs": "written by the model",
+ "chance": 0.99,
+ "redacted": 0,
+ "personaRef": "sha256:a1658e4765b2406a4f64348a55d2a2b870baeafbf42fbc62b7a04f4dfd7f9f30",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/9100c463bfe0b461/S1-03.json",
+  "sha256": "f7ab9a22226c0b41ed160197bba3875d3dfdcb9d50239c2cb9a762ad4f49fd6e",
+  "commit": "52d7290fa196cf66e404a9a57ac33a82b1c1fa77"
+ }
+}
