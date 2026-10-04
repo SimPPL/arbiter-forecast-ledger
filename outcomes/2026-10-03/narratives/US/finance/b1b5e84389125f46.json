@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "arbiterKey": "US:b1b5e84389125f46",
+ "title": "Crypto token communities rally votes for Moonshot leaderboard",
+ "category": "finance",
+ "real": {
+  "posts": 563,
+  "rank": 29,
+  "storiesWithPost": 469
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 4.66652159420413,
+    "lo80": 0.0,
+    "hi80": 34.95571207291147,
+    "pAnyPost": 0.39177101967799643,
+    "pTop10": null,
+    "asHeldLatestDay": 783.0,
+    "rank": 42,
+    "storiesForecast": 1135,
+    "baselines": {
+     "persist": 783.0,
+     "volols": 3.2775401765622934,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 563,
+   "logError": 4.6004787974604655,
+   "brierAnyPost": 0.3699424925035442,
+   "inRange80": false,
+   "baselines": {
+    "persist": {
+     "posts": 783.0,
+     "logError": 0.3293547688523484
+    },
+    "volols": {
+     "posts": 3.2775401765622934,
+     "logError": 4.881676132224399
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 6.335054251498059
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "US:b1b5e84389125f46"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
