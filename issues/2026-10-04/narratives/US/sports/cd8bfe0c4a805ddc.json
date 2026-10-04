@@ -1,0 +1,67 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-04",
+ "region": "US",
+ "arbiterKey": "US:cd8bfe0c4a805ddc",
+ "title": "Football player matchups and comparisons",
+ "category": "sports",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "US top 50 by the D+1 forecast"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-05",
+   "lag": 2,
+   "posts": 5.520723680313359,
+   "lo80": 0.0,
+   "hi80": 55.23706813822006,
+   "pAnyPost": 0.4654205607476636,
+   "pTop10": null,
+   "asHeldLatestDay": 2520.0,
+   "rank": 26,
+   "storiesForecast": 1341,
+   "baselines": {
+    "persist": 2520.0,
+    "volols": 5.269468413430697,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-06",
+   "lag": 3,
+   "posts": 2.355953926109819,
+   "lo80": 0.0754111672646458,
+   "hi80": 15.92986706359934,
+   "pAnyPost": 0.24092741935483875,
+   "pTop10": null,
+   "asHeldLatestDay": 2520.0,
+   "rank": 19,
+   "storiesForecast": 1341,
+   "baselines": {
+    "persist": 2520.0,
+    "volols": 2.7041566913536057,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-04/pred_2026-10-05_h1_K0.parquet",
+   "sha256": "45c05dceca8e30ee736feca09ca0956ead659dd21923b587d61d5a0571dccbb0",
+   "row": {
+    "narrativeKey": "US:cd8bfe0c4a805ddc"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-04/pred_2026-10-06_h2_K0.parquet",
+   "sha256": "a39d5c6bcc42b7f41043e2bc918952c95159ee37143194e938d358f3f6a53383",
+   "row": {
+    "narrativeKey": "US:cd8bfe0c4a805ddc"
+   },
+   "models": "every model"
+  }
+ ]
+}
