@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "IN",
+ "arbiterKey": "IN:592a2023abfdec51",
+ "title": "2027 Cricket World Cup Groups and Schedule Revealed",
+ "category": "sports",
+ "real": {
+  "posts": 22,
+  "rank": 175,
+  "storiesWithPost": 403
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 25.59049559024624,
+    "lo80": 20.311814995413037,
+    "hi80": 35.56907557363354,
+    "pAnyPost": 0.9881910104066721,
+    "pTop10": null,
+    "asHeldLatestDay": 1652.0,
+    "rank": 2,
+    "storiesForecast": 1376,
+    "baselines": {
+     "persist": 1652.0,
+     "volols": 6.125877749873017,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 22,
+   "logError": 0.14505962737120326,
+   "brierAnyPost": 0.00013945223521532614,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 1652.0,
+     "logError": 4.274852881891874
+    },
+    "volols": {
+     "posts": 6.125877749873017,
+     "logError": 1.1717613043974315
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 3.1354942159291497
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "IN:592a2023abfdec51"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
