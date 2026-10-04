@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:4aefdbbe65da365b",
+ "title": "Broncos-Rams Game Sparks Debate Over Coaching and Key Plays",
+ "optionId": "S2-01",
+ "seat": "S2",
+ "seatName": "continuation",
+ "model": "none: the origin day's most repeated posts, fixed chances by rank",
+ "sentence": "Minnesota defenders performed a Darth Vader force choke sack celebration.",
+ "sentenceIs": "a paraphrase of a real post from the origin day; the post itself stays private",
+ "chance": 0.6,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/4aefdbbe65da365b/S2-01.json",
+  "sha256": "4ac8f1ff9625bf28d6b24507f638f8527de3336149a4a4de81fa1199008c878c",
+  "commit": "ba3dd55bc15af4142b8cb5d184cf43c3a670d779"
+ }
+}
