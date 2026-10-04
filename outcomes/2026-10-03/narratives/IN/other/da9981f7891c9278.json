@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "IN",
+ "arbiterKey": "IN:da9981f7891c9278",
+ "title": "Indian Coast Guard seizes narcotics from vessel in Arabian Sea",
+ "category": "other",
+ "real": {
+  "posts": 21,
+  "rank": 180,
+  "storiesWithPost": 403
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 4.646045381711672,
+    "lo80": 0.0,
+    "hi80": 34.82578460533143,
+    "pAnyPost": 0.38640429338103754,
+    "pTop10": null,
+    "asHeldLatestDay": 12.0,
+    "rank": 28,
+    "storiesForecast": 1376,
+    "baselines": {
+     "persist": 12.0,
+     "volols": 1.161403242111782,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 21,
+   "logError": 1.3600870857074494,
+   "brierAnyPost": 0.37649969118122384,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 12.0,
+     "logError": 0.5260930958967793
+    },
+    "volols": {
+     "posts": 1.161403242111782,
+     "logError": 2.320284793467062
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 3.091042453358316
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "IN:da9981f7891c9278"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
