@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:a84a4cb3ef9e948a",
+ "title": "LingOrm Draws Fan Attention at Dior’s Paris Fashion Week Show",
+ "optionId": "S3-01",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "Yujin is in Paris for the Lacoste show",
+ "sentenceIs": "written by the model",
+ "chance": 0.99,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/a84a4cb3ef9e948a/S3-01.json",
+  "sha256": "953a8174d254b5e4a337febc2ea4777eb659a71d9b01fb91f621c9543f2c8e81",
+  "commit": "5626acdcf0a9b1d0f6385463c337d2548b5369a5"
+ }
+}
