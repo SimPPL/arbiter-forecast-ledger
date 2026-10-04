@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:562b435aa1e07b1f",
+ "title": "Wisconsin stuns Penn State with road win",
+ "optionId": "S3-04",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "The new Ryan Field is a beautiful stadium",
+ "sentenceIs": "written by the model",
+ "chance": 0.5,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/562b435aa1e07b1f/S3-04.json",
+  "sha256": "376d6d53b79422c4e21d67c1fd3e2969fbcac506bdacb688e0150f0407f19be9",
+  "commit": "f0a1148ffadc2a0147a38b46caa0ac2ec27e49e2"
+ }
+}
