@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:6ac3e2825463b554",
+ "title": "Formind’s RYET Commercial Updates Draw Investor Attention",
+ "optionId": "S1-03",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "google/gemma-4-26b-a4b-it",
+ "sentence": "The massive jump to $9.3M through $9.5M for H1 FY2027 shows that the execution is actually scaling the business.",
+ "sentenceIs": "written by the model",
+ "chance": 0.2,
+ "redacted": 0,
+ "personaRef": "sha256:a3bc933e592dd1c5419270498ff415046f738b34e0bf3ac7665231cef755202f",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/6ac3e2825463b554/S1-03.json",
+  "sha256": "703a25543cd56ab17f21f7d224f6f9e3133a67b5e77ebe0fa72fc8f8b3d5eb06",
+  "commit": "bed8fa58e4ad7bfd4b2faabe18ece9273a8190fa"
+ }
+}
