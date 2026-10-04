@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:4b85ab68972db051",
+ "title": "La Granja VIP MX and Wanda-related social chatter",
+ "optionId": "S3-03",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "The combination of Im Fine and So What was amazing",
+ "sentenceIs": "written by the model",
+ "chance": 0.8,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/4b85ab68972db051/S3-03.json",
+  "sha256": "8e735f9a017a96af483e7c718b45b90b93dab9e457dd425db58c6370ac999349",
+  "commit": "4de28fd4788a0436468c7497bc39a3deb66d4f10"
+ }
+}
