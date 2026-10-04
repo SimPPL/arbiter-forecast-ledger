@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "arbiterKey": "US:88ce71409e711548",
+ "title": "Reggie’s departure from the Clover Boys sparks streamer drama",
+ "category": "entertainment",
+ "real": {
+  "posts": 2,
+  "rank": 340,
+  "storiesWithPost": 469
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 11.341944363983503,
+    "lo80": 0.6324467913792003,
+    "hi80": 77.31319277511909,
+    "pAnyPost": 0.5509838998211092,
+    "pTop10": null,
+    "asHeldLatestDay": 1384.0,
+    "rank": 10,
+    "storiesForecast": 1135,
+    "baselines": {
+     "persist": 1384.0,
+     "volols": 3.7993795581101075,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 2,
+   "logError": 1.4143912833599261,
+   "brierAnyPost": 0.2016154582198597,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 1384.0,
+     "logError": 6.134843129953329
+    },
+    "volols": {
+     "posts": 3.7993795581101075,
+     "logError": 0.4698743621640453
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 1.0986122886681098
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "US:88ce71409e711548"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
