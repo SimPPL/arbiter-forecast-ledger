@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "IN",
+ "arbiterKey": "IN:7f75b62ab30339fa",
+ "title": "Wicknell Chivayo Reported Dead in Helicopter Crash",
+ "category": "business",
+ "real": {
+  "posts": 28,
+  "rank": 163,
+  "storiesWithPost": 403
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 7.394615783997465,
+    "lo80": 0.11034073702669059,
+    "hi80": 52.26625568688474,
+    "pAnyPost": 0.48121645796064405,
+    "pTop10": null,
+    "asHeldLatestDay": 593.0,
+    "rank": 10,
+    "storiesForecast": 1376,
+    "baselines": {
+     "persist": 593.0,
+     "volols": 4.53862928498076,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 28,
+   "logError": 1.2397053077470304,
+   "brierAnyPost": 0.2691363634909002,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 593.0,
+     "logError": 3.019583489376171
+    },
+    "volols": {
+     "posts": 4.53862928498076,
+     "logError": 1.6555487813246441
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 3.367295829986474
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "IN:7f75b62ab30339fa"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
