@@ -1,0 +1,68 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-04",
+ "region": "IN",
+ "arbiterKey": "IN:99ae0e8a61d3cbf3",
+ "title": "Chuttamalle Edits Draw Concern Over Portrayals of the Heroine",
+ "category": "entertainment",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "IN top 20 by the D+1 forecast",
+  "published top 10 for 2026-10-06"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-05",
+   "lag": 2,
+   "posts": 10.833855582545585,
+   "lo80": 0.6634566481767263,
+   "hi80": 101.05943011243971,
+   "pAnyPost": 0.5757009345794393,
+   "pTop10": null,
+   "asHeldLatestDay": 712.0,
+   "rank": 13,
+   "storiesForecast": 1418,
+   "baselines": {
+    "persist": 712.0,
+    "volols": 5.156937444855631,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-06",
+   "lag": 3,
+   "posts": 4.761123423404352,
+   "lo80": 0.0,
+   "hi80": 46.395012139362606,
+   "pAnyPost": 0.3782991202346041,
+   "pTop10": null,
+   "asHeldLatestDay": 712.0,
+   "rank": 10,
+   "storiesForecast": 1418,
+   "baselines": {
+    "persist": 712.0,
+    "volols": 2.9877710107398743,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-04/pred_2026-10-05_h1_K0.parquet",
+   "sha256": "45c05dceca8e30ee736feca09ca0956ead659dd21923b587d61d5a0571dccbb0",
+   "row": {
+    "narrativeKey": "IN:99ae0e8a61d3cbf3"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-04/pred_2026-10-06_h2_K0.parquet",
+   "sha256": "a39d5c6bcc42b7f41043e2bc918952c95159ee37143194e938d358f3f6a53383",
+   "row": {
+    "narrativeKey": "IN:99ae0e8a61d3cbf3"
+   },
+   "models": "every model"
+  }
+ ]
+}
