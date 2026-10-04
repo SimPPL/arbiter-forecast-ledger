@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "arbiterKey": "US:073b85204a463d60",
+ "title": "Jack Smith’s Senate Hearing Draws Scrutiny of Eric Schmitt",
+ "category": "politics",
+ "real": {
+  "posts": 27,
+  "rank": 151,
+  "storiesWithPost": 469
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 13.00028622276315,
+    "lo80": 0.8517926874986744,
+    "hi80": 87.83584964696901,
+    "pAnyPost": 0.5760286225402504,
+    "pTop10": null,
+    "asHeldLatestDay": 37.0,
+    "rank": 6,
+    "storiesForecast": 1135,
+    "baselines": {
+     "persist": 37.0,
+     "volols": 1.318922591755234,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 27,
+   "logError": 0.6931267362858486,
+   "brierAnyPost": 0.17975172890511742,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 37.0,
+     "logError": 0.30538164955118186
+    },
+    "volols": {
+     "posts": 1.318922591755234,
+     "logError": 2.4911018324696137
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 3.332204510175204
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "US:073b85204a463d60"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
