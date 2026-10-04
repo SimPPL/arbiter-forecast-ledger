@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:912490d350a007f6",
+ "title": "Bills Fans React to Game Against the Chargers",
+ "optionId": "S3-05",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "The Bills are 3 0.",
+ "sentenceIs": "written by the model",
+ "chance": 0.01,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/912490d350a007f6/S3-05.json",
+  "sha256": "69c728da0dd47cf001a101971cc3fc8b79e0f9e2d7fabb7792523f3c96a4616a",
+  "commit": "cac8b4c7a4bbdc05592e31746ddd11cfddc425fa"
+ }
+}
