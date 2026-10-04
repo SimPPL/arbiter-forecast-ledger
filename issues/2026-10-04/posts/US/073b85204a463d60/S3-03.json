@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:073b85204a463d60",
+ "title": "Jack Smith’s Senate Hearing Draws Scrutiny of Eric Schmitt",
+ "optionId": "S3-03",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "Josh Hawley is wrong to suggest Jack Smith should be charged with perjury.",
+ "sentenceIs": "written by the model",
+ "chance": 0.6,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/073b85204a463d60/S3-03.json",
+  "sha256": "0f0e03ec02fcae817d02b81e172e48e438dce72ef3719ab8710882ddcab5f7e2",
+  "commit": "37b87741d4134b2995f2227ea7baef1b3cef7f43"
+ }
+}
