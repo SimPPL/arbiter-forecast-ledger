@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:9100c463bfe0b461",
+ "title": "Nike Earnings Beat EPS Estimates but Miss Revenue Forecasts",
+ "optionId": "S1-04",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "google/gemma-4-26b-a4b-it",
+ "sentence": "Nike is losing its grip and reducing Jordan releases to try and fix things.",
+ "sentenceIs": "written by the model",
+ "chance": 0.15,
+ "redacted": 0,
+ "personaRef": "sha256:28fc7e8abe674e686576fe773cc5bc03c9bbfdc30662669ef12b1e47c51087d2",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/9100c463bfe0b461/S1-04.json",
+  "sha256": "474ee76bd9382e131c16a8eff1b67324b6ce9f874039e9046d83507e4b7552f2",
+  "commit": "eb676db0620bcedc31a842ca5961bbc4cad5fba9"
+ }
+}
