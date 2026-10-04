@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:977e42721988a89f",
+ "title": "Bitget Reports $351M Hot-Wallet Breach",
+ "optionId": "S1-03",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "google/gemma-4-26b-a4b-it",
+ "sentence": "BITGET LOSING OVER $350M IN A BACKEND BREACH PROVES HOW MASSIVE THE RISK REMAINS EVEN WITHOUT PRIVATE KEY THEFT",
+ "sentenceIs": "written by the model",
+ "chance": 0.05,
+ "redacted": 0,
+ "personaRef": "@mrketinsider",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/977e42721988a89f/S1-03.json",
+  "sha256": "c46525f7eeb272525db8b2e90fbe5c87f18daf90118d4a4be91dea1970862686",
+  "commit": "6f15c2dedfbb52e11f7a9111fbb30f0e6608ab27"
+ }
+}
