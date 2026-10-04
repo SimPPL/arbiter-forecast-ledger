@@ -1,0 +1,72 @@
+{
+ "unit": "category outcome",
+ "day": "2026-10-03",
+ "region": "IN",
+ "category": "uncategorised",
+ "real": {
+  "posts": 6,
+  "regionPosts": 46048,
+  "share": 0.00013029881862404447
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet; real totals include stories that did not exist at the origin, so compare shares first",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "forecast": {
+    "posts": 3.3211409544119146,
+    "share": 0.006275139737960896,
+    "regionPosts": 529.2537047933721,
+    "stories": 12
+   },
+   "realPostsOfMembers": 45.0,
+   "logError": 0.48239067185257967,
+   "shareError": 0.006144840919336852,
+   "baselines": {
+    "persist": {
+     "posts": 54.0,
+     "share": 0.0017586139516706832,
+     "logError": 2.0614230361771577,
+     "shareError": 0.0016283151330466388
+    },
+    "volols": {
+     "posts": 5.449288055315604,
+     "share": 0.008428363684137045,
+     "logError": 0.0819404033606812,
+     "shareError": 0.008298064865513
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null,
+     "logError": 1.9459101490553132,
+     "shareError": null
+    }
+   },
+   "members": [
+    "IN:57d98bab5c3395cb",
+    "IN:588f17c5cfc05d78",
+    "IN:58d4fd87d174e195",
+    "IN:7786584be74437f6",
+    "IN:9b04bf38f9d99a4c",
+    "IN:9cce2a8e419117dd",
+    "IN:9d2f596e83c5bfe9",
+    "IN:bf2bd654b5fd129e",
+    "IN:c2f528e16f8ab35c",
+    "IN:d037100e23e3ea62",
+    "IN:f30365ddf5630899",
+    "IN:f78b4ec0e5d5e5c0"
+   ],
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "region": "IN",
+     "narrativeKey": "members"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
