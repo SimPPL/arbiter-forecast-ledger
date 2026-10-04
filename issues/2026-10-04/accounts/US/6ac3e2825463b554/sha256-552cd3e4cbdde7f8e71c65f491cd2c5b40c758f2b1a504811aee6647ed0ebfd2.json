@@ -1,0 +1,28 @@
+{
+ "unit": "account forecast",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:6ac3e2825463b554",
+ "title": "Formind’s RYET Commercial Updates Draw Investor Attention",
+ "accountRef": "sha256:552cd3e4cbdde7f8e71c65f491cd2c5b40c758f2b1a504811aee6647ed0ebfd2",
+ "public": false,
+ "namedBecause": null,
+ "chances": {
+  "W1": null,
+  "W2": 0.038744,
+  "W3": null
+ },
+ "listRanks": {
+  "W1": null,
+  "W2": 3,
+  "W3": null
+ },
+ "accountRefRule": "the handle for an account that passes PublicAccounts.decide at the origin; otherwise sha256(lower(handle) + \":\" + salt), with one salt per issue kept only in the private repo",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/accounts/6ac3e2825463b554/sha256-552cd3e4cbdde7f8e71c65f491cd2c5b40c758f2b1a504811aee6647ed0ebfd2.json",
+  "sha256": "6e0206991fd68bc05399e33c5ab049f3226176e83fa944d9cc944f8191f33c95",
+  "commit": "3642bc1eb65ef53e28c4489a87e546bf17a14980"
+ }
+}
