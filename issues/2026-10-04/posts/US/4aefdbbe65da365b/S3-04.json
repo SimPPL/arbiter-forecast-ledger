@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:4aefdbbe65da365b",
+ "title": "Broncos-Rams Game Sparks Debate Over Coaching and Key Plays",
+ "optionId": "S3-04",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "Talanoa Hufanga sealed the game with two interceptions against Matthew Stafford.",
+ "sentenceIs": "written by the model",
+ "chance": 0.8,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/4aefdbbe65da365b/S3-04.json",
+  "sha256": "b9ad4decf91baadea625e7d05362ec863c2f8518b5dea9633b39ec2ac31d0037",
+  "commit": "b753e381eaa05682ad0fb10124a0e2da5aac0026"
+ }
+}
