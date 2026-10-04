@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "IN",
+ "arbiterKey": "IN:8020cb8b205f558a",
+ "title": "Telugu Film Promotions and Leak Warnings",
+ "category": "entertainment",
+ "real": {
+  "posts": 3,
+  "rank": 301,
+  "storiesWithPost": 403
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 10.32155756215008,
+    "lo80": 0.4974820636593436,
+    "hi80": 70.83854453813937,
+    "pAnyPost": 0.5348837209302326,
+    "pTop10": null,
+    "asHeldLatestDay": 857.0,
+    "rank": 8,
+    "storiesForecast": 1376,
+    "baselines": {
+     "persist": 857.0,
+     "volols": 5.063479427688083,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 3,
+   "logError": 1.040414296019496,
+   "brierAnyPost": 0.21633315305570572,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 857.0,
+     "logError": 5.368309738368072
+    },
+    "volols": {
+     "posts": 5.063479427688083,
+     "logError": 0.41598943717766446
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 1.3862943611198906
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "IN:8020cb8b205f558a"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
