@@ -1,0 +1,28 @@
+{
+ "unit": "account forecast",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:51a76f0eecbaab0e",
+ "title": "NFL game reactions, player updates, and betting picks",
+ "accountRef": "sha256:133d491fbb4bae310523e137b37375423bcfb5bc9b50b9e369a96a59d04327d1",
+ "public": false,
+ "namedBecause": null,
+ "chances": {
+  "W1": 0.008779,
+  "W2": null,
+  "W3": null
+ },
+ "listRanks": {
+  "W1": 3,
+  "W2": null,
+  "W3": null
+ },
+ "accountRefRule": "the handle for an account that passes PublicAccounts.decide at the origin; otherwise sha256(lower(handle) + \":\" + salt), with one salt per issue kept only in the private repo",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/accounts/51a76f0eecbaab0e/sha256-133d491fbb4bae310523e137b37375423bcfb5bc9b50b9e369a96a59d04327d1.json",
+  "sha256": "e3859e925034d99b7611eab3ce3a24896830a267283ab09209f33543b70a2e96",
+  "commit": "6125c271496bec18bc2b9717dc5fcf1133632095"
+ }
+}
