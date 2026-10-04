@@ -16,6 +16,12 @@ RESEARCH="${RESEARCH:-$HOME/Documents/simppl/papers/narrative-reach-sim}"
 PRIVATE="${PRIVATE:-$HOME/Documents/simppl/papers/arbiter-prediction-prereg}"
 OTS="${OTS:-$RESEARCH/tmp/venv-ots/bin/ots}"
 PY="${PY:-$RESEARCH/tmp/venv-bo/bin/python}"
+# The parquet reads and the whole-issue rebuild share the machine with other agents: one heavy job at a time through the
+# research repo's lock (tmp/MEMORY-RULES.txt there), with capped threads. LOCK= (empty) runs without it.
+LOCK="${LOCK-$RESEARCH/tmp/heavy.lock}"
+export OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4
+HEAVY=()
+if [[ -n "$LOCK" && -d "$(dirname "$LOCK")" ]] && command -v lockf >/dev/null; then HEAVY=(lockf -k "$LOCK"); fi
 
 KIND=issue
 if [[ "${1:-}" == "--outcome" ]]; then KIND=outcome; shift; fi
@@ -44,15 +50,15 @@ if [[ -n "$(git status --porcelain -- "$FOLDER" by-narrative by-category by-hour
   echo "refused: $FOLDER or the views have uncommitted changes" >&2; exit 2
 fi
 
-"$PY" tools/export_units.py "$KIND" "$DAY" --research "$RESEARCH" --private "$PRIVATE" --ots "$OTS" --commit ${EXTRA[@]+"${EXTRA[@]}"}
+${HEAVY[@]+"${HEAVY[@]}"} "$PY" tools/export_units.py "$KIND" "$DAY" --research "$RESEARCH" --private "$PRIVATE" --ots "$OTS" --commit ${EXTRA[@]+"${EXTRA[@]}"}
 
 # Every public file and every new commit message, scanned once more for private handles.
 "$PY" tools/scan_public.py --research "$RESEARCH" --since "$START"
 
 if [[ "$KIND" == "issue" ]]; then
-  "$PY" tools/verify.py "$DAY" --offline --units-only || true
+  ${HEAVY[@]+"${HEAVY[@]}"} "$PY" tools/verify.py "$DAY" --offline --units-only || true
 else
-  "$PY" tools/verify.py --outcome-day "$DAY" --offline --units-only || true
+  ${HEAVY[@]+"${HEAVY[@]}"} "$PY" tools/verify.py --outcome-day "$DAY" --offline --units-only || true
 fi
 
 N="$(git rev-list --count "$START"..HEAD)"
