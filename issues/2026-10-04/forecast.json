@@ -1,0 +1,416 @@
+{
+ "issueDay": "2026-10-04",
+ "frozenUtc": "2026-10-04T08:24:43Z",
+ "frozenIst": "2026-10-04T13:54:43+05:30",
+ "origin": "2026-10-03",
+ "model": "gbm_med",
+ "unit": "An Arbiter story (narrative key) on X, regions US and IN. \"posts\" is the forecast count of posts published on the target day (UTC) that Arbiter will assign to the story; lo and hi bound the 80 percent range.",
+ "note": null,
+ "source": {
+  "repo": "narrative-reach-sim (private research repo)",
+  "folder": "cleanroom/2026-10-01-tomorrow-forward/forecasts/issue-2026-10-04",
+  "freezeCommit": "e0c67afd6223dcae792ba0a4dc58ef298a9f9a03"
+ },
+ "horizons": [
+  {
+   "horizonDays": 1,
+   "horizonCountedFrom": "issue day",
+   "lagFromOriginDays": 2,
+   "targetDay": "2026-10-05",
+   "targetStartsUtc": "2026-10-05T00:00:00Z",
+   "frozenBeforeTargetStart": true,
+   "regions": {
+    "IN": {
+     "liveStories": 1418,
+     "top": [
+      {
+       "rank": 1,
+       "title": "Reports of a confrontation aboard a FlyDubai flight",
+       "arbiterKey": "IN:f1bb9ee3c01de292",
+       "posts": 32.1,
+       "lo": 0.0,
+       "hi": 384.1,
+       "chance": "likely"
+      },
+      {
+       "rank": 2,
+       "title": "Tamil Film Releases Draw Fan Buzz and Mixed Expectations",
+       "arbiterKey": "IN:20e89d6f58021950",
+       "posts": 19.6,
+       "lo": 1.9,
+       "hi": 176.7,
+       "chance": "likely"
+      },
+      {
+       "rank": 3,
+       "title": "Sant Rampal Ji Maharaj’s Scriptural Debate Challenge",
+       "arbiterKey": "IN:7787bbea4648db69",
+       "posts": 17.9,
+       "lo": 1.7,
+       "hi": 162.3,
+       "chance": "likely"
+      },
+      {
+       "rank": 4,
+       "title": "Protest over Election Chief at Mumbai’s Shivaji Park",
+       "arbiterKey": "IN:eca699ff3823b127",
+       "posts": 16.5,
+       "lo": 1.5,
+       "hi": 150.2,
+       "chance": "likely"
+      },
+      {
+       "rank": 5,
+       "title": "Hindu Devotional Prayers and Daily Greetings",
+       "arbiterKey": "IN:7e4ac68906339414",
+       "posts": 16.0,
+       "lo": 1.4,
+       "hi": 145.9,
+       "chance": "likely"
+      },
+      {
+       "rank": 6,
+       "title": "Debate over Delhi Police conduct and public safety",
+       "arbiterKey": "IN:f3f57d88fea4f1a0",
+       "posts": 14.5,
+       "lo": 1.2,
+       "hi": 133.0,
+       "chance": "likely"
+      },
+      {
+       "rank": 7,
+       "title": "Gandhi Jayanti tributes highlight truth, peace and cleanliness",
+       "arbiterKey": "IN:57ed7b9f042f4ce4",
+       "posts": 13.4,
+       "lo": 1.0,
+       "hi": 122.8,
+       "chance": "likely"
+      },
+      {
+       "rank": 8,
+       "title": "India Defeats Pakistan in Cricket Final to Win Gold",
+       "arbiterKey": "IN:8a314801b3f76c80",
+       "posts": 13.1,
+       "lo": 1.0,
+       "hi": 120.7,
+       "chance": "possible"
+      },
+      {
+       "rank": 9,
+       "title": "2027 Cricket World Cup Groups and Schedule Revealed",
+       "arbiterKey": "IN:592a2023abfdec51",
+       "posts": 12.8,
+       "lo": 0.9,
+       "hi": 117.7,
+       "chance": "possible"
+      },
+      {
+       "rank": 10,
+       "title": "Bigg Boss 20 Contestant Support and House Rivalries",
+       "arbiterKey": "IN:f670094fbe29dc76",
+       "posts": 12.1,
+       "lo": 0.8,
+       "hi": 112.1,
+       "chance": "possible"
+      }
+     ]
+    },
+    "US": {
+     "liveStories": 1341,
+     "top": [
+      {
+       "rank": 1,
+       "title": "Juice=Juice’s 2026 “5ROOMS” Tour in Kyoto",
+       "arbiterKey": "US:92b7402a19461f1a",
+       "posts": 13.9,
+       "lo": 1.1,
+       "hi": 127.4,
+       "chance": "likely"
+      },
+      {
+       "rank": 2,
+       "title": "Debate over U.S. proposals to Iran and the continuation of the war",
+       "arbiterKey": "US:aa7728112268940a",
+       "posts": 11.6,
+       "lo": 0.8,
+       "hi": 108.0,
+       "chance": "possible"
+      },
+      {
+       "rank": 3,
+       "title": "Formind’s RYET Commercial Updates Draw Investor Attention",
+       "arbiterKey": "US:6ac3e2825463b554",
+       "posts": 10.9,
+       "lo": 0.7,
+       "hi": 101.8,
+       "chance": "possible"
+      },
+      {
+       "rank": 4,
+       "title": "Trump Revisits Supreme Court Nominations as Justices Face Scrutiny",
+       "arbiterKey": "US:93ad5bf8ba2e1cd3",
+       "posts": 10.9,
+       "lo": 0.7,
+       "hi": 101.2,
+       "chance": "possible"
+      },
+      {
+       "rank": 5,
+       "title": "La Granja VIP MX and Wanda-related social chatter",
+       "arbiterKey": "US:4b85ab68972db051",
+       "posts": 10.4,
+       "lo": 0.6,
+       "hi": 97.6,
+       "chance": "possible"
+      },
+      {
+       "rank": 6,
+       "title": "Nigeria’s Independence Day and national politics",
+       "arbiterKey": "US:934aed0b68b62d85",
+       "posts": 10.4,
+       "lo": 0.6,
+       "hi": 97.0,
+       "chance": "possible"
+      },
+      {
+       "rank": 7,
+       "title": "Trump Announces U.S. Push for AI “Superintelligence”",
+       "arbiterKey": "US:84ef5ba95d676c36",
+       "posts": 10.0,
+       "lo": 0.5,
+       "hi": 93.9,
+       "chance": "possible"
+      },
+      {
+       "rank": 8,
+       "title": "Nike Earnings Beat EPS Estimates but Miss Revenue Forecasts",
+       "arbiterKey": "US:9100c463bfe0b461",
+       "posts": 10.0,
+       "lo": 0.5,
+       "hi": 93.5,
+       "chance": "possible"
+      },
+      {
+       "rank": 9,
+       "title": "MLB postseason betting picks and pitcher strikeout props",
+       "arbiterKey": "US:982c898dd81ff005",
+       "posts": 9.7,
+       "lo": 0.5,
+       "hi": 91.2,
+       "chance": "possible"
+      },
+      {
+       "rank": 10,
+       "title": "Jack Smith’s Senate Hearing Draws Scrutiny of Eric Schmitt",
+       "arbiterKey": "US:073b85204a463d60",
+       "posts": 9.7,
+       "lo": 0.5,
+       "hi": 90.9,
+       "chance": "possible"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "horizonDays": 2,
+   "horizonCountedFrom": "issue day",
+   "lagFromOriginDays": 3,
+   "targetDay": "2026-10-06",
+   "targetStartsUtc": "2026-10-06T00:00:00Z",
+   "frozenBeforeTargetStart": true,
+   "regions": {
+    "IN": {
+     "liveStories": 1418,
+     "top": [
+      {
+       "rank": 1,
+       "title": "Reports of a confrontation aboard a FlyDubai flight",
+       "arbiterKey": "IN:f1bb9ee3c01de292",
+       "posts": 8.7,
+       "lo": 0.3,
+       "hi": 78.4,
+       "chance": "possible"
+      },
+      {
+       "rank": 2,
+       "title": "Tamil Film Releases Draw Fan Buzz and Mixed Expectations",
+       "arbiterKey": "IN:20e89d6f58021950",
+       "posts": 8.3,
+       "lo": 0.3,
+       "hi": 75.8,
+       "chance": "possible"
+      },
+      {
+       "rank": 3,
+       "title": "Congress reshuffles state leadership in Uttar Pradesh and Punjab",
+       "arbiterKey": "IN:bad8bef4cfde3074",
+       "posts": 6.8,
+       "lo": 0.1,
+       "hi": 62.9,
+       "chance": "possible"
+      },
+      {
+       "rank": 4,
+       "title": "Indian women win Asian Games compound archery gold",
+       "arbiterKey": "IN:5e03d2c7023b11ba",
+       "posts": 6.6,
+       "lo": 0.1,
+       "hi": 61.9,
+       "chance": "possible"
+      },
+      {
+       "rank": 5,
+       "title": "India Defeats Pakistan in Cricket Final to Win Gold",
+       "arbiterKey": "IN:8a314801b3f76c80",
+       "posts": 5.8,
+       "lo": 0.0,
+       "hi": 55.2,
+       "chance": "possible"
+      },
+      {
+       "rank": 6,
+       "title": "Protest over Election Chief at Mumbai’s Shivaji Park",
+       "arbiterKey": "IN:eca699ff3823b127",
+       "posts": 5.8,
+       "lo": 0.0,
+       "hi": 54.8,
+       "chance": "possible"
+      },
+      {
+       "rank": 7,
+       "title": "Drishyam’s Vijay Salgaonkar Returns for a Final Showdown",
+       "arbiterKey": "IN:c0803a0c1ae0f99e",
+       "posts": 5.1,
+       "lo": 0.0,
+       "hi": 49.0,
+       "chance": "possible"
+      },
+      {
+       "rank": 8,
+       "title": "Wicknell Chivayo Reported Dead in Helicopter Crash",
+       "arbiterKey": "IN:7f75b62ab30339fa",
+       "posts": 4.8,
+       "lo": 0.0,
+       "hi": 46.8,
+       "chance": "possible"
+      },
+      {
+       "rank": 9,
+       "title": "Sant Rampal Ji Maharaj’s Scriptural Debate Challenge",
+       "arbiterKey": "IN:7787bbea4648db69",
+       "posts": 4.8,
+       "lo": 0.0,
+       "hi": 46.8,
+       "chance": "possible"
+      },
+      {
+       "rank": 10,
+       "title": "Chuttamalle Edits Draw Concern Over Portrayals of the Heroine",
+       "arbiterKey": "IN:99ae0e8a61d3cbf3",
+       "posts": 4.8,
+       "lo": 0.0,
+       "hi": 46.4,
+       "chance": "possible"
+      }
+     ]
+    },
+    "US": {
+     "liveStories": 1341,
+     "top": [
+      {
+       "rank": 1,
+       "title": "Crypto token communities rally votes for Moonshot leaderboard",
+       "arbiterKey": "US:b1b5e84389125f46",
+       "posts": 6.5,
+       "lo": 0.0,
+       "hi": 60.7,
+       "chance": "possible"
+      },
+      {
+       "rank": 2,
+       "title": "Nike Earnings Beat EPS Estimates but Miss Revenue Forecasts",
+       "arbiterKey": "US:9100c463bfe0b461",
+       "posts": 5.7,
+       "lo": 0.0,
+       "hi": 53.8,
+       "chance": "possible"
+      },
+      {
+       "rank": 3,
+       "title": "Trump Revisits Supreme Court Nominations as Justices Face Scrutiny",
+       "arbiterKey": "US:93ad5bf8ba2e1cd3",
+       "posts": 5.6,
+       "lo": 0.0,
+       "hi": 53.6,
+       "chance": "possible"
+      },
+      {
+       "rank": 4,
+       "title": "Red Wings face Rangers in season opener",
+       "arbiterKey": "US:f471567177c3a480",
+       "posts": 5.1,
+       "lo": 0.0,
+       "hi": 48.8,
+       "chance": "possible"
+      },
+      {
+       "rank": 5,
+       "title": "Fans promote Yeonjun’s Miu Miu appearances",
+       "arbiterKey": "US:6ea1156fd6a1d17b",
+       "posts": 4.7,
+       "lo": 0.0,
+       "hi": 45.7,
+       "chance": "possible"
+      },
+      {
+       "rank": 6,
+       "title": "Michael King dominates for the Padres",
+       "arbiterKey": "US:7239a4bf193ad657",
+       "posts": 3.4,
+       "lo": 0.0,
+       "hi": 34.9,
+       "chance": "possible"
+      },
+      {
+       "rank": 7,
+       "title": "Trump Announces U.S. Push for AI “Superintelligence”",
+       "arbiterKey": "US:84ef5ba95d676c36",
+       "posts": 3.2,
+       "lo": 0.0,
+       "hi": 33.8,
+       "chance": "possible"
+      },
+      {
+       "rank": 8,
+       "title": "Juice=Juice’s 2026 “5ROOMS” Tour in Kyoto",
+       "arbiterKey": "US:92b7402a19461f1a",
+       "posts": 3.2,
+       "lo": 0.0,
+       "hi": 33.5,
+       "chance": "possible"
+      },
+      {
+       "rank": 9,
+       "title": "Virginia Tech–Pitt matchup draws college football betting picks",
+       "arbiterKey": "US:d04cf569b99b712d",
+       "posts": 3.2,
+       "lo": 0.0,
+       "hi": 33.3,
+       "chance": "possible"
+      },
+      {
+       "rank": 10,
+       "title": "Sharks open season with Luca Cagnoni’s first NHL goal",
+       "arbiterKey": "US:3bd5d79e53775b75",
+       "posts": 3.0,
+       "lo": 0.0,
+       "hi": 32.0,
+       "chance": "possible"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}
