@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:4b85ab68972db051",
+ "title": "La Granja VIP MX and Wanda-related social chatter",
+ "optionId": "S1-04",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "sentence": "Kunno keeps sending Ivonne to peón just to stir drama",
+ "sentenceIs": "written by the model",
+ "chance": 0.85,
+ "redacted": 0,
+ "personaRef": "sha256:a6abddaf972045556881adce0f682bae334755177276783fdc050c1c237b96c1",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/4b85ab68972db051/S1-04.json",
+  "sha256": "44899944a8370bfd10c94a25beee25a53d431eee0b3823a711b1135f268e2cbc",
+  "commit": "e2e8f97004cb24a225e2f8443716e2800c1796bb"
+ }
+}
