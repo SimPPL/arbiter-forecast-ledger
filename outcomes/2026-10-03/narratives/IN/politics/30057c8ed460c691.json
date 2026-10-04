@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "IN",
+ "arbiterKey": "IN:30057c8ed460c691",
+ "title": "Raja Warring’s Tenure as Punjab Congress President",
+ "category": "politics",
+ "real": {
+  "posts": 8,
+  "rank": 228,
+  "storiesWithPost": 403
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 5.48913578544227,
+    "lo80": 0.0,
+    "hi80": 40.17543611622975,
+    "pAnyPost": 0.4257602862254025,
+    "pTop10": null,
+    "asHeldLatestDay": 826.0,
+    "rank": 23,
+    "storiesForecast": 1376,
+    "baselines": {
+     "persist": 826.0,
+     "volols": 5.0087905808462825,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 8,
+   "logError": 0.3270952164357299,
+   "brierAnyPost": 0.32975124887593166,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 826.0,
+     "logError": 4.520580117687471
+    },
+    "volols": {
+     "posts": 5.0087905808462825,
+     "logError": 0.4040010835076484
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 2.1972245773362196
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "IN:30057c8ed460c691"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
