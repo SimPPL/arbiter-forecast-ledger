@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:9100c463bfe0b461",
+ "title": "Nike Earnings Beat EPS Estimates but Miss Revenue Forecasts",
+ "optionId": "S2-02",
+ "seat": "S2",
+ "seatName": "continuation",
+ "model": "none: the origin day's most repeated posts, fixed chances by rank",
+ "sentence": "Mississippi State Athletics is furious because they are stuck in a deal with Adidas until 2030 after finding out how much Ole Miss is getting paid.",
+ "sentenceIs": "a paraphrase of a real post from the origin day; the post itself stays private",
+ "chance": 0.5,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/9100c463bfe0b461/S2-02.json",
+  "sha256": "62d6103af57683b0c8350b2f8342cc4278601f560656afd2f109289c11115490",
+  "commit": "1e9f2afb2ed033f9f8ce21a07efd3c741d392fe6"
+ }
+}
