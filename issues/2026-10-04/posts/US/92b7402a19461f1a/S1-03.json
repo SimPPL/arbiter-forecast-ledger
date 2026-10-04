@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:92b7402a19461f1a",
+ "title": "Juice=Juice’s 2026 “5ROOMS” Tour in Kyoto",
+ "optionId": "S1-03",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "I hope they have some spooky songs for October",
+ "sentenceIs": "written by the model",
+ "chance": 0.05,
+ "redacted": 0,
+ "personaRef": "sha256:4c0438973c60128bc86dc0733b29649ec221220b413d1e6fbf02a09a8d005517",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/92b7402a19461f1a/S1-03.json",
+  "sha256": "7361523f4ad9a52064fc62fd3dac29cd79f93c4bb642065299f8bb83705177a2",
+  "commit": "40326836e0fc5e1897d21ee0b0703fea71939763"
+ }
+}
