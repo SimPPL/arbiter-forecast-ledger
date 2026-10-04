@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:9100c463bfe0b461",
+ "title": "Nike Earnings Beat EPS Estimates but Miss Revenue Forecasts",
+ "optionId": "S1-01",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "sentence": "Nike topped EPS expectations even as revenue fell showing strength from signature shoe launches like the Caitlin 1",
+ "sentenceIs": "written by the model",
+ "chance": 0.85,
+ "redacted": 0,
+ "personaRef": "sha256:bc4e62103fd29309725accbf9b7ad01050ff75364076180abee23248afb27798",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/9100c463bfe0b461/S1-01.json",
+  "sha256": "f02e293118afcf6be54273a23b0aaea90be937bde55be0dfae745d1bd64c5089",
+  "commit": "4a2050582b18051b46b956230af98d5f083028ff"
+ }
+}
