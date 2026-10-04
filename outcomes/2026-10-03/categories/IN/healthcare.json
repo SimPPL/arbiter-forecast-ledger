@@ -1,0 +1,75 @@
+{
+ "unit": "category outcome",
+ "day": "2026-10-03",
+ "region": "IN",
+ "category": "healthcare",
+ "real": {
+  "posts": 13,
+  "regionPosts": 46048,
+  "share": 0.000282314107018763
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet; real totals include stories that did not exist at the origin, so compare shares first",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "forecast": {
+    "posts": 6.102783999163412,
+    "share": 0.011530923532308618,
+    "regionPosts": 529.2537047933721,
+    "stories": 15
+   },
+   "realPostsOfMembers": 13.0,
+   "logError": 0.6785705098658006,
+   "shareError": 0.011248609425289855,
+   "baselines": {
+    "persist": {
+     "posts": 14.0,
+     "share": 0.0004559369504331401,
+     "logError": 0.06899287148695166,
+     "shareError": 0.0001736228434143771
+    },
+    "volols": {
+     "posts": 4.104497373258203,
+     "share": 0.006348388312608987,
+     "logError": 1.008935340581816,
+     "shareError": 0.006066074205590224
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null,
+     "logError": 2.6390573296152584,
+     "shareError": null
+    }
+   },
+   "members": [
+    "IN:0524f19e1292a492",
+    "IN:06ddb19ad48474bd",
+    "IN:2f03a31c35c29bc2",
+    "IN:31f159116a70f1f4",
+    "IN:3e9f63f5b74810a6",
+    "IN:4d41cae8c1fb5dfd",
+    "IN:6cb912b3023e239b",
+    "IN:963a6b98b79c35bb",
+    "IN:a54f61d4bcd5403a",
+    "IN:ab661fb2e0d63fa5",
+    "IN:bb30b14d9c400300",
+    "IN:be019776bdcac291",
+    "IN:c00a4595136875e0",
+    "IN:df42a5ed139411f5",
+    "IN:eef5ee1d65e11372"
+   ],
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "region": "IN",
+     "narrativeKey": "members"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
