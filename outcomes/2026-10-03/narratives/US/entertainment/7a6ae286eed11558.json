@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "arbiterKey": "US:7a6ae286eed11558",
+ "title": "Snowfall Viewers React to Leon, Wanda and Dara’s Relationship Drama",
+ "category": "entertainment",
+ "real": {
+  "posts": 3,
+  "rank": 312,
+  "storiesWithPost": 469
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 6.831022729858767,
+    "lo80": 0.03579529704259965,
+    "hi80": 48.690095383952,
+    "pAnyPost": 0.47048300536672627,
+    "pTop10": null,
+    "asHeldLatestDay": 9.0,
+    "rank": 20,
+    "storiesForecast": 1135,
+    "baselines": {
+     "persist": 9.0,
+     "volols": 0.770132456204822,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 3,
+   "logError": 0.6717987571933846,
+   "brierAnyPost": 0.28038824760545444,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 9.0,
+     "logError": 0.9162907318741553
+    },
+    "volols": {
+     "posts": 0.770132456204822,
+     "logError": 0.8152399833200542
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 1.3862943611198906
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "US:7a6ae286eed11558"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
