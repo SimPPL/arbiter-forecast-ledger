@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:a84a4cb3ef9e948a",
+ "title": "LingOrm Draws Fan Attention at Dior’s Paris Fashion Week Show",
+ "optionId": "S2-02",
+ "seat": "S2",
+ "seatName": "continuation",
+ "model": "none: the origin day's most repeated posts, fixed chances by rank",
+ "sentence": "Most girls in her situation would have deleted their Instagram account by now, and she graduated from Indian Springs School (the best private high school in Alabama for 13 straight years) in 2023 and likes lifting weights and showing off her.",
+ "sentenceIs": "a paraphrase of a real post from the origin day; the post itself stays private",
+ "chance": 0.5,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/a84a4cb3ef9e948a/S2-02.json",
+  "sha256": "3341a053086128fa78e74d5bac40f1f60ce34405d6c5d5d55daf8bff4bb016a0",
+  "commit": "01b0c24e04aadf59f192e2991e54f155ec90d621"
+ }
+}
