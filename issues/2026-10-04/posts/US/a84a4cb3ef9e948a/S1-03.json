@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:a84a4cb3ef9e948a",
+ "title": "LingOrm Draws Fan Attention at Dior’s Paris Fashion Week Show",
+ "optionId": "S1-03",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "Lingling Kwong and Orm Kornnaphat looked so gorgeous and elegant in Dior at Paris Fashion Week",
+ "sentenceIs": "written by the model",
+ "chance": 0.99,
+ "redacted": 0,
+ "personaRef": "sha256:742b8dd363cfcf57e41d44829819c07f97ad3e69126a05b307e7f5795d1cddbf",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/a84a4cb3ef9e948a/S1-03.json",
+  "sha256": "6a541c516839623a5490e19196c625ba5f4fa4b2e44ab3b9412bafa628dd4a47",
+  "commit": "55430fd6d9270b4d0f8d30d6086320c7b2253bd3"
+ }
+}
