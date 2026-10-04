@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:51a76f0eecbaab0e",
+ "title": "NFL game reactions, player updates, and betting picks",
+ "optionId": "S2-01",
+ "seat": "S2",
+ "seatName": "continuation",
+ "model": "none: the origin day's most repeated posts, fixed chances by rank",
+ "sentence": "The post lists several football betting picks including Houston Moneyline, Notre Dame 1st Half Winner (3-Way), Alabama Moneyline, Florida +7.5 (Alternate Spread), Ohio State Moneyline, Nebraska Moneyline, Miami Florida Moneyline, USC Moneyline, Texas Tech Moneyline, and Green Bay Packers.",
+ "sentenceIs": "a paraphrase of a real post from the origin day; the post itself stays private",
+ "chance": 0.6,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/51a76f0eecbaab0e/S2-01.json",
+  "sha256": "4a239757a2e7f8b6dcbf03f28fef94267ecd7c8801d7436239e747b6373985f3",
+  "commit": "80e1b8e94594c4a514ba07107ddb56601552a7ad"
+ }
+}
