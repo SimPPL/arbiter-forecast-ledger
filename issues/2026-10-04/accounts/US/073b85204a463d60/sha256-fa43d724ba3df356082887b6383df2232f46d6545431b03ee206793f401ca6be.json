@@ -1,0 +1,28 @@
+{
+ "unit": "account forecast",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:073b85204a463d60",
+ "title": "Jack Smith’s Senate Hearing Draws Scrutiny of Eric Schmitt",
+ "accountRef": "sha256:fa43d724ba3df356082887b6383df2232f46d6545431b03ee206793f401ca6be",
+ "public": false,
+ "namedBecause": null,
+ "chances": {
+  "W1": null,
+  "W2": 0.070552,
+  "W3": null
+ },
+ "listRanks": {
+  "W1": null,
+  "W2": 6,
+  "W3": null
+ },
+ "accountRefRule": "the handle for an account that passes PublicAccounts.decide at the origin; otherwise sha256(lower(handle) + \":\" + salt), with one salt per issue kept only in the private repo",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/accounts/073b85204a463d60/sha256-fa43d724ba3df356082887b6383df2232f46d6545431b03ee206793f401ca6be.json",
+  "sha256": "8e54e68277b1b737ff7830250ae38b7839d9c294e59a8f28e5fbe1f19df2f1b3",
+  "commit": "736befba7fd8caa4d55160d77857a7ac74732516"
+ }
+}
