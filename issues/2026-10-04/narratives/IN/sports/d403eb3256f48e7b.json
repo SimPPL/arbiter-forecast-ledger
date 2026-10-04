@@ -1,0 +1,67 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-04",
+ "region": "IN",
+ "arbiterKey": "IN:d403eb3256f48e7b",
+ "title": "Indian Athletes Win Medals and Break Records at the 2026 Asian Games",
+ "category": "sports",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "IN top 20 by the D+1 forecast"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-05",
+   "lag": 2,
+   "posts": 8.258198786216841,
+   "lo80": 0.30140276038092984,
+   "hi80": 78.84603879927671,
+   "pAnyPost": 0.530841121495327,
+   "pTop10": null,
+   "asHeldLatestDay": 18.0,
+   "rank": 19,
+   "storiesForecast": 1418,
+   "baselines": {
+    "persist": 18.0,
+    "volols": 1.4322170305391926,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-06",
+   "lag": 3,
+   "posts": 1.0967656692534509,
+   "lo80": 0.0,
+   "hi80": 9.577607686386994,
+   "pAnyPost": 0.16532258064516125,
+   "pTop10": null,
+   "asHeldLatestDay": 18.0,
+   "rank": 54,
+   "storiesForecast": 1418,
+   "baselines": {
+    "persist": 18.0,
+    "volols": 0.9644483404868763,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-04/pred_2026-10-05_h1_K0.parquet",
+   "sha256": "45c05dceca8e30ee736feca09ca0956ead659dd21923b587d61d5a0571dccbb0",
+   "row": {
+    "narrativeKey": "IN:d403eb3256f48e7b"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-04/pred_2026-10-06_h2_K0.parquet",
+   "sha256": "a39d5c6bcc42b7f41043e2bc918952c95159ee37143194e938d358f3f6a53383",
+   "row": {
+    "narrativeKey": "IN:d403eb3256f48e7b"
+   },
+   "models": "every model"
+  }
+ ]
+}
