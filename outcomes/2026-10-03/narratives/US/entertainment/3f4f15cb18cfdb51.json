@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "arbiterKey": "US:3f4f15cb18cfdb51",
+ "title": "Debate over Savannah James and helping friends financially",
+ "category": "entertainment",
+ "real": {
+  "posts": 6,
+  "rank": 257,
+  "storiesWithPost": 469
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 5.019119905156727,
+    "lo80": 0.0,
+    "hi80": 37.19304994152099,
+    "pAnyPost": 0.40966010733452596,
+    "pTop10": null,
+    "asHeldLatestDay": 5.0,
+    "rank": 38,
+    "storiesForecast": 1135,
+    "baselines": {
+     "persist": 5.0,
+     "volols": 0.5963550414609162,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 6,
+   "logError": 0.15096909557882698,
+   "brierAnyPost": 0.34850118887228343,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 5.0,
+     "logError": 0.15415067982725827
+    },
+    "volols": {
+     "posts": 0.5963550414609162,
+     "logError": 1.478187217711886
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 1.9459101490553132
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "US:3f4f15cb18cfdb51"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
