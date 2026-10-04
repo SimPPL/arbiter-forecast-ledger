@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:977e42721988a89f",
+ "title": "Bitget Reports $351M Hot-Wallet Breach",
+ "optionId": "S2-02",
+ "seat": "S2",
+ "seatName": "continuation",
+ "model": "none: the origin day's most repeated posts, fixed chances by rank",
+ "sentence": "The 2027 bull run has started with Bitcoin to $250,000, ETH to $10,000, DOGE to $1, SHIB to $0.5, PEPE to $0.1, XLM to $3, FLOKI to $1.50, BONK to $1, and LUNC.",
+ "sentenceIs": "a paraphrase of a real post from the origin day; the post itself stays private",
+ "chance": 0.5,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/977e42721988a89f/S2-02.json",
+  "sha256": "b7cc99004d2559d80b194d95883c5a1d87614fa41dbef396e31ef248edf43e63",
+  "commit": "cbc649e062a49b63eeb84929e7b9e49bd10becd7"
+ }
+}
