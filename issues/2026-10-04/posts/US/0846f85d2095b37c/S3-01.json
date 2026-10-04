@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:0846f85d2095b37c",
+ "title": "Mississippi State edges Missouri in SEC matchup",
+ "optionId": "S3-01",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "Alabama dominated Mississippi State 56 23",
+ "sentenceIs": "written by the model",
+ "chance": 0.95,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/0846f85d2095b37c/S3-01.json",
+  "sha256": "a8427be78fd25271729ac77877d10b606bc3ce079989acb7fb82fafd0a8caf67",
+  "commit": "d2a02d9d69521ecade4848aaa61d094daf14c886"
+ }
+}
