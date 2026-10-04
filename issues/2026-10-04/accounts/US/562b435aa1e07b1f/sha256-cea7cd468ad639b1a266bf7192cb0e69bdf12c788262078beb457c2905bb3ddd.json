@@ -1,0 +1,28 @@
+{
+ "unit": "account forecast",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:562b435aa1e07b1f",
+ "title": "Wisconsin stuns Penn State with road win",
+ "accountRef": "sha256:cea7cd468ad639b1a266bf7192cb0e69bdf12c788262078beb457c2905bb3ddd",
+ "public": false,
+ "namedBecause": null,
+ "chances": {
+  "W1": 0.333903,
+  "W2": null,
+  "W3": null
+ },
+ "listRanks": {
+  "W1": 8,
+  "W2": null,
+  "W3": null
+ },
+ "accountRefRule": "the handle for an account that passes PublicAccounts.decide at the origin; otherwise sha256(lower(handle) + \":\" + salt), with one salt per issue kept only in the private repo",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/accounts/562b435aa1e07b1f/sha256-cea7cd468ad639b1a266bf7192cb0e69bdf12c788262078beb457c2905bb3ddd.json",
+  "sha256": "adb32be7ca2e17a5a06e8ba0e42d2d10f36a1f25a9ec58c196fecd19cb8eb242",
+  "commit": "91791f2529ddb65af408166a7c9f32d70d4f5b36"
+ }
+}
