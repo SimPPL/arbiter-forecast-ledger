@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:d04cf569b99b712d",
+ "title": "Virginia Tech–Pitt matchup draws college football betting picks",
+ "optionId": "S1-03",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "sentence": "Ja'Kyrian Turner's 20-yard touchdown run ignited Pitt's rally past Virginia Tech",
+ "sentenceIs": "written by the model",
+ "chance": 0.7,
+ "redacted": 0,
+ "personaRef": "sha256:67d93801b534d768261b27ca2c48ec6d2541c2c84cc38d5bd9331bd6b762527a",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/d04cf569b99b712d/S1-03.json",
+  "sha256": "e1641f50576331c6129a1762d989b97bef0f838adb613c3528ef75e70fdd89b2",
+  "commit": "080004bac5f1597af295fe109e504a7df50f4c14"
+ }
+}
