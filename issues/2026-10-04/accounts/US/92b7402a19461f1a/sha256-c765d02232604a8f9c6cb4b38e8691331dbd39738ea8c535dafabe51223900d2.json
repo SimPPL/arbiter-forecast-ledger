@@ -1,0 +1,28 @@
+{
+ "unit": "account forecast",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:92b7402a19461f1a",
+ "title": "Juice=Juice’s 2026 “5ROOMS” Tour in Kyoto",
+ "accountRef": "sha256:c765d02232604a8f9c6cb4b38e8691331dbd39738ea8c535dafabe51223900d2",
+ "public": false,
+ "namedBecause": null,
+ "chances": {
+  "W1": null,
+  "W2": null,
+  "W3": 0.005202
+ },
+ "listRanks": {
+  "W1": null,
+  "W2": null,
+  "W3": 7
+ },
+ "accountRefRule": "the handle for an account that passes PublicAccounts.decide at the origin; otherwise sha256(lower(handle) + \":\" + salt), with one salt per issue kept only in the private repo",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/accounts/92b7402a19461f1a/sha256-c765d02232604a8f9c6cb4b38e8691331dbd39738ea8c535dafabe51223900d2.json",
+  "sha256": "02d1d9dbdfbe818d27cf326e6eade15da25965a1f5dba4d05f56c4c2611e99f2",
+  "commit": "541f886ee71648116c740c49e984ab2007fc59a6"
+ }
+}
