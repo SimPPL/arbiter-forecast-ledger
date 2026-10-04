@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:6ac3e2825463b554",
+ "title": "Formind’s RYET Commercial Updates Draw Investor Attention",
+ "optionId": "S2-05",
+ "seat": "S2",
+ "seatName": "continuation",
+ "model": "none: the origin day's most repeated posts, fixed chances by rank",
+ "sentence": "UBS forecasts that Micron Technology's free cash flow will reach $347.4bn across FY2027 and FY2028, with $157.2bn in FY2027 and $190.2bn in FY2028.",
+ "sentenceIs": "a paraphrase of a real post from the origin day; the post itself stays private",
+ "chance": 0.35,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/6ac3e2825463b554/S2-05.json",
+  "sha256": "ddfc5ff7ef49a6cbe4a1539ee3eeaef09c057049d4aabc7c2e40398fbaaaa844",
+  "commit": "947d11b6cb4812506cac3db3ce5661f925603053"
+ }
+}
