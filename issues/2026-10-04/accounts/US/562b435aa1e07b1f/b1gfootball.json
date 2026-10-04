@@ -1,0 +1,28 @@
+{
+ "unit": "account forecast",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:562b435aa1e07b1f",
+ "title": "Wisconsin stuns Penn State with road win",
+ "accountRef": "@b1gfootball",
+ "public": true,
+ "namedBecause": "a post with 250,000+ views",
+ "chances": {
+  "W1": 0.376286,
+  "W2": null,
+  "W3": null
+ },
+ "listRanks": {
+  "W1": 4,
+  "W2": null,
+  "W3": null
+ },
+ "accountRefRule": "the handle for an account that passes PublicAccounts.decide at the origin; otherwise sha256(lower(handle) + \":\" + salt), with one salt per issue kept only in the private repo",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/accounts/562b435aa1e07b1f/b1gfootball.json",
+  "sha256": "10d64fc3bf2cc6803217c27ec31b799ba27556798ff830bc15b669089cec27df",
+  "commit": "11a76144b504b2bdde1b1ca7aa9b090cc2931682"
+ }
+}
