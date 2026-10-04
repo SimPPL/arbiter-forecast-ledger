@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:4aefdbbe65da365b",
+ "title": "Broncos-Rams Game Sparks Debate Over Coaching and Key Plays",
+ "optionId": "S1-01",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "sentence": "Bo Nix's poise and Sean Payton's game plan drove the Broncos' comeback victory",
+ "sentenceIs": "written by the model",
+ "chance": 0.7,
+ "redacted": 0,
+ "personaRef": "sha256:28d364f7cc36346165126b096b2bcd28ea4c1a11c9cbacc4b008bb4701957f65",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/4aefdbbe65da365b/S1-01.json",
+  "sha256": "5936db3c8c5235f5b88f6a7b48c29cbd1b0c7f80c1d1cea7c31ef61d9bf63688",
+  "commit": "3cf51b1faa8ee75c479560566aec5132329a5fbd"
+ }
+}
