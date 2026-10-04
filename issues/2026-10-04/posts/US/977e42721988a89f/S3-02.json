@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:977e42721988a89f",
+ "title": "Bitget Reports $351M Hot-Wallet Breach",
+ "optionId": "S3-02",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "Dogecoin is the peoples coin and we are going to the moon",
+ "sentenceIs": "written by the model",
+ "chance": 0.7,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/977e42721988a89f/S3-02.json",
+  "sha256": "2c672c369b0b03109199d6011cc1f8d25a16d6c917fffb644761838fed4f4fdf",
+  "commit": "fd16a0e1e2bb80414907ea262a4f9eeb436b705c"
+ }
+}
