@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:a84a4cb3ef9e948a",
+ "title": "LingOrm Draws Fan Attention at Dior’s Paris Fashion Week Show",
+ "optionId": "S2-01",
+ "seat": "S2",
+ "seatName": "continuation",
+ "model": "none: the origin day's most repeated posts, fixed chances by rank",
+ "sentence": "Olandria is at PFW SS27 with @LashaeAsh Bama Barbie.",
+ "sentenceIs": "a paraphrase of a real post from the origin day; the post itself stays private",
+ "chance": 0.6,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/a84a4cb3ef9e948a/S2-01.json",
+  "sha256": "1d2887f44f6425d7c09076dec946b16f38dfeed0e9da171a27f31f26a1f318a4",
+  "commit": "da9c6e6ab8b0541d91c86c78b85fb6384b826f1a"
+ }
+}
