@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:977e42721988a89f",
+ "title": "Bitget Reports $351M Hot-Wallet Breach",
+ "optionId": "S3-05",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "Doge is a great project to study for this Uptober",
+ "sentenceIs": "written by the model",
+ "chance": 0.4,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/977e42721988a89f/S3-05.json",
+  "sha256": "0dc4db8c0cc1f2cb2345d3baafbe39bf1fc7b60de92039226cd95b8e69c1aef7",
+  "commit": "906a23ffe73633ab97eef34ee13f52c74dc4d0e7"
+ }
+}
