@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:92b7402a19461f1a",
+ "title": "Juice=Juice’s 2026 “5ROOMS” Tour in Kyoto",
+ "optionId": "S1-04",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "The timing of this tour aligns perfectly with the bullish momentum we saw on October 2nd.",
+ "sentenceIs": "written by the model",
+ "chance": 0.01,
+ "redacted": 0,
+ "personaRef": "sha256:a862b43b22cc85ef3972412242a516922133c9305f64795f2bd3bce0ebab10fc",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/92b7402a19461f1a/S1-04.json",
+  "sha256": "963cbc9a34d8d3f7721f25ecec3755e587d59112ac6bf6f1933b3c74e4af56ed",
+  "commit": "af0718aeaadedf838b18822e596e5b772c91dbec"
+ }
+}
