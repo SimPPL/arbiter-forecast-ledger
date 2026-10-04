@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:9219ac6562e6dc15",
+ "title": "Fever and Aces playoff matchup sparks player and fan debate",
+ "optionId": "S3-05",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "Arike Ogunbowale deserved a better outcome after her performance.",
+ "sentenceIs": "written by the model",
+ "chance": 0.4,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/9219ac6562e6dc15/S3-05.json",
+  "sha256": "72e4988e1790e82b00cf7a772d6dccf4db59833e9f2bfc19998fe64488dc2a74",
+  "commit": "0798fe8bce28d1c1272f8b86cd4670175d2949aa"
+ }
+}
