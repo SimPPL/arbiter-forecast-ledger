@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:d04cf569b99b712d",
+ "title": "Virginia Tech–Pitt matchup draws college football betting picks",
+ "optionId": "S3-03",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "The officiating in the game between Virginia Tech and Pittsburgh was terrible.",
+ "sentenceIs": "written by the model",
+ "chance": 0.99,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/d04cf569b99b712d/S3-03.json",
+  "sha256": "10f47ef8daee3b3f54cd76aed100b30295e861cfe3ddc27e81b04ea0ed04d8a0",
+  "commit": "78431f8be650ede0124fcedd38a76c5730288291"
+ }
+}
