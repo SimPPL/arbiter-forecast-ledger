@@ -1,0 +1,67 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-04",
+ "region": "US",
+ "arbiterKey": "US:2ff7376ab6042774",
+ "title": "Debate over South Africa’s batting order and ODI cricket",
+ "category": "sports",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "US top 50 by the D+1 forecast"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-05",
+   "lag": 2,
+   "posts": 7.22591019430943,
+   "lo80": 0.15629643310935826,
+   "hi80": 69.94321041280926,
+   "pAnyPost": 0.5158878504672897,
+   "pTop10": null,
+   "asHeldLatestDay": 2175.0,
+   "rank": 17,
+   "storiesForecast": 1341,
+   "baselines": {
+    "persist": 2175.0,
+    "volols": 5.0702730540830085,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-06",
+   "lag": 3,
+   "posts": 1.7236470293737365,
+   "lo80": 0.0,
+   "hi80": 12.740052202956171,
+   "pAnyPost": 0.20564516129032262,
+   "pTop10": null,
+   "asHeldLatestDay": 2175.0,
+   "rank": 31,
+   "storiesForecast": 1341,
+   "baselines": {
+    "persist": 2175.0,
+    "volols": 2.6202714085851837,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-04/pred_2026-10-05_h1_K0.parquet",
+   "sha256": "45c05dceca8e30ee736feca09ca0956ead659dd21923b587d61d5a0571dccbb0",
+   "row": {
+    "narrativeKey": "US:2ff7376ab6042774"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-04/pred_2026-10-06_h2_K0.parquet",
+   "sha256": "a39d5c6bcc42b7f41043e2bc918952c95159ee37143194e938d358f3f6a53383",
+   "row": {
+    "narrativeKey": "US:2ff7376ab6042774"
+   },
+   "models": "every model"
+  }
+ ]
+}
