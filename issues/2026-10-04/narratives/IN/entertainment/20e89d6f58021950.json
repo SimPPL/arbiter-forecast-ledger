@@ -1,0 +1,69 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-04",
+ "region": "IN",
+ "arbiterKey": "IN:20e89d6f58021950",
+ "title": "Tamil Film Releases Draw Fan Buzz and Mixed Expectations",
+ "category": "entertainment",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "IN top 20 by the D+1 forecast",
+  "published top 10 for 2026-10-05",
+  "published top 10 for 2026-10-06"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-05",
+   "lag": 2,
+   "posts": 19.606830960601638,
+   "lo80": 1.8966527198309033,
+   "hi80": 176.7207275847099,
+   "pAnyPost": 0.6448598130841121,
+   "pTop10": null,
+   "asHeldLatestDay": 115.0,
+   "rank": 2,
+   "storiesForecast": 1418,
+   "baselines": {
+    "persist": 115.0,
+    "volols": 2.866415726305391,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-06",
+   "lag": 3,
+   "posts": 8.341412488106597,
+   "lo80": 0.2844724644144744,
+   "hi80": 75.84896256067097,
+   "pAnyPost": 0.4838709677419355,
+   "pTop10": null,
+   "asHeldLatestDay": 115.0,
+   "rank": 2,
+   "storiesForecast": 1418,
+   "baselines": {
+    "persist": 115.0,
+    "volols": 1.7970456570610236,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-04/pred_2026-10-05_h1_K0.parquet",
+   "sha256": "45c05dceca8e30ee736feca09ca0956ead659dd21923b587d61d5a0571dccbb0",
+   "row": {
+    "narrativeKey": "IN:20e89d6f58021950"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-04/pred_2026-10-06_h2_K0.parquet",
+   "sha256": "a39d5c6bcc42b7f41043e2bc918952c95159ee37143194e938d358f3f6a53383",
+   "row": {
+    "narrativeKey": "IN:20e89d6f58021950"
+   },
+   "models": "every model"
+  }
+ ]
+}
