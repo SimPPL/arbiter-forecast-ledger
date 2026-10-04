@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:92b7402a19461f1a",
+ "title": "Juice=Juice’s 2026 “5ROOMS” Tour in Kyoto",
+ "optionId": "S2-03",
+ "seat": "S2",
+ "seatName": "continuation",
+ "model": "none: the origin day's most repeated posts, fixed chances by rank",
+ "sentence": "From October 6 to 11, the first edition of the Santiago Festival of the Arts (SAFA) will feature more than 150 cultural spaces and 800 free activities in the Metropolitan Region.",
+ "sentenceIs": "a paraphrase of a real post from the origin day; the post itself stays private",
+ "chance": 0.45,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/92b7402a19461f1a/S2-03.json",
+  "sha256": "6806ebf83b75a7c31be0d58b12acd88f75fcf3ccb366a8ef47964c77840bc480",
+  "commit": "3d24ea11ada339a223d7153c1e93e57b1bd60b7f"
+ }
+}
