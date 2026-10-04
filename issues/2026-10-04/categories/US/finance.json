@@ -1,0 +1,142 @@
+{
+ "unit": "category forecast",
+ "issueDay": "2026-10-04",
+ "region": "US",
+ "category": "finance",
+ "model": "gbm_med",
+ "members": [
+  "US:043546055b0e6180",
+  "US:097fb68d55a9b2f7",
+  "US:0ad315ad72e0ada5",
+  "US:16afd1546b5b3419",
+  "US:2eb5daf78d6f0469",
+  "US:32ddc55eacbf85e3",
+  "US:35fd330825e909f8",
+  "US:49f4b0d7c8e370a4",
+  "US:4a4b08a9a4afe864",
+  "US:4c63228598fe1320",
+  "US:4e6640e56b89bcaa",
+  "US:4e98c3bde0bc033b",
+  "US:530a64f2a56107a4",
+  "US:54b667aab82bb4f0",
+  "US:563723570879aece",
+  "US:58fc678498fd520f",
+  "US:5a5a03982818b7f7",
+  "US:5fb3772f42125bbf",
+  "US:64e39b7382dd235f",
+  "US:665e141ba10d6b2a",
+  "US:678fb98e47359f3b",
+  "US:67a151700c59cc91",
+  "US:6ac3e2825463b554",
+  "US:6d2da29da9e9b208",
+  "US:6d59362d4751b464",
+  "US:7429f8ddc34fa180",
+  "US:79d241db50609153",
+  "US:84b173d9ee0c0bd5",
+  "US:8533a97bf27ec18a",
+  "US:874ffe3bb9fc4277",
+  "US:9100c463bfe0b461",
+  "US:929654eb52cab466",
+  "US:95f726de5cd49c5d",
+  "US:977e42721988a89f",
+  "US:98e603beadf66de7",
+  "US:9bdb89f3846ae06c",
+  "US:9ec3eef7916a0dea",
+  "US:a53b2562bbe53321",
+  "US:a86418d8935a2698",
+  "US:acbec7560f365a56",
+  "US:add3ce8dc177e820",
+  "US:ae1af5fe7a5d5de0",
+  "US:ae59582c91a1410d",
+  "US:b0aee4817dfe3a32",
+  "US:b1b5e84389125f46",
+  "US:b207797b05839845",
+  "US:becf29eae8d6adb0",
+  "US:c469c139e110ee7c",
+  "US:c85b7cabccaa178e",
+  "US:cbbf8a45c22693c7",
+  "US:d3414bf456693dcb",
+  "US:d5cecc743062725f",
+  "US:d98ba26e2ae2eb32",
+  "US:db9a2352e43f7468",
+  "US:dca945809de85fff",
+  "US:e0cb70acd195097e",
+  "US:f0f7c6e06cd3d87d",
+  "US:f35bcdd987cec07b",
+  "US:f839178ae1f41a90",
+  "US:fc298690914685ee"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-05",
+   "lag": 2,
+   "posts": 42.20865818432338,
+   "regionPosts": 570.7346161537416,
+   "share": 0.07395496433837023,
+   "stories": 60,
+   "baselines": {
+    "persist": {
+     "posts": 1061.0,
+     "share": 0.014608489721736496
+    },
+    "volols": {
+     "posts": 21.651798989844462,
+     "share": 0.029753132836587218
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null
+    }
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-06",
+   "lag": 3,
+   "posts": 20.557622067522157,
+   "regionPosts": 204.92729854265045,
+   "share": 0.10031665968232928,
+   "stories": 60,
+   "baselines": {
+    "persist": {
+     "posts": 1061.0,
+     "share": 0.014608489721736496
+    },
+    "volols": {
+     "posts": 14.020376213386433,
+     "share": 0.030968643172298953
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null
+    }
+   }
+  }
+ },
+ "shareRule": "share is the category's forecast posts over the region's forecast posts, both summed over stories live at the origin with negative forecasts counted as zero (the rule of fwd_score.areaShareUS)",
+ "categorySource": {
+  "file": "inputs/nk_meta.parquet",
+  "sha256": "f7bd153f2bfd462044415c1b5b122c8cf7218d19f3eb6a1775407b79332d5b59",
+  "public": false,
+  "note": "a frozen input of the research repo; FREEZE.json holds its sha256"
+ },
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-04/pred_2026-10-05_h1_K0.parquet",
+   "sha256": "45c05dceca8e30ee736feca09ca0956ead659dd21923b587d61d5a0571dccbb0",
+   "row": {
+    "region": "US",
+    "narrativeKey": "members"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-04/pred_2026-10-06_h2_K0.parquet",
+   "sha256": "a39d5c6bcc42b7f41043e2bc918952c95159ee37143194e938d358f3f6a53383",
+   "row": {
+    "region": "US",
+    "narrativeKey": "members"
+   },
+   "models": "every model"
+  }
+ ]
+}
