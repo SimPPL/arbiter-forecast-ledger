@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:562b435aa1e07b1f",
+ "title": "Wisconsin stuns Penn State with road win",
+ "optionId": "S2-03",
+ "seat": "S2",
+ "seatName": "continuation",
+ "model": "none: the origin day's most repeated posts, fixed chances by rank",
+ "sentence": "The post says row the boat, ski-u-mah, and go Gophers.",
+ "sentenceIs": "a paraphrase of a real post from the origin day; the post itself stays private",
+ "chance": 0.45,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/562b435aa1e07b1f/S2-03.json",
+  "sha256": "ae7afee4ba0056c6a0aef9e6b1d75e317dce057e5f0fce4e26cb6c741244fe1d",
+  "commit": "a65748deac932ed941201d24af17d4e60648cc9f"
+ }
+}
