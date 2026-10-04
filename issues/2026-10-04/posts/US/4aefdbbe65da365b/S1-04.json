@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:4aefdbbe65da365b",
+ "title": "Broncos-Rams Game Sparks Debate Over Coaching and Key Plays",
+ "optionId": "S1-04",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "meta-llama/llama-3.3-70b-instruct",
+ "sentence": "Coaching is key to winning games.",
+ "sentenceIs": "written by the model",
+ "chance": 0.8,
+ "redacted": 0,
+ "personaRef": "sha256:48458b1c16ddb757e78946ff732d6288e671d96355ec4af9d3ba2f1dbc089125",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/4aefdbbe65da365b/S1-04.json",
+  "sha256": "d7ab3c220422561fdccdda3bc5013ce34300a0495ded08519368bf24a72f06a3",
+  "commit": "ac2eedb11f65374a316c28e0d3152ca7050b5bc3"
+ }
+}
