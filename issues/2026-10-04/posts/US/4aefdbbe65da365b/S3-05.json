@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:4aefdbbe65da365b",
+ "title": "Broncos-Rams Game Sparks Debate Over Coaching and Key Plays",
+ "optionId": "S3-05",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "The pass interference call that wiped out the interception was a phantom call.",
+ "sentenceIs": "written by the model",
+ "chance": 0.75,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/4aefdbbe65da365b/S3-05.json",
+  "sha256": "07f1b88ca3ed65a3bb5a10b395edac2782cc9637e215c176361455f2db34398a",
+  "commit": "f0953a49109c02258b70da85b6da690cb16a1c50"
+ }
+}
