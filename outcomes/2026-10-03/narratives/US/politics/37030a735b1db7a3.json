@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "arbiterKey": "US:37030a735b1db7a3",
+ "title": "Debate over death penalty execution methods",
+ "category": "politics",
+ "real": {
+  "posts": 10,
+  "rank": 216,
+  "storiesWithPost": 469
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 4.99396195478155,
+    "lo80": 0.0,
+    "hi80": 37.0334154982393,
+    "pAnyPost": 0.40966010733452596,
+    "pTop10": null,
+    "asHeldLatestDay": 296.0,
+    "rank": 39,
+    "storiesForecast": 1135,
+    "baselines": {
+     "persist": 296.0,
+     "volols": 2.514954162696741,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 10,
+   "logError": 0.6071426511410014,
+   "brierAnyPost": 0.34850118887228343,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 296.0,
+     "logError": 3.295836866004329
+    },
+    "volols": {
+     "posts": 2.514954162696741,
+     "logError": 1.140868788105339
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 2.3978952727983707
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "US:37030a735b1db7a3"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
