@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "US",
+ "arbiterKey": "US:53d65b96690bfa65",
+ "title": "Fans Anticipate Megan Thee Stallion’s Tina Tuesday Freestyle",
+ "category": "entertainment",
+ "real": {
+  "posts": 5,
+  "rank": 272,
+  "storiesWithPost": 469
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 9.32416238861605,
+    "lo80": 0.3655583972778815,
+    "hi80": 64.50978480674048,
+    "pAnyPost": 0.5134168157423971,
+    "pTop10": null,
+    "asHeldLatestDay": 45.0,
+    "rank": 12,
+    "storiesForecast": 1135,
+    "baselines": {
+     "persist": 45.0,
+     "volols": 1.4102969221128756,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 5,
+   "logError": 0.5427275417390196,
+   "brierAnyPost": 0.23676319520226838,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 45.0,
+     "logError": 2.03688192726104
+    },
+    "volols": {
+     "posts": 1.4102969221128756,
+     "logError": 0.912009525118291
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 1.791759469228055
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "US:53d65b96690bfa65"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
