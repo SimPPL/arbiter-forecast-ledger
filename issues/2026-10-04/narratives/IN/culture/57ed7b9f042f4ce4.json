@@ -1,0 +1,68 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-04",
+ "region": "IN",
+ "arbiterKey": "IN:57ed7b9f042f4ce4",
+ "title": "Gandhi Jayanti tributes highlight truth, peace and cleanliness",
+ "category": "culture",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "IN top 20 by the D+1 forecast",
+  "published top 10 for 2026-10-05"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-05",
+   "lag": 2,
+   "posts": 13.358935760772528,
+   "lo80": 1.0184011022772332,
+   "hi80": 122.83663046615776,
+   "pAnyPost": 0.6018691588785047,
+   "pTop10": null,
+   "asHeldLatestDay": 596.0,
+   "rank": 7,
+   "storiesForecast": 1418,
+   "baselines": {
+    "persist": 596.0,
+    "volols": 4.88310998374938,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-06",
+   "lag": 3,
+   "posts": 3.7699968826225416,
+   "lo80": 0.0,
+   "hi80": 38.241315198733574,
+   "pAnyPost": 0.35777126099706746,
+   "pTop10": null,
+   "asHeldLatestDay": 596.0,
+   "rank": 16,
+   "storiesForecast": 1418,
+   "baselines": {
+    "persist": 596.0,
+    "volols": 2.8518427255900427,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-04/pred_2026-10-05_h1_K0.parquet",
+   "sha256": "45c05dceca8e30ee736feca09ca0956ead659dd21923b587d61d5a0571dccbb0",
+   "row": {
+    "narrativeKey": "IN:57ed7b9f042f4ce4"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-04/pred_2026-10-06_h2_K0.parquet",
+   "sha256": "a39d5c6bcc42b7f41043e2bc918952c95159ee37143194e938d358f3f6a53383",
+   "row": {
+    "narrativeKey": "IN:57ed7b9f042f4ce4"
+   },
+   "models": "every model"
+  }
+ ]
+}
