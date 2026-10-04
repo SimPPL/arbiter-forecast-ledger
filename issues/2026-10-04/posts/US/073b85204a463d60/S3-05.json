@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:073b85204a463d60",
+ "title": "Jack Smith’s Senate Hearing Draws Scrutiny of Eric Schmitt",
+ "optionId": "S3-05",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "Eric Schmitt and Josh Hawley are an embarrassment to Missouri.",
+ "sentenceIs": "written by the model",
+ "chance": 0.4,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/073b85204a463d60/S3-05.json",
+  "sha256": "316b3bda0aa5af71e0df8593a7c344af34b14c66a539ba89e2a5cfeaaa6e9381",
+  "commit": "f3f87a49290aadb6b16c1ce37b55145e7c98d247"
+ }
+}
