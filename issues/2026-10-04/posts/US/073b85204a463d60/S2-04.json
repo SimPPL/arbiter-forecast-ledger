@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:073b85204a463d60",
+ "title": "Jack Smith’s Senate Hearing Draws Scrutiny of Eric Schmitt",
+ "optionId": "S2-04",
+ "seat": "S2",
+ "seatName": "continuation",
+ "model": "none: the origin day's most repeated posts, fixed chances by rank",
+ "sentence": "The author expresses disbelief that Southern Miss lost a 2011 court battle to Iowa over the similarity between their eagle head logo and Iowa's hawkeye head logo.",
+ "sentenceIs": "a paraphrase of a real post from the origin day; the post itself stays private",
+ "chance": 0.4,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/073b85204a463d60/S2-04.json",
+  "sha256": "d75d3a9c12b6912aa2ba56e1c99134c7d631e28bd2e55caa12c7e9eae86ca65a",
+  "commit": "2e7296d9b56c613c974f6d32f4654dcb35df9800"
+ }
+}
