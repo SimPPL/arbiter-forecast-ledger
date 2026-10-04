@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:912490d350a007f6",
+ "title": "Bills Fans React to Game Against the Chargers",
+ "optionId": "S1-01",
+ "seat": "S1",
+ "seatName": "persona seat",
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "sentence": "Even when the game feels rough, let your love for the team shine brighter than any uniform",
+ "sentenceIs": "written by the model",
+ "chance": 0.2,
+ "redacted": 0,
+ "personaRef": "sha256:b7c58eeb8bb540759ec452061c54f84f0e950b1df05cd296f5db75dc3e9fd586",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/912490d350a007f6/S1-01.json",
+  "sha256": "782dd9ee281941dfbefbd098f4491cc9d0f0039a56d86e94b9d225267f8affed",
+  "commit": "1a9e10e4a2e62f2a633d554827b814ed0d024e64"
+ }
+}
