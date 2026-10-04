@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:92b7402a19461f1a",
+ "title": "Juice=Juice’s 2026 “5ROOMS” Tour in Kyoto",
+ "optionId": "S3-04",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "Eba thanked the audience for filling the venue.",
+ "sentenceIs": "written by the model",
+ "chance": 0.01,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/92b7402a19461f1a/S3-04.json",
+  "sha256": "ea9d43c467889b73f84b51e6785cbc4b2d9f3f4f15c393f11140d7619d7f1ece",
+  "commit": "81e362641da0a8f48df75cf5d3c1c8884e156811"
+ }
+}
