@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-03",
+ "region": "IN",
+ "arbiterKey": "IN:090c9c31c4e5d6b8",
+ "title": "Omegaverse fandom posts about alpha–omega dynamics",
+ "category": "entertainment",
+ "real": {
+  "posts": 8,
+  "rank": 228,
+  "storiesWithPost": 403
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-02",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-03",
+    "lag": 2,
+    "posts": 6.030580802684863,
+    "lo80": 0.0,
+    "hi80": 43.61106074407899,
+    "pAnyPost": 0.44901610017889093,
+    "pTop10": null,
+    "asHeldLatestDay": 8.0,
+    "rank": 18,
+    "storiesForecast": 1376,
+    "baselines": {
+     "persist": 8.0,
+     "volols": 0.974313830232145,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 8,
+   "logError": 0.24695525719019185,
+   "brierAnyPost": 0.30358325786207796,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 8.0,
+     "logError": 0.0
+    },
+    "volols": {
+     "posts": 0.974313830232145,
+     "logError": 1.5170036670806903
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 2.1972245773362196
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-02/pred_2026-10-03_h1_K0.parquet",
+    "sha256": "6ae2ad9f84db132ca23009ca980f77da8629ab5e7af270d13aa3df293efb8198",
+    "row": {
+     "narrativeKey": "IN:090c9c31c4e5d6b8"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
