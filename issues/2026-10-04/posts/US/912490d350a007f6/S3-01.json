@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:912490d350a007f6",
+ "title": "Bills Fans React to Game Against the Chargers",
+ "optionId": "S3-01",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "The Bills beat the Chargers 24 16.",
+ "sentenceIs": "written by the model",
+ "chance": 0.01,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/912490d350a007f6/S3-01.json",
+  "sha256": "59deddf3fc0cc6b2ac87926170288309699150ee5e4819d2d099745fc79189d3",
+  "commit": "f38899b0959eaf4c9a298ea661bbb1bd859dc8ec"
+ }
+}
