@@ -1,0 +1,67 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-04",
+ "region": "US",
+ "arbiterKey": "US:4aefdbbe65da365b",
+ "title": "Broncos-Rams Game Sparks Debate Over Coaching and Key Plays",
+ "category": "sports",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "covered by FWD-TWEETS-1"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-05",
+   "lag": 2,
+   "posts": 0.07172022553395767,
+   "lo80": 0.02273526298788576,
+   "hi80": 0.07172022553395767,
+   "pAnyPost": 0.024991963998714284,
+   "pTop10": null,
+   "asHeldLatestDay": 32.0,
+   "rank": 315,
+   "storiesForecast": 1341,
+   "baselines": {
+    "persist": 32.0,
+    "volols": 1.4215551870473764,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-06",
+   "lag": 3,
+   "posts": 0.0,
+   "lo80": 0.0,
+   "hi80": 0.0,
+   "pAnyPost": 0.018336713995943166,
+   "pTop10": null,
+   "asHeldLatestDay": 32.0,
+   "rank": 794,
+   "storiesForecast": 1341,
+   "baselines": {
+    "persist": 32.0,
+    "volols": 0.8862135948193754,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-04/pred_2026-10-05_h1_K0.parquet",
+   "sha256": "45c05dceca8e30ee736feca09ca0956ead659dd21923b587d61d5a0571dccbb0",
+   "row": {
+    "narrativeKey": "US:4aefdbbe65da365b"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-04/pred_2026-10-06_h2_K0.parquet",
+   "sha256": "a39d5c6bcc42b7f41043e2bc918952c95159ee37143194e938d358f3f6a53383",
+   "row": {
+    "narrativeKey": "US:4aefdbbe65da365b"
+   },
+   "models": "every model"
+  }
+ ]
+}
