@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:4b85ab68972db051",
+ "title": "La Granja VIP MX and Wanda-related social chatter",
+ "optionId": "S2-04",
+ "seat": "S2",
+ "seatName": "continuation",
+ "model": "none: the origin day's most repeated posts, fixed chances by rank",
+ "sentence": "Alito applauds Washington's blow against the prosecutor investigating Cerimedo and the PRI leader stated he will continue using international instances to denounce attacks on democracy in Mexico.",
+ "sentenceIs": "a paraphrase of a real post from the origin day; the post itself stays private",
+ "chance": 0.4,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/4b85ab68972db051/S2-04.json",
+  "sha256": "987c3dc2f1718ce76c0ffa3e9354a51407fab2fc127550c99dd11dbcc27cc5ad",
+  "commit": "ff8166790186095e98e52f72c04206562445098d"
+ }
+}
