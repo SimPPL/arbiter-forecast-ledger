@@ -1,0 +1,23 @@
+{
+ "unit": "predicted post",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:d04cf569b99b712d",
+ "title": "Virginia Tech–Pitt matchup draws college football betting picks",
+ "optionId": "S3-04",
+ "seat": "S3",
+ "seatName": "narrative summary",
+ "model": "google/gemma-4-31b-it",
+ "sentence": "Ethan Grunkemeyer had a great game with 434 passing yards and 3 touchdowns.",
+ "sentenceIs": "written by the model",
+ "chance": 0.9,
+ "redacted": 0,
+ "personaRef": null,
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/posts/d04cf569b99b712d/S3-04.json",
+  "sha256": "d589fc0ca6a4b524a1588c01d4d7dc67ef5a3fc1afd5461a6ae06f75efae50b7",
+  "commit": "b62ee69d25e6e0664dc68fd76e9fd7c475c03e62"
+ }
+}
