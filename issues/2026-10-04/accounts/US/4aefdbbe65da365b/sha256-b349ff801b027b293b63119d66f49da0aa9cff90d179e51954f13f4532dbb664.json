@@ -1,0 +1,28 @@
+{
+ "unit": "account forecast",
+ "issueDay": "2026-10-04",
+ "targetDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:4aefdbbe65da365b",
+ "title": "Broncos-Rams Game Sparks Debate Over Coaching and Key Plays",
+ "accountRef": "sha256:b349ff801b027b293b63119d66f49da0aa9cff90d179e51954f13f4532dbb664",
+ "public": false,
+ "namedBecause": null,
+ "chances": {
+  "W1": 0.042225,
+  "W2": null,
+  "W3": null
+ },
+ "listRanks": {
+  "W1": 8,
+  "W2": null,
+  "W3": null
+ },
+ "accountRefRule": "the handle for an account that passes PublicAccounts.decide at the origin; otherwise sha256(lower(handle) + \":\" + salt), with one salt per issue kept only in the private repo",
+ "derivedFrom": {
+  "repo": "arbiter-prediction-prereg (private)",
+  "file": "issues/2026-10-04/units/accounts/4aefdbbe65da365b/sha256-b349ff801b027b293b63119d66f49da0aa9cff90d179e51954f13f4532dbb664.json",
+  "sha256": "95df4fda8af7e6e33723f3ae2abb036586634bec99b2b480f169b0ab6cf6b907",
+  "commit": "9c6e8ded08c91a2e0e2d940d7c53adc0ec429305"
+ }
+}
