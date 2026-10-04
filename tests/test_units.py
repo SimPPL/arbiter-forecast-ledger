@@ -389,6 +389,27 @@ class IssueUnits(Fixture):
         with self.assertRaises(EX.Refused):
             EX.commitUnits(self.ledger, [(path, u2, msg)])
 
+    def test_added_selection_reason_is_skipped_not_refused(self) -> None:
+        """A committed unit that differs only in why it was selected is left as committed: no rewrite, no refusal.
+
+        The FWD-TWEETS-1 keys join the selection after the private issue lands, which adds a reason to units
+        already published that morning. The forecast is unchanged, so the unit stands and the run goes on.
+        """
+        units = self.publishIssue()
+        n = int(sh(self.ledger, 'rev-list', '--count', 'HEAD'))
+        path, u, msg = units[4]
+        before = open(os.path.join(self.ledger, path), encoding='utf-8').read()
+        u2 = json.loads(json.dumps(u))
+        u2['selectedBecause'] = list(u2.get('selectedBecause', [])) + ['FWD-TWEETS-1 key']
+        self.assertEqual(EX.commitUnits(self.ledger, [(path, u2, msg)]), 0)
+        self.assertEqual(int(sh(self.ledger, 'rev-list', '--count', 'HEAD')), n)
+        self.assertEqual(open(os.path.join(self.ledger, path), encoding='utf-8').read(), before)
+        # a changed number with a changed reason is still a different forecast and still refuses
+        u3 = json.loads(json.dumps(u2))
+        u3['horizons']['D+1']['posts'] = 1.0
+        with self.assertRaises(EX.Refused):
+            EX.commitUnits(self.ledger, [(path, u3, msg)])
+
     def test_manifest_ignores_unit_layer(self) -> None:
         """MANIFEST.json checks leave the unit layer to UNITS.json."""
         self.assertTrue(V.isUnitLayer('narratives/US/sports/a.json'))
