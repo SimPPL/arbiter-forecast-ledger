@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-04",
+ "region": "US",
+ "arbiterKey": "US:93ad5bf8ba2e1cd3",
+ "title": "Legal and political battles over voter eligibility and election rules",
+ "category": "politics",
+ "real": {
+  "posts": 4,
+  "rank": 338,
+  "storiesWithPost": 482
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-04",
+    "lag": 2,
+    "posts": 5.011390267459995,
+    "lo80": 0.0,
+    "hi80": 47.72796943275255,
+    "pAnyPost": 0.4094202898550725,
+    "pTop10": null,
+    "asHeldLatestDay": 231.0,
+    "rank": 56,
+    "storiesForecast": 1190,
+    "baselines": {
+     "persist": 231.0,
+     "volols": 2.53178921836337,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 4,
+   "logError": 0.18421813506184992,
+   "brierAnyPost": 0.34878439403486655,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 231.0,
+     "logError": 3.8372994592322094
+    },
+    "volols": {
+     "posts": 2.53178921836337,
+     "logError": 0.34763330917323665
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 1.6094379124341003
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "narrativeKey": "US:93ad5bf8ba2e1cd3"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
