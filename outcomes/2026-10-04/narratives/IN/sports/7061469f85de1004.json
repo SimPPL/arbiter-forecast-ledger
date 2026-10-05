@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-04",
+ "region": "IN",
+ "arbiterKey": "IN:7061469f85de1004",
+ "title": "Negreira case fuels Real Madrid–Barcelona rivalry",
+ "category": "sports",
+ "real": {
+  "posts": 5,
+  "rank": 266,
+  "storiesWithPost": 437
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-04",
+    "lag": 2,
+    "posts": 4.847331929059465,
+    "lo80": 0.0,
+    "hi80": 46.39812236858132,
+    "pAnyPost": 0.4003623188405797,
+    "pTop10": null,
+    "asHeldLatestDay": 456.0,
+    "rank": 45,
+    "storiesForecast": 1371,
+    "baselines": {
+     "persist": 456.0,
+     "volols": 4.296538827383414,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 5,
+   "logError": 0.0257739925232916,
+   "brierAnyPost": 0.35956534866624656,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 456.0,
+     "logError": 4.332923921666151
+    },
+    "volols": {
+     "posts": 4.296538827383414,
+     "logError": 0.1247059134380426
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 1.791759469228055
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "narrativeKey": "IN:7061469f85de1004"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
