@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-04",
+ "region": "IN",
+ "arbiterKey": "IN:a6624bbb553d35c6",
+ "title": "Reports of Ronaldo’s rift with Portugal coach Jorge Jesus",
+ "category": "sports",
+ "real": {
+  "posts": 2031,
+  "rank": 2,
+  "storiesWithPost": 437
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-04",
+    "lag": 2,
+    "posts": 35.780488730012095,
+    "lo80": 0.03303728271184637,
+    "hi80": 485.30196335663203,
+    "pAnyPost": 0.7,
+    "pTop10": null,
+    "asHeldLatestDay": 1216.0,
+    "rank": 1,
+    "storiesForecast": 1371,
+    "baselines": {
+     "persist": 1216.0,
+     "volols": 5.765972697206351,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 2031,
+   "logError": 4.011808301681931,
+   "brierAnyPost": 0.09000000000000002,
+   "inRange80": false,
+   "baselines": {
+    "persist": {
+     "posts": 1216.0,
+     "logError": 0.512631715710846
+    },
+    "volols": {
+     "posts": 5.765972697206351,
+     "logError": 5.704869773641176
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 7.616775808698373
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "narrativeKey": "IN:a6624bbb553d35c6"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
