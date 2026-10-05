@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-04",
+ "region": "US",
+ "arbiterKey": "US:d0a7d81bc8bad12f",
+ "title": "Sneaker deals and new Nike signature styles",
+ "category": "business",
+ "real": {
+  "posts": 0,
+  "rank": null,
+  "storiesWithPost": 482
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-04",
+    "lag": 2,
+    "posts": 12.433131022010022,
+    "lo80": 0.7658140749579565,
+    "hi80": 107.88815543550474,
+    "pAnyPost": 0.5597826086956521,
+    "pTop10": null,
+    "asHeldLatestDay": 963.0,
+    "rank": 12,
+    "storiesForecast": 1190,
+    "baselines": {
+     "persist": 963.0,
+     "volols": 3.7727833259076053,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 0,
+   "logError": 2.5977241197748424,
+   "brierAnyPost": 0.31335656899810954,
+   "inRange80": false,
+   "baselines": {
+    "persist": {
+     "posts": 963.0,
+     "logError": 6.871091294610546
+    },
+    "volols": {
+     "posts": 3.7727833259076053,
+     "logError": 1.5629296412061209
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 0.0
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "narrativeKey": "US:d0a7d81bc8bad12f"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
