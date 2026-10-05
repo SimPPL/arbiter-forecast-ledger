@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-04",
+ "region": "US",
+ "arbiterKey": "US:934aed0b68b62d85",
+ "title": "Nigeria’s Independence Day and national politics",
+ "category": "politics",
+ "real": {
+  "posts": 65,
+  "rank": 152,
+  "storiesWithPost": 482
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-04",
+    "lag": 2,
+    "posts": 16.88666020516371,
+    "lo80": 1.3512401012479969,
+    "hi80": 143.98819623293562,
+    "pAnyPost": 0.6014492753623188,
+    "pTop10": null,
+    "asHeldLatestDay": 931.0,
+    "rank": 6,
+    "storiesForecast": 1190,
+    "baselines": {
+     "persist": 931.0,
+     "volols": 3.7388415384879106,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 65,
+   "logError": 1.305599546944026,
+   "brierAnyPost": 0.15884268010922076,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 931.0,
+     "logError": 2.6476780726591658
+    },
+    "volols": {
+     "posts": 3.7388415384879106,
+     "logError": 2.6338620373531594
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 4.189654742026425
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "narrativeKey": "US:934aed0b68b62d85"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
