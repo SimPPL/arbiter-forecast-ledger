@@ -1,0 +1,26 @@
+{
+ "kind": "issue",
+ "issueDay": "2026-10-05",
+ "researchFolder": "cleanroom/2026-10-01-tomorrow-forward/forecasts/issue-2026-10-05",
+ "researchFreezeCommit": "c0921049c799a468ec3eb699d602a777050ed688",
+ "researchHead": "c793844dc7743ffe40a1e8242837541a703266e0",
+ "freezeSha256": "b94833ee62ba34f9998b00219ed76fc044a8a278c15b3659a68e5635f7e67409",
+ "frozenFilesNotPublished": {
+  "inputs/build_stats.json": "d0d5f4db14d58b1d718f337e99ea67eed29e7b0ed4816a5c6706de68ebead563",
+  "inputs/nk_meta.parquet": "828d52036125ecf612116f9824d73d6e9a40d191e9b551e04f88d85e4e5636a9",
+  "inputs/vint.parquet": "a8a1f728ef1d692d9ad4374f607cb977de63633b01199ae3a89e5bacced99352"
+ },
+ "exportedUtc": "2026-10-05T08:04:36Z",
+ "files": {
+  "FREEZE.json": "b94833ee62ba34f9998b00219ed76fc044a8a278c15b3659a68e5635f7e67409",
+  "FREEZE.json.ots": "dacc415fe0cd2cafbff92e5e3451a5afa5372dea851a859d6c9f9cefd9c009f5",
+  "README.md": "ec79961acae60fc9f464ca17b7b8b60b8a567a3fba27dbd3bcd57662d522129f",
+  "forecast.json": "a344eff883ce838a4bed5d1c4e30f5f4dabf431896633270fb058cbb07eb916e",
+  "forecast_2026-10-06.json": "809d58367b0490e5de84d98df7a667e43a8628813e596667e494a48eedd6828c",
+  "forecast_2026-10-07.json": "f96f6d9e83e3e788303048a9839476ed4d2d491378ea7cde8f855b9554fbfe7b",
+  "pred_2026-10-06_h1_K0.parquet": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+  "pred_2026-10-06_h1_K6.parquet": "30f2fd916ce004823fa1c17b574184fc632d4c037bda528b2ab2d8f291c8c874",
+  "pred_2026-10-07_h2_K0.parquet": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+  "pred_2026-10-07_h2_K6.parquet": "f7deed845b4a6a441728779e9a2321f3da4b040e2433211c18459dfc03d80f32"
+ }
+}

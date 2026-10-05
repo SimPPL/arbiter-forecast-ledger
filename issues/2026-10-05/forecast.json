@@ -1,0 +1,416 @@
+{
+ "issueDay": "2026-10-05",
+ "frozenUtc": "2026-10-05T08:03:35Z",
+ "frozenIst": "2026-10-05T13:33:35+05:30",
+ "origin": "2026-10-04",
+ "model": "gbm_med",
+ "unit": "An Arbiter story (narrative key) on X, regions US and IN. \"posts\" is the forecast count of posts published on the target day (UTC) that Arbiter will assign to the story; lo and hi bound the 80 percent range.",
+ "note": null,
+ "source": {
+  "repo": "narrative-reach-sim (private research repo)",
+  "folder": "cleanroom/2026-10-01-tomorrow-forward/forecasts/issue-2026-10-05",
+  "freezeCommit": "c0921049c799a468ec3eb699d602a777050ed688"
+ },
+ "horizons": [
+  {
+   "horizonDays": 1,
+   "horizonCountedFrom": "issue day",
+   "lagFromOriginDays": 2,
+   "targetDay": "2026-10-06",
+   "targetStartsUtc": "2026-10-06T00:00:00Z",
+   "frozenBeforeTargetStart": true,
+   "regions": {
+    "IN": {
+     "liveStories": 1419,
+     "top": [
+      {
+       "rank": 1,
+       "title": "Reports of a confrontation aboard a FlyDubai flight",
+       "arbiterKey": "IN:f1bb9ee3c01de292",
+       "posts": 25.0,
+       "lo": 0.0,
+       "hi": 368.6,
+       "chance": "likely"
+      },
+      {
+       "rank": 2,
+       "title": "Jantar Mantar Protest Against Gyanesh Kumar; Neha Bora Detained",
+       "arbiterKey": "IN:73639a7b0b1fa21d",
+       "posts": 14.3,
+       "lo": 1.3,
+       "hi": 250.3,
+       "chance": "likely"
+      },
+      {
+       "rank": 3,
+       "title": "Drishyam’s Vijay Salgaonkar Returns for a Final Showdown",
+       "arbiterKey": "IN:c0803a0c1ae0f99e",
+       "posts": 13.9,
+       "lo": 1.2,
+       "hi": 244.5,
+       "chance": "likely"
+      },
+      {
+       "rank": 4,
+       "title": "Reports of Ronaldo’s rift with Portugal coach Jorge Jesus",
+       "arbiterKey": "IN:a6624bbb553d35c6",
+       "posts": 13.7,
+       "lo": 1.2,
+       "hi": 240.8,
+       "chance": "likely"
+      },
+      {
+       "rank": 5,
+       "title": "Journalist Alleges Misconduct by Delhi Police at Jantar Mantar",
+       "arbiterKey": "IN:a6a15bef5624c6bd",
+       "posts": 12.4,
+       "lo": 1.0,
+       "hi": 219.8,
+       "chance": "likely"
+      },
+      {
+       "rank": 6,
+       "title": "Suicide bombing at police checkpoint in Dera Ismail Khan",
+       "arbiterKey": "IN:c9432950ff855e24",
+       "posts": 12.0,
+       "lo": 0.9,
+       "hi": 212.1,
+       "chance": "likely"
+      },
+      {
+       "rank": 7,
+       "title": "India beats Pakistan to win Asian Games cricket gold",
+       "arbiterKey": "IN:cb84705f2a3518f0",
+       "posts": 11.2,
+       "lo": 0.8,
+       "hi": 198.9,
+       "chance": "likely"
+      },
+      {
+       "rank": 8,
+       "title": "2027 Cricket World Cup Groups and Schedule Revealed",
+       "arbiterKey": "IN:592a2023abfdec51",
+       "posts": 10.5,
+       "lo": 0.7,
+       "hi": 188.8,
+       "chance": "likely"
+      },
+      {
+       "rank": 9,
+       "title": "Debate over Gaza war, famine claims and regional actors",
+       "arbiterKey": "IN:d0e1efd015a7e06f",
+       "posts": 10.5,
+       "lo": 0.7,
+       "hi": 188.7,
+       "chance": "likely"
+      },
+      {
+       "rank": 10,
+       "title": "Tamil Film Releases Draw Fan Buzz and Mixed Expectations",
+       "arbiterKey": "IN:20e89d6f58021950",
+       "posts": 10.0,
+       "lo": 0.6,
+       "hi": 179.4,
+       "chance": "likely"
+      }
+     ]
+    },
+    "US": {
+     "liveStories": 1262,
+     "top": [
+      {
+       "rank": 1,
+       "title": "Debate over U.S. proposals to Iran and the continuation of the war",
+       "arbiterKey": "US:aa7728112268940a",
+       "posts": 16.9,
+       "lo": 1.7,
+       "hi": 293.6,
+       "chance": "likely"
+      },
+      {
+       "rank": 2,
+       "title": "Fans promote Yeonjun’s Miu Miu appearances",
+       "arbiterKey": "US:6ea1156fd6a1d17b",
+       "posts": 14.7,
+       "lo": 1.4,
+       "hi": 257.5,
+       "chance": "likely"
+      },
+      {
+       "rank": 3,
+       "title": "Nigeria’s Independence Day and national politics",
+       "arbiterKey": "US:934aed0b68b62d85",
+       "posts": 14.5,
+       "lo": 1.3,
+       "hi": 253.6,
+       "chance": "likely"
+      },
+      {
+       "rank": 4,
+       "title": "Baseball Rivalries and Series Matchups",
+       "arbiterKey": "US:0846f85d2095b37c",
+       "posts": 13.5,
+       "lo": 1.2,
+       "hi": 237.4,
+       "chance": "likely"
+      },
+      {
+       "rank": 5,
+       "title": "Reacciones al partido entre Necaxa y América",
+       "arbiterKey": "US:e93c4ce88c2ebd52",
+       "posts": 11.2,
+       "lo": 0.8,
+       "hi": 199.4,
+       "chance": "likely"
+      },
+      {
+       "rank": 6,
+       "title": "Formind’s RYET Commercial Updates Draw Investor Attention",
+       "arbiterKey": "US:6ac3e2825463b554",
+       "posts": 10.1,
+       "lo": 0.7,
+       "hi": 181.4,
+       "chance": "likely"
+      },
+      {
+       "rank": 7,
+       "title": "Trump Announces U.S. Push for AI “Superintelligence”",
+       "arbiterKey": "US:84ef5ba95d676c36",
+       "posts": 9.5,
+       "lo": 0.6,
+       "hi": 171.4,
+       "chance": "likely"
+      },
+      {
+       "rank": 8,
+       "title": "Max Verstappen takes pole at Sepang",
+       "arbiterKey": "US:3036285ba7ac1d01",
+       "posts": 9.5,
+       "lo": 0.6,
+       "hi": 171.1,
+       "chance": "likely"
+      },
+      {
+       "rank": 9,
+       "title": "Arike Ogunbowale’s 45-point game ties the Wings’ series",
+       "arbiterKey": "US:d948630f722b5165",
+       "posts": 9.1,
+       "lo": 0.5,
+       "hi": 165.2,
+       "chance": "likely"
+      },
+      {
+       "rank": 10,
+       "title": "Nike Earnings Beat EPS Estimates but Miss Revenue Forecasts",
+       "arbiterKey": "US:9100c463bfe0b461",
+       "posts": 9.0,
+       "lo": 0.5,
+       "hi": 164.2,
+       "chance": "likely"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "horizonDays": 2,
+   "horizonCountedFrom": "issue day",
+   "lagFromOriginDays": 3,
+   "targetDay": "2026-10-07",
+   "targetStartsUtc": "2026-10-07T00:00:00Z",
+   "frozenBeforeTargetStart": true,
+   "regions": {
+    "IN": {
+     "liveStories": 1419,
+     "top": [
+      {
+       "rank": 1,
+       "title": "Jantar Mantar Protest Against Gyanesh Kumar; Neha Bora Detained",
+       "arbiterKey": "IN:73639a7b0b1fa21d",
+       "posts": 9.0,
+       "lo": 0.4,
+       "hi": 65.2,
+       "chance": "possible"
+      },
+      {
+       "rank": 2,
+       "title": "Journalist Alleges Misconduct by Delhi Police at Jantar Mantar",
+       "arbiterKey": "IN:a6a15bef5624c6bd",
+       "posts": 5.6,
+       "lo": 0.0,
+       "hi": 42.5,
+       "chance": "possible"
+      },
+      {
+       "rank": 3,
+       "title": "India’s women win Asian Games hockey gold and qualify for LA Olympics",
+       "arbiterKey": "IN:d7b27e1023fd2e52",
+       "posts": 5.4,
+       "lo": 0.0,
+       "hi": 41.5,
+       "chance": "possible"
+      },
+      {
+       "rank": 4,
+       "title": "India beats Pakistan to win Asian Games cricket gold",
+       "arbiterKey": "IN:cb84705f2a3518f0",
+       "posts": 4.6,
+       "lo": 0.0,
+       "hi": 36.0,
+       "chance": "possible"
+      },
+      {
+       "rank": 5,
+       "title": "2027 Cricket World Cup Groups and Schedule Revealed",
+       "arbiterKey": "IN:592a2023abfdec51",
+       "posts": 3.9,
+       "lo": 0.0,
+       "hi": 31.7,
+       "chance": "possible"
+      },
+      {
+       "rank": 6,
+       "title": "Posts promote Sant Rampal Ji Maharaj’s teachings and devotion",
+       "arbiterKey": "IN:4e525bc6bdeb84a3",
+       "posts": 3.8,
+       "lo": 0.0,
+       "hi": 30.9,
+       "chance": "possible"
+      },
+      {
+       "rank": 7,
+       "title": "Drishyam’s Vijay Salgaonkar Returns for a Final Showdown",
+       "arbiterKey": "IN:c0803a0c1ae0f99e",
+       "posts": 3.8,
+       "lo": 0.0,
+       "hi": 30.4,
+       "chance": "possible"
+      },
+      {
+       "rank": 8,
+       "title": "Wicknell Chivayo Reported Dead in Helicopter Crash",
+       "arbiterKey": "IN:7f75b62ab30339fa",
+       "posts": 3.2,
+       "lo": 0.0,
+       "hi": 26.8,
+       "chance": "possible"
+      },
+      {
+       "rank": 9,
+       "title": "Protest over Election Chief at Mumbai’s Shivaji Park",
+       "arbiterKey": "IN:eca699ff3823b127",
+       "posts": 3.0,
+       "lo": 0.3,
+       "hi": 29.1,
+       "chance": "possible"
+      },
+      {
+       "rank": 10,
+       "title": "Sant Rampal Ji Announces Scripture-Based Religious Debate",
+       "arbiterKey": "IN:c40333e9ea4bfd8e",
+       "posts": 2.9,
+       "lo": 0.3,
+       "hi": 28.6,
+       "chance": "possible"
+      }
+     ]
+    },
+    "US": {
+     "liveStories": 1262,
+     "top": [
+      {
+       "rank": 1,
+       "title": "Nike Earnings Beat EPS Estimates but Miss Revenue Forecasts",
+       "arbiterKey": "US:9100c463bfe0b461",
+       "posts": 5.3,
+       "lo": 0.0,
+       "hi": 40.8,
+       "chance": "possible"
+      },
+      {
+       "rank": 2,
+       "title": "Max Verstappen takes pole at Sepang",
+       "arbiterKey": "US:3036285ba7ac1d01",
+       "posts": 4.8,
+       "lo": 0.0,
+       "hi": 37.4,
+       "chance": "possible"
+      },
+      {
+       "rank": 3,
+       "title": "Football player matchups and comparisons",
+       "arbiterKey": "US:cd8bfe0c4a805ddc",
+       "posts": 4.5,
+       "lo": 0.0,
+       "hi": 35.3,
+       "chance": "possible"
+      },
+      {
+       "rank": 4,
+       "title": "Fans promote Yeonjun’s Miu Miu appearances",
+       "arbiterKey": "US:6ea1156fd6a1d17b",
+       "posts": 4.1,
+       "lo": 0.0,
+       "hi": 32.5,
+       "chance": "possible"
+      },
+      {
+       "rank": 5,
+       "title": "Red Wings face Rangers in season opener",
+       "arbiterKey": "US:f471567177c3a480",
+       "posts": 3.8,
+       "lo": 0.0,
+       "hi": 31.0,
+       "chance": "possible"
+      },
+      {
+       "rank": 6,
+       "title": "Virginia Tech–Pitt matchup draws college football betting picks",
+       "arbiterKey": "US:d04cf569b99b712d",
+       "posts": 3.8,
+       "lo": 0.0,
+       "hi": 30.8,
+       "chance": "possible"
+      },
+      {
+       "rank": 7,
+       "title": "Debate over South Africa’s batting order and ODI cricket",
+       "arbiterKey": "US:2ff7376ab6042774",
+       "posts": 3.8,
+       "lo": 0.0,
+       "hi": 30.7,
+       "chance": "possible"
+      },
+      {
+       "rank": 8,
+       "title": "Alleged Altercation Involving Lucki and Carti’s Entourages at ComplexCon",
+       "arbiterKey": "US:7a084e67f74836a8",
+       "posts": 3.7,
+       "lo": 0.0,
+       "hi": 30.2,
+       "chance": "possible"
+      },
+      {
+       "rank": 9,
+       "title": "Nigeria’s Independence Day and national politics",
+       "arbiterKey": "US:934aed0b68b62d85",
+       "posts": 3.1,
+       "lo": 0.0,
+       "hi": 26.2,
+       "chance": "possible"
+      },
+      {
+       "rank": 10,
+       "title": "NFL reactions to Herbert, Burrow and Jaguars–Bengals games",
+       "arbiterKey": "US:711e36bca0eecd14",
+       "posts": 3.0,
+       "lo": 0.0,
+       "hi": 25.7,
+       "chance": "possible"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}
