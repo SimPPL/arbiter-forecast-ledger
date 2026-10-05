@@ -1,0 +1,82 @@
+{
+ "unit": "category outcome",
+ "day": "2026-10-04",
+ "region": "IN",
+ "category": "climate",
+ "real": {
+  "posts": 348,
+  "regionPosts": 45031,
+  "share": 0.007728009593391219
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet; real totals include stories that did not exist at the origin, so compare shares first",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "forecast": {
+    "posts": 13.462574477761148,
+    "share": 0.019168283008767866,
+    "regionPosts": 702.3359615257747,
+    "stories": 22
+   },
+   "realPostsOfMembers": 24.0,
+   "logError": 3.1835076799803415,
+   "shareError": 0.011440273415376647,
+   "baselines": {
+    "persist": {
+     "posts": 1143.0,
+     "share": 0.025816506301666892,
+     "logError": 1.1872142497373162,
+     "shareError": 0.018088496708275673
+    },
+    "volols": {
+     "posts": 14.675016533400747,
+     "share": 0.020744630073394346,
+     "logError": 3.1030037809215907,
+     "shareError": 0.013016620480003127
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null,
+     "logError": 5.855071922202427,
+     "shareError": null
+    }
+   },
+   "members": [
+    "IN:0142042f655e6915",
+    "IN:03b44193b162b362",
+    "IN:04aaa30f1ddf9b00",
+    "IN:148bf8649c798abb",
+    "IN:1d087b954b42700c",
+    "IN:3c24c4f1277b9686",
+    "IN:6cdae6bd0e81b7f9",
+    "IN:6cead2ac06fc9fae",
+    "IN:76be96842b79c56b",
+    "IN:852d2d6fa9f8d279",
+    "IN:9e6f3ae010950c60",
+    "IN:b6ab4dbca6dd0c37",
+    "IN:c40c0f03e564a19b",
+    "IN:cdbaf65b4bb87e1d",
+    "IN:d260a3b41312b5dc",
+    "IN:e065a66c3c59d649",
+    "IN:e6c4d155c844d2d6",
+    "IN:ef1e7059308bc416",
+    "IN:f6b3f8ee88b07b03",
+    "IN:f6e3ed1dc785d6c6",
+    "IN:f8c3c959fffe4d3d",
+    "IN:fc3e2783125f900c"
+   ],
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "region": "IN",
+     "narrativeKey": "members"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
