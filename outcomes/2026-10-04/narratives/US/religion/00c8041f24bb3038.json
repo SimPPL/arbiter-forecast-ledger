@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-04",
+ "region": "US",
+ "arbiterKey": "US:00c8041f24bb3038",
+ "title": "Pope Leo XIV on Catholic social teaching and AI",
+ "category": "religion",
+ "real": {
+  "posts": 7,
+  "rank": 290,
+  "storiesWithPost": 482
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-04",
+    "lag": 2,
+    "posts": 8.408512784611242,
+    "lo80": 0.2367693185056476,
+    "hi80": 75.26484107309693,
+    "pAnyPost": 0.4963768115942029,
+    "pTop10": null,
+    "asHeldLatestDay": 574.0,
+    "rank": 30,
+    "storiesForecast": 1190,
+    "baselines": {
+     "persist": 574.0,
+     "volols": 3.2788690726278324,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 7,
+   "logError": 0.162173353158094,
+   "brierAnyPost": 0.253636315900021,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 574.0,
+     "logError": 4.2749284991175145
+    },
+    "volols": {
+     "posts": 3.2788690726278324,
+     "logError": 0.6257528023697747
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 2.0794415416798357
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "narrativeKey": "US:00c8041f24bb3038"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
