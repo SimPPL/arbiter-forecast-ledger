@@ -5,9 +5,10 @@ Share of the region's posts in this Arbiter category: forecast (stories live at 
 | issue | target day | horizon | forecast share | real share | share error | yesterday's share error | forecast posts | real posts | log error | yesterday's count log error | every story dies log error | forecast | score |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 2026-10-02 | 2026-10-03 | D+1 | 4.0% | 4.5% | 0.6 points | 3.9 points | 21 | 2079 | 4.551 | 2.442 | 7.640 | - | [score fac7013](https://github.com/SimPPL/arbiter-forecast-ledger/commit/fac7013b78e97a1e8591c3c5d17fce5154c44182) |
+| 2026-10-03 | 2026-10-04 | D+1 | 3.4% | 4.8% | 1.4 points | 4.4 points | 24 | 2153 | 4.463 | 2.466 | 7.675 | - | [score 7fb5f15](https://github.com/SimPPL/arbiter-forecast-ledger/commit/7fb5f158ac36348739e88b46c219938b26c22c73) |
 | 2026-10-04 | 2026-10-05 | D+1 | 2.5% | - | - | - | 16 | - | - | - | - | [forecast 6d40a42](https://github.com/SimPPL/arbiter-forecast-ledger/commit/6d40a422871f1c2e1316217f63795819a43375db) | - |
 | 2026-10-04 | 2026-10-06 | D+2 | 1.7% | - | - | - | 3.6 | - | - | - | - | [forecast 6d40a42](https://github.com/SimPPL/arbiter-forecast-ledger/commit/6d40a422871f1c2e1316217f63795819a43375db) | - |
 | 2026-10-05 | 2026-10-06 | D+1 | 2.4% | - | - | - | 15 | - | - | - | - | [forecast 31a6c46](https://github.com/SimPPL/arbiter-forecast-ledger/commit/31a6c46a37d5a9958f81c1e57663123adcdad404) | - |
 | 2026-10-05 | 2026-10-07 | D+2 | 1.8% | - | - | - | 2.9 | - | - | - | - | [forecast 31a6c46](https://github.com/SimPPL/arbiter-forecast-ledger/commit/31a6c46a37d5a9958f81c1e57663123adcdad404) | - |
 
-Running means over 1 scored rows: share error 0.6 points against 3.9 points for yesterday's share; log error 4.551 against 2.442 for yesterday's count and 7.640 for every story dies.
+Running means over 2 scored rows: share error 1.0 points against 4.1 points for yesterday's share; log error 4.507 against 2.454 for yesterday's count and 7.658 for every story dies.

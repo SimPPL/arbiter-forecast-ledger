@@ -5,3 +5,4 @@
 | issue | target day | horizon | forecast posts | 80 percent range | chance of any post | real posts | log error | yesterday's count log error | real rank | forecast | score |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 2026-10-02 | 2026-10-03 | D+1 | 6.5 | [0.0, 46] | 0.46 | 0.0 | 2.010 | 7.797 | - | - | [score 73cb051](https://github.com/SimPPL/arbiter-forecast-ledger/commit/73cb051ab2b163776019b04bd79a963d6873cb62) |
+| 2026-10-03 | 2026-10-04 | D+1 | 12 | [0.7, 106] | 0.55 | 0.0 | 2.577 | 8.688 | - | - | [score bb12118](https://github.com/SimPPL/arbiter-forecast-ledger/commit/bb121180794d3676caae1a8814da708a76efcc68) |

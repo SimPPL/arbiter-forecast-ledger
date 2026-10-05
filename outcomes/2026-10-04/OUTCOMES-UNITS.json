@@ -1,0 +1,635 @@
+{
+ "day": "2026-10-04",
+ "kind": "outcome units",
+ "counts": {
+  "category": 24,
+  "narrative": 80
+ },
+ "units": [
+  {
+   "path": "outcomes/2026-10-04/categories/US/sports.json",
+   "unit": "category",
+   "sha256": "69ee0a7f5c328403333db05575f14473af202d89b071f67a0778cd1cb84c9b5e",
+   "commit": "00eb45f2d2d27a959f3c66fa293ed7ea303478f6"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/US/entertainment.json",
+   "unit": "category",
+   "sha256": "1e326510792cc95f8a048feae02d96d2d37ab6aafca1014e0ce29bd4f9c89ccb",
+   "commit": "60b36870bf07640ffffc5321d3e1e9067f8659e5"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/US/politics.json",
+   "unit": "category",
+   "sha256": "d42edf9ac6772a3450533b0a0246d6f7395c4f39a5e9e2a2611c07dc6d594e99",
+   "commit": "9e66203ad049b21ce5d74891e3e0650b15e0f151"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/US/culture.json",
+   "unit": "category",
+   "sha256": "3d0ea7f9fe89943fb078b012549ee522bfaf27a82fa1a4831aa9076975f34c82",
+   "commit": "d023d713878ae334197b2b508e8d46a9b80d43ca"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/US/technology.json",
+   "unit": "category",
+   "sha256": "e76e94a4124ea19e72f77ae52b0669158e5d62528d64b4fc252d82ac121e1eec",
+   "commit": "f9224df88012774e4318a785dd9e339e5839a348"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/US/religion.json",
+   "unit": "category",
+   "sha256": "c8b93d87273e0a0f25d6e69a8b49d45192db91c7a258723ae1b67f06321bfa9c",
+   "commit": "432ea387a9ba97a24daf10f9b7351edc8bfb9e0c"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/US/business.json",
+   "unit": "category",
+   "sha256": "f8a915ea4b81e7f8add718d8ebcd6c18651e5709210653e12ab524bdee857c17",
+   "commit": "4421024e0d575f8f7b42c3709b3051ae413299ab"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/US/finance.json",
+   "unit": "category",
+   "sha256": "1cb3a41bf3af5a936081e4ab9a660fb6963a29a0a2a4c94a4501567c975b20c2",
+   "commit": "09ab4dec247189c39e990695951dd2b154428c8f"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/US/other.json",
+   "unit": "category",
+   "sha256": "3c91cc5be2b60423638cf2703bf176ad316b95ee6b7a9af9bfbf5ce6140b18ff",
+   "commit": "31f8bd2e73450694b307682a23c90c65929053fa"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/US/climate.json",
+   "unit": "category",
+   "sha256": "72fc300241ca2e4d863b4cba912878a1cfb6fe54fccdd45fd08cd0bd3ff1fa58",
+   "commit": "54557ca5738222acba31a686f913a81521da1eff"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/US/healthcare.json",
+   "unit": "category",
+   "sha256": "39add439efb1b677dc47fc2f0b5ef1d9e472a7387e101fd284bb48e27cb4daef",
+   "commit": "d8b3c425ea6b4e628001f13850575781b0324a41"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/US/uncategorised.json",
+   "unit": "category",
+   "sha256": "e1c6caa0f8c9827635b5ae4103ddf3ac755c7a404bf3a4813d34dec680f18eff",
+   "commit": "14af3ebe21db07ba1611dffef3415099b35ea428"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/IN/entertainment.json",
+   "unit": "category",
+   "sha256": "636b341e7013df4589a378a275bf96c82c28db6a827b85b6d3a25ddc328b9297",
+   "commit": "ea93749ae8e09c9cb30ee0ca3d271306e6b2a6ff"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/IN/sports.json",
+   "unit": "category",
+   "sha256": "1fc7df45f953b4a9963946ee2d754db5e9a851381b8c1fb39f83b3f458e01fe0",
+   "commit": "6262159fac8ead86ca13c287374ea6011e88bf02"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/IN/politics.json",
+   "unit": "category",
+   "sha256": "a7f510dc460efdeb5809e29916668392b6dd2aea0724a51eefd21c0250fd05f3",
+   "commit": "5a05eb78e3d3ee9086e4ef2ffba9c129701ac864"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/IN/religion.json",
+   "unit": "category",
+   "sha256": "44f5ad18aea71b4635bf7f8038eaeeeab871dd346ef6bd545dbf3c1a3ae60974",
+   "commit": "29e1043e5543b331303af214d023dbb0bbff950c"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/IN/culture.json",
+   "unit": "category",
+   "sha256": "bd3c827c1f9f09608c5c2750e76e7ba36b3e64bb9d57c47616661444f19b3707",
+   "commit": "8b05b55aed7a6d0391b57cb70f97eccc221b5580"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/IN/finance.json",
+   "unit": "category",
+   "sha256": "5f70b52e25bf89cfaac31fede055c95baec0b5ff1917b941618498c0e092142b",
+   "commit": "7fb5f158ac36348739e88b46c219938b26c22c73"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/IN/business.json",
+   "unit": "category",
+   "sha256": "350953f84e95c4f874006bc8d762eb40810a1ea538eb4bee04b268ce806b74e5",
+   "commit": "eda79e27dd2c7330919f3b8449627b0203ea0101"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/IN/healthcare.json",
+   "unit": "category",
+   "sha256": "25234fcf9f65f3494239e96fb8f26e36692439b8011dd0cde9d1c45e7b56b740",
+   "commit": "8c2f6e6055a2ba66c92a2cb88b3820cad98612b5"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/IN/climate.json",
+   "unit": "category",
+   "sha256": "0ea517fedeac02995783b0b02ceaa07a43ffa4c3f5ad3511a2912b0938f819da",
+   "commit": "c50c1dba97f3153e0ed6fa21f3c3c5d746807aee"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/IN/other.json",
+   "unit": "category",
+   "sha256": "bf43496bc4bafa767a69eb17d18168ab19d6fb2bd27fffd0e14e1a22e8536aa7",
+   "commit": "b234d1fb24f26e16a050781efa9ab2dccc02da64"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/IN/technology.json",
+   "unit": "category",
+   "sha256": "29e9b74b0f9a84c1cf85991a918610605c75d9d2fae1bc72bae497cc00d5fb34",
+   "commit": "c1c44d85cb3d5e23381d2fd51ec6253f1d9e9036"
+  },
+  {
+   "path": "outcomes/2026-10-04/categories/IN/uncategorised.json",
+   "unit": "category",
+   "sha256": "8b0893556229f5dc82c2ed75e7edf79dae4a1f6388744cca80c30182161831d0",
+   "commit": "2aa9d06a9706bc4b85f72484b69037f13a2147e3"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/sports/4aefdbbe65da365b.json",
+   "unit": "narrative",
+   "sha256": "53b0326b2ccdf74a725d7be5b0010c0c26a37bc174c60eab3316dd88a3eea4bb",
+   "commit": "61624691d630a878d57bdd823b66047d338705b3"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/sports/c380cc30f2ca4f78.json",
+   "unit": "narrative",
+   "sha256": "7c26a7d0cef971d404ba0bb1deb673a38b274c1e2a64a2c476a4c3494c6a4390",
+   "commit": "5fd860de6b9ab613c66d5f8e6210f9c98b21d5c4"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/sports/912490d350a007f6.json",
+   "unit": "narrative",
+   "sha256": "55e96652d3da24919a839600c6de1abb1b230107593855b863933ee2cccdf66b",
+   "commit": "e9fd74e2bc5867a500508ca4ff05079802f7ff54"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/entertainment/6ea1156fd6a1d17b.json",
+   "unit": "narrative",
+   "sha256": "e92e886a45424c42e319ea141c5ac9c17636ef0077f12a8d174afcb0aa10b02c",
+   "commit": "995e8c47f7949eae6c4e150503f09d087e2ae26b"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/entertainment/e2f3d4fe605ce5ed.json",
+   "unit": "narrative",
+   "sha256": "bcbcf543be5d3bd19846723c2cdfc3f25524cfb0f23e532342a5eb13ea163c10",
+   "commit": "8a08a0ddb73a926023a9273bb169fba02ec6ac56"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/politics/611a8648542db4eb.json",
+   "unit": "narrative",
+   "sha256": "38df8cd3f30263d9eb2c0b826724f5b40fd9cdc7f93e6265ade2fc636ccec0ab",
+   "commit": "ddc84efd7075727ef2d58a59c5a6003245691e7f"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/politics/aa7728112268940a.json",
+   "unit": "narrative",
+   "sha256": "da6f51e26e0f4fb04f90692838998fd391d107928516bb3fa535a30ba581017f",
+   "commit": "1b2fe8c13ae457c01d8d9a05f1bd163fad538b70"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/sports/63bbdad0d08ec158.json",
+   "unit": "narrative",
+   "sha256": "58e697e5c695f5c12fec5388c86dffa40c135fd67af6deea6bec2f8ca235ab13",
+   "commit": "81989d2831fb3e537a9c2fe18b6df9bab63f8826"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/entertainment/92b7402a19461f1a.json",
+   "unit": "narrative",
+   "sha256": "958b3d73e0f2bd780b3c29e596b0dfe6248e5a0dac182d1cdec137e146810f0b",
+   "commit": "9bb8efb52228737f0e646c736562683333dea952"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/sports/5893068df1b13ea7.json",
+   "unit": "narrative",
+   "sha256": "57b39fbada2cef5d0e4965437f0be1d0ce90765e108f7f7ec8136f875954bf44",
+   "commit": "93d91356dfa9ffcf8845019804d67751c1fb05f2"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/politics/934aed0b68b62d85.json",
+   "unit": "narrative",
+   "sha256": "81abdc73295033aa3849b683104edbcee738bc059b9de753998a862bcaeedff4",
+   "commit": "0ed1c4532a0c0ba4043768d7e9dc45e893f0947e"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/technology/84ef5ba95d676c36.json",
+   "unit": "narrative",
+   "sha256": "9e96b6aa40a55ef82a9f14d1850a9a2e843774bba3852f6edf8f814fe77ea16a",
+   "commit": "3ae31853308937f34ba4dc037b8552dd6fc1cf06"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/politics/db3eed060beda220.json",
+   "unit": "narrative",
+   "sha256": "baf7d3fb8d2bc178b517e77de4ce125bafc24ace9267733348539adcf4234903",
+   "commit": "a5cbd8c00e885c5220463bc823e3b02eacc88f3d"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/entertainment/0098682eddd62915.json",
+   "unit": "narrative",
+   "sha256": "ea03407e5445eead84f89e8d40fe8ae1427d2bddb61e7f5ba63de03919a4a8a2",
+   "commit": "5367fe08e7d6e9b63f38fa880031871ad90325ab"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/technology/8e08b4b780af5b02.json",
+   "unit": "narrative",
+   "sha256": "ff8fb976843a14906cff923767afb608f6b2e9a9b4f52636a9844fa3c5092947",
+   "commit": "6e213382d83f7acc633371aed99fda31a0b2af45"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/sports/99434d89fde8b8da.json",
+   "unit": "narrative",
+   "sha256": "85c1e021112968734d88ceb9dd600e332a08e0c45db272510b9c585bb7f1265b",
+   "commit": "e434fb64a99ec7b9002df1a0e23a7e2e524ef371"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/finance/9100c463bfe0b461.json",
+   "unit": "narrative",
+   "sha256": "3a808d8acf248995c226cd678c4c4250297585bc30361ba7357e0ba563285b78",
+   "commit": "41e6e72ff5e8d7dd0b247e2b5004d10e71fbaf64"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/entertainment/5ee6da2ae3705abf.json",
+   "unit": "narrative",
+   "sha256": "dcda6ac6d945f1a3dc98ee6be3b709806dda93b4e79ec6ecffc07724ab8a43ed",
+   "commit": "817fbccff18bcfe52314cd2c4f36ec77ad1b4b7e"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/finance/16afd1546b5b3419.json",
+   "unit": "narrative",
+   "sha256": "9cfd4b21728be96eebffc9e50fd477228ebd18bd4d6a80851870dadc2f2a5c75",
+   "commit": "e624b5e11d5ac87511314514119d60088088258a"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/business/2de9bbe21103fdb7.json",
+   "unit": "narrative",
+   "sha256": "ae0930ce0a8bd55f405f0c0667dd4a7c43d21ea5feddfdb7d030bf910eeb715c",
+   "commit": "52f0d36bcb580a999cdeb964af48ce0b48fc9824"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/politics/e06e09c0dc3dedf8.json",
+   "unit": "narrative",
+   "sha256": "d1d69426eb7b6ef88bb626e9a66490bc7f40e409bad105601078971c0c0ef382",
+   "commit": "93dbed80665485d76aeff3c0cff9888ea4d0b31e"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/culture/6aefd8f0597da22f.json",
+   "unit": "narrative",
+   "sha256": "111228a5171417a217619ff9b23f9ad3f65e5ac118110e6a8e4882a71347c02b",
+   "commit": "fd137f489167015678dcf3ed3cde26f9cb46857f"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/politics/073b85204a463d60.json",
+   "unit": "narrative",
+   "sha256": "078f61a35086f31759ec84569122e49c23a5ed674a690e3b54dc20ca67a109db",
+   "commit": "82873962cf485291b68d54edb7860ff934939a2e"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/entertainment/2a0c197695d5603d.json",
+   "unit": "narrative",
+   "sha256": "e87acf0a7fc780d91295036909be79cbc907040a8cf179fe5f6c64e66828ebca",
+   "commit": "9bb2009cedd6e9beaaced714143d8152c8fde128"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/entertainment/72515ce02c92f5f5.json",
+   "unit": "narrative",
+   "sha256": "c788f56f7438bce91205138829628bd9020b2522f8976be8cb1dac539a9840b9",
+   "commit": "158a224e7b12a366e8efd09c6eb2c48cf487b88c"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/sports/7946a4b98658e7b3.json",
+   "unit": "narrative",
+   "sha256": "ce8548d3dae6bbd8b542b261e9b0f69302c6d6b718ac82f1308ff1deb59d0844",
+   "commit": "51a8d2577777f9611f70db417453a23294c5fa81"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/sports/dea26aee7b673155.json",
+   "unit": "narrative",
+   "sha256": "87163abd0c7c07710ff0ac49d03b06bf569cb63552d0d7b43ba8411218eea62a",
+   "commit": "3bb41022c9f151ff75834d3986684ddaa08bc750"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/entertainment/a7cce7dbf21897ad.json",
+   "unit": "narrative",
+   "sha256": "2ff7acf125936c32680dbcd9d2789cd4c88577c4f15f8876dc75670678ae414d",
+   "commit": "d3c98731f95fd62fe15997d42a2f2923944f54a2"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/healthcare/99f02684a5cc2582.json",
+   "unit": "narrative",
+   "sha256": "abaa323c1461c285eac8511e5fc55c9f82435f55d566600d1fe5a4606b4b8372",
+   "commit": "d8159d8f80b8507fafd5774f413b1cbcead9a17c"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/sports/e46eb99c98609d4e.json",
+   "unit": "narrative",
+   "sha256": "ddf64a7a535de7dfe362df9a30b7f0b367897a110e4e374d9171b6022f9695b3",
+   "commit": "4e9f7b72a44309f8e2ee29b9cbacff6cddde3bb4"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/entertainment/4b85ab68972db051.json",
+   "unit": "narrative",
+   "sha256": "81fd447fefc521f5b1f75e140a34dea9fc45b8d5667ecb8b7070ac28c4e79705",
+   "commit": "4c75be592939a120fc4c7bd3d41bff0ebe911927"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/politics/7af3145e1d87a48d.json",
+   "unit": "narrative",
+   "sha256": "283ee60218596945f2c203caf58dd3e753c0553a99807a7c0b5a9c351dbbd938",
+   "commit": "f116a57e3776184024cd0f50b0c6a14e1050f2a8"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/finance/6ac3e2825463b554.json",
+   "unit": "narrative",
+   "sha256": "1774fe398a8fc3696af8c431f17df5602479a3f5914aef4cfe8963db449fe049",
+   "commit": "3df7979245530c63c4a01d5c210e3b8b7b776f1d"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/entertainment/029e22ce0f2f2335.json",
+   "unit": "narrative",
+   "sha256": "ffbfc1deea6081c070e7815c9bac3ff96e97bba18556e3d202822ae7e23e9e9c",
+   "commit": "b5fc6f632696b351495bf23862ad1a8ee1e23bfb"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/religion/00c8041f24bb3038.json",
+   "unit": "narrative",
+   "sha256": "6895b5558f3a9d983995c86bba861dc0e7ba698bfa8047af75ed2963c72300d4",
+   "commit": "cfd5898ab3fb805b8eb27505ff4a51a63cfdd5b4"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/sports/adc37aaf897187be.json",
+   "unit": "narrative",
+   "sha256": "24c36c12a011e609b0e212cea7e3e1fa6e31b4dc5ddc4acf9bd1808a71703fb8",
+   "commit": "ceac95afb99a79192341958e3336003557b7673b"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/entertainment/017a24f564dbd018.json",
+   "unit": "narrative",
+   "sha256": "ed7123cd97655a08728ff573bec16852fb3bb0e93d25706d697ce172f19a616b",
+   "commit": "fba9e1d902def7a30417493c7473d72b08a23eac"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/politics/93ad5bf8ba2e1cd3.json",
+   "unit": "narrative",
+   "sha256": "207df485f72953f1be3c22812702f3818da58402b1d4c54187699929a7b1aedf",
+   "commit": "ef5457286c0a17927fd07eb03f7a4739a1e0e5e2"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/entertainment/7a6ae286eed11558.json",
+   "unit": "narrative",
+   "sha256": "3fbc1a6decf7811c59551deef8fe9d5254f16be99184c2f28567e087205ae467",
+   "commit": "1ec66fc124808afca7da4c89a24adf8e976810a9"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/finance/d98ba26e2ae2eb32.json",
+   "unit": "narrative",
+   "sha256": "620bf8049ae3302a90ac4da252489cfb4f1a412d3a764c2364cca5e86ab81558",
+   "commit": "5c3783f099c8171e4a2ae7f51bbc1df06c6a78cb"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/entertainment/a84a4cb3ef9e948a.json",
+   "unit": "narrative",
+   "sha256": "4a424d992dfd26103e64a78cee7318ee8f02dbd329a2f2006b7b94e6f905d43d",
+   "commit": "46879c0af7317a65b42eecddb637cd66bdcefd48"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/sports/9414a04a0f2a6f5d.json",
+   "unit": "narrative",
+   "sha256": "e603e01e7765b7564a1070c2f461e0ecd66fcb025fef2306dda8a26351231257",
+   "commit": "562de70c262f052a134c619b648117a1626a37f7"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/finance/977e42721988a89f.json",
+   "unit": "narrative",
+   "sha256": "cdccd21f47920598ecb7eebc523d04cf12f6f2bbd7c5c71123da2efa9fd5da53",
+   "commit": "4956cbbce477c3e48c262dc867ebe6a1c0f6b022"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/business/d0a7d81bc8bad12f.json",
+   "unit": "narrative",
+   "sha256": "fa70c34669ccab8ed65ccb7a1025b01e5e871139d9aaa723b3e7f5a61c6a3262",
+   "commit": "d56fdf3d83f32319bd925c57bf0df381b8218b4b"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/sports/cfc5a4ffc262e59f.json",
+   "unit": "narrative",
+   "sha256": "bc1afe9818b6da2e4aed929b557697ed662374c2bcb3a50733210f8b2d66ae6e",
+   "commit": "bb121180794d3676caae1a8814da708a76efcc68"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/sports/58d75c07166da141.json",
+   "unit": "narrative",
+   "sha256": "ca679859077c1615707efb22592111c0ea5f10bafe907f116417e3be1ffc3716",
+   "commit": "7415f49675b8006405afeec8a5eee63301279d5b"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/sports/9219ac6562e6dc15.json",
+   "unit": "narrative",
+   "sha256": "d28af114f5d5238158d276a864c61d87899ddb9b83cebab1e04a8cda7b318c2b",
+   "commit": "34ebb01892852e8adf23dc30a2539e845c14d4bf"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/entertainment/62a3497fb3eac692.json",
+   "unit": "narrative",
+   "sha256": "3f2ae4139f03b16a112874fdf213b3ae6b2f25e75bfc175496b634d5d4281321",
+   "commit": "94b0938ad2e15ad21465ba7ca2d6458b4d63858c"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/entertainment/09d5dd4f8d90ff7b.json",
+   "unit": "narrative",
+   "sha256": "19b32edee267704b9fa39b98a041a97632fb87dc8a37413568cf48f499654b92",
+   "commit": "75bfcd251d1beadb102d945f1a6709e380e01d67"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/sports/f8c9c4f92ff396e9.json",
+   "unit": "narrative",
+   "sha256": "a0c9cc254c18878a33d53245eafce044c631af98c86f78ceab55895a90718f00",
+   "commit": "8f8b8b1cd85679103be791d0d987112d53276152"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/culture/d0cae49b9255033f.json",
+   "unit": "narrative",
+   "sha256": "fb975fc6fdfd382f5fa67be6b6188c1f19c876263499a50dd6b5665af02c4861",
+   "commit": "52d00ff35404b749b61a08889d741ea2b6a3d894"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/culture/2d1328185301b293.json",
+   "unit": "narrative",
+   "sha256": "2074e2dd12810bee0457a856389d817a2e5ccd446d6b40f6f57fb39fcdd19d3c",
+   "commit": "656e24de14590c4db1a88294946cd5ebd94d6e06"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/sports/51a76f0eecbaab0e.json",
+   "unit": "narrative",
+   "sha256": "bfd9fa484b9773847650cd52818ac555589c65932d07a36171ca3ec188294200",
+   "commit": "381ea433e02ed737171fd257fb0aedfc9b86bc8b"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/sports/7239a4bf193ad657.json",
+   "unit": "narrative",
+   "sha256": "e104fda538a5f3d653968d9ba5b32b5d2d709e40b0bb6153c652f0105e23b45e",
+   "commit": "91ad939e58fe754bd586754eac8acf3d3038c783"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/sports/2fd796de893b2824.json",
+   "unit": "narrative",
+   "sha256": "e138a182b72196680bc3cdab03b65ff60b4bb8246714914dac9e312a380c1b5f",
+   "commit": "e8cb85290f9d50c4ddbeee68352eeea5bb5ba303"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/US/sports/1c02346cf87b2c28.json",
+   "unit": "narrative",
+   "sha256": "d967f4dd16e7fee91a69cd1f0d610688d25024c9304334660f58c2d3bfcc6b92",
+   "commit": "3bb290a670f62408dddab809f6cba93e2e630d9e"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/entertainment/80192404b362aaa9.json",
+   "unit": "narrative",
+   "sha256": "fac1504438f17427fa5185b9b9286251436be35d8e0561486ed083c8efda5a3b",
+   "commit": "ecbc240b7fc353723b4d28e801d61215c74d721f"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/sports/a6624bbb553d35c6.json",
+   "unit": "narrative",
+   "sha256": "1ac265ea2737d5c98fb68cb94f53bfabfe1ce25405bbf8eb0026df4c14f32e64",
+   "commit": "80a091ffab7b1040a31be801f13412ed5f9654f0"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/entertainment/f670094fbe29dc76.json",
+   "unit": "narrative",
+   "sha256": "fc6b32699a81949bdff819cd55244a31325897449823db8feb2cdae9c5acbfbc",
+   "commit": "39aed379f3d3a909596c264244ffb9968ef68cd9"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/religion/7e4ac68906339414.json",
+   "unit": "narrative",
+   "sha256": "cc2b83c3d987d83fe9cc232d0a6b18d9b2041387728f38761298b00dd0fcd942",
+   "commit": "df0d9549e8141332e83a163ad983df97811593ec"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/business/f1bb9ee3c01de292.json",
+   "unit": "narrative",
+   "sha256": "22dc38c36bfe46b6bc74891384efec1c137df58bd5b5f1ebd99bf9623bf6630b",
+   "commit": "e2d864d68cd86199de04bd5e558720b8d2376e47"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/sports/592a2023abfdec51.json",
+   "unit": "narrative",
+   "sha256": "698b7693ff70eb49d20414ae7a6b5de4b80d0dd4ecab9cf28dc8c6c4b43b9999",
+   "commit": "0a307cb8559a54d897ec32dcd494a6227128f15c"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/politics/1071ffd387d67b31.json",
+   "unit": "narrative",
+   "sha256": "003cf4689e74498d39b9b92d5aa56118f93f1b61ab03b1cbe21545a65358a8bf",
+   "commit": "da143ded186c7e4024ca5de8d1567134b67b8c69"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/entertainment/20e89d6f58021950.json",
+   "unit": "narrative",
+   "sha256": "569c75b90ee37c67aed7ef81fc82cba43984d97f681dc3c45da29365cab524f6",
+   "commit": "4f0dea08b176d6a6f1e6c098fd8b5dbf063d46c1"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/technology/e49590dfd5772e60.json",
+   "unit": "narrative",
+   "sha256": "cbc8730f3968cf8decedda100c7ffc94505bbbd89cac253fc3d4cc65ba3e84b5",
+   "commit": "a0cd0b7c7deb1b0b929f34a07af1563e9e42f8ed"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/business/7f75b62ab30339fa.json",
+   "unit": "narrative",
+   "sha256": "1ed133267db481135787b9dfcf75f7affcabd08ad9e9f807a16efb9eb587d646",
+   "commit": "3546a5c41cdefab651a0bd7757ca415c4407d902"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/technology/82998f737fc4f243.json",
+   "unit": "narrative",
+   "sha256": "a8cb236c451715d93ad1f51ded64cb418e8d82b29d4483a445cb73bfe096b594",
+   "commit": "9d7e89b649a1439d7e9d68e2a1aaef9911ea13f8"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/entertainment/c0803a0c1ae0f99e.json",
+   "unit": "narrative",
+   "sha256": "f2baf4e2b0b9249d45fb05d1e7ab19e46c5551cc7e72dc9e95de977fd890caf4",
+   "commit": "54abd89d652cce23b59782edf7885528827bee2f"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/healthcare/963a6b98b79c35bb.json",
+   "unit": "narrative",
+   "sha256": "f58a83e789a172f8a7263bffdad04c4185c7327d96edb2a336ff71d04607d073",
+   "commit": "b0c78f05413910e7ff58a31c1f4bd72664c24605"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/politics/eca699ff3823b127.json",
+   "unit": "narrative",
+   "sha256": "d8911fcb299a0b31a43576ad79131a68f90859e371105e7e6491c37f881e7d22",
+   "commit": "119524bdada02c695eee84042822e0e48413a750"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/business/66e2a3f70365bce2.json",
+   "unit": "narrative",
+   "sha256": "26b5bae23b4f9d7f390a2edfc6c28e9844cf633025ecc6fc1c43e1afefa860a7",
+   "commit": "8f0ac91abdaeaed6a0f646df21f29045bec83682"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/sports/7061469f85de1004.json",
+   "unit": "narrative",
+   "sha256": "34df2ad8decd8cfb3f4cfaffb9db58a1698e9d154befa482297f23703ea9ca03",
+   "commit": "f07465be6119a44d7a95a424fc8819db2b767c54"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/politics/bad8bef4cfde3074.json",
+   "unit": "narrative",
+   "sha256": "2e1c531cc9209a16ea1388ce472f15c9b406360c1cf564a53378efc67e75109f",
+   "commit": "8f0a024b927727c616dd19852c705aba69d5827b"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/climate/cdbaf65b4bb87e1d.json",
+   "unit": "narrative",
+   "sha256": "d165ba5b965d5fc748d5ad4b441dd4b92e28c564fda9683070fb46416754dc82",
+   "commit": "d4e0e5aafda9824d38ec2ee9d3a4588c8eb10825"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/politics/59054866f10a15f6.json",
+   "unit": "narrative",
+   "sha256": "e754f792cd249604b7957fe59f46324655940c115447a03b0d15cda553a192f9",
+   "commit": "2b0fa3bb82e96e7cbde60c04bba97738760730ad"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/culture/57ed7b9f042f4ce4.json",
+   "unit": "narrative",
+   "sha256": "f4369269602bdc0ae8eec359caa1d85fabecf74c0db2f04422c0c721346ad019",
+   "commit": "2e82fd10f57608d19e7b57956132555472482f49"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/politics/f3f57d88fea4f1a0.json",
+   "unit": "narrative",
+   "sha256": "909cb81fea2bb22aa229a19f3dfe1199cb9c71256d4265c54169a5e7b45e9c4d",
+   "commit": "26423fcb7c2130577bd109bfff135497688d4f27"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/sports/b92e0e9f19ef033c.json",
+   "unit": "narrative",
+   "sha256": "201e3151070089768875a54c176aa09779e954c424762a26703682cec2637753",
+   "commit": "414a07a5aaef8e55a7636fae2b1dec59f51e57b2"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/politics/bc0f504675d7e271.json",
+   "unit": "narrative",
+   "sha256": "e68d057f27d75a4bbcb8e27bf4f9c3c5b003e27ecd238348f5b51e3dd607ece4",
+   "commit": "6140eaab9eb9e003809606970952a7c901b129af"
+  },
+  {
+   "path": "outcomes/2026-10-04/narratives/IN/other/636f05f3345161f7.json",
+   "unit": "narrative",
+   "sha256": "0744b552367b559857c47c15ddccc48ff1003cf4444c7db90f8bc5b30909a485",
+   "commit": "ac8dd79a54bcac17891f7fc0b380bd8994022901"
+  }
+ ],
+ "note": "One commit per unit, in this order. The OpenTimestamps proof of this file shows every unit existed by its Bitcoin block time; the push record on GitHub is the second clock."
+}
