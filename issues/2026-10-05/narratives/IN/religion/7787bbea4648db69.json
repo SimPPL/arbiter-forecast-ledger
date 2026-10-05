@@ -1,0 +1,67 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-05",
+ "region": "IN",
+ "arbiterKey": "IN:7787bbea4648db69",
+ "title": "Sant Rampal Ji Maharaj’s Scriptural Debate Challenge",
+ "category": "religion",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "IN top 20 by the D+1 forecast"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 9.595543054571602,
+   "lo80": 0.5877447182099504,
+   "hi80": 173.2439428368737,
+   "pAnyPost": 0.6365280289330922,
+   "pTop10": null,
+   "asHeldLatestDay": 134.0,
+   "rank": 11,
+   "storiesForecast": 1419,
+   "baselines": {
+    "persist": 134.0,
+    "volols": 3.1039253024214606,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 1.8734317066900343,
+   "lo80": 0.0,
+   "hi80": 20.752861551196812,
+   "pAnyPost": 0.27531645569620256,
+   "pTop10": null,
+   "asHeldLatestDay": 134.0,
+   "rank": 27,
+   "storiesForecast": 1419,
+   "baselines": {
+    "persist": 134.0,
+    "volols": 1.9521670698881555,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "narrativeKey": "IN:7787bbea4648db69"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "narrativeKey": "IN:7787bbea4648db69"
+   },
+   "models": "every model"
+  }
+ ]
+}
