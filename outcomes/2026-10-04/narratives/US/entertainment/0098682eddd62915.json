@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-04",
+ "region": "US",
+ "arbiterKey": "US:0098682eddd62915",
+ "title": "Fortnite Halloween draws attention with horror character crossovers",
+ "category": "entertainment",
+ "real": {
+  "posts": 38,
+  "rank": 173,
+  "storiesWithPost": 482
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-04",
+    "lag": 2,
+    "posts": 6.77448250060354,
+    "lo80": 0.021972509803293298,
+    "hi80": 62.0194894674421,
+    "pAnyPost": 0.47101449275362317,
+    "pTop10": null,
+    "asHeldLatestDay": 37.0,
+    "rank": 45,
+    "storiesForecast": 1190,
+    "baselines": {
+     "persist": 37.0,
+     "volols": 1.4092823638032497,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 38,
+   "logError": 1.612714749687429,
+   "brierAnyPost": 0.27982566687670657,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 37.0,
+     "logError": 0.02597548640326064
+    },
+    "volols": {
+     "posts": 1.4092823638032497,
+     "logError": 2.784232717326167
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 3.6635616461296463
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "narrativeKey": "US:0098682eddd62915"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
