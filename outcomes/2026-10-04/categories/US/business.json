@@ -1,0 +1,77 @@
+{
+ "unit": "category outcome",
+ "day": "2026-10-04",
+ "region": "US",
+ "category": "business",
+ "real": {
+  "posts": 126,
+  "regionPosts": 88544,
+  "share": 0.001423021322732201
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet; real totals include stories that did not exist at the origin, so compare shares first",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "forecast": {
+    "posts": 34.7514478887106,
+    "share": 0.038522505880790536,
+    "regionPosts": 902.1076665222758,
+    "stories": 17
+   },
+   "realPostsOfMembers": 108.0,
+   "logError": 1.2675963177551797,
+   "shareError": 0.03709948455805834,
+   "baselines": {
+    "persist": {
+     "posts": 1327.0,
+     "share": 0.02053035460115106,
+     "logError": 2.3472422435777878,
+     "shareError": 0.019107333278418858
+    },
+    "volols": {
+     "posts": 13.047273620828841,
+     "share": 0.021613736259700925,
+     "logError": 2.2017587578482356,
+     "shareError": 0.020190714936968723
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null,
+     "logError": 4.844187086458591,
+     "shareError": null
+    }
+   },
+   "members": [
+    "US:293f5c95186a19b2",
+    "US:2de9bbe21103fdb7",
+    "US:37cf480a75ae7264",
+    "US:3c9fcd09c7e2963a",
+    "US:55d23cee1f48e980",
+    "US:6460fd549ee93239",
+    "US:6d80fbfdb9c2c51b",
+    "US:75fc98ead8321593",
+    "US:7b8d0c57e16dccce",
+    "US:7c1b3f83a806f329",
+    "US:a45db3184a2a17cf",
+    "US:a631264d1059b6db",
+    "US:c184d1dca6a937a7",
+    "US:cb5c64672e740e44",
+    "US:d0a7d81bc8bad12f",
+    "US:eeaeba1b66bf1061",
+    "US:f681718cf403b284"
+   ],
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "region": "US",
+     "narrativeKey": "members"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
