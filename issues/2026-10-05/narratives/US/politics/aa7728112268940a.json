@@ -1,0 +1,68 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:aa7728112268940a",
+ "title": "Debate over U.S. proposals to Iran and the continuation of the war",
+ "category": "politics",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "US top 50 by the D+1 forecast",
+  "published top 10 for 2026-10-06"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 16.91541354119669,
+   "lo80": 1.684629100941552,
+   "hi80": 293.61937692984475,
+   "pAnyPost": 0.7052441229656419,
+   "pTop10": null,
+   "asHeldLatestDay": 204.0,
+   "rank": 1,
+   "storiesForecast": 1262,
+   "baselines": {
+    "persist": 204.0,
+    "volols": 2.830652446907566,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 3.0168676159116523,
+   "lo80": 0.0,
+   "hi80": 25.5442316183753,
+   "pAnyPost": 0.36363636363636365,
+   "pTop10": null,
+   "asHeldLatestDay": 204.0,
+   "rank": 11,
+   "storiesForecast": 1262,
+   "baselines": {
+    "persist": 204.0,
+    "volols": 1.6415022821505574,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "narrativeKey": "US:aa7728112268940a"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "narrativeKey": "US:aa7728112268940a"
+   },
+   "models": "every model"
+  }
+ ]
+}
