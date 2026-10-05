@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-04",
+ "region": "US",
+ "arbiterKey": "US:7239a4bf193ad657",
+ "title": "Michael King dominates for the Padres",
+ "category": "sports",
+ "real": {
+  "posts": 0,
+  "rank": null,
+  "storiesWithPost": 482
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-04",
+    "lag": 2,
+    "posts": 6.063778762161493,
+    "lo80": 0.0,
+    "hi80": 56.2585675339573,
+    "pAnyPost": 0.4492753623188406,
+    "pTop10": null,
+    "asHeldLatestDay": 7.0,
+    "rank": 48,
+    "storiesForecast": 1190,
+    "baselines": {
+     "persist": 7.0,
+     "volols": 0.7331125900446683,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 0,
+   "logError": 1.9549801437513956,
+   "brierAnyPost": 0.20184835118672548,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 7.0,
+     "logError": 2.0794415416798357
+    },
+    "volols": {
+     "posts": 0.7331125900446683,
+     "logError": 0.5499189769120238
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 0.0
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "narrativeKey": "US:7239a4bf193ad657"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
