@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-04",
+ "region": "US",
+ "arbiterKey": "US:92b7402a19461f1a",
+ "title": "Juice=Juice’s 2026 “5ROOMS” Tour in Kyoto",
+ "category": "entertainment",
+ "real": {
+  "posts": 153,
+  "rank": 102,
+  "storiesWithPost": 482
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-04",
+    "lag": 2,
+    "posts": 8.802452518063596,
+    "lo80": 0.28855354698340024,
+    "hi80": 78.45809295593034,
+    "pAnyPost": 0.5072463768115942,
+    "pTop10": null,
+    "asHeldLatestDay": 80.0,
+    "rank": 26,
+    "storiesForecast": 1190,
+    "baselines": {
+     "persist": 80.0,
+     "volols": 1.8273463793637807,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 153,
+   "logError": 2.754319991100884,
+   "brierAnyPost": 0.24280613316530136,
+   "inRange80": false,
+   "baselines": {
+    "persist": {
+     "posts": 80.0,
+     "logError": 0.6425034477411904
+    },
+    "volols": {
+     "posts": 1.8273463793637807,
+     "logError": 3.997614005787293
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 5.0369526024136295
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "narrativeKey": "US:92b7402a19461f1a"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
