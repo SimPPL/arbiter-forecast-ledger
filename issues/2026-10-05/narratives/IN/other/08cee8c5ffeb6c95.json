@@ -1,0 +1,67 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-05",
+ "region": "IN",
+ "arbiterKey": "IN:08cee8c5ffeb6c95",
+ "title": "Swachhata Hi Seva 2026 Cleanliness Drive",
+ "category": "other",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "IN top 20 by the D+1 forecast"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 7.796886961847544,
+   "lo80": 0.3182156627957882,
+   "hi80": 143.6650031081939,
+   "pAnyPost": 0.6057866184448463,
+   "pTop10": null,
+   "asHeldLatestDay": 9.0,
+   "rank": 19,
+   "storiesForecast": 1419,
+   "baselines": {
+    "persist": 9.0,
+    "volols": 1.0827694451481287,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 1.1489592062439207,
+   "lo80": 0.0,
+   "hi80": 15.268356747006703,
+   "pAnyPost": 0.2257383966244726,
+   "pTop10": null,
+   "asHeldLatestDay": 9.0,
+   "rank": 39,
+   "storiesForecast": 1419,
+   "baselines": {
+    "persist": 9.0,
+    "volols": 0.7528041588593004,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "narrativeKey": "IN:08cee8c5ffeb6c95"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "narrativeKey": "IN:08cee8c5ffeb6c95"
+   },
+   "models": "every model"
+  }
+ ]
+}
