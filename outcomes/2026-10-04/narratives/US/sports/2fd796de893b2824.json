@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-04",
+ "region": "US",
+ "arbiterKey": "US:2fd796de893b2824",
+ "title": "Bo Nix draws attention during a primetime NFL game",
+ "category": "sports",
+ "real": {
+  "posts": 0,
+  "rank": null,
+  "storiesWithPost": 482
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-04",
+    "lag": 2,
+    "posts": 5.718613507239307,
+    "lo80": 0.0,
+    "hi80": 53.460678652554975,
+    "pAnyPost": 0.4347826086956522,
+    "pTop10": null,
+    "asHeldLatestDay": 32.0,
+    "rank": 49,
+    "storiesForecast": 1190,
+    "baselines": {
+     "persist": 32.0,
+     "volols": 1.3384849609547464,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 0,
+   "logError": 1.9048818099199882,
+   "brierAnyPost": 0.18903591682419663,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 32.0,
+     "logError": 3.4965075614664802
+    },
+    "volols": {
+     "posts": 1.3384849609547464,
+     "logError": 0.8495032670982309
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 0.0
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "narrativeKey": "US:2fd796de893b2824"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
