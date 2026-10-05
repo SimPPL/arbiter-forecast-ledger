@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-04",
+ "region": "US",
+ "arbiterKey": "US:e06e09c0dc3dedf8",
+ "title": "Tennessee Execution of Christa Pike Delayed by Court Stay",
+ "category": "politics",
+ "real": {
+  "posts": 23,
+  "rank": 196,
+  "storiesWithPost": 482
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-04",
+    "lag": 2,
+    "posts": 11.780467660143236,
+    "lo80": 0.6800200669411047,
+    "hi80": 102.59770531798813,
+    "pAnyPost": 0.5489130434782609,
+    "pTop10": null,
+    "asHeldLatestDay": 20.0,
+    "rank": 16,
+    "storiesForecast": 1190,
+    "baselines": {
+     "persist": 20.0,
+     "volols": 1.1253751721800822,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 23,
+   "logError": 0.6301357889426202,
+   "brierAnyPost": 0.20347944234404539,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 20.0,
+     "logError": 0.13353139262452274
+    },
+    "volols": {
+     "posts": 1.1253751721800822,
+     "logError": 2.4241054919408116
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 3.1780538303479458
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "narrativeKey": "US:e06e09c0dc3dedf8"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
