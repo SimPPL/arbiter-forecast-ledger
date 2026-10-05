@@ -1,0 +1,185 @@
+{
+ "unit": "category forecast",
+ "issueDay": "2026-10-05",
+ "region": "IN",
+ "category": "business",
+ "model": "gbm_med",
+ "members": [
+  "IN:0645ed89ab6644c0",
+  "IN:066ec47900167a74",
+  "IN:067a4c39633862f2",
+  "IN:07bb6db978d844a2",
+  "IN:0b11f13ae5842ef6",
+  "IN:0d76c9ee47553432",
+  "IN:0ee6934221f2cded",
+  "IN:10c0fb77b88bb82d",
+  "IN:166512d0f0cf16ec",
+  "IN:16a882953098c030",
+  "IN:178f85d275f76436",
+  "IN:1b4b8db8d5cea7cd",
+  "IN:1c9c21ca2c4e17ac",
+  "IN:202fe3ffa97b3998",
+  "IN:2083ec220be00904",
+  "IN:246836751409b510",
+  "IN:267f017619d63c71",
+  "IN:2a2d0344de759134",
+  "IN:2b7abfd1f9fceb46",
+  "IN:2c7a43ced03f494d",
+  "IN:2e1e823fd473bf0c",
+  "IN:3368522020e1f57c",
+  "IN:336f52470f6b9622",
+  "IN:33f30d541f46ee17",
+  "IN:39975601cb5d1427",
+  "IN:3d3dbc5be88611ca",
+  "IN:3d85f4e4e5038c62",
+  "IN:4291ed025f177f3f",
+  "IN:42afd5ce6eef9432",
+  "IN:43cde62cf1a75e3b",
+  "IN:43edcf60011069ce",
+  "IN:450ffe7ba5e07650",
+  "IN:4886d970333489ef",
+  "IN:48a5dd038d3e3bd6",
+  "IN:4be01d1296327f83",
+  "IN:55464d292f429bcc",
+  "IN:55f42ad4e86431a9",
+  "IN:57348570bda1a16f",
+  "IN:5ba4e1427e321657",
+  "IN:6108cab62e9a1a15",
+  "IN:61c5f8d28b637dc4",
+  "IN:62d3e18cbe871a5c",
+  "IN:62eb01abf4635bcb",
+  "IN:6626944eb27d6d18",
+  "IN:66e2a3f70365bce2",
+  "IN:6cee48ac75eb9329",
+  "IN:72471b7329fc34dc",
+  "IN:734effb4f31aa533",
+  "IN:76acef2998c232a7",
+  "IN:776eb3a676f3443c",
+  "IN:7e6119a9bc3f7793",
+  "IN:7f75b62ab30339fa",
+  "IN:80aa0e9d6501c2c9",
+  "IN:8442a951d5f2647a",
+  "IN:869dba4a5e5e0c01",
+  "IN:881bd01fdb0ef281",
+  "IN:8bb07c5cd6340877",
+  "IN:8be444f5fd2b86b0",
+  "IN:8fd0d7a53e65865d",
+  "IN:92d4a887a6ec1387",
+  "IN:94dac38d7cb13380",
+  "IN:9539e83a16d04e58",
+  "IN:97b3cd9d408fd8f4",
+  "IN:9812e99292bfe08a",
+  "IN:9840d60065da907d",
+  "IN:9f1343d7d26fa2ab",
+  "IN:9f73c195b294f773",
+  "IN:a23ce990ebd2e3f7",
+  "IN:a58705a48306d6fe",
+  "IN:aa8af00ab09868b0",
+  "IN:ac6c286c03ee16e7",
+  "IN:acee126e5c65059b",
+  "IN:ad4cdd6dc2ed80cf",
+  "IN:aed66db932ff22c5",
+  "IN:b0f322513f36ce7f",
+  "IN:b16c788e7d9fa929",
+  "IN:b3f42bec80bdb0a6",
+  "IN:b6c2f8d52215734d",
+  "IN:be5392c0582e8d6c",
+  "IN:be9e7fad71c1d96f",
+  "IN:c2190ddf33ddd12e",
+  "IN:c6891fb61c8807b5",
+  "IN:c7d2e7a074183248",
+  "IN:ca8c7fbebbda140e",
+  "IN:cd05ae934aabf56c",
+  "IN:d0b5d66162b0b697",
+  "IN:d70bb97d77ebd5c0",
+  "IN:d74e2bf7b18b4d24",
+  "IN:db079a19d518c949",
+  "IN:dcff76e7b923137a",
+  "IN:e014a8604d81e95b",
+  "IN:e2a9bd0d5da17f8c",
+  "IN:ef3e30b61016d986",
+  "IN:f030976f02bbab13",
+  "IN:f1bb9ee3c01de292",
+  "IN:f1c5e92432717ca5",
+  "IN:f35f4bd22abb8872",
+  "IN:f7250aab858063f1",
+  "IN:f729b8be1ad16b7c",
+  "IN:f9d8a2216f4b9a5f",
+  "IN:fb44fe5b1a02f0ce",
+  "IN:fe155615bcebf869",
+  "IN:ff3982a4df58b799"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 53.39218305226602,
+   "regionPosts": 636.8844298424806,
+   "share": 0.08383339354907987,
+   "stories": 103,
+   "baselines": {
+    "persist": {
+     "posts": 1366.0,
+     "share": 0.03033465834647243
+    },
+    "volols": {
+     "posts": 45.27979741726861,
+     "share": 0.050121322824624795
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null
+    }
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 12.505273300037395,
+   "regionPosts": 158.49670167679767,
+   "share": 0.07889926520703137,
+   "stories": 103,
+   "baselines": {
+    "persist": {
+     "posts": 1366.0,
+     "share": 0.03033465834647243
+    },
+    "volols": {
+     "posts": 30.651189110283525,
+     "share": 0.051766332373736706
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null
+    }
+   }
+  }
+ },
+ "shareRule": "share is the category's forecast posts over the region's forecast posts, both summed over stories live at the origin with negative forecasts counted as zero (the rule of fwd_score.areaShareUS)",
+ "categorySource": {
+  "file": "inputs/nk_meta.parquet",
+  "sha256": "828d52036125ecf612116f9824d73d6e9a40d191e9b551e04f88d85e4e5636a9",
+  "public": false,
+  "note": "a frozen input of the research repo; FREEZE.json holds its sha256"
+ },
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "region": "IN",
+    "narrativeKey": "members"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "region": "IN",
+    "narrativeKey": "members"
+   },
+   "models": "every model"
+  }
+ ]
+}
