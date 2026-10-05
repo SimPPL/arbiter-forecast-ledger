@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-04",
+ "region": "US",
+ "arbiterKey": "US:2d1328185301b293",
+ "title": "Social media marks birthdays and personal milestones",
+ "category": "culture",
+ "real": {
+  "posts": 0,
+  "rank": null,
+  "storiesWithPost": 482
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-04",
+    "lag": 2,
+    "posts": 7.49481854117367,
+    "lo80": 0.11666223754093677,
+    "hi80": 67.8584902650134,
+    "pAnyPost": 0.4873188405797102,
+    "pTop10": null,
+    "asHeldLatestDay": 290.0,
+    "rank": 38,
+    "storiesForecast": 1190,
+    "baselines": {
+     "persist": 290.0,
+     "volols": 2.705089834413189,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 0,
+   "logError": 2.1394563942334424,
+   "brierAnyPost": 0.237479652383953,
+   "inRange80": false,
+   "baselines": {
+    "persist": {
+     "posts": 290.0,
+     "logError": 5.673323267171493
+    },
+    "volols": {
+     "posts": 2.705089834413189,
+     "logError": 1.3097075052592804
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 0.0
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "narrativeKey": "US:2d1328185301b293"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
