@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-04",
+ "region": "IN",
+ "arbiterKey": "IN:66e2a3f70365bce2",
+ "title": "Rayalaseema Plans a Global Horticulture Hub",
+ "category": "business",
+ "real": {
+  "posts": 5,
+  "rank": 266,
+  "storiesWithPost": 437
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-04",
+    "lag": 2,
+    "posts": 6.463341634876528,
+    "lo80": 0.0,
+    "hi80": 59.497400246834516,
+    "pAnyPost": 0.46376811594202894,
+    "pTop10": null,
+    "asHeldLatestDay": 886.0,
+    "rank": 26,
+    "storiesForecast": 1371,
+    "baselines": {
+     "persist": 886.0,
+     "volols": 5.251587036870694,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 5,
+   "logError": 0.218243785024268,
+   "brierAnyPost": 0.2875446334803613,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 886.0,
+     "logError": 4.996085513081525
+    },
+    "volols": {
+     "posts": 5.251587036870694,
+     "logError": 0.041075888185841514
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 1.791759469228055
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "narrativeKey": "IN:66e2a3f70365bce2"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
