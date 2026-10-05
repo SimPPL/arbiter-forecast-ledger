@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-04",
+ "region": "IN",
+ "arbiterKey": "IN:7e4ac68906339414",
+ "title": "Hindu Devotional Prayers and Daily Greetings",
+ "category": "religion",
+ "real": {
+  "posts": 753,
+  "rank": 16,
+  "storiesWithPost": 437
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-04",
+    "lag": 2,
+    "posts": 11.685280206753909,
+    "lo80": 0.6675074706834732,
+    "hi80": 101.82612152243189,
+    "pAnyPost": 0.5489130434782609,
+    "pTop10": null,
+    "asHeldLatestDay": 134.0,
+    "rank": 10,
+    "storiesForecast": 1371,
+    "baselines": {
+     "persist": 134.0,
+     "volols": 2.9048415616059082,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 753,
+   "logError": 4.084950085586658,
+   "brierAnyPost": 0.20347944234404539,
+   "inRange80": false,
+   "baselines": {
+    "persist": {
+     "posts": 134.0,
+     "logError": 1.7201175895695267
+    },
+    "volols": {
+     "posts": 2.9048415616059082,
+     "logError": 5.2631751587517375
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 6.625392368007956
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "narrativeKey": "IN:7e4ac68906339414"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
