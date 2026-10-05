@@ -1,0 +1,88 @@
+{
+ "unit": "category forecast",
+ "issueDay": "2026-10-05",
+ "region": "US",
+ "category": "uncategorised",
+ "model": "gbm_med",
+ "members": [
+  "US:3b7edbaac9155500",
+  "US:945f3d1dccd73bdf",
+  "US:abd051bb4b700622",
+  "US:bad835f39db26304",
+  "US:c23d1b9005376c6f",
+  "US:c326374f39a93788"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 1.5160176430701644,
+   "regionPosts": 709.2685085269255,
+   "share": 0.002137438254827879,
+   "stories": 6,
+   "baselines": {
+    "persist": {
+     "posts": 11.0,
+     "share": 0.00012423202023852548
+    },
+    "volols": {
+     "posts": 1.9869449664189691,
+     "share": 0.0022678567407002775
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null
+    }
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 0.4704859907109286,
+   "regionPosts": 208.32905598286254,
+   "share": 0.002258379122831678,
+   "stories": 6,
+   "baselines": {
+    "persist": {
+     "posts": 11.0,
+     "share": 0.00012423202023852548
+    },
+    "volols": {
+     "posts": 1.4073955689532403,
+     "share": 0.002595945511373232
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null
+    }
+   }
+  }
+ },
+ "shareRule": "share is the category's forecast posts over the region's forecast posts, both summed over stories live at the origin with negative forecasts counted as zero (the rule of fwd_score.areaShareUS)",
+ "categorySource": {
+  "file": "inputs/nk_meta.parquet",
+  "sha256": "828d52036125ecf612116f9824d73d6e9a40d191e9b551e04f88d85e4e5636a9",
+  "public": false,
+  "note": "a frozen input of the research repo; FREEZE.json holds its sha256"
+ },
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "region": "US",
+    "narrativeKey": "members"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "region": "US",
+    "narrativeKey": "members"
+   },
+   "models": "every model"
+  }
+ ]
+}
