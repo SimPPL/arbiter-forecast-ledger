@@ -1,0 +1,68 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-05",
+ "region": "IN",
+ "arbiterKey": "IN:c9432950ff855e24",
+ "title": "Suicide bombing at police checkpoint in Dera Ismail Khan",
+ "category": "politics",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "IN top 20 by the D+1 forecast",
+  "published top 10 for 2026-10-06"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 11.959569158541601,
+   "lo80": 0.9419946080888203,
+   "hi80": 212.12040506287528,
+   "pAnyPost": 0.6636528028933093,
+   "pTop10": null,
+   "asHeldLatestDay": 332.0,
+   "rank": 6,
+   "storiesForecast": 1419,
+   "baselines": {
+    "persist": 332.0,
+    "volols": 4.192554933365719,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 2.280362522895311,
+   "lo80": 0.10214938068238945,
+   "hi80": 23.83346711604095,
+   "pAnyPost": 0.29641350210970463,
+   "pTop10": null,
+   "asHeldLatestDay": 332.0,
+   "rank": 18,
+   "storiesForecast": 1419,
+   "baselines": {
+    "persist": 332.0,
+    "volols": 2.5373761344310175,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "narrativeKey": "IN:c9432950ff855e24"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "narrativeKey": "IN:c9432950ff855e24"
+   },
+   "models": "every model"
+  }
+ ]
+}
