@@ -1,0 +1,68 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:7a084e67f74836a8",
+ "title": "Alleged Altercation Involving Lucki and Carti’s Entourages at ComplexCon",
+ "category": "entertainment",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "US top 50 by the D+1 forecast",
+  "published top 10 for 2026-10-07"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 6.786645885329997,
+   "lo80": 0.16683079039253773,
+   "hi80": 127.0515659788685,
+   "pAnyPost": 0.5840867992766727,
+   "pTop10": null,
+   "asHeldLatestDay": 1781.0,
+   "rank": 21,
+   "storiesForecast": 1262,
+   "baselines": {
+    "persist": 1781.0,
+    "volols": 5.2913340594631295,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 3.7167022884934533,
+   "lo80": 0.0,
+   "hi80": 30.168873359117626,
+   "pAnyPost": 0.3918495297805643,
+   "pTop10": null,
+   "asHeldLatestDay": 1781.0,
+   "rank": 8,
+   "storiesForecast": 1262,
+   "baselines": {
+    "persist": 1781.0,
+    "volols": 2.7670227860529106,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "narrativeKey": "US:7a084e67f74836a8"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "narrativeKey": "US:7a084e67f74836a8"
+   },
+   "models": "every model"
+  }
+ ]
+}
