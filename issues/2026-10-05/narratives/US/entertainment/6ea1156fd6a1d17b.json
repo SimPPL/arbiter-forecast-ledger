@@ -1,0 +1,69 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:6ea1156fd6a1d17b",
+ "title": "Fans promote Yeonjun’s Miu Miu appearances",
+ "category": "entertainment",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "US top 50 by the D+1 forecast",
+  "published top 10 for 2026-10-06",
+  "published top 10 for 2026-10-07"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 14.716293619937039,
+   "lo80": 1.3550904428749633,
+   "hi80": 257.45480057185756,
+   "pAnyPost": 0.6943942133815552,
+   "pTop10": null,
+   "asHeldLatestDay": 1271.0,
+   "rank": 2,
+   "storiesForecast": 1262,
+   "baselines": {
+    "persist": 1271.0,
+    "volols": 4.823036084373463,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 4.0720554075631785,
+   "lo80": 0.0,
+   "hi80": 32.51711492464359,
+   "pAnyPost": 0.39811912225705326,
+   "pTop10": null,
+   "asHeldLatestDay": 1271.0,
+   "rank": 4,
+   "storiesForecast": 1262,
+   "baselines": {
+    "persist": 1271.0,
+    "volols": 2.564229186027217,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "narrativeKey": "US:6ea1156fd6a1d17b"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "narrativeKey": "US:6ea1156fd6a1d17b"
+   },
+   "models": "every model"
+  }
+ ]
+}
