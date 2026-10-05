@@ -1,0 +1,67 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:16afd1546b5b3419",
+ "title": "Cooler PCE Inflation Eases Fed-Hike Concerns",
+ "category": "finance",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "US top 50 by the D+1 forecast"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 6.833669566728161,
+   "lo80": 0.17387730055121314,
+   "hi80": 127.82487147263323,
+   "pAnyPost": 0.5877034358047016,
+   "pTop10": null,
+   "asHeldLatestDay": 27.0,
+   "rank": 20,
+   "storiesForecast": 1262,
+   "baselines": {
+    "persist": 27.0,
+    "volols": 1.4260994158894764,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 0.22388164594692353,
+   "lo80": 0.18377490167176974,
+   "hi80": 0.22388164594692353,
+   "pAnyPost": 0.027367920038077087,
+   "pTop10": null,
+   "asHeldLatestDay": 27.0,
+   "rank": 175,
+   "storiesForecast": 1262,
+   "baselines": {
+    "persist": 27.0,
+    "volols": 0.905202978879803,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "narrativeKey": "US:16afd1546b5b3419"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "narrativeKey": "US:16afd1546b5b3419"
+   },
+   "models": "every model"
+  }
+ ]
+}
