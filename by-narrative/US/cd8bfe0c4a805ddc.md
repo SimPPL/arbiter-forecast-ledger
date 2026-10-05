@@ -6,3 +6,5 @@
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 2026-10-04 | 2026-10-05 | D+1 | 5.5 | [0.0, 55] | 0.46 | waiting | - | - | - | [forecast 4b32959](https://github.com/SimPPL/arbiter-forecast-ledger/commit/4b32959d9965c710c8a49e279430afe63716b503) | - |
 | 2026-10-04 | 2026-10-06 | D+2 | 2.4 | [0.1, 16] | 0.24 | waiting | - | - | - | [forecast 4b32959](https://github.com/SimPPL/arbiter-forecast-ledger/commit/4b32959d9965c710c8a49e279430afe63716b503) | - |
+| 2026-10-05 | 2026-10-06 | D+1 | 7.0 | [0.2, 130] | 0.59 | waiting | - | - | - | [forecast 527499e](https://github.com/SimPPL/arbiter-forecast-ledger/commit/527499e5ffe42ebd7a1318cb150d27b173750b0b) | - |
+| 2026-10-05 | 2026-10-07 | D+2 | 4.5 | [0.0, 35] | 0.40 | waiting | - | - | - | [forecast 527499e](https://github.com/SimPPL/arbiter-forecast-ledger/commit/527499e5ffe42ebd7a1318cb150d27b173750b0b) | - |
