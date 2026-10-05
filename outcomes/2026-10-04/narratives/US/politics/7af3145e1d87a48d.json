@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-04",
+ "region": "US",
+ "arbiterKey": "US:7af3145e1d87a48d",
+ "title": "U.S. Withdrawal and End of Operation Inherent Resolve in Iraq",
+ "category": "politics",
+ "real": {
+  "posts": 8,
+  "rank": 273,
+  "storiesWithPost": 482
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-04",
+    "lag": 2,
+    "posts": 5.698224019320055,
+    "lo80": 0.0,
+    "hi80": 53.295402684788115,
+    "pAnyPost": 0.4311594202898551,
+    "pTop10": null,
+    "asHeldLatestDay": 41.0,
+    "rank": 50,
+    "storiesForecast": 1190,
+    "baselines": {
+     "persist": 41.0,
+     "volols": 1.4608030497598392,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 8,
+   "logError": 0.29538215782029864,
+   "brierAnyPost": 0.3235796051249737,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 41.0,
+     "logError": 1.5404450409471488
+    },
+    "volols": {
+     "posts": 1.4608030497598392,
+     "logError": 1.2967368376710642
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 2.1972245773362196
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "narrativeKey": "US:7af3145e1d87a48d"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
