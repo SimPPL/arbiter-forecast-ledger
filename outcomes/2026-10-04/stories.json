@@ -1,0 +1,389 @@
+{
+ "day": "2026-10-04",
+ "kind": "by key",
+ "reading": "T0: posts published on the day that Arbiter's reading of the day assigns to the story",
+ "forecasts": [
+  {
+   "issueDay": "2026-10-03",
+   "horizonDays": 1,
+   "lagFromOriginDays": 2,
+   "horizonCountedFrom": "issue day",
+   "kind": "by key",
+   "modelName": "boosted trees (median)",
+   "model": "gbm_med",
+   "regions": {
+    "US": [
+     {
+      "rank": 1,
+      "title": "Formind’s RYET Commercial Updates Draw Investor Attention",
+      "arbiterKey": "US:6ac3e2825463b554",
+      "posts": 29.0,
+      "lo": 0.0,
+      "hi": 396.2,
+      "chance": "likely",
+      "actual": 7,
+      "inRange": true
+     },
+     {
+      "rank": 2,
+      "title": "LingOrm Draws Fan Attention at Dior’s Paris Fashion Week Show",
+      "arbiterKey": "US:a84a4cb3ef9e948a",
+      "posts": 22.9,
+      "lo": 0.0,
+      "hi": 314.9,
+      "chance": "likely",
+      "actual": 0,
+      "inRange": true
+     },
+     {
+      "rank": 3,
+      "title": "NHL season opener sparks team and player reactions",
+      "arbiterKey": "US:9414a04a0f2a6f5d",
+      "posts": 21.6,
+      "lo": 0.0,
+      "hi": 297.9,
+      "chance": "likely",
+      "actual": 0,
+      "inRange": true
+     },
+     {
+      "rank": 4,
+      "title": "Reality TV fans debate Angela’s conflict with Melody",
+      "arbiterKey": "US:029e22ce0f2f2335",
+      "posts": 18.9,
+      "lo": 1.6,
+      "hi": 160.6,
+      "chance": "likely",
+      "actual": 7,
+      "inRange": true
+     },
+     {
+      "rank": 5,
+      "title": "Bitget Reports $351M Hot-Wallet Breach",
+      "arbiterKey": "US:977e42721988a89f",
+      "posts": 17.3,
+      "lo": 1.4,
+      "hi": 147.1,
+      "chance": "likely",
+      "actual": 0,
+      "inRange": false
+     },
+     {
+      "rank": 6,
+      "title": "Nigeria’s Independence Day and national politics",
+      "arbiterKey": "US:934aed0b68b62d85",
+      "posts": 16.9,
+      "lo": 1.4,
+      "hi": 144.0,
+      "chance": "likely",
+      "actual": 65,
+      "inRange": true
+     },
+     {
+      "rank": 7,
+      "title": "Calls to ban LFI amid unrest in France",
+      "arbiterKey": "US:db3eed060beda220",
+      "posts": 16.6,
+      "lo": 1.3,
+      "hi": 141.3,
+      "chance": "possible",
+      "actual": 40,
+      "inRange": true
+     },
+     {
+      "rank": 8,
+      "title": "Debate over Ancelotti’s tactics for Brazil",
+      "arbiterKey": "US:63bbdad0d08ec158",
+      "posts": 15.0,
+      "lo": 1.1,
+      "hi": 128.8,
+      "chance": "possible",
+      "actual": 162,
+      "inRange": false
+     },
+     {
+      "rank": 9,
+      "title": "Buzz builds around Tom Cruise’s film Digger",
+      "arbiterKey": "US:2a0c197695d5603d",
+      "posts": 14.9,
+      "lo": 1.1,
+      "hi": 127.5,
+      "chance": "possible",
+      "actual": 18,
+      "inRange": true
+     },
+     {
+      "rank": 10,
+      "title": "Fans celebrate pop and R&B artists",
+      "arbiterKey": "US:e2f3d4fe605ce5ed",
+      "posts": 14.5,
+      "lo": 1.0,
+      "hi": 124.3,
+      "chance": "possible",
+      "actual": 455,
+      "inRange": false
+     }
+    ],
+    "IN": [
+     {
+      "rank": 1,
+      "title": "Reports of Ronaldo’s rift with Portugal coach Jorge Jesus",
+      "arbiterKey": "IN:a6624bbb553d35c6",
+      "posts": 35.8,
+      "lo": 0.0,
+      "hi": 485.3,
+      "chance": "likely",
+      "actual": 2031,
+      "inRange": false
+     },
+     {
+      "rank": 2,
+      "title": "Reports of a confrontation aboard a FlyDubai flight",
+      "arbiterKey": "IN:f1bb9ee3c01de292",
+      "posts": 32.9,
+      "lo": 0.0,
+      "hi": 446.7,
+      "chance": "likely",
+      "actual": 55,
+      "inRange": true
+     },
+     {
+      "rank": 3,
+      "title": "Gandhi Jayanti tributes highlight truth, peace and cleanliness",
+      "arbiterKey": "IN:57ed7b9f042f4ce4",
+      "posts": 28.2,
+      "lo": 0.0,
+      "hi": 385.1,
+      "chance": "likely",
+      "actual": 0,
+      "inRange": true
+     },
+     {
+      "rank": 4,
+      "title": "Protest over Election Chief at Mumbai’s Shivaji Park",
+      "arbiterKey": "IN:eca699ff3823b127",
+      "posts": 21.0,
+      "lo": 0.0,
+      "hi": 289.6,
+      "chance": "likely",
+      "actual": 6,
+      "inRange": true
+     },
+     {
+      "rank": 5,
+      "title": "Drishyam’s Vijay Salgaonkar Returns for a Final Showdown",
+      "arbiterKey": "IN:c0803a0c1ae0f99e",
+      "posts": 19.2,
+      "lo": 1.7,
+      "hi": 163.0,
+      "chance": "likely",
+      "actual": 8,
+      "inRange": true
+     },
+     {
+      "rank": 6,
+      "title": "Tamil Film Releases Draw Fan Buzz and Mixed Expectations",
+      "arbiterKey": "IN:20e89d6f58021950",
+      "posts": 19.1,
+      "lo": 1.6,
+      "hi": 161.8,
+      "chance": "likely",
+      "actual": 16,
+      "inRange": true
+     },
+     {
+      "rank": 7,
+      "title": "Debate over Delhi Police conduct and public safety",
+      "arbiterKey": "IN:f3f57d88fea4f1a0",
+      "posts": 18.1,
+      "lo": 1.5,
+      "hi": 153.5,
+      "chance": "likely",
+      "actual": 0,
+      "inRange": false
+     },
+     {
+      "rank": 8,
+      "title": "Wicknell Chivayo Reported Dead in Helicopter Crash",
+      "arbiterKey": "IN:7f75b62ab30339fa",
+      "posts": 14.4,
+      "lo": 1.0,
+      "hi": 123.8,
+      "chance": "possible",
+      "actual": 12,
+      "inRange": true
+     },
+     {
+      "rank": 9,
+      "title": "World Heart Day Promotes Heart Health and Prevention",
+      "arbiterKey": "IN:963a6b98b79c35bb",
+      "posts": 12.5,
+      "lo": 0.8,
+      "hi": 108.5,
+      "chance": "possible",
+      "actual": 8,
+      "inRange": true
+     },
+     {
+      "rank": 10,
+      "title": "Hindu Devotional Prayers and Daily Greetings",
+      "arbiterKey": "IN:7e4ac68906339414",
+      "posts": 11.7,
+      "lo": 0.7,
+      "hi": 101.8,
+      "chance": "possible",
+      "actual": 753,
+      "inRange": false
+     }
+    ]
+   }
+  }
+ ],
+ "actualTop10": {
+  "US": [
+   {
+    "rank": 1,
+    "title": "Reacciones al partido entre Necaxa y América",
+    "arbiterKey": "US:e93c4ce88c2ebd52",
+    "posts": 4986,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 2,
+    "title": "Baseball Rivalries and Series Matchups",
+    "arbiterKey": "US:0846f85d2095b37c",
+    "posts": 4181,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 3,
+    "title": "Max Verstappen takes pole at Sepang",
+    "arbiterKey": "US:3036285ba7ac1d01",
+    "posts": 3372,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 4,
+    "title": "NFL reactions to Herbert, Burrow and Jaguars–Bengals games",
+    "arbiterKey": "US:711e36bca0eecd14",
+    "posts": 2856,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 5,
+    "title": "Houston Texans’ Early-Season Struggles and Colts Matchup",
+    "arbiterKey": "US:a6481323c0d3ab6e",
+    "posts": 2827,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 6,
+    "title": "Broncos-Rams Game Sparks Debate Over Coaching and Key Plays",
+    "arbiterKey": "US:4aefdbbe65da365b",
+    "posts": 2606,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 7,
+    "title": "Zay Flowers’ Hamstring Status and Ravens-Cowboys Game",
+    "arbiterKey": "US:be37a8ccd0a1dc40",
+    "posts": 2023,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 8,
+    "title": "Debate Over Drake Maye’s Play and Patriots’ Struggles",
+    "arbiterKey": "US:1bb9c21861f3f162",
+    "posts": 1968,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 9,
+    "title": "Colts–Commanders London game marked by quarterback injuries",
+    "arbiterKey": "US:4a0eac86b2b24fcf",
+    "posts": 1935,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 10,
+    "title": "NFL Betting Picks and Player Prop Parlays",
+    "arbiterKey": "US:d97b662ab0051a89",
+    "posts": 1884,
+    "liveAtOrigin": false
+   }
+  ],
+  "IN": [
+   {
+    "rank": 1,
+    "title": "Fans support Farrhana Bhatt and discuss her bond with Rubina Dilaik",
+    "arbiterKey": "IN:80192404b362aaa9",
+    "posts": 2479,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 2,
+    "title": "Reports of Ronaldo’s rift with Portugal coach Jorge Jesus",
+    "arbiterKey": "IN:a6624bbb553d35c6",
+    "posts": 2031,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 3,
+    "title": "Journalist Alleges Misconduct by Delhi Police at Jantar Mantar",
+    "arbiterKey": "IN:a6a15bef5624c6bd",
+    "posts": 1573,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 4,
+    "title": "Sant Rampal Ji’s live debate on scripture and salvation",
+    "arbiterKey": "IN:7749ae079adf5e33",
+    "posts": 1379,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 5,
+    "title": "Bahrain GP: Tire Strategy and Driver Performances",
+    "arbiterKey": "IN:7b22bdd1d5243f72",
+    "posts": 1354,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 6,
+    "title": "Jantar Mantar Protest Against Gyanesh Kumar; Neha Bora Detained",
+    "arbiterKey": "IN:73639a7b0b1fa21d",
+    "posts": 1197,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 7,
+    "title": "Fans react to Mr Fanboy Chapter 6",
+    "arbiterKey": "IN:3d43cfc33e82cdfb",
+    "posts": 1168,
+    "liveAtOrigin": false
+   },
+   {
+    "rank": 8,
+    "title": "Fans react to WilliamEst’s affectionate scene in You Maniac",
+    "arbiterKey": "IN:d944fe79f48a1447",
+    "posts": 941,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 9,
+    "title": "Bigg Boss 20 Contestant Support and House Rivalries",
+    "arbiterKey": "IN:f670094fbe29dc76",
+    "posts": 873,
+    "liveAtOrigin": true
+   },
+   {
+    "rank": 10,
+    "title": "Djokovic Beats Zverev in Beijing and Advances to the Semifinals",
+    "arbiterKey": "IN:e89f2ba4be873856",
+    "posts": 844,
+    "liveAtOrigin": false
+   }
+  ]
+ },
+ "actualTop10Source": "score file"
+}

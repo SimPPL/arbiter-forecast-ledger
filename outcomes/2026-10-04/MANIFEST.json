@@ -1,0 +1,19 @@
+{
+ "kind": "outcome",
+ "day": "2026-10-04",
+ "scoring": "by key",
+ "researchHead": "b18b660b6fa1f60b775382902ec900027b222e30",
+ "sources": {
+  "cleanroom/2026-10-01-tomorrow-forward/results/issue-2026-10-03/score_2026-10-04_h1_T0.json": "e0bbdb874a0a415ea9afced5be6471cc4fc5a4be9943ba14955d7d76594dd6e8",
+  "data/tomorrow_tournament/live/vint.parquet": "a8a1f728ef1d692d9ad4374f607cb977de63633b01199ae3a89e5bacced99352",
+  "data/tomorrow_tournament/live/nk_meta.parquet": "828d52036125ecf612116f9824d73d6e9a40d191e9b551e04f88d85e4e5636a9"
+ },
+ "exportedUtc": "2026-10-05T08:05:46Z",
+ "files": {
+  "README.md": "f9f850aa013da4009d06cbfa36e05fb4b676e51f81e3080a7ba1654463892e3b",
+  "TABLE.md": "96fbd3076689a99936e884d2902fa2aeccc418d379906094076e6d5c3e685e40",
+  "ranks.json": "5ce4b42c6b5354f65469438f722a64b794aeca60f51f2280cf9840247d2074b4",
+  "score.json": "b1252e39a65d3fc47ac65642d073eebc945c7dd776de6ccb9cd5fd3e75dddf2f",
+  "stories.json": "1828c2617537e04e26cc808c259360b7ce8ca4ca8ba0ed1e136821df926362c3"
+ }
+}
