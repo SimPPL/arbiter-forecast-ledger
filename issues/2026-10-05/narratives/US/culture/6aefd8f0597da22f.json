@@ -1,0 +1,67 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:6aefd8f0597da22f",
+ "title": "Cornell Student’s Lawsuit Alleges Fraternity Sexual Assault",
+ "category": "culture",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "US top 50 by the D+1 forecast"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 8.572879872956074,
+   "lo80": 0.4344983903195403,
+   "hi80": 156.4262239109988,
+   "pAnyPost": 0.620253164556962,
+   "pTop10": null,
+   "asHeldLatestDay": 19.0,
+   "rank": 11,
+   "storiesForecast": 1262,
+   "baselines": {
+    "persist": 19.0,
+    "volols": 1.245858803757505,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 1.3396621644451656,
+   "lo80": 0.0,
+   "hi80": 16.71204341528458,
+   "pAnyPost": 0.240506329113924,
+   "pTop10": null,
+   "asHeldLatestDay": 19.0,
+   "rank": 51,
+   "storiesForecast": 1262,
+   "baselines": {
+    "persist": 19.0,
+    "volols": 0.8028377560797103,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "narrativeKey": "US:6aefd8f0597da22f"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "narrativeKey": "US:6aefd8f0597da22f"
+   },
+   "models": "every model"
+  }
+ ]
+}
