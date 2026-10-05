@@ -1,0 +1,91 @@
+{
+ "unit": "category forecast",
+ "issueDay": "2026-10-05",
+ "region": "US",
+ "category": "religion",
+ "model": "gbm_med",
+ "members": [
+  "US:00c8041f24bb3038",
+  "US:04a6a6fb8b343250",
+  "US:17655d3366b6ef0e",
+  "US:1fda638e4d389ba4",
+  "US:517a81a4c441440f",
+  "US:8f0c49b640b81833",
+  "US:bebe0e357b90ce00",
+  "US:dc649862268c0bc3",
+  "US:f7821049f5482732"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 10.133107492311389,
+   "regionPosts": 709.2685085269255,
+   "share": 0.014286701538965496,
+   "stories": 9,
+   "baselines": {
+    "persist": {
+     "posts": 403.0,
+     "share": 0.004551409468738706
+    },
+    "volols": {
+     "posts": 6.665209733281133,
+     "share": 0.007607528682108147
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null
+    }
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 2.2997482932560507,
+   "regionPosts": 208.32905598286254,
+   "share": 0.011039018452832769,
+   "stories": 9,
+   "baselines": {
+    "persist": {
+     "posts": 403.0,
+     "share": 0.004551409468738706
+    },
+    "volols": {
+     "posts": 4.18533290097647,
+     "share": 0.007719859574357914
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null
+    }
+   }
+  }
+ },
+ "shareRule": "share is the category's forecast posts over the region's forecast posts, both summed over stories live at the origin with negative forecasts counted as zero (the rule of fwd_score.areaShareUS)",
+ "categorySource": {
+  "file": "inputs/nk_meta.parquet",
+  "sha256": "828d52036125ecf612116f9824d73d6e9a40d191e9b551e04f88d85e4e5636a9",
+  "public": false,
+  "note": "a frozen input of the research repo; FREEZE.json holds its sha256"
+ },
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "region": "US",
+    "narrativeKey": "members"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "region": "US",
+    "narrativeKey": "members"
+   },
+   "models": "every model"
+  }
+ ]
+}
