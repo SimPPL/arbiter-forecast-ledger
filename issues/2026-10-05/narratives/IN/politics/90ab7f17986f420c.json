@@ -1,0 +1,67 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-05",
+ "region": "IN",
+ "arbiterKey": "IN:90ab7f17986f420c",
+ "title": "Rajasthan School Staff Seek Regularization and Better Pay",
+ "category": "politics",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "IN top 20 by the D+1 forecast"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 8.456941988432662,
+   "lo80": 0.41712506996735144,
+   "hi80": 154.51962280339353,
+   "pAnyPost": 0.6166365280289331,
+   "pTop10": null,
+   "asHeldLatestDay": 27.0,
+   "rank": 15,
+   "storiesForecast": 1419,
+   "baselines": {
+    "persist": 27.0,
+    "volols": 1.723754233067854,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 2.1724693472017473,
+   "lo80": 0.06589899800652564,
+   "hi80": 23.01667884586328,
+   "pAnyPost": 0.2837552742616034,
+   "pTop10": null,
+   "asHeldLatestDay": 27.0,
+   "rank": 22,
+   "storiesForecast": 1419,
+   "baselines": {
+    "persist": 27.0,
+    "volols": 1.1542684165811914,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "narrativeKey": "IN:90ab7f17986f420c"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "narrativeKey": "IN:90ab7f17986f420c"
+   },
+   "models": "every model"
+  }
+ ]
+}
