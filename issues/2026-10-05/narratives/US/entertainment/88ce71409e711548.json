@@ -1,0 +1,67 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:88ce71409e711548",
+ "title": "Reggie’s departure from the Clover Boys sparks streamer drama",
+ "category": "entertainment",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "US top 50 by the D+1 forecast"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 4.903485618483036,
+   "lo80": 0.0,
+   "hi80": 96.08295321412896,
+   "pAnyPost": 0.5226039783001808,
+   "pTop10": null,
+   "asHeldLatestDay": 10.0,
+   "rank": 36,
+   "storiesForecast": 1262,
+   "baselines": {
+    "persist": 10.0,
+    "volols": 0.9580053762247907,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 0.9450927404878946,
+   "lo80": 0.0,
+   "hi80": 13.725017820872615,
+   "pAnyPost": 0.2088607594936709,
+   "pTop10": null,
+   "asHeldLatestDay": 10.0,
+   "rank": 80,
+   "storiesForecast": 1262,
+   "baselines": {
+    "persist": 10.0,
+    "volols": 0.6343357640238441,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "narrativeKey": "US:88ce71409e711548"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "narrativeKey": "US:88ce71409e711548"
+   },
+   "models": "every model"
+  }
+ ]
+}
