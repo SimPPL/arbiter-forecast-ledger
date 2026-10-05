@@ -1,0 +1,67 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-05",
+ "region": "IN",
+ "arbiterKey": "IN:f670094fbe29dc76",
+ "title": "Bigg Boss 20 Contestant Support and House Rivalries",
+ "category": "entertainment",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "IN top 20 by the D+1 forecast"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 8.909538463128523,
+   "lo80": 0.48494676239761747,
+   "hi80": 161.9625819664021,
+   "pAnyPost": 0.6292947558770343,
+   "pTop10": null,
+   "asHeldLatestDay": 873.0,
+   "rank": 12,
+   "storiesForecast": 1419,
+   "baselines": {
+    "persist": 873.0,
+    "volols": 5.6770944036325215,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 2.6967511858559847,
+   "lo80": 0.24204931668099397,
+   "hi80": 26.98567181809917,
+   "pAnyPost": 0.31118143459915615,
+   "pTop10": null,
+   "asHeldLatestDay": 873.0,
+   "rank": 12,
+   "storiesForecast": 1419,
+   "baselines": {
+    "persist": 873.0,
+    "volols": 3.2916176753529056,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "narrativeKey": "IN:f670094fbe29dc76"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "narrativeKey": "IN:f670094fbe29dc76"
+   },
+   "models": "every model"
+  }
+ ]
+}
