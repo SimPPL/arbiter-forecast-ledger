@@ -1,0 +1,103 @@
+{
+ "unit": "category forecast",
+ "issueDay": "2026-10-05",
+ "region": "IN",
+ "category": "healthcare",
+ "model": "gbm_med",
+ "members": [
+  "IN:0524f19e1292a492",
+  "IN:06ddb19ad48474bd",
+  "IN:21f9493ad76c837c",
+  "IN:2f03a31c35c29bc2",
+  "IN:31f159116a70f1f4",
+  "IN:3e9f63f5b74810a6",
+  "IN:4d41cae8c1fb5dfd",
+  "IN:6cb912b3023e239b",
+  "IN:963a6b98b79c35bb",
+  "IN:99f6375dd7782115",
+  "IN:9cf20a6d8c2caef3",
+  "IN:a548cf46d3fa256c",
+  "IN:a54f61d4bcd5403a",
+  "IN:ab661fb2e0d63fa5",
+  "IN:b384dcbce9e9b667",
+  "IN:bb30b14d9c400300",
+  "IN:bd6b99077fb2ad03",
+  "IN:be019776bdcac291",
+  "IN:c00a4595136875e0",
+  "IN:d5fee5b5669c34b3",
+  "IN:df42a5ed139411f5"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 5.648476307534907,
+   "regionPosts": 636.8844298424806,
+   "share": 0.008868918822417962,
+   "stories": 21,
+   "baselines": {
+    "persist": {
+     "posts": 445.0,
+     "share": 0.009882081232928427
+    },
+    "volols": {
+     "posts": 11.77683078735612,
+     "share": 0.013036064015581076
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null
+    }
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 0.8703349064146992,
+   "regionPosts": 158.49670167679767,
+   "share": 0.005491186234206081,
+   "stories": 21,
+   "baselines": {
+    "persist": {
+     "posts": 445.0,
+     "share": 0.009882081232928427
+    },
+    "volols": {
+     "posts": 7.783461990954367,
+     "share": 0.013145371913382293
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null
+    }
+   }
+  }
+ },
+ "shareRule": "share is the category's forecast posts over the region's forecast posts, both summed over stories live at the origin with negative forecasts counted as zero (the rule of fwd_score.areaShareUS)",
+ "categorySource": {
+  "file": "inputs/nk_meta.parquet",
+  "sha256": "828d52036125ecf612116f9824d73d6e9a40d191e9b551e04f88d85e4e5636a9",
+  "public": false,
+  "note": "a frozen input of the research repo; FREEZE.json holds its sha256"
+ },
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "region": "IN",
+    "narrativeKey": "members"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "region": "IN",
+    "narrativeKey": "members"
+   },
+   "models": "every model"
+  }
+ ]
+}
