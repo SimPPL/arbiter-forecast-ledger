@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-04",
+ "region": "US",
+ "arbiterKey": "US:4b85ab68972db051",
+ "title": "La Granja VIP MX and Wanda-related social chatter",
+ "category": "entertainment",
+ "real": {
+  "posts": 8,
+  "rank": 273,
+  "storiesWithPost": 482
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-04",
+    "lag": 2,
+    "posts": 8.270140105862602,
+    "lo80": 0.2185799311376813,
+    "hi80": 74.14320042752281,
+    "pAnyPost": 0.4963768115942029,
+    "pTop10": null,
+    "asHeldLatestDay": 379.0,
+    "rank": 33,
+    "storiesForecast": 1190,
+    "baselines": {
+     "persist": 379.0,
+     "volols": 2.920120067707324,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 8,
+   "logError": 0.02957391602836612,
+   "brierAnyPost": 0.253636315900021,
+   "inRange80": true,
+   "baselines": {
+    "persist": {
+     "posts": 379.0,
+     "logError": 3.742946675384212
+    },
+    "volols": {
+     "posts": 2.920120067707324,
+     "logError": 0.831102294485748
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 2.1972245773362196
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "narrativeKey": "US:4b85ab68972db051"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
