@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-04",
+ "region": "IN",
+ "arbiterKey": "IN:f670094fbe29dc76",
+ "title": "Bigg Boss 20 Contestant Support and House Rivalries",
+ "category": "entertainment",
+ "real": {
+  "posts": 873,
+  "rank": 9,
+  "storiesWithPost": 437
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-04",
+    "lag": 2,
+    "posts": 7.9604155858249195,
+    "lo80": 0.17786597428383824,
+    "hi80": 71.63259202023553,
+    "pAnyPost": 0.49275362318840576,
+    "pTop10": null,
+    "asHeldLatestDay": 309.0,
+    "rank": 17,
+    "storiesForecast": 1371,
+    "baselines": {
+     "persist": 309.0,
+     "volols": 3.8067963048702023,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 873,
+   "logError": 4.580263767397793,
+   "brierAnyPost": 0.25729888678848983,
+   "inRange80": false,
+   "baselines": {
+    "persist": {
+     "posts": 309.0,
+     "logError": 1.0365080781763432
+    },
+    "volols": {
+     "posts": 3.8067963048702023,
+     "logError": 5.203049562330497
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 6.773080375655535
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "narrativeKey": "IN:f670094fbe29dc76"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
