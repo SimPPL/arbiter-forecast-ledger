@@ -1,0 +1,67 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:ea86c93fdd66452c",
+ "title": "Viewers React to Svengoolie’s Wizard of Oz Broadcast",
+ "category": "entertainment",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "US top 50 by the D+1 forecast"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 4.811895450159925,
+   "lo80": 0.0,
+   "hi80": 94.57675084474445,
+   "pAnyPost": 0.515370705244123,
+   "pTop10": null,
+   "asHeldLatestDay": 578.0,
+   "rank": 38,
+   "storiesForecast": 1262,
+   "baselines": {
+    "persist": 578.0,
+    "volols": 3.8610307864013405,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 0.2987634508342348,
+   "lo80": 0.25620282107969405,
+   "hi80": 0.2987634508342348,
+   "pAnyPost": 0.027685229255909882,
+   "pTop10": null,
+   "asHeldLatestDay": 578.0,
+   "rank": 155,
+   "storiesForecast": 1262,
+   "baselines": {
+    "persist": 578.0,
+    "volols": 2.132298569843179,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "narrativeKey": "US:ea86c93fdd66452c"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "narrativeKey": "US:ea86c93fdd66452c"
+   },
+   "models": "every model"
+  }
+ ]
+}
