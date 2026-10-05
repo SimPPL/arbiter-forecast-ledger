@@ -1,0 +1,66 @@
+{
+ "unit": "narrative outcome",
+ "day": "2026-10-04",
+ "region": "IN",
+ "arbiterKey": "IN:b92e0e9f19ef033c",
+ "title": "Indian Shooters Win Trap Medals at the Asian Games",
+ "category": "sports",
+ "real": {
+  "posts": 0,
+  "rank": null,
+  "storiesWithPost": 437
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "bridge": null,
+   "forecast": {
+    "targetDay": "2026-10-04",
+    "lag": 2,
+    "posts": 9.881489752148743,
+    "lo80": 0.43039532104406525,
+    "hi80": 87.20470414235055,
+    "pAnyPost": 0.5217391304347826,
+    "pTop10": null,
+    "asHeldLatestDay": 576.0,
+    "rank": 13,
+    "storiesForecast": 1371,
+    "baselines": {
+     "persist": 576.0,
+     "volols": 4.6144310282105625,
+     "zero": 0.0
+    }
+   },
+   "scoredActual": 0,
+   "logError": 2.3870631578032873,
+   "brierAnyPost": 0.2722117202268431,
+   "inRange80": false,
+   "baselines": {
+    "persist": {
+     "posts": 576.0,
+     "logError": 6.3578422665081
+    },
+    "volols": {
+     "posts": 4.6144310282105625,
+     "logError": 1.7253402523723236
+    },
+    "zero": {
+     "posts": 0.0,
+     "logError": 0.0
+    }
+   },
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "narrativeKey": "IN:b92e0e9f19ef033c"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
