@@ -1,0 +1,131 @@
+{
+ "unit": "category outcome",
+ "day": "2026-10-04",
+ "region": "IN",
+ "category": "technology",
+ "real": {
+  "posts": 76,
+  "regionPosts": 45031,
+  "share": 0.0016877262330394617
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet; real totals include stories that did not exist at the origin, so compare shares first",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "forecast": {
+    "posts": 25.67683434488586,
+    "share": 0.036559190688605456,
+    "regionPosts": 702.3359615257747,
+    "stories": 71
+   },
+   "realPostsOfMembers": 53.0,
+   "logError": 1.0600098605864643,
+   "shareError": 0.03487146445556599,
+   "baselines": {
+    "persist": {
+     "posts": 193.0,
+     "share": 0.00435921759949406,
+     "logError": 0.9240527372096441,
+     "shareError": 0.0026714913664545982
+    },
+    "volols": {
+     "posts": 18.965346624025077,
+     "share": 0.026809448495927955,
+     "logError": 1.3498073199051843,
+     "shareError": 0.02512172226288849
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null,
+     "logError": 4.343805421853684,
+     "shareError": null
+    }
+   },
+   "members": [
+    "IN:0532e0342d998ea0",
+    "IN:0662ad60f309ae8e",
+    "IN:096b265e7becc82d",
+    "IN:0fcfe86d6cd45775",
+    "IN:12e999e3bf97d894",
+    "IN:13d4354c7439764d",
+    "IN:178740ea245964cf",
+    "IN:1e1d04f5ff4d4253",
+    "IN:23ec6393813b521f",
+    "IN:245ca690c27243d6",
+    "IN:26042b239224fef5",
+    "IN:260cdf31f1a9fc79",
+    "IN:304a19dc65f35fa5",
+    "IN:344518fb7c62bb66",
+    "IN:3d2de2a487524071",
+    "IN:3dfa2891fe3bee71",
+    "IN:3ff421c0e45a509c",
+    "IN:4014508021f80690",
+    "IN:476509a24fdc55a7",
+    "IN:49ab14d4e36a8688",
+    "IN:4b359b9c300b7281",
+    "IN:50d1ddefbca251c8",
+    "IN:5177ccd868dbbd83",
+    "IN:57f9586357c1f0a4",
+    "IN:67a5c761428e37c8",
+    "IN:702dbef7351c94a7",
+    "IN:73059b4e53611e86",
+    "IN:744d2e587b880437",
+    "IN:7634cda229c04fb9",
+    "IN:79d2093d10b32167",
+    "IN:8085ab5ebb6ad9c7",
+    "IN:82998f737fc4f243",
+    "IN:86ec0ab7cc949b3f",
+    "IN:8857c33f140cf44d",
+    "IN:893a89dd0cc1bcf6",
+    "IN:8daf6bc1c5fef9e0",
+    "IN:8eeceed06c4547bd",
+    "IN:932f7813af1decac",
+    "IN:9f3e2cfad476474a",
+    "IN:a073b5e8b43e5347",
+    "IN:a17467daccbf1a25",
+    "IN:a366f5439d55a0dc",
+    "IN:b0809ae885bc4aa1",
+    "IN:b1a2bfa7d837fe87",
+    "IN:b855b90d9ddb897b",
+    "IN:b9a5fcb0dfa734ef",
+    "IN:bd9437671ab59446",
+    "IN:be31a32653c2cbe0",
+    "IN:be9e9318c83cab2d",
+    "IN:bf24d85f9ba483c0",
+    "IN:c20c9da0d4ff8ae6",
+    "IN:c544fe03607faa68",
+    "IN:c57a1abd36685213",
+    "IN:cab34007921477d9",
+    "IN:cbe256a8e0202316",
+    "IN:cd65d3f0aff971af",
+    "IN:d1c2c43b9e9d4241",
+    "IN:d5f0d0cee6b51435",
+    "IN:d9ceaae4ba5fb6a3",
+    "IN:da9a08ab05d22f42",
+    "IN:db61c88595ad3335",
+    "IN:de33d8dbfa8ce4ff",
+    "IN:deae960b7de4742c",
+    "IN:e321fa5a126a8eaf",
+    "IN:e49590dfd5772e60",
+    "IN:e52a4dfc632b8b19",
+    "IN:e5a5369c6a37c870",
+    "IN:ece8cfa5c4f617db",
+    "IN:f7d244c336ebad32",
+    "IN:fbf9535d780f464d",
+    "IN:fc91b2dc2865acbb"
+   ],
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "region": "IN",
+     "narrativeKey": "members"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
