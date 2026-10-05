@@ -1,0 +1,117 @@
+{
+ "unit": "category outcome",
+ "day": "2026-10-04",
+ "region": "US",
+ "category": "finance",
+ "real": {
+  "posts": 91,
+  "regionPosts": 88544,
+  "share": 0.0010277376219732562
+ },
+ "realNote": "real counts are the posts published on the day that Arbiter's reading of the day (T0) assigns to the story, from the research repo's private tables; the forecast side and every score are rebuilt from the frozen parquet; real totals include stories that did not exist at the origin, so compare shares first",
+ "byIssue": [
+  {
+   "issueDay": "2026-10-03",
+   "horizon": "D+1",
+   "scoring": "by key",
+   "forecast": {
+    "posts": 78.87119021556228,
+    "share": 0.0874299079173325,
+    "regionPosts": 902.1076665222758,
+    "stories": 57
+   },
+   "realPostsOfMembers": 943.0,
+   "logError": 0.14137336232064257,
+   "shareError": 0.08640217029535925,
+   "baselines": {
+    "persist": {
+     "posts": 4799.0,
+     "share": 0.07424654991026672,
+     "logError": 3.954582619846942,
+     "shareError": 0.07321881228829347
+    },
+    "volols": {
+     "posts": 31.35541699795803,
+     "share": 0.05194247725631404,
+     "logError": 1.0450071204152285,
+     "shareError": 0.05091473963434078
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null,
+     "logError": 4.5217885770490405,
+     "shareError": null
+    }
+   },
+   "members": [
+    "US:043546055b0e6180",
+    "US:097fb68d55a9b2f7",
+    "US:0ad315ad72e0ada5",
+    "US:16afd1546b5b3419",
+    "US:31337470dd4da839",
+    "US:32ddc55eacbf85e3",
+    "US:35fd330825e909f8",
+    "US:49f4b0d7c8e370a4",
+    "US:4a4b08a9a4afe864",
+    "US:4c63228598fe1320",
+    "US:4e6640e56b89bcaa",
+    "US:4e98c3bde0bc033b",
+    "US:54b667aab82bb4f0",
+    "US:563723570879aece",
+    "US:5a5a03982818b7f7",
+    "US:5fb3772f42125bbf",
+    "US:64e39b7382dd235f",
+    "US:665e141ba10d6b2a",
+    "US:678fb98e47359f3b",
+    "US:67a151700c59cc91",
+    "US:6ac3e2825463b554",
+    "US:6d2da29da9e9b208",
+    "US:6d59362d4751b464",
+    "US:7429f8ddc34fa180",
+    "US:79d241db50609153",
+    "US:84b173d9ee0c0bd5",
+    "US:8533a97bf27ec18a",
+    "US:874ffe3bb9fc4277",
+    "US:9100c463bfe0b461",
+    "US:929654eb52cab466",
+    "US:95f726de5cd49c5d",
+    "US:977e42721988a89f",
+    "US:98e603beadf66de7",
+    "US:9bdb89f3846ae06c",
+    "US:9ec3eef7916a0dea",
+    "US:a53b2562bbe53321",
+    "US:a86418d8935a2698",
+    "US:acbec7560f365a56",
+    "US:add3ce8dc177e820",
+    "US:ae1af5fe7a5d5de0",
+    "US:ae59582c91a1410d",
+    "US:b0aee4817dfe3a32",
+    "US:b1b5e84389125f46",
+    "US:b207797b05839845",
+    "US:becf29eae8d6adb0",
+    "US:c469c139e110ee7c",
+    "US:c85b7cabccaa178e",
+    "US:cbbf8a45c22693c7",
+    "US:d3414bf456693dcb",
+    "US:d5cecc743062725f",
+    "US:d98ba26e2ae2eb32",
+    "US:db9a2352e43f7468",
+    "US:e0cb70acd195097e",
+    "US:f0f7c6e06cd3d87d",
+    "US:f35bcdd987cec07b",
+    "US:f839178ae1f41a90",
+    "US:fc298690914685ee"
+   ],
+   "issueUnit": null,
+   "derivedFrom": {
+    "file": "issues/2026-10-03/pred_2026-10-04_h1_K0.parquet",
+    "sha256": "2689c1918231d91d4912aae4da60343cdda3887646b20e97c1cf55ab054c31b1",
+    "row": {
+     "region": "US",
+     "narrativeKey": "members"
+    },
+    "models": "every model"
+   }
+  }
+ ]
+}
