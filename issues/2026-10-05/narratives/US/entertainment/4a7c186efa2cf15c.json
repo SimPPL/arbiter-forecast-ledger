@@ -1,0 +1,67 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:4a7c186efa2cf15c",
+ "title": "Jang Wonyoung Heads to Dior’s Spring/Summer 2027 Show",
+ "category": "entertainment",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "US top 50 by the D+1 forecast"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 5.058030070491491,
+   "lo80": 0.0,
+   "hi80": 98.62444018868273,
+   "pAnyPost": 0.5316455696202531,
+   "pTop10": null,
+   "asHeldLatestDay": 963.0,
+   "rank": 34,
+   "storiesForecast": 1262,
+   "baselines": {
+    "persist": 963.0,
+    "volols": 4.464165013470014,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 1.8282290522785942,
+   "lo80": 0.0,
+   "hi80": 20.41066198512767,
+   "pAnyPost": 0.2721518987341772,
+   "pTop10": null,
+   "asHeldLatestDay": 963.0,
+   "rank": 31,
+   "storiesForecast": 1262,
+   "baselines": {
+    "persist": 963.0,
+    "volols": 2.4056672364026914,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "narrativeKey": "US:4a7c186efa2cf15c"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "narrativeKey": "US:4a7c186efa2cf15c"
+   },
+   "models": "every model"
+  }
+ ]
+}
