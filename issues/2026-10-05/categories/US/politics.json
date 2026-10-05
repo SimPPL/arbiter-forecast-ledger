@@ -1,0 +1,163 @@
+{
+ "unit": "category forecast",
+ "issueDay": "2026-10-05",
+ "region": "US",
+ "category": "politics",
+ "model": "gbm_med",
+ "members": [
+  "US:00a6ab54fdd18f79",
+  "US:044fcb5ad3306523",
+  "US:073b85204a463d60",
+  "US:0859089b7d8f352b",
+  "US:1613700a0fd9078a",
+  "US:1b2ff4434505e7ff",
+  "US:1b53667d48bc8682",
+  "US:1c49aa4931687d06",
+  "US:1c4a9540aabd2b1b",
+  "US:1dfbdbf37b80a189",
+  "US:1ea3bf975dee4932",
+  "US:207368b8cef5bf78",
+  "US:231c3f0a79771dd3",
+  "US:2403416e009e8d4d",
+  "US:25ed85f6c742f423",
+  "US:27ff6ee187fc47e1",
+  "US:2abfc8fd1f7eaa6e",
+  "US:2fa4335339d5b0aa",
+  "US:37030a735b1db7a3",
+  "US:3e2b277d56d18ff0",
+  "US:3ffe782e0e20e414",
+  "US:4244e2d825bc7add",
+  "US:43ef6bb7273ad2b9",
+  "US:4717f98e02ba4ded",
+  "US:51f37d9edf930c74",
+  "US:56525ed93f85af56",
+  "US:56f58f5955d8a3b3",
+  "US:57aad3646c8e4f74",
+  "US:58dc4bdb1c82cc5e",
+  "US:5da0a23d09837ad6",
+  "US:602de2c7f7ee6a00",
+  "US:611a8648542db4eb",
+  "US:6b0f2940a406360d",
+  "US:736fba74dc7947f0",
+  "US:7a9554fbf99618d8",
+  "US:7af3145e1d87a48d",
+  "US:7f66f37c66a0d835",
+  "US:7ff08d3b0b6bfcb4",
+  "US:836e5990ec747487",
+  "US:83d1348d2ffb8256",
+  "US:8451438875f38b15",
+  "US:8566aa6139938353",
+  "US:934aed0b68b62d85",
+  "US:93ad5bf8ba2e1cd3",
+  "US:9671641beedc0e91",
+  "US:97c0c1152d8937c2",
+  "US:98e7aa67e3be4562",
+  "US:9b9c44ac4b748bd9",
+  "US:a637dcf89fa705bc",
+  "US:aa7728112268940a",
+  "US:aabdae6f07f87360",
+  "US:ab79d05b03708d16",
+  "US:ac59fed3e04f9878",
+  "US:ad4a7148e4315c8f",
+  "US:afc057596b82acfb",
+  "US:b01a5d7ff1bd9f4c",
+  "US:b5843a0029a74d5b",
+  "US:b66cd41ce7ab3fc4",
+  "US:b6c2e73d3ee316ba",
+  "US:b7919a5a589e1f6a",
+  "US:c2083398efcd1084",
+  "US:c242d39c5093bb1d",
+  "US:cdc0443ceb8794d4",
+  "US:cef139f1edc9c269",
+  "US:d3ef4131165c59f9",
+  "US:d9e525c144ef366e",
+  "US:db3eed060beda220",
+  "US:e06e09c0dc3dedf8",
+  "US:e2960469b316e5f5",
+  "US:e4a4a81eb51567fd",
+  "US:e98b785cab5000bb",
+  "US:e99c060cec8b39fd",
+  "US:e99f8bec5ce0cb84",
+  "US:ec0f6e9eafde26f2",
+  "US:eed8ebba3482359c",
+  "US:f4809ff5311ddcd9",
+  "US:f59b35abc93f43c1",
+  "US:f8a069e5571d5f7e",
+  "US:f975b3897f44df53",
+  "US:f9ed9aa90abef103",
+  "US:fb4f414f06802a10"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 92.4217171591222,
+   "regionPosts": 709.2685085269255,
+   "share": 0.13030568261245967,
+   "stories": 81,
+   "baselines": {
+    "persist": {
+     "posts": 2702.0,
+     "share": 0.03051590169859053
+    },
+    "volols": {
+     "posts": 48.46247699118678,
+     "share": 0.0553140408883978
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null
+    }
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 22.860287349535916,
+   "regionPosts": 208.32905598286254,
+   "share": 0.10973163220888611,
+   "stories": 81,
+   "baselines": {
+    "persist": {
+     "posts": 2702.0,
+     "share": 0.03051590169859053
+    },
+    "volols": {
+     "posts": 31.50944415117773,
+     "share": 0.05811926789776116
+    },
+    "zero": {
+     "posts": 0.0,
+     "share": null
+    }
+   }
+  }
+ },
+ "shareRule": "share is the category's forecast posts over the region's forecast posts, both summed over stories live at the origin with negative forecasts counted as zero (the rule of fwd_score.areaShareUS)",
+ "categorySource": {
+  "file": "inputs/nk_meta.parquet",
+  "sha256": "828d52036125ecf612116f9824d73d6e9a40d191e9b551e04f88d85e4e5636a9",
+  "public": false,
+  "note": "a frozen input of the research repo; FREEZE.json holds its sha256"
+ },
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "region": "US",
+    "narrativeKey": "members"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "region": "US",
+    "narrativeKey": "members"
+   },
+   "models": "every model"
+  }
+ ]
+}
