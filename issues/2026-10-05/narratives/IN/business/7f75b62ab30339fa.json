@@ -1,0 +1,67 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-05",
+ "region": "IN",
+ "arbiterKey": "IN:7f75b62ab30339fa",
+ "title": "Wicknell Chivayo Reported Dead in Helicopter Crash",
+ "category": "business",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "published top 10 for 2026-10-07"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 6.794339389530753,
+   "lo80": 0.16798366387871602,
+   "hi80": 127.17808582775854,
+   "pAnyPost": 0.5840867992766727,
+   "pTop10": null,
+   "asHeldLatestDay": 12.0,
+   "rank": 25,
+   "storiesForecast": 1419,
+   "baselines": {
+    "persist": 12.0,
+    "volols": 1.2301504224223212,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 3.2053520623505296,
+   "lo80": 0.0,
+   "hi80": 26.789772990691432,
+   "pAnyPost": 0.3730407523510971,
+   "pTop10": null,
+   "asHeldLatestDay": 12.0,
+   "rank": 8,
+   "storiesForecast": 1419,
+   "baselines": {
+    "persist": 12.0,
+    "volols": 0.8473807678734786,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "narrativeKey": "IN:7f75b62ab30339fa"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "narrativeKey": "IN:7f75b62ab30339fa"
+   },
+   "models": "every model"
+  }
+ ]
+}
