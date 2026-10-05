@@ -1,0 +1,67 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-05",
+ "region": "US",
+ "arbiterKey": "US:78e667d39ace78bc",
+ "title": "Jack Hughes Scores Overtime Winner for the Devils",
+ "category": "sports",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "US top 50 by the D+1 forecast"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 4.0238301986103995,
+   "lo80": 0.0,
+   "hi80": 81.61700013300765,
+   "pAnyPost": 0.4719710669077758,
+   "pTop10": null,
+   "asHeldLatestDay": 6.0,
+   "rank": 49,
+   "storiesForecast": 1262,
+   "baselines": {
+    "persist": 6.0,
+    "volols": 0.76513535601656,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 1.07584026265224,
+   "lo80": 0.0,
+   "hi80": 14.714821316525994,
+   "pAnyPost": 0.2183544303797469,
+   "pTop10": null,
+   "asHeldLatestDay": 6.0,
+   "rank": 66,
+   "storiesForecast": 1262,
+   "baselines": {
+    "persist": 6.0,
+    "volols": 0.5174787612262493,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "narrativeKey": "US:78e667d39ace78bc"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "narrativeKey": "US:78e667d39ace78bc"
+   },
+   "models": "every model"
+  }
+ ]
+}
