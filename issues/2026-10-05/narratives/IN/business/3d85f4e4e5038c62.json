@@ -1,0 +1,67 @@
+{
+ "unit": "narrative forecast",
+ "issueDay": "2026-10-05",
+ "region": "IN",
+ "arbiterKey": "IN:3d85f4e4e5038c62",
+ "title": "South African Forums and Business Events",
+ "category": "business",
+ "model": "gbm_med",
+ "selectedBecause": [
+  "IN top 20 by the D+1 forecast"
+ ],
+ "horizons": {
+  "D+1": {
+   "targetDay": "2026-10-06",
+   "lag": 2,
+   "posts": 7.860107341273398,
+   "lo80": 0.32768925211533895,
+   "hi80": 144.7046636637755,
+   "pAnyPost": 0.6094032549728752,
+   "pTop10": null,
+   "asHeldLatestDay": 294.0,
+   "rank": 17,
+   "storiesForecast": 1419,
+   "baselines": {
+    "persist": 294.0,
+    "volols": 4.031159238842802,
+    "zero": 0.0
+   }
+  },
+  "D+2": {
+   "targetDay": "2026-10-07",
+   "lag": 3,
+   "posts": 2.725272627586242,
+   "lo80": 0.2516320652704478,
+   "hi80": 27.201588894448786,
+   "pAnyPost": 0.3122362869198312,
+   "pTop10": null,
+   "asHeldLatestDay": 294.0,
+   "rank": 11,
+   "storiesForecast": 1419,
+   "baselines": {
+    "persist": 294.0,
+    "volols": 2.452557601309058,
+    "zero": 0.0
+   }
+  }
+ },
+ "pTop10Note": "The frozen forecast holds no chance of reaching the region's top 10, so pTop10 is null; it was not added after the freeze because a number made later could not be shown to predate the target day.",
+ "derivedFrom": [
+  {
+   "file": "issues/2026-10-05/pred_2026-10-06_h1_K0.parquet",
+   "sha256": "180b0fca7d26ad9c16ca1199b168b07b4ebedf3b938eab2d479a2e469a39b6d2",
+   "row": {
+    "narrativeKey": "IN:3d85f4e4e5038c62"
+   },
+   "models": "every model"
+  },
+  {
+   "file": "issues/2026-10-05/pred_2026-10-07_h2_K0.parquet",
+   "sha256": "b2fdae3c37a433245031e02b7aa9dbf05f7d0857f727941e99df7ce18ab7fbfa",
+   "row": {
+    "narrativeKey": "IN:3d85f4e4e5038c62"
+   },
+   "models": "every model"
+  }
+ ]
+}
